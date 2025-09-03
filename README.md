@@ -3,13 +3,19 @@
 **Group Name: Reddit Scrapers**
 
 Member 1: Varad Paradkar\
-Student ID: 801418318
+Student ID: 801418318\
 EmailID: vparadka@charlotte.edu
 
-Mitali Yadav , 801453849 , myadav5@charlotte.edu
+Member 2: Mitali Yadav\
+Student ID: 801453849\
+EmailID: myadav5@charlotte.edu
 
-Sudeepta Bal , 801455628 , sbal1@charlotte.edu
+Mamber 3: Sudeepta Bal\
+Student ID: 801455628\
+EmailID: sbal1@charlotte.edu
 
-Ruthwik Dovala ,, rdovala@charlotte.edu
+Member4: Ruthwik Dovala\
+Student ID:\
+EmailID: rdovala@charlotte.edu
 
-**Project Description**
+<u>**Project Description**</u>
