@@ -10,12 +10,12 @@ Member 2: Mitali Yadav\
 Student ID: 801453849\
 EmailID: myadav5@charlotte.edu
 
-Mamber 3: Sudeepta Bal\
+Member 3: Sudeepta Bal\
 Student ID: 801455628\
 EmailID: sbal1@charlotte.edu
 
 Member4: Ruthwik Dovala\
-Student ID:\
+Student ID: \
 EmailID: rdovala@charlotte.edu
 
-<u>**Project Description**</u>
+<ins>**Project Description**</ins>
