@@ -1,6 +1,6 @@
 # ITCS6190-Course-Project
 
-**Group Name: Reddit Scrapers**
+<ins>**Group Name: Reddit Scrapers**</ins>
 
 Member 1: Varad Paradkar\
 Student ID: 801418318\
