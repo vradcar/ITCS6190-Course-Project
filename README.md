@@ -2,7 +2,11 @@
 
 **Group Name: Reddit Scrapers**
 
-Varad Paradkar , 801418318 , vparadka@charlotte.edu
+Member 1: Varad Paradkar 
+
+Student ID: 801418318
+
+EmailID: vparadka@charlotte.edu
 
 Mitali Yadav , 801453849 , myadav5@charlotte.edu
 
