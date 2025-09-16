@@ -19,3 +19,5 @@ Student ID: 801431661\
 EmailID: rdovala@charlotte.edu
 
 <ins>**Project Description**</ins>
+
+This project aims to build a complete data pipeline to analyze the job market, providing insights on hiring companies, high-demand locations, and in-demand roles and skills. It combines Spark SQL for core analysis, streaming for real-time monitoring of new job postings, and MLlib models to classify jobs by industry and role specialization.
