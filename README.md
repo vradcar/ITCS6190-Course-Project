@@ -1,6 +1,6 @@
 # ITCS6190-Course-Project
 
-<ins>**Group Name: Reddit Scrapers**</ins>
+<ins>**Group Name: Unattached and Unhinged**</ins>
 
 Member 1: Varad Paradkar\
 Student ID: 801418318\
