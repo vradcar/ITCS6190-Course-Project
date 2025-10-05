@@ -1,0 +1,60 @@
+name: Enhanced YC Job Scraping Pipeline
+
+on:
+  schedule:
+    # Run every day at 6:30 AM UTC (30 minutes after Cloudflare Worker cron)
+    - cron: '30 6 * * *'
+  workflow_dispatch: # Allow manual triggering
+    inputs:
+      max_jobs:
+        description: 'Maximum number of jobs to scrape'
+        required: false
+        default: '50'
+      days_back:
+        description: 'Number of days back to scrape'
+        required: false
+        default: '30'
+
+jobs:
+  scrape-yc-jobs:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        
+    - name: Install Python dependencies
+      run: |
+        cd scrapers
+        pip install -r requirements.txt
+        
+    - name: Create environment file
+      run: |
+        cd scrapers
+        cat > .env << EOF
+        WORKER_ENDPOINT=${{ secrets.WORKER_ENDPOINT }}
+        SCRAPE_DELAY=2
+        MAX_JOBS_PER_RUN=${{ github.event.inputs.max_jobs || '50' }}
+        EOF
+        
+    - name: Run Enhanced YC Job Scraping
+      run: |
+        cd scrapers
+        python yc_scraper_enhanced.py --max-jobs ${{ github.event.inputs.max_jobs || '50' }} --days-back ${{ github.event.inputs.days_back || '30' }}
+        
+    - name: Run Analytics Pipeline
+      run: |
+        cd spark-analytics
+        pip install -r requirements.txt
+        export WORKER_ENDPOINT=${{ secrets.WORKER_ENDPOINT }}
+        python daily_analytics.py --date $(date -I) --save
+        
+    - name: Notify Completion
+      run: |
+        echo "✅ Enhanced YC Job Scraping Pipeline completed successfully"
+        echo "📊 Jobs scraped and processed on $(date)"

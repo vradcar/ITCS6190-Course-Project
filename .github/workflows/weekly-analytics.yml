@@ -1,0 +1,73 @@
+name: Weekly YC Job Analytics
+
+on:
+  schedule:
+    # Run every Sunday at 8 AM UTC for weekly reports
+    - cron: '0 8 * * 0'
+  workflow_dispatch: # Allow manual triggering
+    inputs:
+      start_date:
+        description: 'Start date for analysis (YYYY-MM-DD)'
+        required: false
+      end_date:
+        description: 'End date for analysis (YYYY-MM-DD)'
+        required: false
+      report_type:
+        description: 'Type of report (daily, weekly)'
+        required: false
+        default: 'weekly'
+
+jobs:
+  analytics:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        
+    - name: Install Analytics Dependencies
+      run: |
+        cd spark-analytics
+        pip install -r requirements.txt
+        
+    - name: Setup Environment
+      run: |
+        export WORKER_ENDPOINT=${{ secrets.WORKER_ENDPOINT }}
+        export PYTHONPATH="${PYTHONPATH}:$(pwd)/spark-analytics"
+        
+    - name: Generate Weekly Analytics Report
+      run: |
+        cd spark-analytics
+        if [ "${{ github.event.inputs.report_type }}" = "weekly" ] || [ -z "${{ github.event.inputs.report_type }}" ]; then
+          # Weekly report (last 7 days)
+          START_DATE=$(date -d '7 days ago' -I)
+          END_DATE=$(date -d '1 day ago' -I)
+          python daily_analytics.py --weekly --start-date $START_DATE --end-date $END_DATE --save
+        else
+          # Daily report
+          REPORT_DATE=${{ github.event.inputs.start_date }}
+          if [ -z "$REPORT_DATE" ]; then
+            REPORT_DATE=$(date -d '1 day ago' -I)
+          fi
+          python daily_analytics.py --date $REPORT_DATE --save
+        fi
+      env:
+        WORKER_ENDPOINT: ${{ secrets.WORKER_ENDPOINT }}
+        
+    - name: Upload Analytics Results
+      uses: actions/upload-artifact@v3
+      with:
+        name: analytics-results-$(date -I)
+        path: spark-analytics/analytics_output/
+        retention-days: 30
+        
+    - name: Summary
+      run: |
+        echo "📊 Analytics pipeline completed successfully"
+        echo "📅 Report generated for $(date)"
+        echo "📁 Results uploaded as workflow artifacts"
