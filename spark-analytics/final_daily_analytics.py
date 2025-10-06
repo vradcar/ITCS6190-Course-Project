@@ -21,14 +21,13 @@ class SimpleJobAnalytics:
 
 
 def main():
-    days_back = 7   
+
+    days_back = 7
     load_dotenv()
     """
-    Main function to initialize Spark, connect to R2, and read data.
+    Main function to initialize Spark, connect to R2, and read data from a JSON file in the bucket.
     """
     # --- 1. Load Cloudflare R2 Credentials from Environment Variables ---
-    # Best practice: Do NOT hardcode credentials in your script.
-    # Load them from the environment for better security.
     try:
         account_id = os.environ["CLOUDFLARE_ACCOUNT_ID"]
         access_key_id = os.environ["CLOUDFLARE_R2_ACCESS_KEY_ID"]
@@ -37,31 +36,32 @@ def main():
         print(f"Error: Environment variable {e} not set.")
         print("Please set CLOUDFLARE_ACCOUNT_ID, CLOUDFLARE_R2_ACCESS_KEY_ID, and CLOUDFLARE_R2_SECRET_ACCESS_KEY.")
         return
-    WAREHOUSE = "70ccae44f9c2610c4c703c97025a163c_job-data-bucket"
-    TOKEN = "7vfZ8GAe1AHrWhkao58q0z1OMA1xk7hwWiVB-sTh"
-    CATALOG_URI = "https://catalog.cloudflarestorage.com/70ccae44f9c2610c4c703c97025a163c/job-data-bucket"   
+
+    # Cloudflare R2 S3 endpoint
+    r2_endpoint = f"https://{account_id}.r2.cloudflarestorage.com"
+    bucket = "job-data-bucket"
+    key = "exports/2025-10-03.json"
+    s3a_path = f"s3a://{bucket}/{key}"
 
     spark = SparkSession.builder \
-    .appName("R2DataCatalogExample") \
-    .config('spark.jars.packages', 'org.apache.iceberg:iceberg-spark-runtime-3.5_2.12:1.6.1,org.apache.iceberg:iceberg-aws-bundle:1.6.1') \
-    .config("spark.sql.extensions", "org.apache.iceberg.spark.extensions.IcebergSparkSessionExtensions") \
-    .config("spark.sql.catalog.my_catalog", "org.apache.iceberg.spark.SparkCatalog") \
-    .config("spark.sql.catalog.my_catalog.type", "rest") \
-    .config("spark.sql.catalog.my_catalog.uri", CATALOG_URI) \
-    .config("spark.sql.catalog.my_catalog.warehouse", WAREHOUSE) \
-    .config("spark.sql.catalog.my_catalog.token", TOKEN) \
-    .config("spark.sql.catalog.my_catalog.header.X-Iceberg-Access-Delegation", "vended-credentials") \
-    .config("spark.sql.catalog.my_catalog.s3.remote-signing-enabled", "false") \
-    .config("spark.sql.defaultCatalog", "my_catalog") \
-    .getOrCreate()
+        .appName("R2DirectJsonRead") \
+        .config("spark.hadoop.fs.s3a.access.key", access_key_id) \
+        .config("spark.hadoop.fs.s3a.secret.key", secret_access_key) \
+        .config("spark.hadoop.fs.s3a.endpoint", r2_endpoint) \
+        .config("spark.hadoop.fs.s3a.path.style.access", "true") \
+        .config("spark.hadoop.fs.s3a.connection.ssl.enabled", "true") \
+        .config("spark.hadoop.fs.s3a.impl", "org.apache.hadoop.fs.s3a.S3AFileSystem") \
+        .getOrCreate()
 
     print("SparkSession created successfully.")
+    print(f"Attempting to read JSON from: {s3a_path}")
 
-    table_name = "my_catalog.default.my_table"  # <-- IMPORTANT: CHANGE THIS
-
-    print(f"Attempting to read data from Iceberg table: {table_name}")
-
-    df = spark.table(table_name)
+    try:
+        df = spark.read.json(s3a_path)
+        print(f"Read {df.count()} records from {s3a_path}")
+        df.show(5)
+    except Exception as e:
+        print(f"Failed to read JSON from R2: {e}")
 
 
 if __name__ == "__main__":
