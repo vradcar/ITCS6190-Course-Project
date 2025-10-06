@@ -2,72 +2,82 @@ name: Weekly YC Job Analytics
 
 on:
   schedule:
-    # Run every Sunday at 8 AM UTC for weekly reports
+    # Run every Sunday at 8:00 AM UTC (3:00 AM EST)
     - cron: '0 8 * * 0'
-  workflow_dispatch: # Allow manual triggering
+  workflow_dispatch:
     inputs:
-      start_date:
-        description: 'Start date for analysis (YYYY-MM-DD)'
+      days_back:
+        description: 'Number of days to analyze'
         required: false
-      end_date:
-        description: 'End date for analysis (YYYY-MM-DD)'
-        required: false
-      report_type:
-        description: 'Type of report (daily, weekly)'
-        required: false
-        default: 'weekly'
+        default: '7'
 
 jobs:
   analytics:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Checkout repository
+    - name: Checkout code
       uses: actions/checkout@v4
-      
+    
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.11'
-        
-    - name: Install Analytics Dependencies
+        python-version: '3.9'
+    
+    - name: Install Python dependencies
       run: |
-        cd spark-analytics
-        pip install -r requirements.txt
-        
-    - name: Setup Environment
+        python -m pip install --upgrade pip
+        pip install requests
+    
+    - name: Create output directories
       run: |
-        export WORKER_ENDPOINT=${{ secrets.WORKER_ENDPOINT }}
-        export PYTHONPATH="${PYTHONPATH}:$(pwd)/spark-analytics"
-        
-    - name: Generate Weekly Analytics Report
+        mkdir -p analytics_output
+        mkdir -p reports
+    
+    - name: Test environment
       run: |
-        cd spark-analytics
-        if [ "${{ github.event.inputs.report_type }}" = "weekly" ] || [ -z "${{ github.event.inputs.report_type }}" ]; then
-          # Weekly report (last 7 days)
-          START_DATE=$(date -d '7 days ago' -I)
-          END_DATE=$(date -d '1 day ago' -I)
-          python daily_analytics.py --weekly --start-date $START_DATE --end-date $END_DATE --save
-        else
-          # Daily report
-          REPORT_DATE=${{ github.event.inputs.start_date }}
-          if [ -z "$REPORT_DATE" ]; then
-            REPORT_DATE=$(date -d '1 day ago' -I)
-          fi
-          python daily_analytics.py --date $REPORT_DATE --save
-        fi
+        echo "=== Environment Test ==="
+        python --version
+        echo "Working directory: $(pwd)"
+        echo "Available space: $(df -h .)"
+        echo "Python packages: $(pip list | grep requests)"
+        echo "========================"
+    
+    - name: Run Simple YC Job Analytics
       env:
         WORKER_ENDPOINT: ${{ secrets.WORKER_ENDPOINT }}
-        
-    - name: Upload Analytics Results
-      uses: actions/upload-artifact@v3
-      with:
-        name: analytics-results-$(date -I)
-        path: spark-analytics/analytics_output/
-        retention-days: 30
-        
-    - name: Summary
       run: |
-        echo "📊 Analytics pipeline completed successfully"
-        echo "📅 Report generated for $(date)"
-        echo "📁 Results uploaded as workflow artifacts"
+        cd spark-analytics
+        python simple_analytics.py --days-back ${{ github.event.inputs.days_back || '7' }}
+      continue-on-error: true
+    
+    - name: Check outputs (always run)
+      if: always()
+      run: |
+        echo "=== Output Check ==="
+        ls -la analytics_output/ || echo "No analytics_output directory"
+        ls -la reports/ || echo "No reports directory"
+        find . -name "*.json" -o -name "*.md" -o -name "*.txt" | head -10 || echo "No result files found"
+        echo "===================="
+    
+    - name: Upload analytics results
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: yc-job-analytics-${{ github.run_number }}
+        path: |
+          analytics_output/
+          reports/
+        retention-days: 30
+    
+    - name: Display summary (always run)
+      if: always()
+      run: |
+        if [ -f analytics_output/latest_summary.txt ]; then
+          echo "=== Analytics Summary ==="
+          cat analytics_output/latest_summary.txt
+          echo "========================="
+        else
+          echo "❌ No summary file found - checking for any output files"
+          find . -name "*summary*" -o -name "*report*" -o -name "*analysis*" | head -5
+        fi
