@@ -51,7 +51,20 @@ def main():
         .config("spark.hadoop.fs.s3a.path.style.access", "true") \
         .config("spark.hadoop.fs.s3a.connection.ssl.enabled", "true") \
         .config("spark.hadoop.fs.s3a.impl", "org.apache.hadoop.fs.s3a.S3AFileSystem") \
+        .config("spark.hadoop.fs.s3a.connection.timeout", "60000") \
+        .config("spark.hadoop.fs.s3a.connection.establish.timeout", "60000") \
+        .config("spark.hadoop.fs.s3a.connection.request.timeout", "60000") \
+        .config("spark.hadoop.fs.s3a.socket.timeout", "60000") \
+        .config("spark.hadoop.fs.s3a.connection.maximum", "100") \
         .getOrCreate()
+
+    # Print all S3A configs for debugging
+    print("--- S3A Hadoop Configurations ---")
+    hadoop_conf = spark._jsc.hadoopConfiguration()
+    for k in hadoop_conf:
+        if 's3a' in k:
+            print(f'{k}: {hadoop_conf.get(k)}')
+    print("-------------------------------")
 
     print("SparkSession created successfully.")
     print(f"Attempting to read JSON from: {s3a_path}")
