@@ -131,6 +131,64 @@ python daily_analytics.py --date 2025-10-03
 python daily_analytics.py --weekly --start-date 2025-09-27 --end-date 2025-10-03
 ```
 
+---
+
+## 📊 Exploratory Data Analysis (EDA)
+
+The exploratory data analysis (EDA) was conducted to uncover patterns, trends, and relationships within the Y Combinator job market dataset.
+
+### 🔹 **Datasets Analyzed**
+- **companies.csv** – 91,026 company records  
+- **jobs.csv** – 288,439 job listings  
+- **postings.csv** – 204,693 job postings  
+- **company_industries.csv** and **company_specialities.csv** – industry-level attributes  
+
+All analyses and visualizations are implemented in:
+- `spark-analytics/data_analysis.py`
+
+---
+
+### 🔍 **Key Findings**
+
+#### 1. Industry and Specialization Insights
+- Visualizations of the **top 20 industries and specialties** reveal dominance by **Technology**, **Finance**, and **Healthcare** sectors.  
+- Frequency plots and bar charts show these sectors contributing the majority of job postings.
+
+#### 2. Company Scale vs Job Activity
+- Merging `companies.csv`, `employee_counts.csv`, and `company_industries.csv` confirmed that **larger organizations post more jobs**.  
+- A strong positive correlation was observed between **company size** and **posting frequency**.
+
+#### 3. Sector-wise Job Density
+- PySpark joins linking jobs and industry datasets highlight **IT**, **Consulting**, and **Finance** as sectors with the highest **job density** and **posting frequency**.
+
+#### 4. Data Quality & Cleaning
+- `.info()` and `.value_counts()` were used to inspect missing values and outliers.  
+- Identified companies with **>500 postings**, indicating possible **data skew or intensive recruitment**.  
+- The `postings.csv` file was cleaned to remove missing and inconsistent entries for accurate analysis.
+
+---
+
+### 📈 **Visualization Summary**
+
+| Visualization Type | Description |
+|---------------------|-------------|
+| **Bar Charts** | Top 20 industries and specialties |
+| **Heatmaps** | Company size vs. number of postings |
+| **Frequency Plots** | Job distribution across sectors |
+| **Trend Lines** | Company size vs. posting activity |
+
+All visuals are available in **`spark-analytics/data_analysis.ipynb`** under the **Spark Analytics branch**.
+
+---
+
+### 🧠 **Insights**
+- A few dominant industries (Technology, Finance, Healthcare) account for most postings, following a **power-law trend**.  
+- **Company size** directly influences job posting activity.  
+- Cleaned datasets ensure reliability for **Spark MLlib** and **real-time job forecasting** in later phases.
+
+---
+
+
 ## 🎯 Automated Pipeline Features
 
 ### ✅ **Currently Active:**
