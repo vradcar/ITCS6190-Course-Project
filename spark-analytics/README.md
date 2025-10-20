@@ -1,20 +1,32 @@
-# YC Job Analytics Pipeline
+# Spark Analytics - LinkedIn Job Postings
 
-This directory contains the analytics pipeline for processing Y Combinator job data, with both simple and Spark-based implementations.
+Apache Spark-based analytics platform for processing and analyzing LinkedIn job posting data with real-time streaming capabilities and ML integration.
 
 ## 🚀 Quick Start
 
-### Option 1: Simple Analytics (Recommended for GitHub Actions)
-```bash
-cd spark-analytics
-python simple_analytics.py --days-back 7
+### 1. Install Dependencies
+```powershell
+pip install pyspark pandas matplotlib seaborn numpy
 ```
 
-### Option 2: Spark Analytics (Local Development)
-```bash
-cd spark-analytics
-pip install -r requirements.txt
-python daily_analytics.py --days-back 7
+### 2. Verify Setup
+```powershell
+.\setup_demo.ps1
+```
+
+### 3. Run Complex Queries
+Open `complex_queries.ipynb` in VS Code or Jupyter and run all cells.
+
+### 4. Run Streaming Demo
+
+**Terminal 1 - Start Streaming Processor:**
+```powershell
+python streaming_processor.py
+```
+
+**Terminal 2 - Start Data Simulator:**
+```powershell
+python streaming_data_simulator.py
 ```
 
 ## 📁 File Structure
@@ -179,3 +191,122 @@ To manually trigger the weekly analytics:
 3. Click "Run workflow"
 4. Set `days_back` parameter (default: 7)
 5. Download artifacts to view reports
+
+---
+
+## 📁 LinkedIn Job Analytics Project
+
+### Project Structure for Demo
+
+```
+spark-analytics/
+├── complex_queries.ipynb          # 🔍 Spark SQL complex queries
+├── data_analysis.ipynb            # 📊 Exploratory data analysis
+├── streaming_processor.py         # ⚡ Real-time streaming app
+├── streaming_data_simulator.py    # 📤 Data ingestion simulator
+├── DEMO_GUIDE.md                  # 📖 Complete demo instructions
+├── ML_INTEGRATION_PLAN.md         # 🤖 ML roadmap
+├── GITHUB_ISSUE_TEMPLATE.md       # 📝 Check-in template
+├── setup_demo.ps1                 # ⚙️ Setup verification script
+├── analytics_output/              # 💾 Generated results
+│   ├── query_results/             # CSV & Parquet files
+│   └── visuals/                   # Charts & graphs
+├── streaming_input/               # 📥 Streaming data batches
+└── reports/                       # 📄 Analysis reports
+```
+
+### 🎯 Features
+
+#### Complex Queries
+- **Query 1:** Top skills by industry with ranking (Window functions)
+- **Query 2:** Average skills required per industry (Aggregations)
+- **Query 3:** Cross-industry skill analysis (DISTINCT + GROUP BY)
+
+#### Streaming Analytics
+- Real-time job posting processing
+- Multiple concurrent streaming queries
+- Location, experience, and company trend analysis
+- ~50 records per batch, 5-second intervals
+
+#### Visualizations
+- Top skills by industry (bar charts)
+- Average skill requirements (horizontal bars)
+- Cross-industry skill distribution
+
+### 📊 Key Outputs
+
+#### Query Results
+- `analytics_output/query_results/skills_by_industry.csv`
+- `analytics_output/query_results/avg_skills_by_industry.csv`
+- `analytics_output/query_results/cross_industry_skills.csv`
+
+#### Visualizations
+- `analytics_output/visuals/top_skills_by_industry.png`
+- `analytics_output/visuals/avg_skills_by_industry.png`
+- `analytics_output/visuals/cross_industry_skills.png`
+
+### 🔮 Next Steps: ML Integration
+
+1. **Job-Skill Matching System:** TF-IDF + Cosine Similarity
+2. **Skill Demand Forecasting:** Facebook Prophet (Time Series)
+3. **Cloud Deployment:** AWS EMR for distributed processing
+4. **Dashboard:** Real-time visualization with Plotly/Streamlit
+
+See `ML_INTEGRATION_PLAN.md` for detailed roadmap.
+
+### 📖 Documentation
+
+- **[DEMO_GUIDE.md](DEMO_GUIDE.md)** - Complete presentation guide with step-by-step instructions
+- **[ML_INTEGRATION_PLAN.md](ML_INTEGRATION_PLAN.md)** - Machine Learning integration roadmap
+- **[GITHUB_ISSUE_TEMPLATE.md](GITHUB_ISSUE_TEMPLATE.md)** - Template for check-in updates
+
+### 🛠️ Technologies
+
+- **Apache Spark** - Distributed data processing
+- **PySpark** - Python API for Spark
+- **Spark Structured Streaming** - Real-time processing
+- **Pandas** - Data manipulation
+- **Matplotlib/Seaborn** - Visualization
+
+### 🐛 Troubleshooting
+
+**Issue:** OutOfMemory errors  
+**Fix:** Increase driver memory: `.config("spark.driver.memory", "4g")`
+
+**Issue:** Streaming not updating  
+**Fix:** Ensure `streaming_data_simulator.py` is running
+
+**Issue:** PySpark import errors  
+**Fix:** `pip install pyspark` and restart Python kernel
+
+**Issue:** File path errors  
+**Fix:** Use absolute paths or verify current working directory
+
+### 🎬 Demo Checklist
+
+- [ ] Run `setup_demo.ps1` to verify environment
+- [ ] Execute `complex_queries.ipynb` and save visualizations
+- [ ] Test streaming demo (processor + simulator)
+- [ ] Take screenshots for GitHub Issue
+- [ ] Review `DEMO_GUIDE.md` for presentation flow
+- [ ] Prepare 5-7 minute presentation
+- [ ] Upload visuals to GitHub Issue
+
+### 📝 For Check-In Presentation
+
+**What to Demonstrate:**
+1. Complex queries with Spark SQL (2-3 min)
+2. Streaming setup with live demo (3-4 min)
+3. Results and visualizations (1 min)
+4. Challenges and ML roadmap (1 min)
+
+**Materials Needed:**
+- Screenshots of query results
+- Live streaming demo or video recording
+- Visualization charts
+- GitHub Issue with all visuals uploaded
+
+---
+
+**Project Status:** ✅ Ready for Check-In Demo  
+**Last Updated:** October 20, 2025
