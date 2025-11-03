@@ -275,16 +275,16 @@ class SkillExtractor:
 
 def main():
     """Standalone testing"""
-    from daily_analytics import YCJobAnalytics
+    from data_loader import DataLoader
     
-    analytics = YCJobAnalytics()
+    loader = DataLoader()
     
     try:
         # Load data
-        df = analytics.load_data_from_worker()
+        df = loader.load_postings()
         
         if df and df.count() > 0:
-            extractor = SkillExtractor(analytics.spark)
+            extractor = SkillExtractor(loader.spark)
             
             # Extract top skills
             top_skills = extractor.extract_top_skills(df)
@@ -300,7 +300,7 @@ def main():
             print("📭 No data available for skill extraction")
     
     finally:
-        analytics.cleanup()
+        loader.cleanup()
 
 
 if __name__ == "__main__":

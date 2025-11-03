@@ -1,17 +1,22 @@
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, count, avg, rank, hour, sum, round, when, desc, percentile_approx
 from pyspark.sql.window import Window
+import os
 
-spark = SparkSession.builder.appName("MusicAnalysis").getOrCreate()
+# Get base directory
+base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+data_dir = os.path.join(base_dir, "data")
+
+spark = SparkSession.builder.appName("LinkedInJobAnalysis").getOrCreate()
 spark.sparkContext.setLogLevel("WARN")
 
 # Load datasets
 def load_comp_data():
     try:    
-        comp = spark.read.csv("/workspaces/ITCS6190-Course-Project/data/companies/companies.csv", header=True, inferSchema=True)
-        comp_ind = spark.read.csv("/workspaces/ITCS6190-Course-Project/data/companies/company_industries.csv", header=True, inferSchema=True)
-        comp_spel = spark.read.csv("/workspaces/ITCS6190-Course-Project/data/companies/company_specialities.csv", header=True, inferSchema=True)
-        employee_counts = spark.read.csv("/workspaces/ITCS6190-Course-Project/data/companies/employee_counts.csv", header=True, inferSchema=True)
+        comp = spark.read.csv(os.path.join(data_dir, "companies", "companies.csv"), header=True, inferSchema=True)
+        comp_ind = spark.read.csv(os.path.join(data_dir, "companies", "company_industries.csv"), header=True, inferSchema=True)
+        comp_spel = spark.read.csv(os.path.join(data_dir, "companies", "company_specialities.csv"), header=True, inferSchema=True)
+        employee_counts = spark.read.csv(os.path.join(data_dir, "companies", "employee_counts.csv"), header=True, inferSchema=True)
     except Exception as e:
         print(f"Error loading data: {e}")
         print("Please ensure csv files are present in the data directory.")
@@ -27,9 +32,9 @@ def load_comp_data():
 
 def load_job_data():
     try:
-        job_ind = spark.read.csv("/workspaces/ITCS6190-Course-Project/data/jobs/job_industries.csv", header=True, inferSchema=True)
-        job_skill = spark.read.csv("/workspaces/ITCS6190-Course-Project/data/jobs/job_skills.csv", header=True, inferSchema=True)
-        job_sal = spark.read.csv("/workspaces/ITCS6190-Course-Project/data/jobs/salaries.csv", header=True, inferSchema=True)
+        job_ind = spark.read.csv(os.path.join(data_dir, "jobs", "job_industries.csv"), header=True, inferSchema=True)
+        job_skill = spark.read.csv(os.path.join(data_dir, "jobs", "job_skills.csv"), header=True, inferSchema=True)
+        job_sal = spark.read.csv(os.path.join(data_dir, "jobs", "salaries.csv"), header=True, inferSchema=True)
     except Exception as e:
         print(f"Error loading job data: {e}")
         print("Please ensure job csv files are present in the data directory.")
@@ -96,7 +101,7 @@ def median_salary_by_skill(job_skill_df, salaries_df, top_n=20):
 
 def load_posting_data():
     try:
-        postings = spark.read.csv("/workspaces/ITCS6190-Course-Project/data/postings_cleaned.csv", header=True, inferSchema=True)
+        postings = spark.read.csv(os.path.join(data_dir, "postings_cleaned.csv"), header=True, inferSchema=True, multiLine=True, escape='"')
     except Exception as e:
         print(f"Error loading posting data: {e}")
         print("Please ensure postings csv file is present in the data directory.")

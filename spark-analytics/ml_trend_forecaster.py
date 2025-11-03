@@ -303,30 +303,19 @@ class TrendForecaster:
 
 def main():
     """Standalone testing"""
-    from daily_analytics import YCJobAnalytics
+    from data_loader import DataLoader
     
-    analytics = YCJobAnalytics()
+    loader = DataLoader()
     
     try:
-        # Load data for multiple days
-        from datetime import datetime, timedelta
+        # Load data
+        df = loader.load_postings()
         
-        all_data = []
-        for i in range(7):
-            date = (datetime.now() - timedelta(days=i)).strftime("%Y-%m-%d")
-            df = analytics.load_data_from_worker(date)
-            if df and df.count() > 0:
-                all_data.append(df)
-        
-        if all_data:
-            combined_df = all_data[0]
-            for df in all_data[1:]:
-                combined_df = combined_df.union(df)
-            
-            forecaster = TrendForecaster(analytics.spark)
+        if df and df.count() > 0:
+            forecaster = TrendForecaster(loader.spark)
             
             # Train model
-            model, assembler, historical_df = forecaster.train_forecasting_model(combined_df)
+            model, assembler, historical_df = forecaster.train_forecasting_model(df)
             
             if model:
                 # Forecast future
@@ -335,14 +324,14 @@ def main():
                 )
                 
                 # Analyze trends
-                trends = forecaster.analyze_trends_by_category(combined_df)
+                trends = forecaster.analyze_trends_by_category(df)
                 
                 print("\n✅ Trend forecasting completed successfully!")
         else:
             print("📭 No data available for trend forecasting")
     
     finally:
-        analytics.cleanup()
+        loader.cleanup()
 
 
 if __name__ == "__main__":

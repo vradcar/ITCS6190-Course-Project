@@ -18,8 +18,8 @@ from ml_skill_extractor import SkillExtractor
 from ml_recommender import JobRecommender
 from ml_trend_forecaster import TrendForecaster
 
-# Import existing analytics (for data loading)
-from daily_analytics import YCJobAnalytics
+# Import data loader
+from data_loader import DataLoader
 
 
 class MLPipeline:
@@ -27,9 +27,9 @@ class MLPipeline:
     
     def __init__(self):
         """Initialize ML pipeline with Spark session"""
-        # Reuse existing analytics session
-        self.analytics = YCJobAnalytics()
-        self.spark = self.analytics.spark
+        # Initialize data loader
+        self.data_loader = DataLoader()
+        self.spark = self.data_loader.spark
         
         # Initialize ML components
         self.job_classifier = JobClassifier(self.spark)
@@ -41,29 +41,15 @@ class MLPipeline:
         print("✅ ML Pipeline initialized")
     
     def load_data(self, date_str=None, days_back=7):
-        """Load job data from multiple sources"""
-        print("\n📥 Loading job data...")
+        """Load job data from CSV files"""
+        print("\n📥 Loading job data from CSV files...")
         
-        if date_str:
-            # Load specific date
-            df = self.analytics.load_data_from_worker(date_str)
-            if df and df.count() > 0:
-                return df
-        else:
-            # Load multiple days for better ML training
-            all_data = []
-            for i in range(days_back):
-                date = (datetime.now() - timedelta(days=i)).strftime("%Y-%m-%d")
-                df = self.analytics.load_data_from_worker(date)
-                if df and df.count() > 0:
-                    all_data.append(df)
-            
-            if all_data:
-                combined_df = all_data[0]
-                for df in all_data[1:]:
-                    combined_df = combined_df.union(df)
-                print(f"✅ Loaded {combined_df.count()} jobs from {len(all_data)} days")
-                return combined_df
+        # Load postings data
+        df = self.data_loader.load_postings()
+        
+        if df and df.count() > 0:
+            print(f"✅ Loaded {df.count()} job postings")
+            return df
         
         print("⚠️  No data loaded")
         return None
@@ -291,7 +277,7 @@ class MLPipeline:
     
     def cleanup(self):
         """Clean up resources"""
-        self.analytics.cleanup()
+        self.data_loader.cleanup()
 
 
 def main():

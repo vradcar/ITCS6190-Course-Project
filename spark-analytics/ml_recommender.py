@@ -287,16 +287,16 @@ class JobRecommender:
 
 def main():
     """Standalone testing"""
-    from daily_analytics import YCJobAnalytics
+    from data_loader import DataLoader
     
-    analytics = YCJobAnalytics()
+    loader = DataLoader()
     
     try:
         # Load data
-        df = analytics.load_data_from_worker()
+        df = loader.load_postings()
         
         if df and df.count() > 0:
-            recommender = JobRecommender(analytics.spark)
+            recommender = JobRecommender(loader.spark)
             
             # Train model
             model, job_indexer, predictions = recommender.train_recommender(df, num_users=50)
@@ -312,7 +312,7 @@ def main():
             print("📭 No data available for recommendations")
     
     finally:
-        analytics.cleanup()
+        loader.cleanup()
 
 
 if __name__ == "__main__":
