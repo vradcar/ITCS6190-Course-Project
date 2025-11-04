@@ -7,20 +7,16 @@ This directory contains the machine learning components integrated with the YC J
 The ML pipeline includes five comprehensive machine learning features:
 
 1. **Job Classification** - Random Forest classifier for categorizing jobs
-2. **Salary Prediction** - Linear Regression for predicting salary ranges
-3. **Skill Extraction** - NLP-based skill mining from job descriptions
-4. **Recommendation System** - Collaborative Filtering (ALS) for job matching
-5. **Trend Forecasting** - Time-series analysis for market predictions
-
+2. **Skill Extraction** - NLP-based skill mining from job descriptions
+3. **Recommendation System** - Collaborative Filtering (ALS) for job matching
+   
 ## 📁 ML Module Structure
 
 ```
 spark-analytics/
 ├── ml_job_classifier.py      # Random Forest job classification
-├── ml_salary_predictor.py    # Linear Regression salary prediction
 ├── ml_skill_extractor.py     # NLP skill extraction
 ├── ml_recommender.py         # Collaborative filtering recommendations
-├── ml_trend_forecaster.py    # Time-series trend forecasting
 ├── ml_pipeline.py           # Main integration pipeline
 └── ML_README.md             # This file
 ```
@@ -51,17 +47,12 @@ python ml_pipeline.py --days-back 7 --save
 # Job Classification
 python ml_job_classifier.py
 
-# Salary Prediction
-python ml_salary_predictor.py
-
 # Skill Extraction
 python ml_skill_extractor.py
 
 # Recommendation System
 python ml_recommender.py
 
-# Trend Forecasting
-python ml_trend_forecaster.py
 ```
 
 ## 📊 ML Components Details
@@ -101,38 +92,7 @@ model, predictions = classifier.train_classifier(df)
 - Operations
 - Other
 
-### 2. Salary Prediction (Linear Regression)
-
-**File:** `ml_salary_predictor.py`
-
-**Purpose:** Predicts salary ranges based on job features
-
-**Algorithm:** Linear Regression with Elastic Net regularization
-
-**Features:**
-- Extracts salary from text/JSON fields
-- Feature engineering: skills, experience, location, job type
-- Experience years extraction from descriptions
-- Remote work detection
-- High-value skill identification
-
-**Usage:**
-```python
-from ml_salary_predictor import SalaryPredictor
-
-predictor = SalaryPredictor(spark)
-model, feature_pipeline, predictions = predictor.train_predictor(df)
-```
-
-**Features Used:**
-- Location encoding
-- Job type (Full-time, Part-time, etc.)
-- Experience level and years
-- Skill presence (50+ technical skills)
-- Remote work indicator
-- Description TF-IDF features
-
-### 3. Skill Extraction (NLP)
+### 2. Skill Extraction (NLP)
 
 **File:** `ml_skill_extractor.py`
 
@@ -167,7 +127,7 @@ combinations = extractor.analyze_skill_combinations(df)
 - Cloud & DevOps (AWS, Kubernetes, Docker, etc.)
 - Specialized (Machine Learning, AI, Blockchain, etc.)
 
-### 4. Recommendation System (Collaborative Filtering)
+### 3. Recommendation System (Collaborative Filtering)
 
 **File:** `ml_recommender.py`
 
@@ -196,57 +156,15 @@ recommendations = recommender.recommend_jobs_for_user(
 )
 ```
 
-**Note:** Currently uses synthetic user data. In production, integrate with actual user interaction data.
-
-### 5. Trend Forecasting (Time-series Analysis)
-
-**File:** `ml_trend_forecaster.py`
-
-**Purpose:** Forecasts job market trends over time
-
-**Algorithm:** Linear Regression with temporal features
-
-**Features:**
-- Daily job posting aggregation
-- Temporal feature engineering (day of week, month, etc.)
-- Lag features (previous day, weekly patterns)
-- Rolling averages (7-day, 30-day)
-- Multi-day forecasting
-
-**Usage:**
-```python
-from ml_trend_forecaster import TrendForecaster
-
-forecaster = TrendForecaster(spark)
-
-# Train model
-model, assembler, historical_df = forecaster.train_forecasting_model(df, forecast_days=7)
-
-# Forecast future
-forecasts = forecaster.forecast_future_trends(
-    model, assembler, historical_df, forecast_days=7
-)
-
-# Analyze trends by category
-trends = forecaster.analyze_trends_by_category(df)
-```
-
-**Temporal Features:**
-- Day index (sequential)
-- Day of week
-- Day of month
-- Month
-- Lag features (1-day, 7-day)
-- Rolling averages (7-day, 30-day)
+**Note:** Currently uses synthetic user data. 
 
 ## 🔧 Integration with Existing Code
 
 The ML components are designed to work **alongside** the existing `daily_analytics.py` without modifying it:
 
 1. **Data Loading:** ML modules use the same `YCJobAnalytics` class for data loading
-2. **No Code Changes:** Original `daily_analytics.py` remains unchanged
-3. **Standalone Usage:** Each ML component can run independently
-4. **Pipeline Integration:** `ml_pipeline.py` orchestrates all components
+2. **Standalone Usage:** Each ML component can run independently
+3. **Pipeline Integration:** `ml_pipeline.py` orchestrates all components
 
 ### Example: Using ML with Existing Analytics
 
@@ -277,11 +195,6 @@ ml_results = ml.run_job_classification(df)
 - Categories: 8 job categories
 - Training Time: ~2-5 minutes for 1000+ jobs
 
-**Salary Prediction:**
-- RMSE: $15,000-$25,000 (depends on salary range)
-- R² Score: 0.6-0.8
-- Requires: Jobs with salary data
-
 **Skill Extraction:**
 - Vocabulary: 100+ known skills
 - Extraction Rate: 5-15 skills per job
@@ -292,10 +205,6 @@ ml_results = ml.run_job_classification(df)
 - Users: Configurable (default: 100 synthetic users)
 - Recommendations: Top 10 per user
 
-**Trend Forecasting:**
-- RMSE: 2-5 jobs/day (depends on posting volume)
-- R² Score: 0.7-0.9
-- Forecast Horizon: 1-30 days
 
 ## 🛠️ Requirements
 
@@ -324,20 +233,6 @@ Java 8+ is required for Spark to run.
 ✅ Model Accuracy: 82.50%
 ```
 
-### Salary Prediction
-```
-💰 Training Salary Predictor (Linear Regression)...
-📊 Found 45 jobs with salary information
-
-💰 Salary Statistics (Training Set):
-   • Average: $125,000
-   • Range: $80,000 - $200,000
-
-✅ Model Performance:
-   • RMSE: $18,500
-   • R² Score: 74.20%
-```
-
 ### Skill Extraction
 ```
 🛠️ Extracting top 20 skills from job descriptions...
@@ -362,18 +257,6 @@ Java 8+ is required for Spark to run.
    ...
 ```
 
-### Trend Forecasting
-```
-📅 Forecasted Job Postings:
-   • 2025-10-06: 12.3 jobs
-   • 2025-10-07: 11.8 jobs
-   • 2025-10-08: 13.1 jobs
-   ...
-
-📊 Total Forecast: 88.5 jobs over 7 days
-   Average: 12.6 jobs/day
-```
-
 ## 🔄 Pipeline Execution
 
 The complete pipeline can be run with all components:
@@ -384,24 +267,17 @@ python ml_pipeline.py --days-back 7 --save
 
 This will:
 1. Load job data from the last 7 days
-2. Run all 5 ML components sequentially
+2. Run all 3 ML components sequentially
 3. Display results and metrics
 4. Save summary to `./ml_results/`
 
 ## 🎓 MLlib Components Used
 
 - **Classification:** `RandomForestClassifier`
-- **Regression:** `LinearRegression`
 - **Clustering:** `KMeans`
 - **Recommendation:** `ALS` (Alternating Least Squares)
 - **Feature Engineering:** `Tokenizer`, `StopWordsRemover`, `CountVectorizer`, `HashingTF`, `IDF`, `NGram`, `StringIndexer`, `VectorAssembler`
 - **Evaluation:** `MulticlassClassificationEvaluator`, `RegressionEvaluator`
-
-## 📚 Further Reading
-
-- [Apache Spark MLlib Guide](https://spark.apache.org/docs/latest/ml-guide.html)
-- [PySpark MLlib Documentation](https://spark.apache.org/docs/latest/api/python/reference/pyspark.ml.html)
-- [Collaborative Filtering with ALS](https://spark.apache.org/docs/latest/ml-collaborative-filtering.html)
 
 ## ⚠️ Notes
 
