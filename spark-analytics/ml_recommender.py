@@ -5,7 +5,7 @@ Recommends jobs to users/candidates based on implicit feedback and job similarit
 """
 
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import *
+from pyspark.sql.functions import col, when, concat_ws, coalesce, lit, monotonically_increasing_id
 from pyspark.sql.types import *
 from pyspark.ml.recommendation import ALS
 from pyspark.ml.evaluation import RegressionEvaluator
@@ -18,6 +18,32 @@ class JobRecommender:
     
     def __init__(self, spark_session):
         self.spark = spark_session
+    
+    def load_user_interactions(self, users_csv_path):
+        """Load user-job interaction data from CSV file"""
+        print(f"\n👥 Loading user interactions from: {users_csv_path}")
+        
+        import os
+        if not os.path.exists(users_csv_path):
+            print(f"❌ File not found: {users_csv_path}")
+            return None
+        
+        # Load users CSV
+        # Expected columns: user_id, job_id, rating (and possibly job_index)
+        interactions_df = self.spark.read.csv(
+            users_csv_path,
+            header=True,
+            inferSchema=True
+        )
+        
+        print(f"✅ Loaded {interactions_df.count()} user-job interactions")
+        print(f"📊 Columns: {interactions_df.columns}")
+        
+        # Show sample
+        print("\n🔍 Sample interactions:")
+        interactions_df.show(5, truncate=False)
+        
+        return interactions_df
     
     def create_user_job_interactions(self, df, num_users=100):
         """Create synthetic user-job interaction data for collaborative filtering"""
@@ -124,7 +150,7 @@ class JobRecommender:
         
         return interactions_df, jobs_list
     
-    def prepare_recommendation_data(self, df, num_users=100):
+    def prepare_recommendation_data(self, df, users_csv_path=None, num_users=100):
         """Prepare data for collaborative filtering"""
         print("\n🎯 Preparing data for collaborative filtering...")
         
@@ -137,20 +163,26 @@ class JobRecommender:
         
         df_indexed = job_indexer.fit(df).transform(df)
         
-        # Create user-job interactions
-        interactions_df, job_list = self.create_user_job_interactions(df, num_users)
+        # Load or create user-job interactions
+        if users_csv_path:
+            print("📂 Using provided users.csv file")
+            interactions_df = self.load_user_interactions(users_csv_path)
+            job_list = None  # Not needed when loading from CSV
+        else:
+            print("🔄 Generating synthetic interactions (legacy mode)")
+            interactions_df, job_list = self.create_user_job_interactions(df, num_users)
         
         if interactions_df is None:
             return None, None, None
         
         return df_indexed, interactions_df, job_indexer
     
-    def train_recommender(self, df, num_users=100, implicit_prefs=True):
+    def train_recommender(self, df, users_csv_path=None, num_users=100, implicit_prefs=True, output_path=None):
         """Train ALS recommendation model"""
         print("\n🎯 Training Job Recommender (Collaborative Filtering - ALS)...")
         
         # Prepare data
-        df_indexed, interactions_df, job_indexer = self.prepare_recommendation_data(df, num_users)
+        df_indexed, interactions_df, job_indexer = self.prepare_recommendation_data(df, users_csv_path, num_users)
         
         if interactions_df is None:
             print("❌ Failed to prepare recommendation data")
@@ -201,6 +233,20 @@ class JobRecommender:
             for row in sample_recs:
                 print(f"   User {row['user_id']}, Job {row['job_index']}: "
                       f"Actual={row['rating']:.1f}, Predicted={row['prediction']:.2f}")
+        
+        # Save predictions to CSV if output_path provided
+        if output_path and predictions_filtered and predictions_filtered.count() > 0:
+            print(f"\n💾 Saving recommendations to: {output_path}")
+            predictions_filtered.select(
+                "user_id",
+                "job_index", 
+                "rating",
+                "prediction"
+            ).coalesce(1).write.mode("overwrite").csv(
+                output_path,
+                header=True
+            )
+            print(f"✅ Recommendations saved to: {output_path}")
         
         return model, job_indexer, predictions
     
@@ -288,6 +334,7 @@ class JobRecommender:
 def main():
     """Standalone testing"""
     from data_loader import DataLoader
+    import os
     
     loader = DataLoader()
     
@@ -298,8 +345,32 @@ def main():
         if df and df.count() > 0:
             recommender = JobRecommender(loader.spark)
             
+            # Paths for input and output
+            users_csv_path = os.path.join(loader.data_dir, "users.csv")
+            output_path = os.path.join(loader.data_dir, "output_recommendation.csv")
+            
+            # Check if users.csv exists
+            if os.path.exists(users_csv_path):
+                print(f"📂 Found users.csv at: {users_csv_path}")
+                use_csv = True
+            else:
+                print(f"⚠️  users.csv not found at: {users_csv_path}")
+                print("🔄 Will generate synthetic data instead")
+                use_csv = False
+            
             # Train model
-            model, job_indexer, predictions = recommender.train_recommender(df, num_users=50)
+            if use_csv:
+                model, job_indexer, predictions = recommender.train_recommender(
+                    df, 
+                    users_csv_path=users_csv_path,
+                    output_path=output_path
+                )
+            else:
+                model, job_indexer, predictions = recommender.train_recommender(
+                    df, 
+                    num_users=50,
+                    output_path=output_path
+                )
             
             if model:
                 # Get recommendations for a user
@@ -308,6 +379,8 @@ def main():
                 )
                 
                 print("\n✅ Job recommendation completed successfully!")
+                if use_csv:
+                    print(f"📊 Recommendations saved to: {output_path}")
         else:
             print("📭 No data available for recommendations")
     
@@ -317,4 +390,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
