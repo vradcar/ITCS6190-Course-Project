@@ -4,7 +4,7 @@ This directory contains the machine learning components integrated with the YC J
 
 ## 🎯 Overview
 
-The ML pipeline includes five comprehensive machine learning features:
+The ML pipeline includes three comprehensive machine learning features:
 
 1. **Job Classification** - Random Forest classifier for categorizing jobs
 2. **Skill Extraction** - NLP-based skill mining from job descriptions
