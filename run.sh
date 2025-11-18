@@ -1,12 +1,20 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# This script is meant to be run from the spark-analytics directory
+# Find repo root (where this script lives) and spark-analytics folder
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+SPARK_DIR="$ROOT_DIR/spark-analytics"
+
+if [ ! -d "$SPARK_DIR" ]; then
+  echo "❌ spark-analytics directory not found at: $SPARK_DIR"
+  exit 1
+fi
+
+cd "$SPARK_DIR"
+
+# Basic sanity check
 if [ ! -f "requirements.txt" ]; then
-  echo "❌ Please run this script from the spark-analytics directory."
-  echo "   Example:"
-  echo "     cd spark-analytics"
-  echo "     ./run.sh"
+  echo "❌ requirements.txt not found in $SPARK_DIR"
   exit 1
 fi
 
@@ -28,7 +36,7 @@ activate_venv() {
 }
 
 setup_env() {
-  echo "[*] Setting up virtual environment and dependencies..."
+  echo "[*] Setting up virtual environment and dependencies in $SPARK_DIR..."
 
   if [ ! -d ".venv" ]; then
     echo "    - Creating .venv..."
@@ -49,8 +57,15 @@ setup_env() {
 run_batch() {
   echo "[*] Running batch analytics (main.py)..."
   activate_venv
-  "$PYTHON_BIN" main.py
-  echo "[✓] Batch analytics finished."
+
+  # Run main.py but don't let a failure kill the whole script
+  if "$PYTHON_BIN" main.py; then
+    echo "[✓] Batch analytics finished."
+  else
+    echo "[!] Batch analytics FAILED (non-zero exit code)."
+    echo "[!] See the error above from Spark / main.py."
+    echo "[!] Continuing to streaming anyway..."
+  fi
 }
 
 run_streaming() {
