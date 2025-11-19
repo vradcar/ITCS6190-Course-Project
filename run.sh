@@ -55,15 +55,13 @@ setup_env() {
 }
 
 run_batch() {
-  echo "[*] Running batch analytics (main.py)..."
+  echo "[*] Running batch + ML analytics (main.py)..."
   activate_venv
 
-  # Run main.py but don't let a failure kill the whole script
   if "$PYTHON_BIN" main.py; then
-    echo "[✓] Batch analytics finished."
+    echo "[✓] Batch + ML analytics finished."
   else
-    echo "[!] Batch analytics FAILED (non-zero exit code)."
-    echo "[!] See the error above from Spark / main.py."
+    echo "[!] Batch + ML analytics FAILED (see error above)."
     echo "[!] Continuing to streaming anyway..."
   fi
 }
@@ -115,9 +113,9 @@ case "$COMMAND" in
     ;;
   *)
     echo "Usage: ./run.sh [all|setup|batch|streaming]"
-    echo "  all        (default) setup env + batch + streaming"
+    echo "  all        (default) setup env + batch + ML + streaming"
     echo "  setup      only create venv and install deps"
-    echo "  batch      only run main.py"
+    echo "  batch      only run main.py (batch + ML analytics)"
     echo "  streaming  only run processor + simulator"
     ;;
 esac
