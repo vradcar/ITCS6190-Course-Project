@@ -1,121 +1,114 @@
 #!/usr/bin/env bash
-set -euo pipefail
 
-# Find repo root (where this script lives) and spark-analytics folder
-ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-SPARK_DIR="$ROOT_DIR/spark-analytics"
+# Orchestrator for:
+#  1) Batch analytics (main.py)
+#  2) ML pipeline (ml_pipeline.py)
+#  3) Spark Structured Streaming demo (streaming_processor + streaming_data_simulator)
 
-if [ ! -d "$SPARK_DIR" ]; then
-  echo "❌ spark-analytics directory not found at: $SPARK_DIR"
-  exit 1
-fi
+# --------------------------
+# Resolve paths
+# --------------------------
+PROJECT_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+SPARK_DIR="$PROJECT_ROOT/spark-analytics"
+VENV_DIR="$SPARK_DIR/.venv"
 
-cd "$SPARK_DIR"
+echo "============================================================"
+echo "ENVIRONMENT SETUP"
+echo "============================================================"
+echo "Project root   : $PROJECT_ROOT"
+echo "Spark folder   : $SPARK_DIR"
+echo "Virtualenv     : $VENV_DIR"
+echo
 
-# Basic sanity check
-if [ ! -f "requirements.txt" ]; then
-  echo "❌ requirements.txt not found in $SPARK_DIR"
-  exit 1
-fi
-
-# Detect python (Codespaces usually has python3)
-if command -v python3 >/dev/null 2>&1; then
-  PYTHON_BIN="${PYTHON_BIN:-python3}"
+# --------------------------
+# Activate virtualenv (if present)
+# --------------------------
+if [ -d "$VENV_DIR" ]; then
+  echo "🔹 Activating virtualenv at $VENV_DIR"
+  # shellcheck disable=SC1090
+  source "$VENV_DIR/bin/activate"
 else
-  PYTHON_BIN="${PYTHON_BIN:-python}"
+  echo "⚠️  No virtualenv found at $VENV_DIR"
+  echo "   You can create one with:"
+  echo "     cd spark-analytics"
+  echo "     python -m venv .venv"
+  echo "     source .venv/bin/activate"
+  echo "     pip install pyspark"
+  echo
 fi
 
-activate_venv() {
-  if [ -f ".venv/bin/activate" ]; then
-    # shellcheck disable=SC1091
-    source .venv/bin/activate
-  elif [ -f ".venv/Scripts/activate" ]; then
-    # shellcheck disable=SC1091
-    source .venv/Scripts/activate
-  fi
-}
-
-setup_env() {
-  echo "[*] Setting up virtual environment and dependencies in $SPARK_DIR..."
-
-  if [ ! -d ".venv" ]; then
-    echo "    - Creating .venv..."
-    "$PYTHON_BIN" -m venv .venv
-  else
-    echo "    - .venv already exists, reusing it."
-  fi
-
-  activate_venv
-
-  echo "    - Upgrading pip and installing requirements..."
-  pip install --upgrade pip
-  pip install -r requirements.txt
-
-  echo "[✓] Environment ready."
-}
-
-run_batch() {
-  echo "[*] Running batch + ML analytics (main.py)..."
-  activate_venv
-
-  if "$PYTHON_BIN" main.py; then
-    echo "[✓] Batch + ML analytics finished."
-  else
-    echo "[!] Batch + ML analytics FAILED (see error above)."
-    echo "[!] Continuing to streaming anyway..."
-  fi
-}
-
-run_streaming() {
-  echo "[*] Starting streaming demo (processor + simulator)..."
-  activate_venv
-
-  mkdir -p streaming_input
-
-  echo "    - Launching streaming processor in background..."
-  "$PYTHON_BIN" streaming_processor.py &
-  PROC_PID=$!
-
-  sleep 5
-
-  echo "    - Launching streaming data simulator in background..."
-  "$PYTHON_BIN" streaming_data_simulator.py &
-  SIM_PID=$!
-
+# --------------------------
+# Verify pyspark is installed
+# --------------------------
+if ! python -c "import pyspark" >/dev/null 2>&1; then
+  echo "❌ pyspark is NOT available in the current Python environment."
+  echo "   From the spark-analytics folder, run once:"
+  echo "       source .venv/bin/activate      # if not already"
+  echo "       python -m pip install --upgrade pip"
+  echo "       python -m pip install pyspark"
   echo
-  echo "[*] Streaming demo is running."
-  echo "    - Processor PID : $PROC_PID"
-  echo "    - Simulator PID : $SIM_PID"
-  echo "Press Ctrl+C to stop both."
+  echo "After installing, re-run: ./run.sh"
+  exit 1
+fi
 
-  trap 'echo; echo "[*] Stopping streaming jobs..."; kill "$PROC_PID" "$SIM_PID" 2>/dev/null || true; exit 0' INT
+echo "✅ pyspark is available."
+echo
 
-  wait "$PROC_PID" "$SIM_PID"
-}
+cd "$SPARK_DIR" || exit 1
 
-# Default behavior: run EVERYTHING
-COMMAND="${1:-all}"
+# --------------------------
+# STEP 1: Batch analytics (main.py)
+# --------------------------
+echo "============================================================"
+echo "STEP 1: Batch analytics (main.py)"
+echo "============================================================"
+python main.py
+if [ $? -ne 0 ]; then
+  echo "[!] Batch analytics FAILED (see error above)."
+  echo "[!] Continuing to ML + streaming anyway..."
+fi
+echo
 
-case "$COMMAND" in
-  all)
-    setup_env
-    run_batch
-    run_streaming
-    ;;
-  setup)
-    setup_env
-    ;;
-  batch)
-    run_batch
-    ;;
-  streaming)
-    run_streaming
-    ;;
-  *)
-    echo "Usage: ./run.sh [all|setup|batch|streaming]"
-    echo "  all        (default) setup env + batch + ML + streaming"
-    echo "  setup      only create venv and install deps"
-    echo "  batch      only run main.py (batch + ML analytics)"
-    echo "  streaming  only run processor + simulator"
-    ;;
-esac
+# --------------------------
+# STEP 2: ML pipeline (ml_pipeline.py)
+#       Uses your MLPipeline + DataLoader + JobClassifier + SkillExtractor + JobRecommender
+# --------------------------
+echo "============================================================"
+echo "STEP 2: ML pipeline (ml_pipeline.py)"
+echo "============================================================"
+python ml_pipeline.py --save
+if [ $? -ne 0 ]; then
+  echo "[!] ML pipeline FAILED (see error above)."
+  echo "[!] Continuing to streaming anyway..."
+fi
+echo
+
+# --------------------------
+# STEP 3: Spark Structured Streaming demo
+# --------------------------
+echo "============================================================"
+echo "STEP 3: Spark Structured Streaming demo"
+echo "============================================================"
+
+echo "    - Launching streaming processor in background..."
+python streaming_processor.py &
+PROCESSOR_PID=$!
+
+echo "    - Launching streaming data simulator in background..."
+python streaming_data_simulator.py &
+SIMULATOR_PID=$!
+
+echo
+echo "[*] Streaming demo is running."
+echo "    - Processor PID : $PROCESSOR_PID"
+echo "    - Simulator PID : $SIMULATOR_PID"
+echo "Press Ctrl+C to stop both."
+echo
+
+# Clean shutdown on Ctrl+C
+trap "echo; echo '[*] Stopping streaming jobs...'; kill $PROCESSOR_PID $SIMULATOR_PID 2>/dev/null || true; exit 0" SIGINT
+
+# Keep script alive so background jobs keep running
+while true; do
+  sleep 5
+done
