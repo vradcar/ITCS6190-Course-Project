@@ -9,17 +9,10 @@ from pyspark.sql.functions import col, concat_ws, lit, row_number
 from pyspark.ml.feature import RegexTokenizer, CountVectorizer, IDF
 from sklearn.preprocessing import normalize
 
-# ---------------------------------------------------------
-# Import postings loader from the SAME folder
-# ---------------------------------------------------------
 from data_loader import DataLoader
 
-# ---------------------------------------------------------
-# Paths for Codespaces repo layout
-# ---------------------------------------------------------
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))          
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.abspath(os.path.join(BASE_DIR, "..", "data"))
-
 USERS_FILE = os.path.join(DATA_DIR, "users.csv")
 
 TRAIN_ROWS = 1000
@@ -29,9 +22,9 @@ TEXT_COLS = [
     "title",
     "description_text",
     "location",
-    "job_type",
+    "formatted_work_type",
     "application_type",
-    "experience_level"
+    "formatted_experience_level"
 ]
 
 HIGH_RATING_THRESHOLD = 3.0
@@ -40,51 +33,33 @@ TOP_N_RECOMMENDATIONS = 5
 
 
 def main():
-
-    # -----------------------------
-    # Start Spark
-    # -----------------------------
     spark = SparkSession.builder \
         .appName("SparkTFIDFRecommender") \
         .config("spark.driver.memory", "4g") \
         .getOrCreate()
 
-    # --------------------------------------------------------
-    # Use your DataLoader (automatically finds postings_cleaned.csv)
-    # --------------------------------------------------------
     loader = DataLoader(spark_session=spark)
     postings = loader.load_postings()
-
     print("✔ Loaded postings from data_loader.py")
 
-    # --------------------------------------------------------
-    # Add row indices (0-based)
-    # --------------------------------------------------------
     window = Window.orderBy(lit(1))
     postings = postings.withColumn("row_temp", row_number().over(window))
     postings = postings.withColumn("row_idx", col("row_temp") - 1).drop("row_temp")
 
-    # --------------------------------------------------------
-    # Train/test split
-    # --------------------------------------------------------
     train = postings.filter((col("row_idx") >= 0) & (col("row_idx") < TRAIN_ROWS))
     test  = postings.filter((col("row_idx") >= TRAIN_ROWS) & (col("row_idx") < TRAIN_ROWS + TEST_ROWS))
 
     print(f"Train count = {train.count()}, Test count = {test.count()}")
 
-    # --------------------------------------------------------
-    # Build text column
-    # --------------------------------------------------------
     for c in TEXT_COLS:
-        if c not in postings.columns:
-            postings = postings.withColumn(c, lit(""))
+        if c not in train.columns:
+            train = train.withColumn(c, lit(""))
+        if c not in test.columns:
+            test = test.withColumn(c, lit(""))
 
     train = train.withColumn("text", concat_ws(" ", *[col(c) for c in TEXT_COLS]))
     test  = test.withColumn("text", concat_ws(" ", *[col(c) for c in TEXT_COLS]))
 
-    # --------------------------------------------------------
-    # TF–IDF Pipeline (Spark)
-    # --------------------------------------------------------
     tokenizer = RegexTokenizer(inputCol="text", outputCol="tokens", pattern="\\W+")
     train_tok = tokenizer.transform(train)
     test_tok = tokenizer.transform(test)
@@ -105,9 +80,6 @@ def main():
     train_tfidf = idf_model.transform(train_cv).select("job_id", "row_idx", "features")
     test_tfidf  = idf_model.transform(test_cv).select("job_id", "row_idx", "features")
 
-    # --------------------------------------------------------
-    # Collect to numpy for similarity computation
-    # --------------------------------------------------------
     train_vecs = train_tfidf.orderBy("row_idx").rdd.map(lambda r: (int(r["job_id"]), r["features"].toArray())).collect()
     test_vecs  = test_tfidf.orderBy("row_idx").rdd.map(lambda r: (int(r["job_id"]), r["features"].toArray())).collect()
 
@@ -122,31 +94,25 @@ def main():
 
     sim_matrix = np.dot(train_norm, test_norm.T)
 
-    # --------------------------------------------------------
-    # Load users.csv (only file loaded here)
-    # --------------------------------------------------------
     users = pd.read_csv(USERS_FILE)
     print("✔ Loaded users.csv")
 
-    # --------------------------------------------------------
-    # Recommendation Logic
-    # --------------------------------------------------------
+    test_desc_map = {
+        int(row["job_id"]): row["description_text"]
+        for row in test.select("job_id", "description_text").collect()
+    }
+
     recommendations = []
 
     for user_id, group in users.groupby("user_id"):
-
         liked_train_indices = []
 
         for _, r in group.iterrows():
-
             if r["rating"] >= HIGH_RATING_THRESHOLD:
-
-                job_idx = int(r["job_index"])  # this is a 0-based row index
-
+                job_idx = int(r["job_index"])
                 if 0 <= job_idx < TRAIN_ROWS:
                     liked_train_indices.append((job_idx, r["rating"]))
 
-        # If no training likes, give empty list
         if not liked_train_indices:
             recommendations.append({
                 "user_id": user_id,
@@ -156,11 +122,8 @@ def main():
 
         scores = {}
 
-        # Score each test job based on similarity to liked train jobs
         for train_idx, rating in liked_train_indices:
-
             similar_test_indices = np.argsort(sim_matrix[train_idx])[-TOP_K_PER_TRAIN:][::-1]
-
             for test_i in similar_test_indices:
                 weight = sim_matrix[train_idx][test_i] * (rating / 5.0)
                 scores[test_i] = max(scores.get(test_i, 0), weight)
@@ -170,17 +133,20 @@ def main():
 
         recommended_ids = [test_job_ids[idx] for idx, _ in topN]
 
+        # ------------------------------
+        # NEW: Format as "job_id - job_description"
+        # ------------------------------
+        recommended_text = [
+            f"{job_id} - {test_desc_map.get(job_id, '')}" for job_id in recommended_ids
+        ]
+
         recommendations.append({
             "user_id": user_id,
-            "recommended_jobs": recommended_ids
+            "recommended_jobs": recommended_text
         })
 
-    # --------------------------------------------------------
-    # Save results
-    # --------------------------------------------------------
     out_path = os.path.join(DATA_DIR, "recommendations.csv")
     pd.DataFrame(recommendations).to_csv(out_path, index=False)
-
     print(f"✔ Saved recommendations to: {out_path}")
 
     spark.stop()
