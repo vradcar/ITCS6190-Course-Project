@@ -57,8 +57,12 @@ class SkillExtractor:
                 'microservices', 'serverless', 'containerization', 'orchestration'
             ]
         }
+        
+        # Broadcast known_skills to workers
+        self.known_skills_broadcast = self.spark.sparkContext.broadcast(self.known_skills)
     
-    def extract_skill_patterns(self, text):
+    @staticmethod
+    def extract_skill_patterns(text, known_skills):
         """Extract skills using pattern matching"""
         if not text:
             return []
@@ -67,7 +71,7 @@ class SkillExtractor:
         found_skills = []
         
         # Check each skill category
-        for category, skills in self.known_skills.items():
+        for category, skills in known_skills.items():
             for skill in skills:
                 # Use word boundary matching for better accuracy
                 pattern = r'\b' + re.escape(skill) + r'\b'
@@ -99,7 +103,11 @@ class SkillExtractor:
         )
         
         # Extract known skills
-        extract_skills_udf = udf(self.extract_skill_patterns, ArrayType(StringType()))
+        known_skills_bc = self.known_skills_broadcast
+        extract_skills_udf = udf(
+            lambda text: SkillExtractor.extract_skill_patterns(text, known_skills_bc.value),
+            ArrayType(StringType())
+        )
         df = df.withColumn("extracted_skills", extract_skills_udf(col("clean_text")))
         
         # Count skills per job
@@ -275,16 +283,16 @@ class SkillExtractor:
 
 def main():
     """Standalone testing"""
-    from daily_analytics import YCJobAnalytics
+    from data_loader import DataLoader
     
-    analytics = YCJobAnalytics()
+    loader = DataLoader()
     
     try:
         # Load data
-        df = analytics.load_data_from_worker()
+        df = loader.load_postings()
         
         if df and df.count() > 0:
-            extractor = SkillExtractor(analytics.spark)
+            extractor = SkillExtractor(loader.spark)
             
             # Extract top skills
             top_skills = extractor.extract_top_skills(df)
@@ -300,9 +308,8 @@ def main():
             print("📭 No data available for skill extraction")
     
     finally:
-        analytics.cleanup()
+        loader.cleanup()
 
 
 if __name__ == "__main__":
     main()
-

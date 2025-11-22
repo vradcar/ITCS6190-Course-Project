@@ -13,13 +13,11 @@ from datetime import datetime, timedelta
 
 # Import ML modules
 from ml_job_classifier import JobClassifier
-from ml_salary_predictor import SalaryPredictor
 from ml_skill_extractor import SkillExtractor
 from ml_recommender import JobRecommender
-from ml_trend_forecaster import TrendForecaster
 
-# Import existing analytics (for data loading)
-from daily_analytics import YCJobAnalytics
+# Import data loader
+from data_loader import DataLoader
 
 
 class MLPipeline:
@@ -27,43 +25,27 @@ class MLPipeline:
     
     def __init__(self):
         """Initialize ML pipeline with Spark session"""
-        # Reuse existing analytics session
-        self.analytics = YCJobAnalytics()
-        self.spark = self.analytics.spark
+        # Initialize data loader
+        self.data_loader = DataLoader()
+        self.spark = self.data_loader.spark
         
         # Initialize ML components
         self.job_classifier = JobClassifier(self.spark)
-        self.salary_predictor = SalaryPredictor(self.spark)
         self.skill_extractor = SkillExtractor(self.spark)
         self.job_recommender = JobRecommender(self.spark)
-        self.trend_forecaster = TrendForecaster(self.spark)
         
         print("✅ ML Pipeline initialized")
     
     def load_data(self, date_str=None, days_back=7):
-        """Load job data from multiple sources"""
-        print("\n📥 Loading job data...")
+        """Load job data from CSV files"""
+        print("\n📥 Loading job data from CSV files...")
         
-        if date_str:
-            # Load specific date
-            df = self.analytics.load_data_from_worker(date_str)
-            if df and df.count() > 0:
-                return df
-        else:
-            # Load multiple days for better ML training
-            all_data = []
-            for i in range(days_back):
-                date = (datetime.now() - timedelta(days=i)).strftime("%Y-%m-%d")
-                df = self.analytics.load_data_from_worker(date)
-                if df and df.count() > 0:
-                    all_data.append(df)
-            
-            if all_data:
-                combined_df = all_data[0]
-                for df in all_data[1:]:
-                    combined_df = combined_df.union(df)
-                print(f"✅ Loaded {combined_df.count()} jobs from {len(all_data)} days")
-                return combined_df
+        # Load postings data
+        df = self.data_loader.load_postings()
+        
+        if df and df.count() > 0:
+            print(f"✅ Loaded {df.count()} job postings")
+            return df
         
         print("⚠️  No data loaded")
         return None
@@ -86,27 +68,6 @@ class MLPipeline:
             return model, classified_df
         
         return None, None
-    
-    def run_salary_prediction(self, df):
-        """Run salary prediction using Linear Regression"""
-        print("\n" + "="*60)
-        print("💰 Salary Prediction (Linear Regression)")
-        print("="*60)
-        
-        if df is None or df.count() == 0:
-            print("❌ No data available for salary prediction")
-            return None, None, None
-        
-        model, feature_pipeline, predictions = self.salary_predictor.train_predictor(df)
-        
-        if model:
-            # Predict salaries for all jobs
-            predicted_df = self.salary_predictor.predict_salaries(
-                model, feature_pipeline, df
-            )
-            return model, feature_pipeline, predicted_df
-        
-        return None, None, None
     
     def run_skill_extraction(self, df):
         """Run skill extraction using NLP"""
@@ -154,33 +115,6 @@ class MLPipeline:
         
         return None, None, None
     
-    def run_trend_forecasting(self, df):
-        """Run trend forecasting using Time-series Analysis"""
-        print("\n" + "="*60)
-        print("📈 Trend Forecasting (Time-series Analysis)")
-        print("="*60)
-        
-        if df is None or df.count() == 0:
-            print("❌ No data available for trend forecasting")
-            return None, None, None
-        
-        model, assembler, historical_df = self.trend_forecaster.train_forecasting_model(
-            df, forecast_days=7
-        )
-        
-        if model:
-            # Forecast future trends
-            forecasts = self.trend_forecaster.forecast_future_trends(
-                model, assembler, historical_df, forecast_days=7
-            )
-            
-            # Analyze trends by category
-            trends = self.trend_forecaster.analyze_trends_by_category(df)
-            
-            return model, assembler, forecasts
-        
-        return None, None, None
-    
     def run_full_pipeline(self, date_str=None, days_back=7, components=None):
         """Run complete ML pipeline with all components"""
         print("\n" + "="*70)
@@ -200,7 +134,7 @@ class MLPipeline:
         
         # Determine which components to run
         if components is None:
-            components = ['classification', 'salary', 'skills', 'recommendation', 'forecasting']
+            components = ['classification', 'skills', 'recommendation']
         
         # 1. Job Classification
         if 'classification' in components:
@@ -213,19 +147,7 @@ class MLPipeline:
             except Exception as e:
                 print(f"❌ Error in job classification: {e}")
         
-        # 2. Salary Prediction
-        if 'salary' in components:
-            try:
-                salary_model, feature_pipeline, predicted_df = self.run_salary_prediction(df)
-                results['salary'] = {
-                    'model': salary_model,
-                    'feature_pipeline': feature_pipeline,
-                    'predictions': predicted_df
-                }
-            except Exception as e:
-                print(f"❌ Error in salary prediction: {e}")
-        
-        # 3. Skill Extraction
+        # 2. Skill Extraction
         if 'skills' in components:
             try:
                 clustered_df, cluster_model, tfidf_model = self.run_skill_extraction(df)
@@ -237,7 +159,7 @@ class MLPipeline:
             except Exception as e:
                 print(f"❌ Error in skill extraction: {e}")
         
-        # 4. Recommendation System
+        # 3. Recommendation System
         if 'recommendation' in components:
             try:
                 rec_model, job_indexer, recommendations = self.run_recommendation_system(df)
@@ -248,18 +170,6 @@ class MLPipeline:
                 }
             except Exception as e:
                 print(f"❌ Error in recommendation system: {e}")
-        
-        # 5. Trend Forecasting
-        if 'forecasting' in components:
-            try:
-                forecast_model, assembler, forecasts = self.run_trend_forecasting(df)
-                results['forecasting'] = {
-                    'model': forecast_model,
-                    'assembler': assembler,
-                    'forecasts': forecasts
-                }
-            except Exception as e:
-                print(f"❌ Error in trend forecasting: {e}")
         
         print("\n" + "="*70)
         print("✅ ML Pipeline Complete!")
@@ -291,7 +201,7 @@ class MLPipeline:
     
     def cleanup(self):
         """Clean up resources"""
-        self.analytics.cleanup()
+        self.data_loader.cleanup()
 
 
 def main():
@@ -300,7 +210,7 @@ def main():
     parser.add_argument("--date", type=str, help="Date to analyze (YYYY-MM-DD)")
     parser.add_argument("--days-back", type=int, default=7, help="Number of days to load for training")
     parser.add_argument("--components", type=str, nargs="+",
-                       choices=['classification', 'salary', 'skills', 'recommendation', 'forecasting'],
+                       choices=['classification', 'skills', 'recommendation'],
                        help="ML components to run (default: all)")
     parser.add_argument("--save", action="store_true", help="Save results to disk")
     
@@ -327,4 +237,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

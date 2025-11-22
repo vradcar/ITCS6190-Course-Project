@@ -19,9 +19,17 @@ class JobClassifier:
     
     def __init__(self, spark_session):
         self.spark = spark_session
+    
+    @staticmethod
+    def categorize_job_title(title):
+        """Map job title to category based on keywords"""
+        if not title:
+            return 'Other'
+        
+        title_lower = title.lower()
         
         # Define job categories based on title keywords
-        self.job_categories = {
+        job_categories = {
             'Software Engineer': ['engineer', 'developer', 'programmer', 'software', 'fullstack', 'full-stack', 'backend', 'frontend', 'devops'],
             'Data Scientist': ['data scientist', 'data engineer', 'data analyst', 'ml engineer', 'ai engineer', 'machine learning'],
             'Product Manager': ['product manager', 'product', 'pm', 'product owner'],
@@ -32,15 +40,8 @@ class JobClassifier:
             'Other': []  # Default category
         }
         
-    def categorize_job_title(self, title):
-        """Map job title to category based on keywords"""
-        if not title:
-            return 'Other'
-        
-        title_lower = title.lower()
-        
         # Check each category (ordered by specificity)
-        for category, keywords in self.job_categories.items():
+        for category, keywords in job_categories.items():
             if category == 'Other':
                 continue
             for keyword in keywords:
@@ -51,8 +52,8 @@ class JobClassifier:
     
     def prepare_features(self, df):
         """Prepare features from job title and description"""
-        # Add category label
-        categorize_udf = udf(self.categorize_job_title, StringType())
+        # Add category label using static method
+        categorize_udf = udf(JobClassifier.categorize_job_title, StringType())
         df = df.withColumn("job_category", categorize_udf(col("title")))
         
         # Combine title and description for feature extraction
@@ -129,7 +130,7 @@ class JobClassifier:
         
         # Combine features
         assembler = VectorAssembler(
-            inputCols=["text_features_vec", "location_index", "experience_index"],
+            inputCols=["text_features_vec", "experience_index"],
             outputCol="features"
         )
         
@@ -219,27 +220,26 @@ class JobClassifier:
 
 def main():
     """Standalone testing"""
-    from daily_analytics import YCJobAnalytics
+    from data_loader import DataLoader
     
-    analytics = YCJobAnalytics()
+    loader = DataLoader()
     
     try:
         # Load data
-        df = analytics.load_data_from_worker()
+        df = loader.load_postings()
         
         if df and df.count() > 0:
-            classifier = JobClassifier(analytics.spark)
+            classifier = JobClassifier(loader.spark)
             model, predictions = classifier.train_classifier(df)
             
             if model:
-                print("\n✅ Job classification completed successfully!")
+                print("\n✅ Job classification via RF completed successfully!")
         else:
             print("📭 No data available for classification")
     
     finally:
-        analytics.cleanup()
+        loader.cleanup()
 
 
 if __name__ == "__main__":
     main()
-
