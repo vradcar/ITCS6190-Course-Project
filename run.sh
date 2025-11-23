@@ -4,6 +4,12 @@
 #  1) Batch analytics (main.py)
 #  2) ML pipeline (ml_pipeline.py)
 #  3) Spark Structured Streaming demo (streaming_processor + streaming_data_simulator)
+#
+# Usage (from repo root):
+#   chmod +x run.sh
+#   ./run.sh
+
+set -Eeuo pipefail
 
 # --------------------------
 # Resolve paths
@@ -11,6 +17,7 @@
 PROJECT_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 SPARK_DIR="$PROJECT_ROOT/spark-analytics"
 VENV_DIR="$SPARK_DIR/.venv"
+REQUIREMENTS_FILE="$SPARK_DIR/requirements.txt"
 
 echo "============================================================"
 echo "ENVIRONMENT SETUP"
@@ -18,43 +25,94 @@ echo "============================================================"
 echo "Project root   : $PROJECT_ROOT"
 echo "Spark folder   : $SPARK_DIR"
 echo "Virtualenv     : $VENV_DIR"
+echo "Requirements   : $REQUIREMENTS_FILE"
 echo
 
 # --------------------------
-# Activate virtualenv (if present)
+# Pick Python (python3 > python)
 # --------------------------
-if [ -d "$VENV_DIR" ]; then
-  echo "🔹 Activating virtualenv at $VENV_DIR"
-  # shellcheck disable=SC1090
-  source "$VENV_DIR/bin/activate"
+if command -v python3 >/dev/null 2>&1; then
+  PYTHON="python3"
+elif command -v python >/dev/null 2>&1; then
+  PYTHON="python"
 else
-  echo "⚠️  No virtualenv found at $VENV_DIR"
-  echo "   You can create one with:"
-  echo "     cd spark-analytics"
-  echo "     python -m venv .venv"
-  echo "     source .venv/bin/activate"
-  echo "     pip install pyspark"
+  echo "❌ No python or python3 found on PATH. Please install Python."
+  exit 1
+fi
+
+echo "Using Python   : $PYTHON"
+echo
+
+# --------------------------
+# Create virtualenv if missing
+# --------------------------
+if [ ! -d "$VENV_DIR" ]; then
+  echo "🔹 Creating virtualenv at $VENV_DIR"
+  "$PYTHON" -m venv "$VENV_DIR"
+  echo
+else
+  echo "🔹 Virtualenv already exists at $VENV_DIR"
   echo
 fi
+
+# --------------------------
+# Activate virtualenv (Unix + Windows Git Bash)
+# --------------------------
+if [ -f "$VENV_DIR/bin/activate" ]; then
+  # shellcheck disable=SC1090
+  source "$VENV_DIR/bin/activate"
+elif [ -f "$VENV_DIR/Scripts/activate" ]; then
+  # shellcheck disable=SC1090
+  source "$VENV_DIR/Scripts/activate"
+else
+  echo "❌ Could not find activate script in:"
+  echo "   - $VENV_DIR/bin/activate"
+  echo "   - $VENV_DIR/Scripts/activate"
+  exit 1
+fi
+
+echo "✅ Virtualenv activated."
+echo
+
+# --------------------------
+# Install dependencies
+# --------------------------
+echo "============================================================"
+echo "DEPENDENCY INSTALL"
+echo "============================================================"
+
+pip install --upgrade pip >/dev/null
+
+if [ -f "$REQUIREMENTS_FILE" ]; then
+  echo "🔹 Installing from requirements.txt ..."
+  pip install -r "$REQUIREMENTS_FILE"
+else
+  echo "⚠️  No requirements.txt found at $REQUIREMENTS_FILE"
+  echo "   Installing pyspark only as a fallback..."
+  pip install pyspark
+fi
+
+echo
 
 # --------------------------
 # Verify pyspark is installed
 # --------------------------
-if ! python -c "import pyspark" >/dev/null 2>&1; then
-  echo "❌ pyspark is NOT available in the current Python environment."
-  echo "   From the spark-analytics folder, run once:"
-  echo "       source .venv/bin/activate      # if not already"
-  echo "       python -m pip install --upgrade pip"
-  echo "       python -m pip install pyspark"
-  echo
-  echo "After installing, re-run: ./run.sh"
-  exit 1
-fi
-
-echo "✅ pyspark is available."
+echo "🔍 Verifying pyspark import ..."
+$PYTHON - <<'PYCODE'
+try:
+    import pyspark  # noqa: F401
+    print("✅ pyspark import OK.")
+except Exception as e:
+    import sys
+    print("❌ pyspark import FAILED:", e, file=sys.stderr)
+    sys.exit(1)
+PYCODE
 echo
 
-cd "$SPARK_DIR" || exit 1
+cd "$SPARK_DIR" || {
+  echo "❌ Failed to cd into $SPARK_DIR"
+  exit 1
+}
 
 # --------------------------
 # STEP 1: Batch analytics (main.py)
@@ -62,24 +120,27 @@ cd "$SPARK_DIR" || exit 1
 echo "============================================================"
 echo "STEP 1: Batch analytics (main.py)"
 echo "============================================================"
-python main.py
-if [ $? -ne 0 ]; then
-  echo "[!] Batch analytics FAILED (see error above)."
-  echo "[!] Continuing to ML + streaming anyway..."
+if [ -f "main.py" ]; then
+  $PYTHON main.py || {
+    echo "[!] Batch analytics FAILED (see error above)."
+  }
+else
+  echo "⚠️  main.py not found in $SPARK_DIR, skipping batch analytics."
 fi
 echo
 
 # --------------------------
 # STEP 2: ML pipeline (ml_pipeline.py)
-#       Uses your MLPipeline + DataLoader + JobClassifier + SkillExtractor + JobRecommender
 # --------------------------
 echo "============================================================"
 echo "STEP 2: ML pipeline (ml_pipeline.py)"
 echo "============================================================"
-python ml_pipeline.py --save
-if [ $? -ne 0 ]; then
-  echo "[!] ML pipeline FAILED (see error above)."
-  echo "[!] Continuing to streaming anyway..."
+if [ -f "ml_pipeline.py" ]; then
+  $PYTHON ml_pipeline.py --save || {
+    echo "[!] ML pipeline FAILED (see error above)."
+  }
+else
+  echo "⚠️  ml_pipeline.py not found in $SPARK_DIR, skipping ML pipeline."
 fi
 echo
 
@@ -90,12 +151,18 @@ echo "============================================================"
 echo "STEP 3: Spark Structured Streaming demo"
 echo "============================================================"
 
+if [ ! -f "streaming_processor.py" ] || [ ! -f "streaming_data_simulator.py" ]; then
+  echo "⚠️  Streaming scripts not found (streaming_processor.py / streaming_data_simulator.py)."
+  echo "    Skipping streaming demo."
+  exit 0
+fi
+
 echo "    - Launching streaming processor in background..."
-python streaming_processor.py &
+$PYTHON streaming_processor.py &
 PROCESSOR_PID=$!
 
 echo "    - Launching streaming data simulator in background..."
-python streaming_data_simulator.py &
+$PYTHON streaming_data_simulator.py &
 SIMULATOR_PID=$!
 
 echo
