@@ -10,13 +10,15 @@ Outputs are written inside `spark-analytics/analytics_output`.
 """
 
 import os
+import sys
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import col, count, desc, avg, rank, collect_list
+from pyspark.sql.functions import col, count, desc, avg, rank
 from pyspark.sql.window import Window
+import matplotlib
+matplotlib.use("Agg")  # Headless environment safe backend
 import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
-from itertools import combinations
 
 
 def init_spark():
@@ -101,23 +103,29 @@ def run_queries(spark, job_skills, skill_map, job_industries, industry_map):
     return skills_by_industry, multi_skill_jobs, cross_industry_skills
 
 
-def persist_queries(skills_by_industry, multi_skill_jobs, cross_industry_skills, query_out):
-    # Parquet
-    skills_by_industry.write.mode("overwrite").parquet(os.path.join(query_out, "skills_by_industry"))
-    multi_skill_jobs.write.mode("overwrite").parquet(os.path.join(query_out, "avg_skills_by_industry"))
-    cross_industry_skills.write.mode("overwrite").parquet(os.path.join(query_out, "cross_industry_skills"))
+def _safe_to_pandas(df, limit_rows=50000):
+    """Convert a Spark DataFrame to pandas with a row cap to avoid OOM."""
+    return df.limit(limit_rows).toPandas()
 
-    # CSV
-    skills_by_industry.toPandas().to_csv(os.path.join(query_out, "skills_by_industry.csv"), index=False)
-    multi_skill_jobs.toPandas().to_csv(os.path.join(query_out, "avg_skills_by_industry.csv"), index=False)
-    cross_industry_skills.toPandas().to_csv(os.path.join(query_out, "cross_industry_skills.csv"), index=False)
-    print(f"Saved query outputs under {query_out}")
+def persist_queries(skills_by_industry, multi_skill_jobs, cross_industry_skills, query_out):
+    try:
+        skills_by_industry.write.mode("overwrite").parquet(os.path.join(query_out, "skills_by_industry"))
+        multi_skill_jobs.write.mode("overwrite").parquet(os.path.join(query_out, "avg_skills_by_industry"))
+        cross_industry_skills.write.mode("overwrite").parquet(os.path.join(query_out, "cross_industry_skills"))
+        # CSV (sampled)
+        _safe_to_pandas(skills_by_industry).to_csv(os.path.join(query_out, "skills_by_industry.csv"), index=False)
+        _safe_to_pandas(multi_skill_jobs).to_csv(os.path.join(query_out, "avg_skills_by_industry.csv"), index=False)
+        _safe_to_pandas(cross_industry_skills).to_csv(os.path.join(query_out, "cross_industry_skills.csv"), index=False)
+        print(f"Saved query outputs under {query_out}")
+    except Exception as e:
+        print(f"❌ Failed persisting query outputs: {e}")
+        raise
 
 
 def create_visualizations(skills_by_industry, multi_skill_jobs, cross_industry_skills, visuals_out):
-    skills_by_industry_pd = skills_by_industry.toPandas()
-    avg_skills_pd = multi_skill_jobs.toPandas()
-    cross_industry_pd = cross_industry_skills.toPandas()
+    skills_by_industry_pd = _safe_to_pandas(skills_by_industry)
+    avg_skills_pd = _safe_to_pandas(multi_skill_jobs)
+    cross_industry_pd = _safe_to_pandas(cross_industry_skills)
 
     # Visualization 1: Top 10 skills in top 5 industries
     top_5_industries = avg_skills_pd.nlargest(5, 'avg_skills_required')['industry_name'].tolist()
@@ -183,15 +191,31 @@ def create_visualizations(skills_by_industry, multi_skill_jobs, cross_industry_s
 
 def main():
     spark = init_spark()
-    data_dir, query_out, visuals_out = resolve_paths()
-    postings, job_skills, skill_map, job_industries, industry_map = load_data(spark, data_dir)
-    skills_by_industry, multi_skill_jobs, cross_industry_skills = run_queries(
-        spark, job_skills, skill_map, job_industries, industry_map
-    )
-    persist_queries(skills_by_industry, multi_skill_jobs, cross_industry_skills, query_out)
-    create_visualizations(skills_by_industry, multi_skill_jobs, cross_industry_skills, visuals_out)
-    print("\nComplex analytics job complete.")
-    spark.stop()
+    exit_code = 0
+    try:
+        data_dir, query_out, visuals_out = resolve_paths()
+        postings, job_skills, skill_map, job_industries, industry_map = load_data(spark, data_dir)
+        skills_by_industry, multi_skill_jobs, cross_industry_skills = run_queries(
+            spark, job_skills, skill_map, job_industries, industry_map
+        )
+        persist_queries(skills_by_industry, multi_skill_jobs, cross_industry_skills, query_out)
+        create_visualizations(skills_by_industry, multi_skill_jobs, cross_industry_skills, visuals_out)
+        print("\nComplex analytics job complete.")
+        # Summary counts (lightweight actions)
+        print("Summary:")
+        print(f"  Industries w/ skills ranked: {skills_by_industry.select('industry_name').distinct().count()}")
+        print(f"  Skill ranking rows: {skills_by_industry.count()}")
+        print(f"  Industries (avg skills): {multi_skill_jobs.count()}")
+        print(f"  Cross-industry skills: {cross_industry_skills.count()}")
+    except Exception as e:
+        print(f"❌ Complex analytics job failed: {e}")
+        exit_code = 1
+    finally:
+        try:
+            spark.stop()
+        except Exception:
+            pass
+    sys.exit(exit_code)
 
 
 if __name__ == "__main__":

@@ -203,18 +203,33 @@ class MLPipeline:
             os.makedirs(analytics_out_dir, exist_ok=True)
 
             # Helper to safely persist a Spark DataFrame
-            def _persist_df(df, name: str):
+            import pandas as _pd
+
+            def _persist_df(df, name: str, sample_rows: int = 5000):
+                """Persist a DataFrame defensively without triggering large actions.
+
+                - Avoid full df.count() which can be expensive and broadcast heavy.
+                - Use df.take(1) to check emptiness.
+                - Write parquet directly (Spark handles partitioning).
+                - For CSV, sample up to sample_rows to limit driver memory.
+                """
+                if df is None:
+                    print(f"   ↳ Skipped {name} (None)")
+                    return
                 try:
-                    if df is not None and df.count() > 0:
-                        parquet_path = os.path.join(analytics_out_dir, name)
-                        csv_path = os.path.join(analytics_out_dir, f"{name}.csv")
-                        df.write.mode("overwrite").parquet(parquet_path)
-                        # Convert small-ish DF to pandas for CSV (guard size if needed)
-                        pdf = df.toPandas()
-                        pdf.to_csv(csv_path, index=False)
-                        print(f"   ↳ Saved {name} to {parquet_path} (parquet) and {csv_path} (csv) [{pdf.shape[0]} rows]")
-                    else:
-                        print(f"   ↳ Skipped {name} (empty or None)")
+                    # Fast emptiness check
+                    if len(df.take(1)) == 0:
+                        print(f"   ↳ Skipped {name} (empty)")
+                        return
+                    parquet_path = os.path.join(analytics_out_dir, name)
+                    csv_path = os.path.join(analytics_out_dir, f"{name}.csv")
+                    df.write.mode("overwrite").parquet(parquet_path)
+                    # Sample for CSV to prevent huge driver collection
+                    sample_df = df.limit(sample_rows)
+                    pdf = sample_df.toPandas()
+                    pdf.to_csv(csv_path, index=False)
+                    more_flag = " (truncated sample)" if df.rdd.getNumPartitions() > 1 and pdf.shape[0] == sample_rows else ""
+                    print(f"   ↳ Saved {name} parquet + sampled CSV [{pdf.shape[0]} rows]{more_flag}")
                 except Exception as e:
                     print(f"   ⚠️  Failed to persist {name}: {e}")
 
