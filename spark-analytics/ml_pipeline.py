@@ -195,6 +195,42 @@ class MLPipeline:
                 json.dump(summary, f, indent=2)
             
             print(f"✅ Results saved to {output_dir}")
+
+            # ---------------------------------------
+            # Persist detailed DataFrame outputs for downstream analytics
+            # ---------------------------------------
+            analytics_out_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "analytics_output", "ml_outputs")
+            os.makedirs(analytics_out_dir, exist_ok=True)
+
+            # Helper to safely persist a Spark DataFrame
+            def _persist_df(df, name: str):
+                try:
+                    if df is not None and df.count() > 0:
+                        parquet_path = os.path.join(analytics_out_dir, name)
+                        csv_path = os.path.join(analytics_out_dir, f"{name}.csv")
+                        df.write.mode("overwrite").parquet(parquet_path)
+                        # Convert small-ish DF to pandas for CSV (guard size if needed)
+                        pdf = df.toPandas()
+                        pdf.to_csv(csv_path, index=False)
+                        print(f"   ↳ Saved {name} to {parquet_path} (parquet) and {csv_path} (csv) [{pdf.shape[0]} rows]")
+                    else:
+                        print(f"   ↳ Skipped {name} (empty or None)")
+                except Exception as e:
+                    print(f"   ⚠️  Failed to persist {name}: {e}")
+
+            # Classification predictions
+            if "classification" in results:
+                _persist_df(results["classification"].get("predictions"), "classification_predictions")
+
+            # Skill clustering results
+            if "skills" in results:
+                _persist_df(results["skills"].get("clustered_data"), "skill_clusters")
+
+            # Recommendations
+            if "recommendation" in results:
+                _persist_df(results["recommendation"].get("recommendations"), "job_recommendations")
+
+            print(f"✅ Detailed ML outputs stored under: {analytics_out_dir}")
         
         except Exception as e:
             print(f"⚠️  Error saving results: {e}")

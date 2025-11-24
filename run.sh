@@ -144,11 +144,64 @@ else
 fi
 echo
 
+# Print ML outputs (if any)
+ML_OUT_DIR="$SPARK_DIR/analytics_output/ml_outputs"
+if [ -d "$ML_OUT_DIR" ]; then
+  echo "🔎 ML outputs saved under: $ML_OUT_DIR"
+  echo "Files:"
+  ls -lh "$ML_OUT_DIR" || true
+  echo
+  echo "Showing first 10 lines of CSVs (if present):"
+  for f in "$ML_OUT_DIR"/*.csv; do
+    [ -e "$f" ] || continue
+    echo "---- $f ----"
+    head -n 10 "$f" || true
+    echo
+  done
+fi
+
 # --------------------------
-# STEP 3: Spark Structured Streaming demo
+# STEP 3: Complex analytics & visualizations (complex_queries_job.py)
 # --------------------------
 echo "============================================================"
-echo "STEP 3: Spark Structured Streaming demo"
+echo "STEP 3: Complex analytics & visualizations (complex_queries_job.py)"
+echo "============================================================"
+if [ -f "complex_queries_job.py" ]; then
+  $PYTHON complex_queries_job.py || {
+    echo "[!] Complex analytics job FAILED (see error above)."
+  }
+else
+  echo "⚠️  complex_queries_job.py not found; skipping analytics visualization step."
+fi
+echo
+
+# Print complex query results and visuals summary
+QUERY_OUT_DIR="$SPARK_DIR/analytics_output/query_results"
+VISUALS_OUT_DIR="$SPARK_DIR/analytics_output/visuals"
+if [ -d "$QUERY_OUT_DIR" ]; then
+  echo "🔎 Query results saved under: $QUERY_OUT_DIR"
+  ls -lh "$QUERY_OUT_DIR" || true
+  echo
+  echo "Showing first 10 lines of CSVs:"
+  for f in "$QUERY_OUT_DIR"/*.csv; do
+    [ -e "$f" ] || continue
+    echo "---- $f ----"
+    head -n 10 "$f" || true
+    echo
+  done
+fi
+
+if [ -d "$VISUALS_OUT_DIR" ]; then
+  echo "🖼️  Visualizations saved under: $VISUALS_OUT_DIR"
+  ls -lh "$VISUALS_OUT_DIR" || true
+  echo
+fi
+
+# --------------------------
+# STEP 4: Spark Structured Streaming demo
+# --------------------------
+echo "============================================================"
+echo "STEP 4: Spark Structured Streaming demo"
 echo "============================================================"
 
 if [ ! -f "streaming_processor.py" ] || [ ! -f "streaming_data_simulator.py" ]; then
