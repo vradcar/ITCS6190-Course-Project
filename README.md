@@ -56,49 +56,91 @@ This project implements a comprehensive **Apache Spark-based analytics platform*
 ## 📂 Project Structure
 
 ```
-ITCS6190-Course-Project/
-├── data/                          # LinkedIn job dataset (Kaggle)
-│   ├── postings_cleaned.csv      # Main job postings data (40K+ records)
-│   ├── companies/                 # Company information
+├── Documentation
+│   ├── Unattached and Unhinged_project proposal.pdf
+│   └── Unattached and Unhinged_project_2nd check in.pdf
+├── LICENSE
+├── README.md
+├── analytics_output
+│   ├── STUDENT_ACTION_PLAN.txt
+│   ├── query_results
+│   │   ├── avg_skills_by_industry
+│   │   │   ├── _SUCCESS
+│   │   │   └── part-00000-02f9a49d-fb2d-49fe-87c5-6e0f7ad2da76-c000.snappy.parquet
+│   │   ├── avg_skills_by_industry.csv
+│   │   ├── cross_industry_skills
+│   │   │   ├── _SUCCESS
+│   │   │   └── part-00000-3e256c5d-6cdb-47c5-99d5-038cfb3bb425-c000.snappy.parquet
+│   │   ├── cross_industry_skills.csv
+│   │   ├── skills_by_industry
+│   │   │   ├── _SUCCESS
+│   │   │   └── part-00000-abed45b1-4805-433e-8384-26b7c33c48d5-c000.snappy.parquet
+│   │   └── skills_by_industry.csv
+│   └── visuals
+│       ├── avg_skills_by_industry.png
+│       ├── career_path_builder.png
+│       ├── cross_industry_skills.png
+│       ├── industry_entry_barriers.png
+│       ├── skill_diversity_index.png
+│       ├── skill_pairs.png
+│       ├── top_10_skills_overall.png
+│       └── top_skills_by_industry.png
+├── data
+│   ├── companies
 │   │   ├── companies.csv
 │   │   ├── company_industries.csv
 │   │   ├── company_specialities.csv
 │   │   └── employee_counts.csv
-│   ├── jobs/                      # Job details and mappings
+│   ├── jobs
 │   │   ├── benefits.csv
 │   │   ├── job_industries.csv
 │   │   ├── job_skills.csv
 │   │   └── salaries.csv
-│   └── mappings/                  # Reference data
-│       ├── industries.csv
-│       └── skills.csv
-│
-├── spark-analytics/               # Apache Spark analytics
-│   ├── complex_queries.ipynb     # Main analysis notebook (8 visualizations)
-│   ├── data_analysis.ipynb       # Exploratory data analysis
-│   ├── streaming_processor.py    # Real-time streaming application
-│   ├── streaming_data_simulator.py # Data simulator for streaming
-│   ├── main.py                   # Batch analytics script
-│   ├── requirements.txt          # Python dependencies
-│   ├── analytics_output/         # Generated reports and visuals
-│   │   ├── visuals/              # PNG charts
-│   │   └── query_results/        # CSV/Parquet results
-│   └── README.md                 # Detailed documentation
-│
-├── Documentation/                 # Project documentation
-│   ├── DEMO_GUIDE.md             # Presentation instructions
-│   ├── ML_INTEGRATION_PLAN.md    # Future ML roadmap
-│   ├── PROJECT_SUMMARY.md        # Complete project explanation
-│   ├── CHECKLIST.md              # Demo day checklist
-│   └── GITHUB_ISSUE_TEMPLATE.md  # Check-in template
-│
-├── analytics_output/              # Top-level output directory
-│   ├── STUDENT_ACTION_PLAN.txt   # Generated career guidance
-│   ├── query_results/            # Analysis results
-│   └── visuals/                  # Visualization outputs
-│
-├── LICENSE                        # Project license
-└── README.md                      # This file
+│   ├── mappings
+│   │   ├── industries.csv
+│   │   └── skills.csv
+│   ├── output_recommendation.csv
+│   │   ├── _SUCCESS
+│   │   └── part-00000-d5c8f9f2-70b2-4195-98d5-609fb9eec289-c000.csv
+│   ├── postings_cleaned.csv
+│   ├── recommendations.csv
+│   └── users.csv
+├── run.sh
+└── spark-analytics
+    ├── INTEGRATION_SUMMARY.md
+    ├── ML_README.md
+    ├── README.md
+    ├── __pycache__
+    │   ├── data_loader.cpython-312.pyc
+    │   ├── ml_job_classifier.cpython-312.pyc
+    │   ├── ml_recommender.cpython-312.pyc
+    │   └── ml_skill_extractor.cpython-312.pyc
+    ├── complex_queries.ipynb
+    ├── data_analysis.ipynb
+    ├── data_loader.py
+    ├── main.py
+    ├── ml_job_classifier.py
+    ├── ml_job_classifier_xg.py
+    ├── ml_pipeline.py
+    ├── ml_recommender.py
+    ├── ml_results
+    │   └── ml_summary.json
+    ├── ml_salary_predictor.py
+    ├── ml_skill_extractor.py
+    ├── requirements.txt
+    ├── spark_recommender.py
+    ├── streaming_input
+    │   ├── batch_0000.csv
+    │   ├── batch_0001.csv
+    │   ├── batch_0002.csv
+    │   ├── batch_0003.csv
+    │   ├── batch_0004.csv
+    │   ├── batch_0005.csv
+    │   ├── batch_0006.csv
+    │   ├── batch_0007.csv
+    │   ├── batch_0008.csv
+    │   └── batch_0009.csv
+    └── streaming_test_data_generator.py
 ```
 
 ---
@@ -417,5 +459,3 @@ Source: Kaggle - [LinkedIn Job Postings](https://www.kaggle.com/datasets/arshkon
 License: CC0 Public Domain
 
 ---
-
-**For questions or support, contact any team member via email listed above.**
