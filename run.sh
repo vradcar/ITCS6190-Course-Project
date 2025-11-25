@@ -197,38 +197,12 @@ if [ -d "$VISUALS_OUT_DIR" ]; then
   echo
 fi
 
-# --------------------------
-# STEP 4: Spark Structured Streaming demo
-# --------------------------
-echo "============================================================"
-echo "STEP 4: Spark Structured Streaming demo"
-echo "============================================================"
+echo "Run complete. All batch, ML, and complex analytics steps finished." 
+echo "Artifacts:"
+echo "  - ML summary & models: $SPARK_DIR/ml_results"
+echo "  - ML detailed outputs: $SPARK_DIR/analytics_output/ml_outputs"
+echo "  - Query results:       $SPARK_DIR/analytics_output/query_results"
+echo "  - Visualizations:      $SPARK_DIR/analytics_output/visuals"
+echo "You can re-run only analytics via: python spark-analytics/complex_queries_job.py"
 
-if [ ! -f "streaming_processor.py" ] || [ ! -f "streaming_data_simulator.py" ]; then
-  echo "⚠️  Streaming scripts not found (streaming_processor.py / streaming_data_simulator.py)."
-  echo "    Skipping streaming demo."
-  exit 0
-fi
-
-echo "    - Launching streaming processor in background..."
-$PYTHON streaming_processor.py &
-PROCESSOR_PID=$!
-
-echo "    - Launching streaming data simulator in background..."
-$PYTHON streaming_data_simulator.py &
-SIMULATOR_PID=$!
-
-echo
-echo "[*] Streaming demo is running."
-echo "    - Processor PID : $PROCESSOR_PID"
-echo "    - Simulator PID : $SIMULATOR_PID"
-echo "Press Ctrl+C to stop both."
-echo
-
-# Clean shutdown on Ctrl+C
-trap "echo; echo '[*] Stopping streaming jobs...'; kill $PROCESSOR_PID $SIMULATOR_PID 2>/dev/null || true; exit 0" SIGINT
-
-# Keep script alive so background jobs keep running
-while true; do
-  sleep 5
-done
+exit 0

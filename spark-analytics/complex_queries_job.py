@@ -18,6 +18,7 @@ import matplotlib
 matplotlib.use("Agg")  # Headless environment safe backend
 import matplotlib.pyplot as plt
 import seaborn as sns
+import traceback
 import pandas as pd
 
 
@@ -129,41 +130,54 @@ def create_visualizations(skills_by_industry, multi_skill_jobs, cross_industry_s
 
     # Visualization 1: Top 10 skills in top 5 industries
     top_5_industries = avg_skills_pd.nlargest(5, 'avg_skills_required')['industry_name'].tolist()
-    fig, axes = plt.subplots(2, 3, figsize=(18, 10))
-    fig.suptitle('Top 10 Skills by Industry', fontsize=16, fontweight='bold')
-    for idx, industry in enumerate(top_5_industries):
-        data = skills_by_industry_pd[skills_by_industry_pd['industry_name'] == industry].head(10)
-        ax = axes[idx // 3, idx % 3]
-        sns.barplot(data=data, y='skill_name', x='skill_count', ax=ax, palette='viridis')
-        ax.set_title(industry, fontsize=10, fontweight='bold')
-        ax.set_xlabel('Job Postings')
-        ax.set_ylabel('')
-    axes[1, 2].axis('off')
-    plt.tight_layout()
-    plt.savefig(os.path.join(visuals_out, 'top_skills_by_industry.png'), dpi=300, bbox_inches='tight')
-    plt.close(fig)
+    try:
+        fig, axes = plt.subplots(2, 3, figsize=(18, 10))
+        fig.suptitle('Top 10 Skills by Industry', fontsize=16, fontweight='bold')
+        for idx, industry in enumerate(top_5_industries):
+            data = skills_by_industry_pd[skills_by_industry_pd['industry_name'] == industry].head(10)
+            ax = axes[idx // 3, idx % 3]
+            # Use hue to avoid FutureWarning, suppress legend for clarity
+            sns.barplot(data=data, y='skill_name', x='skill_count', hue='skill_name', legend=False, ax=ax)
+            ax.set_title(industry, fontsize=10, fontweight='bold')
+            ax.set_xlabel('Job Postings')
+            ax.set_ylabel('')
+        axes[1, 2].axis('off')
+        plt.tight_layout()
+        plt.savefig(os.path.join(visuals_out, 'top_skills_by_industry.png'), dpi=300, bbox_inches='tight')
+        plt.close(fig)
+    except Exception:
+        print('⚠️  Failed to build top_skills_by_industry visualization')
+        traceback.print_exc()
 
     # Visualization 2: Average skills required by industry (top 20)
-    plt.figure(figsize=(12, 8))
-    top_20_avg = avg_skills_pd.head(20)
-    sns.barplot(data=top_20_avg, y='industry_name', x='avg_skills_required', palette='magma')
-    plt.title('Average Number of Skills Required by Industry (Top 20)', fontsize=14, fontweight='bold')
-    plt.xlabel('Average Skills Required')
-    plt.ylabel('Industry')
-    plt.tight_layout()
-    plt.savefig(os.path.join(visuals_out, 'avg_skills_by_industry.png'), dpi=300, bbox_inches='tight')
-    plt.close()
+    try:
+        plt.figure(figsize=(12, 8))
+        top_20_avg = avg_skills_pd.head(20)
+        sns.barplot(data=top_20_avg, y='industry_name', x='avg_skills_required', hue='industry_name', legend=False)
+        plt.title('Average Number of Skills Required by Industry (Top 20)', fontsize=14, fontweight='bold')
+        plt.xlabel('Average Skills Required')
+        plt.ylabel('Industry')
+        plt.tight_layout()
+        plt.savefig(os.path.join(visuals_out, 'avg_skills_by_industry.png'), dpi=300, bbox_inches='tight')
+        plt.close()
+    except Exception:
+        print('⚠️  Failed to build avg_skills_by_industry visualization')
+        traceback.print_exc()
 
     # Visualization 3: Cross-industry skills (top 30)
-    plt.figure(figsize=(12, 8))
-    top_30_cross = cross_industry_pd.head(30)
-    sns.barplot(data=top_30_cross, y='skill_name', x='num_industries', palette='coolwarm')
-    plt.title('Most Versatile Skills (Appearing Across Industries)', fontsize=14, fontweight='bold')
-    plt.xlabel('Number of Industries')
-    plt.ylabel('Skill Name')
-    plt.tight_layout()
-    plt.savefig(os.path.join(visuals_out, 'cross_industry_skills.png'), dpi=300, bbox_inches='tight')
-    plt.close()
+    try:
+        plt.figure(figsize=(12, 8))
+        top_30_cross = cross_industry_pd.head(30)
+        sns.barplot(data=top_30_cross, y='skill_name', x='num_industries', hue='skill_name', legend=False)
+        plt.title('Most Versatile Skills (Appearing Across Industries)', fontsize=14, fontweight='bold')
+        plt.xlabel('Number of Industries')
+        plt.ylabel('Skill Name')
+        plt.tight_layout()
+        plt.savefig(os.path.join(visuals_out, 'cross_industry_skills.png'), dpi=300, bbox_inches='tight')
+        plt.close()
+    except Exception:
+        print('⚠️  Failed to build cross_industry_skills visualization')
+        traceback.print_exc()
 
     # Visualization 4: Skill pair co-occurrence (top 15)
     # Build skill pairs per job
@@ -175,16 +189,20 @@ def create_visualizations(skills_by_industry, multi_skill_jobs, cross_industry_s
 
     print("Generating simplified skill pair visualization (requires job-level data in full version)...")
     # Placeholder: Using cross-industry skills to emulate pairs ranking
-    pair_like = cross_industry_pd.head(15).copy()
-    pair_like['pair_label'] = pair_like['skill_name'] + ' + (other)'
-    plt.figure(figsize=(14, 10))
-    sns.barplot(data=pair_like, y='pair_label', x='num_industries', palette='rocket')
-    plt.title('Representative Skill Versatility (Proxy for Pairs)', fontsize=16, fontweight='bold')
-    plt.xlabel('Number of Industries')
-    plt.ylabel('Skill Pair (Proxy)')
-    plt.tight_layout()
-    plt.savefig(os.path.join(visuals_out, 'skill_pairs_proxy.png'), dpi=300, bbox_inches='tight')
-    plt.close()
+    try:
+        pair_like = cross_industry_pd.head(15).copy()
+        pair_like['pair_label'] = pair_like['skill_name'] + ' + (other)'
+        plt.figure(figsize=(14, 10))
+        sns.barplot(data=pair_like, y='pair_label', x='num_industries', hue='pair_label', legend=False)
+        plt.title('Representative Skill Versatility (Proxy for Pairs)', fontsize=16, fontweight='bold')
+        plt.xlabel('Number of Industries')
+        plt.ylabel('Skill Pair (Proxy)')
+        plt.tight_layout()
+        plt.savefig(os.path.join(visuals_out, 'skill_pairs_proxy.png'), dpi=300, bbox_inches='tight')
+        plt.close()
+    except Exception:
+        print('⚠️  Failed to build skill_pairs_proxy visualization')
+        traceback.print_exc()
 
     print(f"Saved visualizations under {visuals_out}")
 
