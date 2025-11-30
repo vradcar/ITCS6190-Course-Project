@@ -15,6 +15,7 @@ from datetime import datetime, timedelta
 from ml_job_classifier import JobClassifier
 from ml_skill_extractor import SkillExtractor
 from ml_recommender import JobRecommender
+from ml_salary_predictor import SalaryPredictor
 
 # Import data loader
 from data_loader import DataLoader
@@ -33,6 +34,7 @@ class MLPipeline:
         self.job_classifier = JobClassifier(self.spark)
         self.skill_extractor = SkillExtractor(self.spark)
         self.job_recommender = JobRecommender(self.spark)
+        self.salary_predictor = SalaryPredictor(self.spark)
         
         print("✅ ML Pipeline initialized")
     
@@ -43,23 +45,30 @@ class MLPipeline:
         # Load postings data
         df = self.data_loader.load_postings()
         
+        # Sample for stability in local mode
+        if df:
+            sample_limit = 10000
+            print(f"⚠️  Sampling data to {sample_limit} rows for stability...")
+            df = df.limit(sample_limit)
+        
         if df and df.count() > 0:
-            print(f"✅ Loaded {df.count()} job postings")
+            print(f"✅ Loaded {df.count()} job postings (sampled)")
             return df
         
         print("⚠️  No data loaded")
         return None
     
     def run_job_classification(self, df):
-        """Run job classification using Random Forest"""
+        """Run job classification using multiple models"""
         print("\n" + "="*60)
-        print("🎯 Job Classification (Random Forest)")
+        print("🎯 Job Classification (Model Comparison)")
         print("="*60)
         
         if df is None or df.count() == 0:
             print("❌ No data available for classification")
             return None, None
         
+        # This now runs the comparison logic
         model, predictions = self.job_classifier.train_classifier(df)
         
         if model:
@@ -68,6 +77,19 @@ class MLPipeline:
             return model, classified_df
         
         return None, None
+
+    def run_salary_prediction(self, df):
+        """Run salary prediction"""
+        print("\n" + "="*60)
+        print("💰 Salary Prediction (Linear Regression)")
+        print("="*60)
+        
+        if df is None or df.count() == 0:
+            print("❌ No data available for salary prediction")
+            return None, None
+            
+        model, predictions = self.salary_predictor.train_model(df)
+        return model, predictions
     
     def run_skill_extraction(self, df):
         """Run skill extraction using NLP"""
@@ -134,7 +156,7 @@ class MLPipeline:
         
         # Determine which components to run
         if components is None:
-            components = ['classification', 'skills', 'recommendation']
+            components = ['classification', 'skills', 'recommendation', 'salary']
         
         # 1. Job Classification
         if 'classification' in components:
@@ -147,7 +169,18 @@ class MLPipeline:
             except Exception as e:
                 print(f"❌ Error in job classification: {e}")
         
-        # 2. Skill Extraction
+        # 2. Salary Prediction
+        if 'salary' in components:
+            try:
+                salary_model, salary_preds = self.run_salary_prediction(df)
+                results['salary'] = {
+                    'model': salary_model,
+                    'predictions': salary_preds
+                }
+            except Exception as e:
+                print(f"❌ Error in salary prediction: {e}")
+
+        # 3. Skill Extraction
         if 'skills' in components:
             try:
                 clustered_df, cluster_model, tfidf_model = self.run_skill_extraction(df)
@@ -223,13 +256,14 @@ class MLPipeline:
                         return
                     parquet_path = os.path.join(analytics_out_dir, name)
                     csv_path = os.path.join(analytics_out_dir, f"{name}.csv")
-                    df.write.mode("overwrite").parquet(parquet_path)
+                    # Parquet writing disabled to avoid HADOOP_HOME errors on Windows
+                    # df.write.mode("overwrite").parquet(parquet_path)
                     # Sample for CSV to prevent huge driver collection
                     sample_df = df.limit(sample_rows)
                     pdf = sample_df.toPandas()
                     pdf.to_csv(csv_path, index=False)
                     more_flag = " (truncated sample)" if df.rdd.getNumPartitions() > 1 and pdf.shape[0] == sample_rows else ""
-                    print(f"   ↳ Saved {name} parquet + sampled CSV [{pdf.shape[0]} rows]{more_flag}")
+                    print(f"   ↳ Saved {name} sampled CSV [{pdf.shape[0]} rows]{more_flag}")
                 except Exception as e:
                     print(f"   ⚠️  Failed to persist {name}: {e}")
 
