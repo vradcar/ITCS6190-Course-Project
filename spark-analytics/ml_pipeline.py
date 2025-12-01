@@ -30,6 +30,13 @@ class MLPipeline:
         self.data_loader = DataLoader()
         self.spark = self.data_loader.spark
         
+        # Add ML modules to Spark context for workers to resolve ModuleNotFoundError
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        self.spark.sparkContext.addPyFile(os.path.join(current_dir, "ml_job_classifier.py"))
+        self.spark.sparkContext.addPyFile(os.path.join(current_dir, "ml_skill_extractor.py"))
+        self.spark.sparkContext.addPyFile(os.path.join(current_dir, "ml_recommender.py"))
+        self.spark.sparkContext.addPyFile(os.path.join(current_dir, "ml_salary_predictor.py"))
+
         # Initialize ML components
         self.job_classifier = JobClassifier(self.spark)
         self.skill_extractor = SkillExtractor(self.spark)
@@ -88,7 +95,7 @@ class MLPipeline:
             print("❌ No data available for salary prediction")
             return None, None
             
-        model, predictions = self.salary_predictor.train_model(df)
+        model, feature_pipeline, predictions = self.salary_predictor.train_predictor(df)
         return model, predictions
     
     def run_skill_extraction(self, df):
@@ -269,15 +276,44 @@ class MLPipeline:
 
             # Classification predictions
             if "classification" in results:
-                _persist_df(results["classification"].get("predictions"), "classification_predictions")
+                pred_df = results["classification"].get("predictions")
+                if pred_df:
+                    # Select safe columns to avoid Vector serialization issues
+                    safe_cols = ["job_id", "title", "company", "location", "job_category", "prediction", "predicted_category_index"]
+                    existing_cols = [c for c in safe_cols if c in pred_df.columns]
+                    _persist_df(pred_df.select(*existing_cols), "classification_predictions")
 
             # Skill clustering results
             if "skills" in results:
-                _persist_df(results["skills"].get("clustered_data"), "skill_clusters")
+                cluster_df = results["skills"].get("clustered_data")
+                if cluster_df:
+                    # Select safe columns
+                    safe_cols = ["job_id", "title", "extracted_skills", "skill_count", "prediction"]
+                    existing_cols = [c for c in safe_cols if c in cluster_df.columns]
+                    # Rename prediction to cluster_id for clarity
+                    to_save = cluster_df.select(*existing_cols).withColumnRenamed("prediction", "cluster_id")
+                    # Convert array to string for CSV safety (Pandas handles lists, but string is safer for Spark->Pandas)
+                    from pyspark.sql.functions import col, concat_ws
+                    if "extracted_skills" in to_save.columns:
+                        to_save = to_save.withColumn("extracted_skills", concat_ws(",", col("extracted_skills")))
+                    _persist_df(to_save, "skill_clusters")
 
             # Recommendations
             if "recommendation" in results:
-                _persist_df(results["recommendation"].get("recommendations"), "job_recommendations")
+                recs_df = results["recommendation"].get("recommendations")
+                if recs_df:
+                    # Explode recommendations to make it flat and CSV friendly
+                    # Schema: user_id, recommendations: Array[Struct(job_index, rating)]
+                    from pyspark.sql.functions import explode, col
+                    flat_recs = recs_df.select(
+                        col("user_id"), 
+                        explode(col("recommendations")).alias("rec")
+                    ).select(
+                        col("user_id"),
+                        col("rec.job_index").alias("job_index"),
+                        col("rec.rating").alias("score")
+                    )
+                    _persist_df(flat_recs, "job_recommendations")
 
             print(f"✅ Detailed ML outputs stored under: {analytics_out_dir}")
         

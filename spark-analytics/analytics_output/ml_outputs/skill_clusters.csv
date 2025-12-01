@@ -1,0 +1,4073 @@
+job_id,title,extracted_skills,skill_count,cluster_id
+322,Northeast Georgia Health System,,0,0
+357,Georgia Tech Research Institute,,0,0
+358,Georgia Tech Research Institute,,0,0
+387,AstraZeneca,,0,0
+514,Tastes on the Fly,,0,0
+619,Steelcase,,0,0
+677,Cape Fear Valley Health,,0,0
+692,"ChanceLight Behavioral Health, Therapy, & Education",,0,0
+764,Department of Behavioral Health and Developmental Services,,0,0
+766,Department of Behavioral Health and Developmental Services,,0,0
+814,Metropolitan Transportation Authority,,0,0
+821,Discovery Life Sciences,,0,0
+839,Clark County School District,,0,0
+845,Federal Bureau of Prisons - Career Connections,,0,0
+847,Federal Bureau of Prisons - Career Connections,,0,0
+863,Des Moines Public Schools,,0,0
+867,The Jonus Group,,0,0
+876,Department of Behavioral Health and Developmental Services,,0,0
+883,SKF Group,,0,0
+891,Metropolitan Transportation Authority,,0,0
+912,Clark County School District,,0,0
+934,Tennessee Valley Authority,,0,0
+935,The Jonus Group,,0,0
+936,The Jonus Group,,0,0
+958,Service Corporation International,,0,0
+962,Metropolitan Transportation Authority,,0,0
+989,Clark County School District,,0,0
+992,Federal Bureau of Prisons - Career Connections,,0,0
+1003,Des Moines Public Schools,,0,0
+1008,The Jonus Group,,0,0
+1012,Lexington Medical Center,,0,0
+1014,Gainwell Technologies,,0,0
+1017,North Arkansas Regional Medical Center,,0,0
+1037,SGS,,0,0
+1056,Clark County School District,,0,0
+1057,Clark County School District,,0,0
+1058,Clark County School District,,0,0
+1060,Benevis,,0,0
+1061,Schreiber Foods,,0,0
+1101,The New York Foundling,,0,0
+1108,Clark County School District,,0,0
+1112,Ascend Federal Credit Union,,0,0
+1114,Federal Bureau of Prisons - Career Connections,,0,0
+1133,Gainwell Technologies,,0,0
+1142,Merchants Fleet,,0,0
+1145,"AvantGuard Monitoring Centers, A Becklar Company",,0,0
+1147,Staples Stores,,0,0
+1149,Promega Corporation ,,0,0
+1161,Metropolitan Transportation Authority,,0,0
+1174,Brightspeed,,0,0
+1209,The Jonus Group,,0,0
+1240,Staples Stores,,0,0
+1243,Staples Stores,,0,0
+1245,Staples Stores,,0,0
+1249,ABF Freight,,0,0
+1279,Element Materials Technology,,0,0
+1294,Metropolitan Transportation Authority,,0,0
+1313,Clark County School District,,0,0
+1317,Schreiber Foods,,0,0
+1336,The Jonus Group,,0,0
+1337,The Jonus Group,,0,0
+1346,Brightspeed,,0,0
+1351,Gainwell Technologies,,0,0
+1367,Staples Stores,,0,0
+1392,Gulfstream Aerospace,,0,0
+1422,Metropolitan Transportation Authority,,0,0
+1424,Metropolitan Transportation Authority,,0,0
+1433,The New York Foundling,,0,0
+1434,Allied Solutions LLC,,0,0
+1441,Brightspeed,,0,0
+1451,Clark County School District,,0,0
+1472,HARMAN International,,0,0
+1474,Schwan's Company,,0,0
+1493,Staples Stores,,0,0
+1507,Gulfstream Aerospace,,0,0
+1512,National General,,0,0
+1514,Solomon Page,,0,0
+1526,Element Materials Technology,,0,0
+1537,Gainwell Technologies,,0,0
+1575,Ingersoll Rand,,0,0
+1590,Element Materials Technology,,0,0
+1635,DICK'S Sporting Goods,,0,0
+1647,North American Dental Group (NADG),,0,0
+1648,Georgia Tech Research Institute,,0,0
+1652,Sargent & Lundy,,0,0
+1658,"AvantGuard Monitoring Centers, A Becklar Company",,0,0
+1659,Staples Stores,,0,0
+1660,Staples Stores,,0,0
+1662,Staples Stores,,0,0
+1683,Gulfstream Aerospace,,0,0
+1690,Solomon Page,,0,0
+1701,Element Materials Technology,,0,0
+1708,L.A. Care Health Plan,,0,0
+1725,BioMarin Pharmaceutical Inc.,,0,0
+1739,WITRON Group,,0,0
+1740,Tenable,,0,0
+1744,Exact Sciences,,0,0
+1748,Exact Sciences,,0,0
+1756,SBA Communications,,0,0
+1763,North American Dental Group (NADG),,0,0
+1792,ABF Freight,,0,0
+1804,Satellite Healthcare / WellBound,,0,0
+1825,"ClearCaptions, LLC",,0,0
+1828,Partnership HealthPlan of California,,0,0
+1837,Claire's,,0,0
+1845,Ohio Department of Agriculture,,0,0
+1847,Employment Development Department,,0,0
+1853,The Save Mart Companies,,0,0
+1876,Elevance Health,,0,0
+1898,Ingersoll Rand,,0,0
+1902,HRC International,chef,1,0
+1906,Enel North America,,0,0
+1922,"V-Soft Consulting Group, Inc.",,0,0
+1923,Elevance Health,,0,0
+1925,Farm Bureau Financial Services,,0,0
+1937,NAPA Auto Parts,,0,0
+1949,Claire's,,0,0
+1953,Ohio Department of Mental Health & Addiction Services,,0,0
+1958,Warby Parker,,0,0
+1966,Acrisure,,0,0
+1968,Carex Consulting Group,,0,0
+1971,BNY Mellon,,0,0
+1985,DICK'S Sporting Goods,,0,0
+1998,EVERSANA,,0,0
+2000,Bryan Health,,0,0
+2011,BNY Mellon,,0,0
+2042,Element Materials Technology,,0,0
+2053,Partnership HealthPlan of California,,0,0
+2054,Partnership HealthPlan of California,,0,0
+2074,Ohio Department of Mental Health & Addiction Services,,0,0
+2079,Price Chopper Supermarkets-Market 32,,0,0
+2087,Stanford University,,0,0
+2095,SBA Communications,,0,0
+2100,Charter Dura-Bar,,0,0
+2102,DICK'S Sporting Goods,,0,0
+2103,Legends,,0,0
+2107,BNY Mellon,,0,0
+2108,Rich Products Corporation,,0,0
+2109,Experis,,0,0
+2114,Merrick & Company,,0,0
+2118,Easterseals Southern California,,0,0
+2119,Easterseals Southern California,,0,0
+2124,CBS Sports,,0,0
+2133,Pape-Dawson Engineers,,0,0
+2134,Pape-Dawson Engineers,,0,0
+2146,Ohio BWC (official),,0,0
+2148,LyondellBasell,,0,0
+2149,Employment Development Department,,0,0
+2151,Mandarin Oriental Hotel Group,,0,0
+2166,Claire's,,0,0
+2172,Price Chopper Supermarkets-Market 32,,0,0
+2182,"J.B. Hunt Transport Services, Inc.",,0,0
+2183,"J.B. Hunt Transport Services, Inc.",,0,0
+2187,Worldwide Assurance for Employees of Public Agencies (WAEPA),,0,0
+2205,Publicis Collective,,0,0
+2213,Exact Sciences,,0,0
+2216,Langan Engineering & Environmental Services,,0,0
+2218,Odyssey Systems,,0,0
+2220,Deciphera Pharmaceuticals,,0,0
+2226,DICK'S Sporting Goods,,0,0
+2229,Southwest Research Institute,,0,0
+2236,SkyWater Search Partners,,0,0
+2237,ASRC Federal,,0,0
+2240,Digitas Health,,0,0
+2253,Pape-Dawson Engineers,,0,0
+2265,Claire's,,0,0
+2270,Weifield Group Contracting,,0,0
+2292,Careers @ Graham Packaging,,0,0
+2300,Merrick & Company,,0,0
+2304,Zoetis,,0,0
+2305,Publicis Health,,0,0
+2307,Weifield Group Contracting,,0,0
+2314,Publicis Health,,0,0
+2315,Stanford University,,0,0
+2320,Saatchi & Saatchi Wellness,,0,0
+2330,Digitas Health,,0,0
+2342,DICK'S Sporting Goods,,0,0
+2358,Easterseals Southern California,,0,0
+2360,Digitas Health,,0,0
+2367,ASRC Federal,,0,0
+2374,Zoetis,,0,0
+2378,Publicis Health,,0,0
+2386,UVA Health,,0,0
+2387,UVA Health,,0,0
+2388,UVA Health,,0,0
+2401,UVA Health,,0,0
+2402,UVA Health,,0,0
+2404,UVA Health,,0,0
+2405,UVA Health,,0,0
+2421,The Reserves Network,,0,0
+2436,The Reserves Network,,0,0
+2438,The Reserves Network,,0,0
+2454,UVA Health,,0,0
+2470,The Reserves Network,,0,0
+2478,UVA Health,,0,0
+2487,Olympus Corporation of the Americas,,0,0
+2494,UVA Health,,0,0
+2495,UVA Health,,0,0
+2503,Indiana University Health,,0,0
+2518,Tompkins Financial Advisors,,0,0
+2547,Douglas County School District,,0,0
+2576,North Arkansas Regional Medical Center,,0,0
+2583,California Department of Human Resources (CalHR),,0,0
+2613,Douglas County School District,,0,0
+2623,Clark County School District,,0,0
+2624,Summit Materials,,0,0
+2625,Federal Bureau of Prisons - Career Connections,,0,0
+2638,EyeCare Partners,,0,0
+2651,SKF Group,,0,0
+2653,California Department of Human Resources (CalHR),,0,0
+2655,The Guitar Center Company,,0,0
+2656,The Guitar Center Company,,0,0
+2657,Metropolitan Transportation Authority,,0,0
+2659,Clark County School District,,0,0
+2660,Clark County School District,,0,0
+2686,Clark County School District,,0,0
+2694,EyeCare Partners,,0,0
+2714,The Guitar Center Company,,0,0
+2716,Clark County School District,,0,0
+2717,Clark County School District,,0,0
+2719,Schreiber Foods,,0,0
+2739,Department of Behavioral Health and Developmental Services,,0,0
+2740,Douglas County School District,,0,0
+2747,AMN Healthcare Leadership Solutions,,0,0
+2748,Summit Materials,,0,0
+2751,Federal Bureau of Prisons - Career Connections,,0,0
+2763,California Department of Human Resources (CalHR),,0,0
+2765,The Guitar Center Company,,0,0
+2766,The Guitar Center Company,,0,0
+2769,Maricopa County,,0,0
+2770,Clark County School District,,0,0
+2773,Summit Materials,,0,0
+2774,Hyundai Motor America,,0,0
+2776,Hach,,0,0
+2777,California Department of Human Resources (CalHR),,0,0
+2779,Alpine Physician Partners,,0,0
+2782,Clark County School District,,0,0
+2783,AMN Healthcare Leadership Solutions,,0,0
+2785,Federal Bureau of Prisons - Career Connections,,0,0
+2795,Clark County School District,,0,0
+2796,Clark County School District,,0,0
+2800,AMN Healthcare Leadership Solutions,,0,0
+2801,Cantex,,0,0
+2802,Paycor,,0,0
+2805,Tennessee Valley Authority,,0,0
+2807,Veolia North America,,0,0
+2815,Palm Beach State College,,0,0
+2817,Schwan's Company,,0,0
+2822,CooperSurgical,,0,0
+2825,Paycor,,0,0
+2833,Gainwell Technologies,,0,0
+2834,Atrium,,0,0
+2835,Tennessee Valley Authority,,0,0
+2848,NAPA Auto Parts,,0,0
+2855,Ingersoll Rand,,0,0
+2879,Ingersoll Rand,,0,0
+2880,Ingersoll Rand,,0,0
+2888,Satellite Healthcare / WellBound,,0,0
+2889,Allied Universal,,0,0
+2894,L.A. Care Health Plan,,0,0
+2895,L.A. Care Health Plan,,0,0
+2896,L.A. Care Health Plan,,0,0
+2898,The Jonus Group,,0,0
+2905,North American Dental Group (NADG),,0,0
+2947,Ingersoll Rand,,0,0
+2949,Ingersoll Rand,,0,0
+2950,Ingersoll Rand,,0,0
+2952,Satellite Healthcare / WellBound,,0,0
+2956,L.A. Care Health Plan,,0,0
+2961,Monterey Bay Aquarium,,0,0
+2963,Staples Stores,,0,0
+2972,Ingersoll Rand,,0,0
+2974,Ingersoll Rand,,0,0
+2975,Solomon Page,,0,0
+2982,Element Materials Technology,,0,0
+2983,Community Transit,,0,0
+2984,L.A. Care Health Plan,,0,0
+2986,Partnership HealthPlan of California,,0,0
+2999,Staples Stores,,0,0
+3022,Partnership HealthPlan of California,,0,0
+3024,Stanford University,,0,0
+3033,Petco,,0,0
+3034,7 For All Mankind,,0,0
+3036,Staples Stores,,0,0
+3040,Sunrise Senior Living,,0,0
+3059,"V-Soft Consulting Group, Inc.",,0,0
+3062,Partnership HealthPlan of California,,0,0
+3065,Claire's,,0,0
+3068,Resideo,,0,0
+3092,Ingersoll Rand,,0,0
+3094,Ingersoll Rand,,0,0
+3095,Ingersoll Rand,,0,0
+3098,Solomon Page,,0,0
+3101,L.A. Care Health Plan,,0,0
+3102,L.A. Care Health Plan,,0,0
+3104,Partnership HealthPlan of California,,0,0
+3117,L.A. Care Health Plan,,0,0
+3120,Genuine Parts Company,,0,0
+3134,Petco,,0,0
+3149,Acrisure,,0,0
+3150,Epsilon,,0,0
+3151,BNY Mellon,,0,0
+3160,"Advanced Correctional Healthcare, Inc.",,0,0
+3170,Genentech,,0,0
+3171,BNY Mellon,,0,0
+3175,Petco,,0,0
+3186,Cedar Rapids Community School District,,0,0
+3202,Petco,,0,0
+3213,Easterseals Southern California,,0,0
+3243,Edelman Smithfield,,0,0
+3245,"Yamaha Motor Corporation, USA",,0,0
+3247,Piper Companies,,0,0
+3249,Piper Companies,,0,0
+3253,Boston Consulting Group (BCG),,0,0
+3254,Life Care Centers of America,,0,0
+3260,Madison Square Garden Entertainment Corp.,,0,0
+3273,Marmon Foodservice Technologies,,0,0
+3274,Acadia Healthcare,,0,0
+3276,Life Care Centers of America,,0,0
+3277,Life Care Centers of America,,0,0
+3278,Life Care Centers of America,,0,0
+3279,Life Care Centers of America,,0,0
+3280,Life Care Centers of America,,0,0
+3281,Life Care Centers of America,,0,0
+3282,Life Care Centers of America,,0,0
+3288,"Chico's FAS, Inc.",,0,0
+3300,Marmon Foodservice Technologies,,0,0
+3302,University of Colorado Boulder,,0,0
+3305,Life Care Centers of America,,0,0
+3306,Life Care Centers of America,,0,0
+3307,Life Care Centers of America,,0,0
+3308,Navy Region Mid-Atlantic Fleet and Family Readiness (FFR),,0,0
+3309,Navy Region Northwest Fleet and Family Readiness (FFR),,0,0
+3310,Life Care Centers of America,,0,0
+3311,Life Care Centers of America,,0,0
+3312,Life Care Centers of America,,0,0
+3313,Life Care Centers of America,,0,0
+3314,Life Care Centers of America,,0,0
+3315,Life Care Centers of America,,0,0
+3316,Life Care Centers of America,,0,0
+3317,Life Care Centers of America,,0,0
+3318,Life Care Centers of America,,0,0
+3319,Life Care Centers of America,,0,0
+3320,Life Care Centers of America,,0,0
+3321,Life Care Centers of America,,0,0
+3322,Life Care Centers of America,,0,0
+3323,Life Care Centers of America,,0,0
+3324,Life Care Centers of America,,0,0
+3335,Piper Companies,,0,0
+3337,Piper Companies,,0,0
+3340,Piper Companies,,0,0
+3342,Acadia Healthcare,,0,0
+3344,Cedar Fair Entertainment Company,,0,0
+3345,Discover Financial Services,,0,0
+3346,Discover Financial Services,,0,0
+3349,Accor - North & Central America,,0,0
+3350,Life Care Centers of America,,0,0
+3352,Navy Region Southwest Fleet and Family Readiness (FFR),,0,0
+3353,Navy Region Southwest Fleet and Family Readiness (FFR),,0,0
+3354,Life Care Centers of America,,0,0
+3355,Life Care Centers of America,,0,0
+3357,Life Care Centers of America,,0,0
+3358,Life Care Centers of America,,0,0
+3359,Life Care Centers of America,,0,0
+3360,Life Care Centers of America,,0,0
+3361,Life Care Centers of America,,0,0
+3362,Life Care Centers of America,,0,0
+3363,Life Care Centers of America,,0,0
+3364,Life Care Centers of America,,0,0
+3365,Life Care Centers of America,,0,0
+3367,"E2 Consulting Engineers, Inc.",,0,0
+3373,Ascension at Home,,0,0
+3387,Life Care Centers of America,,0,0
+3388,Life Care Centers of America,,0,0
+3389,Life Care Centers of America,,0,0
+3390,Life Care Centers of America,,0,0
+3391,Life Care Centers of America,,0,0
+3392,Life Care Centers of America,,0,0
+3394,Life Care Centers of America,,0,0
+3395,Life Care Centers of America,,0,0
+3396,Life Care Centers of America,,0,0
+3399,Life Care Centers of America,,0,0
+3404,"Coca-Cola Bottling Company UNITED, Inc.",,0,0
+3411,Acadia Healthcare,,0,0
+3413,Discover Financial Services,,0,0
+3419,Life Care Centers of America,,0,0
+3420,Navy Region Northwest Fleet and Family Readiness (FFR),,0,0
+3421,Navy Region Naval District Washington Fleet and Family Readiness (FFR),,0,0
+3423,Life Care Centers of America,,0,0
+3424,Life Care Centers of America,,0,0
+3425,Life Care Centers of America,,0,0
+3426,American Express,express,1,0
+3427,Life Care Centers of America,,0,0
+3429,Life Care Centers of America,,0,0
+3437,"TalentBurst, an Inc 5000 company",,0,0
+3438,"TalentBurst, an Inc 5000 company",,0,0
+3447,Piper Companies,,0,0
+3449,Discover Financial Services,,0,0
+3450,Discover Financial Services,,0,0
+3453,Navy Region Southeast Fleet and Family Readiness (FFR),,0,0
+3454,Navy Region Mid-Atlantic Fleet and Family Readiness (FFR),,0,0
+3458,Life Care Centers of America,,0,0
+3460,Delaware North,,0,0
+3461,Life Care Centers of America,,0,0
+3462,Life Care Centers of America,,0,0
+3463,Life Care Centers of America,,0,0
+3464,Life Care Centers of America,,0,0
+3465,Life Care Centers of America,,0,0
+3466,Life Care Centers of America,,0,0
+3467,Life Care Centers of America,,0,0
+3470,Life Care Centers of America,,0,0
+3471,Life Care Centers of America,,0,0
+3472,Life Care Centers of America,,0,0
+3474,Life Care Centers of America,,0,0
+3477,Life Care Centers of America,,0,0
+3479,Arc'teryx Equipment,,0,0
+3482,"TalentBurst, an Inc 5000 company",,0,0
+3484,Holy Name Medical Center,,0,0
+3494,Acadia Healthcare,,0,0
+3495,University of Colorado Boulder,,0,0
+3496,Life Care Centers of America,,0,0
+3498,Accor - North & Central America,,0,0
+3499,Life Care Centers of America,,0,0
+3500,Life Care Centers of America,,0,0
+3501,Life Care Centers of America,,0,0
+3502,Navy Region Mid-Atlantic Fleet and Family Readiness (FFR),,0,0
+3503,Navy Region Northwest Fleet and Family Readiness (FFR),,0,0
+3506,Life Care Centers of America,,0,0
+3507,Life Care Centers of America,,0,0
+3508,Life Care Centers of America,,0,0
+3509,Life Care Centers of America,,0,0
+3510,Life Care Centers of America,,0,0
+3512,Life Care Centers of America,,0,0
+3513,Life Care Centers of America,,0,0
+3514,Life Care Centers of America,,0,0
+3515,Life Care Centers of America,,0,0
+3516,Life Care Centers of America,,0,0
+3517,Life Care Centers of America,,0,0
+3518,Life Care Centers of America,,0,0
+3530,Navy Region Mid-Atlantic Fleet and Family Readiness (FFR),,0,0
+3532,Navy Region Northwest Fleet and Family Readiness (FFR),,0,0
+3534,Life Care Centers of America,,0,0
+3535,Life Care Centers of America,,0,0
+3537,Life Care Centers of America,,0,0
+3538,Life Care Centers of America,,0,0
+3539,Life Care Centers of America,,0,0
+3540,Life Care Centers of America,,0,0
+3541,Life Care Centers of America,,0,0
+3542,Life Care Centers of America,,0,0
+3543,Life Care Centers of America,,0,0
+3544,Life Care Centers of America,,0,0
+3545,Life Care Centers of America,,0,0
+3552,Cox Automotive Inc.,,0,0
+3559,Life Care Centers of America,,0,0
+3562,Life Care Centers of America,,0,0
+3563,Life Care Centers of America,,0,0
+3565,Life Care Centers of America,,0,0
+3574,Ascension at Home,,0,0
+3579,Eurofins PSS Insourcing Solutions,,0,0
+3580,Eurofins PSS Insourcing Solutions,,0,0
+3582,Ciox Health,,0,0
+3585,"Williams-Sonoma, Inc.",,0,0
+3586,Pottery Barn,,0,2
+3587,Allied Universal Janitorial Services,,0,0
+3590,County of Santa Cruz,,0,0
+3593,St. Peter's Health Partners,,0,0
+3595,Doctors Without Borders/Médecins Sans Frontières - USA,,0,0
+3597,Trinity Health,,0,0
+3600,Trinity Health,,0,0
+3601,Trane Technologies,,0,0
+3602,Trane Technologies,,0,0
+3605,Fender Musical Instruments Corporation,,0,0
+3606,American Tire Distributors,,0,0
+3607,St. Peter's Health Partners,,0,0
+3609,Trinity Health,,0,0
+3610,Trinity Health,,0,0
+3614,Trinity Health,,0,0
+3623,Southern Glazer's Wine & Spirits,,0,0
+3624,Trinity Health,,0,0
+3625,Trane Technologies,,0,0
+3627,General Dynamics Ordnance and Tactical Systems,,0,0
+3638,Trinity Health,,0,0
+3645,Red Bull,,0,0
+3646,Doctors Without Borders/Médecins Sans Frontières - USA,,0,0
+3647,Trinity Health,,0,0
+3649,Trane Technologies,,0,0
+3650,Trane Technologies,,0,0
+3658,JPMorgan Chase & Co.,,0,0
+3661,JPMorgan Chase & Co.,,0,0
+3664,Trinity Health,,0,0
+3665,Trinity Health,,0,0
+3666,Trane Technologies,,0,0
+3667,Trane Technologies,,0,0
+3674,Trane Technologies,,0,0
+3677,JPMorgan Chase & Co.,,0,0
+3681,North Vista Hospital,,0,0
+3683,Trane Technologies,,0,0
+3693,Southern Regional Medical Center,,0,0
+3701,UL Solutions,,0,0
+3711,Amdocs,,0,0
+3712,Desert Valley Hospital & Medical Group,,0,0
+3713,On,,0,0
+3722,Live Nation Entertainment,,0,0
+3724,Bank of America,,0,0
+3729,NewYork-Presbyterian Hospital,,0,0
+3735,Live Nation Entertainment,,0,0
+3736,Live Nation Entertainment,,0,0
+3740,Nextracker Inc.,,0,0
+3753,Bank of America,,0,0
+3754,Skechers,,0,0
+3761,Bank of America,,0,0
+3764,Bank of America,,0,0
+3766,Nextracker Inc.,orchestration,1,0
+3776,Live Nation Entertainment,,0,0
+3777,Nextracker Inc.,r,1,0
+3781,myGwork - LGBTQ+ Business Community,,0,0
+3782,myGwork - LGBTQ+ Business Community,,0,0
+3784,myGwork - LGBTQ+ Business Community,,0,0
+3785,myGwork - LGBTQ+ Business Community,,0,0
+3795,Bill & Melinda Gates Foundation,,0,0
+3796,City and County of Denver,,0,0
+3805,Bank of America,,0,0
+3812,Skechers,,0,0
+3817,myGwork - LGBTQ+ Business Community,,0,0
+3830,UVA Health,,0,0
+3838,Bank of America,,0,0
+3847,Arista Networks,,0,0
+3849,myGwork - LGBTQ+ Business Community,,0,0
+3850,myGwork - LGBTQ+ Business Community,,0,0
+3851,Baxter International Inc.,,0,0
+3866,myGwork - LGBTQ+ Business Community,,0,0
+3869,myGwork - LGBTQ+ Business Community,,0,0
+3889,myGwork - LGBTQ+ Business Community,,0,0
+3894,UVA Health,,0,0
+3897,myGwork - LGBTQ+ Business Community,,0,0
+3898,Baxter International Inc.,,0,0
+3906,UVA Health,,0,0
+3907,UVA Health,,0,0
+3911,myGwork - LGBTQ+ Business Community,,0,0
+3912,myGwork - LGBTQ+ Business Community,,0,0
+3913,Baxter International Inc.,,0,0
+3924,"NHS Management, LLC",,0,0
+3937,ALDI USA,,0,0
+3990,TravelNurseSource,,0,0
+3994,"Source Medical Staffing, LLC.",,0,0
+3996,TravelNurseSource,,0,0
+4015,TravelNurseSource,,0,0
+4020,TravelNurseSource,,0,0
+4022,TravelNurseSource,,0,0
+4023,Pulse Healthcare Services,,0,0
+4028,TravelNurseSource,,0,0
+4029,TravelNurseSource,,0,0
+4030,TravelNurseSource,,0,0
+4034,Garden of the Gods Resort and Club,,0,0
+4036,"Progressive Community Health Centers, Inc.",,0,0
+4037,Pulse Healthcare Services,,0,0
+4038,TravelNurseSource,,0,0
+4040,TravelNurseSource,,0,0
+4041,TravelNurseSource,,0,0
+4042,TravelNurseSource,,0,0
+4048,Lescombes Family Vineyards,,0,0
+4051,ARMStaffing,,0,0
+4052,Peak Potential Therapy,,0,0
+4053,TravelNurseSource,,0,0
+4055,GreatWater 360 Auto Care,,0,0
+4056,TravelNurseSource,,0,0
+4060,TravelNurseSource,,0,0
+4066,TravelNurseSource,,0,0
+4067,TravelNurseSource,,0,0
+4068,TravelNurseSource,,0,0
+4069,TravelNurseSource,,0,0
+4070,TravelNurseSource,,0,0
+4071,TravelNurseSource,,0,0
+4072,TravelNurseSource,,0,0
+4073,TravelNurseSource,,0,0
+4074,TravelNurseSource,,0,0
+4075,TravelNurseSource,,0,0
+4076,TravelNurseSource,,0,0
+4086,Rise Up For Autism,,0,0
+4087,TravelNurseSource,,0,0
+4089,Amazing Care Home Health Services - CO,,0,0
+4091,TravelNurseSource,,0,0
+4093,New Story Schools ,,0,0
+4094,TravelNurseSource,rest,1,0
+4106,TravelNurseSource,,0,0
+4107,TravelNurseSource,,0,0
+4111,Pulse Healthcare Services,,0,0
+4114,TravelNurseSource,,0,0
+4115,TravelNurseSource,,0,0
+4116,Atlantic MEDsearch,,0,0
+4117,TravelNurseSource,,0,0
+4118,TravelNurseSource,,0,0
+4119,TravelNurseSource,,0,0
+4120,TravelNurseSource,,0,0
+4121,TravelNurseSource,,0,0
+4122,TravelNurseSource,,0,0
+4123,TravelNurseSource,,0,0
+4124,TravelNurseSource,,0,0
+4125,TravelNurseSource,,0,0
+4144,New Story Schools ,,0,0
+4145,TravelNurseSource,,0,0
+4146,TravelNurseSource,,0,0
+4147,TravelNurseSource,,0,0
+4148,TravelNurseSource,,0,0
+4149,TravelNurseSource,,0,0
+4150,TravelNurseSource,,0,0
+4151,TravelNurseSource,,0,0
+4152,TravelNurseSource,,0,0
+4180,TravelNurseSource,,0,0
+4182,TravelNurseSource,,0,0
+4183,TravelNurseSource,,0,0
+4184,TravelNurseSource,,0,0
+4186,TravelNurseSource,,0,0
+4187,TravelNurseSource,,0,0
+4188,TravelNurseSource,,0,0
+4189,TravelNurseSource,,0,0
+4190,TravelNurseSource,,0,0
+4191,TravelNurseSource,,0,0
+4192,"RQ Construction, LLC",,0,0
+4221,TravelNurseSource,,0,0
+4222,TravelNurseSource,,0,0
+4224,TravelNurseSource,,0,0
+4225,TravelNurseSource,,0,0
+4226,TravelNurseSource,,0,0
+4227,TravelNurseSource,,0,0
+4228,TravelNurseSource,,0,0
+4229,TravelNurseSource,,0,0
+4230,TravelNurseSource,,0,0
+4236,RiseBoro Community Partnership,,0,0
+4250,SKF Group,,0,0
+4293,Principal Financial Group,,0,0
+4307,Ciena Healthcare,,0,0
+4310,Ciena Healthcare,,0,0
+4313,Ciena Healthcare,,0,0
+4327,ATF,,0,0
+4336,WellSpan Health,,0,0
+4337,WellSpan Health,,0,0
+4346,Ciena Healthcare,,0,0
+4352,WellSpan Health,,0,0
+4361,Full Circle Health,,0,0
+4362,GPS Hospitality,,0,0
+4370,Safelite,,0,0
+4372,Safelite,,0,0
+4373,McLaren Health Care,,0,0
+4377,NYC Health + Hospitals,,0,0
+4383,Panasonic North America,,0,0
+4384,Michael Page,,0,0
+4393,NYC Health + Hospitals,,0,0
+4400,GPS Hospitality,,0,0
+4401,Safelite,,0,0
+4403,Safelite,,0,0
+4433,Safelite,,0,0
+4436,Safelite,,0,0
+4437,StoneX Group Inc.,,0,0
+4441,NYC Health + Hospitals,,0,0
+4444,Vanderbilt University Medical Center,,0,0
+4446,Panasonic North America,,0,0
+4449,Georgia Institute of Technology,,0,0
+4451,Honeywell,,0,0
+4459,Ciena Healthcare,,0,0
+4476,Safelite,,0,0
+4478,Safelite,,0,0
+4479,Safelite,,0,0
+4483,NYC Health + Hospitals,,0,0
+4485,Vanderbilt University Medical Center,,0,0
+4488,Panasonic Avionics Corporation,,0,0
+4489,Panasonic North America,,0,0
+4490,Panasonic North America,,0,0
+4491,West Pharmaceutical Services,,0,0
+4497,The Walsh Group - Walsh Construction & Archer Western,,0,0
+4504,WellSpan Health,,0,0
+4514,Safelite,,0,0
+4516,Safelite,,0,0
+4517,Safelite,,0,0
+4518,Safelite,,0,0
+4520,Safelite,,0,0
+4524,Emerson,,0,0
+4529,Corebridge Financial,,0,0
+4545,Georgia Institute of Technology,,0,0
+4546,Tata Consultancy Services,,0,0
+4554,WellSpan Health,,0,0
+4555,WellSpan Health,,0,0
+4559,National Advisors Trust Company,,0,0
+4564,Nomura,,0,0
+4568,Safelite,,0,0
+4569,McLaren Health Care,,0,0
+4573,NYC Health + Hospitals,,0,0
+4576,Westwood Professional Services,,0,0
+4583,WhiteCap Search,,0,0
+4585,West Pharmaceutical Services,,0,0
+4593,Georgia Institute of Technology,,0,0
+4594,Georgia Institute of Technology,,0,0
+4598,Tata Consultancy Services,,0,0
+4604,Fannie Mae,,0,0
+4616,Safelite,,0,0
+4621,"Edgewater Federal Solutions, Inc.",,0,0
+4622,Panasonic North America,,0,0
+4624,City of Atlanta,,0,0
+4631,Tata Consultancy Services,,0,0
+4634,Edward Jones,,0,0
+4638,Fannie Mae,,0,0
+4640,National Staffing Solutions,,0,0
+4643,Zebra Technologies,,0,0
+4644,Safelite,,0,0
+4645,Safelite,,0,0
+4646,Safelite,,0,0
+4647,Safelite,,0,0
+4652,NYC Health + Hospitals,,0,0
+4655,NYC Health + Hospitals,,0,0
+4657,Holcim Building Envelope,,0,0
+4660,Oliva Gibbs LLP,,0,0
+4661,WhiteCap Search,,0,0
+4668,The Walsh Group - Walsh Construction & Archer Western,,0,0
+4669,Honeywell,,0,0
+4670,Robinhood,,0,0
+4674,Honeywell,,0,0
+4675,Edward Jones,,0,0
+4677,National Staffing Solutions,,0,0
+4679,Honeywell,,0,0
+4691,Tata Consultancy Services,,0,0
+4692,Tata Consultancy Services,oracle,1,0
+4693,Tata Consultancy Services,,0,0
+4694,Management Sciences for Health,,0,0
+4699,Mission Foods,,0,0
+4713,West Pharmaceutical Services,r,1,0
+4719,Ultra Clean Technology,,0,0
+4722,Tata Consultancy Services,,0,0
+4727,National Staffing Solutions,,0,0
+4734,University of Kentucky,,0,0
+4740,Federal Home Loan Bank of Cincinnati,,0,0
+4751,National Staffing Solutions,,0,0
+4759,Plymouth State University,,0,0
+4760,Driven Brands Inc.,,0,0
+4762,In-Q-Tel (IQT),,0,0
+4772,National Staffing Solutions,,0,0
+4773,National Staffing Solutions,,0,0
+4774,National Staffing Solutions,,0,0
+4779,WVU Hospitals — Ruby Memorial Hospital,ruby,1,0
+4784,Guidehouse,,0,0
+4785,Guidehouse,,0,0
+4788,Fannie Mae,"python,java,aws",3,0
+4792,National Staffing Solutions,,0,0
+4803,Driven Brands Inc.,,0,0
+4811,del Lago Resort & Casino,,0,0
+4813,Trinity Health Of New England,,0,0
+4816,CAMBA,,0,0
+4817,Driven Brands Inc.,,0,0
+4825,Beth Israel Lahey Health,,0,0
+4826,Beth Israel Lahey Health,,0,0
+4827,Beth Israel Lahey Health,,0,0
+4828,Beth Israel Lahey Health,,0,0
+4829,Beth Israel Lahey Health,,0,0
+4830,Beth Israel Lahey Health,,0,0
+4832,Beth Israel Lahey Health,,0,0
+4840,Dartmouth College,,0,0
+4841,WVU Hospitals — Ruby Memorial Hospital,ruby,1,0
+4842,WVU Hospitals — Ruby Memorial Hospital,ruby,1,0
+4850,Beth Israel Lahey Health,,0,0
+4852,Beth Israel Lahey Health,,0,0
+4853,Beth Israel Lahey Health,,0,0
+4854,Beth Israel Lahey Health,,0,0
+4855,Beth Israel Lahey Health,,0,0
+4856,Beth Israel Lahey Health,,0,0
+4857,GP Strategies Corporation,,0,0
+4862,"Verve Industrial, A Rockwell Automation Company",,0,0
+4867,Beth Israel Lahey Health,,0,0
+4872,Beth Israel Lahey Health,,0,0
+4873,Beth Israel Lahey Health,,0,0
+4875,Beth Israel Lahey Health,,0,0
+4879,Trinity Health Mid-Atlantic,,0,0
+4880,University of Wisconsin-Madison School of Pharmacy,,0,0
+4881,University Health Services,,0,0
+4882,University Health Services,,0,0
+4885,"North Shore Healthcare, LLC",,0,0
+4889,LV= General Insurance,,0,0
+4890,CAMBA,,0,0
+4893,UF Health Central Florida,,0,0
+4895,WVU Medicine Uniontown Hospital ,,0,0
+4898,Guidehouse,,0,0
+4902,Beth Israel Lahey Health,,0,0
+4903,Beth Israel Lahey Health,,0,0
+4911,Pierce Manufacturing,,0,0
+4913,WVU Medicine,,0,0
+4915,WVU Medicine,,0,0
+4919,WVU Hospitals — Ruby Memorial Hospital,ruby,1,0
+4920,WVU Hospitals — Ruby Memorial Hospital,ruby,1,0
+4925,Beth Israel Lahey Health,,0,0
+4926,Beth Israel Lahey Health,,0,0
+4927,Beth Israel Lahey Health,,0,0
+4928,River Edge Behavioral Health,,0,0
+4929,Trinity Health Mid-Atlantic,,0,0
+4930,University Health Services,,0,0
+4931,University of Central Florida,,0,0
+4933,"North Shore Healthcare, LLC",,0,0
+4934,California Department of Developmental Services,,0,0
+4935,"North Shore Healthcare, LLC",,0,0
+4936,"North Shore Healthcare, LLC",,0,0
+4939,"Oshkosh AeroTech, LLC",,0,0
+4944,DNV,,0,0
+4947,Miami-Dade County Public Schools,,0,0
+4954,Beth Israel Lahey Health,,0,0
+4961,Beth Israel Lahey Health,,0,0
+4962,Beth Israel Lahey Health,,0,0
+4963,Beth Israel Lahey Health,,0,0
+4966,Coastal Carolina University,,0,0
+4969,"North Shore Healthcare, LLC",,0,0
+4970,"North Shore Healthcare, LLC",,0,0
+4971,"North Shore Healthcare, LLC",,0,0
+4974,Pierce Manufacturing,,0,0
+4975,Pierce Manufacturing,,0,0
+4982,DNV,,0,0
+4990,Beth Israel Lahey Health,,0,0
+4993,Beth Israel Lahey Health,,0,0
+4994,Beth Israel Lahey Health,,0,0
+4995,Beth Israel Lahey Health,,0,0
+4997,Beth Israel Lahey Health,,0,0
+4998,Beth Israel Lahey Health,,0,0
+4999,Beth Israel Lahey Health,,0,0
+5000,Beth Israel Lahey Health,,0,0
+5001,Beth Israel Lahey Health,,0,0
+5003,Beth Israel Lahey Health,,0,0
+5004,Beth Israel Lahey Health,,0,0
+5008,University Health Services,,0,0
+5010,The Seattle Public Library,,0,0
+5011,California Department of Developmental Services,,0,0
+5013,Informa,,0,0
+5014,Pierce Manufacturing,,0,0
+5015,"Oshkosh AeroTech, LLC",,0,0
+5018,DNV,,0,0
+5022,Elara Caring ,,0,0
+5029,Trinity Health Mid-Atlantic,,0,0
+5030,University Health Services,,0,0
+5031,University Health Services,,0,0
+5033,"North Shore Healthcare, LLC",,0,0
+5034,"North Shore Healthcare, LLC",,0,0
+5035,"North Shore Healthcare, LLC",,0,0
+5038,"Oshkosh AeroTech, LLC",,0,0
+5046,DNV,,0,0
+5047,Miami-Dade County Public Schools,,0,0
+5050,Elara Caring ,,0,0
+5054,City Experiences,,0,0
+5055,City Experiences,,0,0
+5059,Trinity Health Mid-Atlantic,,0,0
+5061,University Health Services,,0,0
+5062,"North Shore Healthcare, LLC",,0,0
+5063,"North Shore Healthcare, LLC",,0,0
+5064,"North Shore Healthcare, LLC",,0,0
+5068,WVU Medicine,,0,0
+5069,WVU Medicine,,0,0
+5075,DNV,,0,0
+5076,DNV,,0,0
+5077,DNV,,0,0
+5079,Lucky Brand,,0,0
+5089,University of Wisconsin-Madison,,0,0
+5090,University Health Services,,0,0
+5093,"North Shore Healthcare, LLC",,0,0
+5094,"North Shore Healthcare, LLC",,0,0
+5101,Lucky Brand,,0,0
+5103,Elara Caring ,,0,0
+5106,OMNIVISION,,0,0
+5119,DNV,,0,0
+5129,Veolia Water Technologies & Solutions,,0,0
+5132,City Experiences,,0,0
+5134,OceanaGold Corporation,,0,0
+5137,Jefferson County Public Schools,,0,0
+5141,Miami-Dade County Public Schools,,0,0
+5170,Catalent Pharma Solutions,,0,0
+5178,OceanaGold Corporation,,0,0
+5185,Jefferson County Public Schools,,0,0
+5190,U.S. Army MWR,,0,0
+5195,Jefferson County Public Schools,,0,0
+5197,EXP,,0,0
+5201,SMS group USA,,0,0
+5204,"KCI Technologies, Inc.",,0,0
+5212,National Beef Packing Company LLC,,0,0
+5216,Jefferson County Public Schools,,0,0
+5217,Vetcor,,0,0
+5221,Stanford Children's Health | Lucile Packard Children's Hospital Stanford,,0,0
+5224,St. Jude Children's Research Hospital,,0,0
+5229,SitelogIQ,,0,0
+5230,National Indemnity Company,,0,0
+5239,Jefferson County Public Schools,,0,0
+5242,"KCI Technologies, Inc.",,0,0
+5246,Jefferson County Public Schools,,0,0
+5249,Jefferson County Public Schools,,0,0
+5250,Jefferson County Public Schools,,0,0
+5252,St. Jude Children's Research Hospital,,0,0
+5254,Flagstar Bank,,0,0
+5257,Michael Page,,0,0
+5261,ABC 10News San Diego | KGTV Channel 10,,0,0
+5271,Ariston Group,,0,0
+5280,"Nalco Water, An Ecolab Company",,0,0
+5282,Sharp HealthCare,,0,0
+5284,Amazon,,0,0
+5288,"Nalco Water, An Ecolab Company",,0,0
+5289,Ecolab,,0,0
+5291,Sharp HealthCare,,0,0
+5293,Amazon Web Services (AWS),aws,1,0
+5298,Amazon Web Services (AWS),aws,1,0
+5300,Amazon Web Services (AWS),aws,1,0
+5302,Amazon Web Services (AWS),"python,aws",2,0
+5303,Amazon Web Services (AWS),aws,1,0
+5305,Amazon,,0,0
+5308,Amazon Web Services (AWS),aws,1,0
+5309,Amazon Web Services (AWS),aws,1,0
+5310,Amazon Web Services (AWS),aws,1,0
+5311,Amazon Web Services (AWS),aws,1,0
+5314,Amazon,,0,0
+5315,Amazon,,0,0
+5316,Amazon Web Services (AWS),aws,1,0
+5318,Amazon,,0,0
+5320,Amazon Web Services (AWS),aws,1,0
+5322,Amazon Web Services (AWS),aws,1,0
+5324,Amazon Web Services (AWS),aws,1,0
+5325,Amazon,,0,0
+5333,Sharp HealthCare,,0,0
+5334,Sharp HealthCare,,0,0
+5336,Amazon Web Services (AWS),aws,1,0
+5337,Amazon Web Services (AWS),aws,1,0
+5338,Amazon Lab126,,0,0
+5343,Amazon Web Services (AWS),"spark,aws",2,0
+5344,Amazon Web Services (AWS),aws,1,0
+5345,Amazon,,0,0
+5346,Amazon Web Services (AWS),aws,1,0
+5348,Amazon,,0,0
+5349,Amazon Web Services (AWS),"ai,aws",2,0
+5350,Amazon,,0,0
+5354,Sharp HealthCare,,0,0
+5360,Amazon Web Services (AWS),aws,1,0
+5362,Amazon Games,,0,0
+5365,Amazon,,0,0
+5371,Amazon Web Services (AWS),aws,1,0
+5373,Amazon,,0,0
+5374,Amazon Web Services (AWS),aws,1,0
+5375,Amazon Web Services (AWS),aws,1,0
+5376,Amazon Web Services (AWS),aws,1,0
+5377,Amazon Web Services (AWS),aws,1,0
+5378,Amazon,,0,0
+5382,Amazon,,0,0
+5383,Amazon,,0,0
+5385,Amazon,,0,0
+5387,Amazon Web Services (AWS),aws,1,0
+5389,Amazon Web Services (AWS),aws,1,0
+5391,Amazon,,0,0
+5392,Amazon Games,,0,0
+5393,Amazon Web Services (AWS),aws,1,0
+5395,Amazon,,0,0
+5397,Amazon Web Services (AWS),aws,1,0
+5400,Amazon Web Services (AWS),aws,1,0
+5406,Amazon,,0,0
+5413,TravelNurseSource,,0,0
+5414,TravelNurseSource,,0,0
+5416,TravelNurseSource,,0,0
+5417,TravelNurseSource,,0,0
+5418,TravelNurseSource,,0,0
+5486,TravelNurseSource,,0,0
+5487,TravelNurseSource,,0,0
+5488,TravelNurseSource,,0,0
+5489,TravelNurseSource,,0,0
+5490,TravelNurseSource,,0,0
+5491,TravelNurseSource,,0,0
+5492,TravelNurseSource,,0,0
+5493,TravelNurseSource,,0,0
+5521,Palmetto GBA,,0,0
+5527,EV.Careers,,0,0
+6260,PeopleConnect Staffing,,0,0
+6465,TravelNurseSource,,0,0
+6466,TravelNurseSource,,0,0
+6468,Vetted Health,,0,0
+6469,Monarch Healthcare Management,,0,0
+6471,Monarch Healthcare Management,,0,0
+6472,Monarch Healthcare Management,,0,0
+6473,TravelNurseSource,,0,0
+6474,University of Virginia,,0,0
+6476,Pediatrix Medical Group,,0,0
+6477,Pediatrix Medical Group,,0,0
+6479,University of Virginia,,0,0
+6480,Pediatrix Medical Group,,0,0
+6483,Pediatrix Medical Group,,0,0
+6484,Pediatrix Medical Group,,0,0
+6485,Pediatrix Medical Group,,0,0
+6495,Innovative Renal Care,,0,0
+6501,"FIFA World Cup 2026™ - Canada, Mexico and the United States",,0,0
+6502,Houston Methodist,,0,0
+6504,Capital One,,0,0
+6505,Capital One,,0,0
+6507,Capital One,,0,0
+6508,Capital One,,0,0
+6510,Capital One,,0,0
+6520,Capital One,"python,java,aws,spring",4,0
+6523,Capital One,,0,0
+6527,Capital One,,0,0
+6529,Capital One,,0,0
+6530,Capital One,,0,0
+6531,Capital One,data science,1,0
+6533,NYC Department of Education,,0,0
+6534,NYC Department of Education,,0,0
+6537,WellSpan Health,,0,0
+6540,Houston Methodist,,0,0
+6541,Houston Methodist,,0,0
+6542,Capital One,,0,0
+6543,Capital One,,0,0
+6544,Capital One,,0,0
+6546,Capital One,,0,0
+6547,Capital One,,0,0
+6548,Capital One,,0,0
+6549,Capital One,,0,0
+6550,Capital One,,0,0
+6551,Capital One,,0,0
+6553,Capital One,,0,0
+6557,Capital One,"python,java,aws,spring",4,0
+6559,NYC Department of Education,,0,0
+6567,GFL Environmental Inc.,,0,0
+6571,GardaWorld,,0,0
+6573,Houston Methodist,,0,0
+6574,Capital One,,0,0
+6576,Capital One,,0,0
+6577,Capital One,,0,0
+6581,"Team Builders Recruiting and Consulting, LLC",,0,0
+6582,"Team Builders Recruiting and Consulting, LLC",,0,0
+6583,"Team Builders Recruiting and Consulting, LLC",,0,0
+6584,"Team Builders Recruiting and Consulting, LLC",,0,0
+6585,"Team Builders Recruiting and Consulting, LLC",,0,0
+6587,Principal Financial Group,,0,0
+6606,Houston Methodist,,0,0
+6607,Houston Methodist,,0,0
+6610,Capital One,,0,0
+6613,Capital One,"java,go",2,0
+6614,Capital One,,0,0
+6616,Capital One,,0,0
+6617,Capital One,,0,0
+6619,Capital One,,0,0
+6622,WellSpan Health,,0,0
+6623,Tesla,,0,0
+6625,Safelite,,0,0
+6626,Safelite,,0,0
+6633,NYC Health + Hospitals,,0,0
+6642,"FIFA World Cup 2026™ - Canada, Mexico and the United States",,0,0
+6643,Houston Methodist,,0,0
+6648,Capital One,data science,1,0
+6651,Capital One,,0,0
+6652,Capital One,,0,0
+6653,Capital One,,0,0
+6654,"Team Builders Recruiting and Consulting, LLC",,0,0
+6655,"Team Builders Recruiting and Consulting, LLC",,0,0
+6656,"Team Builders Recruiting and Consulting, LLC",,0,0
+6657,"Team Builders Recruiting and Consulting, LLC",,0,0
+6660,TC Restaurant Group,,0,0
+6661,TC Restaurant Group,,0,0
+6663,WellSpan Health,,0,0
+6664,PubMatic,,0,0
+6665,NYC Health + Hospitals,,0,0
+6669,Safelite,,0,0
+6672,Hard Rock Casino Rockford,chef,1,0
+6676,NYC Health + Hospitals,,0,0
+6677,NYC Health + Hospitals,,0,0
+6681,Inversion,,0,0
+6682,EMSA- Emergency Medical Services Authority,,0,0
+6688,"FIFA World Cup 2026™ - Canada, Mexico and the United States",,0,0
+6690,"University of Maryland, Baltimore (UMB)",,0,0
+6691,"University of Maryland, Baltimore (UMB)",,0,0
+6692,Houston Methodist,,0,0
+6693,Houston Methodist,,0,0
+6694,Houston Methodist,,0,0
+6695,Houston Methodist,,0,0
+6696,Houston Methodist,,0,0
+6699,Capital One,,0,0
+6704,Capital One,,0,0
+6708,Capital One,,0,0
+6709,Capital One,"python,java,aws,spring",4,0
+6710,Capital One,,0,0
+6712,Safelite,,0,0
+6713,Safelite,,0,0
+6714,Safelite,,0,0
+6715,Safelite,,0,0
+6729,Houston Methodist,,0,0
+6732,Capital One,"java,go",2,0
+6733,Capital One,data science,1,0
+6735,Capital One,,0,0
+6736,Capital One,,0,0
+6737,Capital One,,0,0
+6739,Grand Fitness,,0,0
+6745,WellSpan Health,,0,0
+6750,Safelite,,0,0
+6755,Westwood Professional Services,,0,0
+6758,"Bridgestone Retail Operations, LLC",,0,0
+6762,Old Second National Bank,,0,0
+6763,Old Second National Bank,,0,0
+6771,Hyatt Hotels Corporation,,0,0
+6776,Saputo Inc.,,0,0
+6779,WellSpan Health,,0,0
+6782,Tesla,,0,0
+6786,Safelite,,0,0
+6789,SymphonyAI,,0,0
+6790,NYC Health + Hospitals,,0,0
+6798,"Bridgestone Retail Operations, LLC",,0,0
+6799,Bridgestone Americas,,0,0
+6801,Martin Marietta,,0,0
+6802,Honeywell,,0,0
+6812,Hyatt Hotels Corporation,,0,0
+6818,Hyatt Regency,,0,0
+6820,Safelite,,0,0
+6821,Safelite,,0,0
+6822,Safelite,,0,0
+6823,Hard Rock Casino Rockford,chef,1,0
+6826,NYC Health + Hospitals,,0,0
+6831,"Bridgestone Retail Operations, LLC",,0,0
+6832,"Bridgestone Retail Operations, LLC",,0,0
+6834,Old Second National Bank,,0,0
+6835,CrowdStrike,,0,0
+6836,CrowdStrike,,0,0
+6848,Zebra Technologies,,0,0
+6850,The Unbound Collection by Hyatt,,0,0
+6851,Hyatt Hotels Corporation,,0,0
+6853,Hyatt Hotels Corporation,,0,0
+6857,Safelite,,0,0
+6859,Safelite,,0,0
+6860,McLaren Health Care,,0,0
+6864,Georgia Department of Public Health,,0,0
+6865,Vanderbilt University Medical Center,,0,0
+6868,"Bridgestone Retail Operations, LLC",,0,0
+6869,"Bridgestone Retail Operations, LLC",,0,0
+6871,Tata Consultancy Services,,0,0
+6873,Honeywell,,0,0
+6893,"Bridgestone Retail Operations, LLC",,0,0
+6899,Toll Brothers,,0,0
+6900,Toll Brothers,,0,0
+6901,Honeywell,,0,0
+6910,Hyatt Regency,,0,0
+6911,Hyatt Regency,,0,0
+6916,"Bridgestone Retail Operations, LLC",,0,0
+6925,Robinhood,"ai,machine learning",2,0
+6926,Robinhood,orchestration,1,0
+6932,Destination by Hyatt,,0,0
+6933,Hyatt Hotels Corporation,,0,0
+6947,Boise Cascade Company,,0,0
+6948,Hyatt Regency,,0,0
+6953,Neighborly®,,0,0
+6956,Hyatt Regency,,0,0
+6957,Hyatt Regency,,0,0
+6959,Summit Fire Protection,,0,0
+6961,Hyatt Hotels Corporation,,0,0
+6962,The Unbound Collection by Hyatt,,0,0
+6966,Grand Hyatt,,0,0
+6974,UW School of Medicine and Public Health,,0,0
+6976,Seattle Information Technology Department,,0,0
+6977,Seattle Human Services Department,,0,0
+6985,Plante Moran,,0,0
+6987,Legacy Health,,0,0
+6988,UW-Madison College of Letters & Science,,0,0
+6990,DNV,,0,0
+6993,Elara Caring ,,0,0
+6996,Raising Cane's Chicken Fingers,,0,0
+6999,CyberCoders,,0,0
+7000,CyberCoders,,0,0
+7003,CyberCoders,,0,0
+7006,Legacy Health,,0,0
+7007,University of Wisconsin-Madison,,0,0
+7020,DNV,,0,0
+7024,WVU Medicine Camden Clark Medical Center,,0,0
+7026,Raising Cane's Chicken Fingers,,0,0
+7035,CyberCoders,,0,0
+7039,UW School of Medicine and Public Health,,0,0
+7041,DNV,,0,0
+7048,Inchcape Shipping Services,,0,0
+7049,Integrated Oncology Network,,0,0
+7054,CyberCoders,,0,0
+7060,TEKsystems,,0,0
+7062,TEKsystems,,0,0
+7063,TEKsystems,,0,0
+7066,Beth Israel Lahey Health,,0,0
+7069,Talent Groups,,0,0
+7075,Plante Moran,,0,0
+7084,Vetcor,,0,0
+7087,CyberCoders,,0,0
+7090,CyberCoders,,0,0
+7096,Case Western Reserve University,,0,0
+7097,Case Western Reserve University,,0,0
+7101,TEKsystems,sql,1,0
+7102,TEKsystems,,0,0
+7110,University of Wisconsin-Madison,,0,0
+7111,University of Wisconsin-Madison,,0,0
+7112,University of Wisconsin-Madison,,0,0
+7115,Summit Fire & Security,,0,0
+7119,Elara Caring ,,0,0
+7127,CyberCoders,,0,0
+7128,CyberCoders,,0,0
+7142,TEKsystems,,0,0
+7145,UW-Madison College of Engineering,,0,0
+7151,DNV,,0,0
+7155,Elara Caring ,,0,0
+7158,CyberCoders,,0,0
+7164,CyberCoders,,0,0
+7169,CyberCoders,,0,0
+7171,Conduent,,0,0
+7174,All Copy Products,,0,0
+7190,TEKsystems,,0,0
+7192,TEKsystems,,0,0
+7198,Elara Caring ,,0,0
+7199,Raising Cane's Chicken Fingers,,0,0
+7203,Raising Cane's Chicken Fingers,,0,0
+7209,CyberCoders,,0,0
+7210,CyberCoders,,0,0
+7212,Conduent,,0,0
+7213,CyberCoders,,0,0
+7215,TC Transcontinental,,0,0
+7216,All Copy Products,,0,0
+7217,Case Western Reserve University,,0,0
+7221,TEKsystems,,0,0
+7225,TEKsystems,sql,1,0
+7235,Nebraska Furniture Mart,,0,0
+7236,Bristol Myers Squibb,,0,0
+7239,CyberCoders,,0,0
+7244,Ingram Content Group,,0,0
+7246,Case Western Reserve University,,0,0
+7248,TEKsystems,,0,0
+7250,TEKsystems,,0,0
+7264,Allbirds,,0,0
+7266,Maxim Healthcare Staffing,,0,0
+7269,Acosta,,0,0
+7270,Premium Retail Services,,0,0
+7271,ActionLink,,0,0
+7273,ActionLink,,0,0
+7274,Acosta,,0,0
+7276,ActionLink,,0,0
+7281,General Dynamics Information Technology,,0,0
+7285,Case Western Reserve University,,0,0
+7286,Case Western Reserve University,,0,0
+7302,Bristol Myers Squibb,,0,0
+7303,The Hershey Company,,0,0
+7304,The Hershey Company,,0,0
+7305,Maxim Healthcare Staffing,,0,0
+7309,Maxim Healthcare Staffing,,0,0
+7310,Maxim Healthcare Staffing,,0,0
+7312,Acosta,,0,0
+7316,Maxim Healthcare Staffing,,0,0
+7319,Premium Retail Services,,0,0
+7323,AAA-The Auto Club Group,,0,0
+7328,TEKsystems,,0,0
+7329,TEKsystems,,0,0
+7333,TEKsystems,,0,0
+7338,Convatec,,0,0
+7339,Nikola Corporation,,0,0
+7341,Bristol Myers Squibb,,0,0
+7342,Dürr,,0,0
+7344,Maxim Healthcare Staffing,,0,0
+7345,Maxim Healthcare Staffing,,0,0
+7347,Maxim Healthcare Staffing,,0,0
+7351,Maxim Healthcare Staffing,,0,0
+7355,"Butterball, LLC",,0,0
+7365,Adobe,,0,0
+7366,ActionLink,,0,0
+7368,Bath & Body Works,,0,0
+7373,AAA-The Auto Club Group,,0,0
+7383,HCA Healthcare,,0,0
+7384,Medical City Healthcare,,0,0
+7389,Nikola Corporation,,0,0
+7398,TriCities Hospital,,0,0
+7399,HCA Healthcare,,0,0
+7400,Belton Regional Medical Center,,0,0
+7401,TriStar NorthCrest Medical Center,,0,0
+7403,Medical City Healthcare,,0,0
+7411,Bath & Body Works,,0,0
+7421,HCA Houston Healthcare,,0,0
+7427,Corpus Christi Medical Center,,0,0
+7428,Trident Medical Center,,0,0
+7429,The Hershey Company,,0,0
+7431,Maxim Healthcare Staffing,,0,0
+7432,Maxim Healthcare Staffing,,0,0
+7433,Maxim Healthcare Staffing,,0,0
+7435,Maxim Healthcare Staffing,,0,0
+7436,Maxim Healthcare Staffing,,0,0
+7438,Maxim Healthcare Staffing,,0,0
+7440,Maxim Healthcare Staffing,,0,0
+7445,Bath & Body Works,,0,0
+7447,Erie Family Health Centers,,0,0
+7449,CACI International Inc,,0,0
+7451,Amneal Pharmaceuticals,,0,0
+7458,HCA Florida Northside Hospital,,0,0
+7461,Maxim Healthcare Staffing,,0,0
+7462,Maxim Healthcare Staffing,,0,0
+7463,Maxim Healthcare Staffing,,0,0
+7464,Maxim Healthcare Staffing,,0,0
+7465,Maxim Healthcare Staffing,,0,0
+7470,ActionLink,,0,0
+7471,Maxim Healthcare Staffing,,0,0
+7472,Maxim Healthcare Staffing,,0,2
+7473,Maxim Healthcare Staffing,,0,0
+7476,General Dynamics Information Technology,,0,0
+7478,Bon Secours,,0,0
+7479,Thrive Pet Healthcare,,0,0
+7482,North Suburban Medical Center,,0,0
+7487,Grand Strand Medical Center – HCA,,0,0
+7488,Del Sol Medical Center,,0,0
+7489,HCA Houston Healthcare,,0,0
+7491,Regional Medical Center of San Jose,,0,0
+7494,Overland Park Regional Medical Center,,0,0
+7499,Grand Strand Medical Center – HCA,,0,0
+7506,AstraZeneca,,0,0
+7509,Lee's Summit Medical Center,,0,0
+7510,Spotsylvania Regional Medical Center,,0,0
+7511,HCA Florida Kendall Hospital,,0,0
+7513,MountainView Hospital,,0,0
+7514,Methodist Healthcare System,,0,0
+7515,Lee's Summit Medical Center,,0,0
+7516,Centerpoint Medical Center,,0,0
+7517,HCA Florida Blake Hospital,,0,0
+7518,HCA Florida Highlands Hospital,,0,0
+7520,Reston Hospital,,0,0
+7527,HCA Healthcare,,0,0
+7529,Rio Grande Regional Hospital,,0,0
+7531,HCA Healthcare,,0,0
+7537,Jobot Consulting,,0,0
+7542,Keck Medicine of USC,,0,1
+7543,"Varsity Tutors, a Nerdy Company",,0,0
+7546,Thrive Pet Healthcare,,0,0
+7547,Medical City Healthcare,,0,0
+7548,Red Tail Acquisitions,,0,0
+7549,Providence Health & Services,,0,0
+7550,"Alexion Pharmaceuticals, Inc.",,0,0
+7556,Jobot Consulting,,0,0
+7559,"Varsity Tutors, a Nerdy Company",,0,0
+7560,Keck Medicine of USC,,0,1
+7561,Saint Agnes Medical Center,,0,0
+7563,Concentrix,,0,0
+7564,The Medical Center of Aurora,,0,0
+7566,Del Sol Medical Center,,0,0
+7567,Las Palmas Medical Center,,0,0
+7568,Providence Health & Services,,0,0
+7570,Evinova,,0,0
+7571,Keck Medicine of USC,,0,1
+7572,Keck Medicine of USC,,0,1
+7573,Keck Medicine of USC,,0,1
+7574,Keck Medicine of USC,,0,1
+7576,Saint Agnes Medical Center,,0,0
+7578,"Varsity Tutors, a Nerdy Company",,0,0
+7587,Keck Medicine of USC,,0,1
+7588,Keck Medicine of USC,,0,1
+7589,Keck Medicine of USC,,0,1
+7590,Keck Medicine of USC,,0,1
+7591,Keck Medicine of USC,,0,1
+7592,Saint Agnes Medical Center,,0,0
+7595,"Varsity Tutors, a Nerdy Company",,0,0
+7596,PetVet Care Centers,,0,0
+7598,"Alexion Pharmaceuticals, Inc.",,0,0
+7601,Partner Therapeutics,,0,0
+7602,Partner Therapeutics,,0,0
+7609,AstraZeneca,,0,0
+7615,Keck Medicine of USC,,0,1
+7616,Keck Medicine of USC,,0,1
+7617,Keck Medicine of USC,,0,1
+7618,Keck Medicine of USC,,0,1
+7619,Keck Medicine of USC,,0,1
+7622,American Cancer Society,,0,0
+7624,Vestcom,,0,0
+7625,The Goodyear Tire & Rubber Company,,0,0
+7628,"Varsity Tutors, a Nerdy Company",,0,0
+7630,Keck Medicine of USC,,0,1
+7631,Murphy USA,,0,0
+7632,"Varsity Tutors, a Nerdy Company",javascript,1,0
+7633,Washington University in St. Louis,,0,0
+7634,VCA Animal Hospitals,,0,0
+7645,Keck Medicine of USC,,0,1
+7647,Keck Medicine of USC,,0,1
+7651,Prisma Health,,0,0
+7652,The Goodyear Tire & Rubber Company,,0,0
+7653,VCA Animal Hospitals,,0,0
+7654,The Goodyear Tire & Rubber Company,,0,0
+7656,Global Payments Inc.,,0,0
+7661,Washington University in St. Louis,,0,0
+7665,Secured Land Transfers,,0,0
+7670,Aimbridge Hospitality,,0,0
+7671,Aimbridge Hospitality,,0,0
+7675,VCA Animal Hospitals,,0,0
+7676,The Goodyear Tire & Rubber Company,,0,0
+7683,Aimbridge Hospitality,,0,0
+7686,Aimbridge Hospitality,,0,0
+7687,"Varsity Tutors, a Nerdy Company",,0,0
+7691,VCA Animal Hospitals,,0,0
+7692,Flowserve Corporation,,0,0
+7693,Children's Wisconsin,,0,0
+7698,Baylor Scott & White Health,,0,0
+7702,National Veterinary Associates,,0,0
+7704,"Varsity Tutors, a Nerdy Company",,0,0
+7708,WSP in the U.S.,,0,0
+7711,The Goodyear Tire & Rubber Company,,0,0
+7713,Secured Land Transfers,,0,0
+7717,Infineon Technologies,,0,0
+7721,Aimbridge Hospitality,,0,0
+7724,Aimbridge Hospitality,,0,0
+7726,WSP in the U.S.,,0,0
+7727,Jobs via eFinancialCareers,,0,0
+7734,Baylor Scott & White Health,,0,0
+7741,National Veterinary Associates,,0,0
+7742,Infineon Technologies,,0,0
+7747,Aimbridge Hospitality,,0,0
+7748,WSP in the U.S.,,0,0
+7750,Umpqua Bank,,0,0
+7751,Jobs via eFinancialCareers,,0,0
+7752,Ken Garff Automotive Group,,0,0
+7759,Creative Financial Staffing (CFS),,0,0
+7760,Aimbridge Hospitality,,0,0
+7770,Creative Financial Staffing (CFS),,0,0
+7772,Aimbridge Hospitality,,0,0
+7774,Planned Parenthood of Greater New York,,0,0
+7775,WSP in the U.S.,,0,0
+7777,Bass Pro Shops,,0,0
+7779,Children's Wisconsin,,0,0
+7780,Jobs via eFinancialCareers,,0,0
+7784,Creative Financial Staffing (CFS),,0,0
+7789,Dynamic Yield by Mastercard,,0,0
+7791,Mastercard,,0,0
+7804,Jobs via eFinancialCareers,,0,0
+7805,Oregon Department of Transportation,,0,0
+7811,Children's Health,,0,0
+7813,Creative Financial Staffing (CFS),,0,0
+7815,Creative Financial Staffing (CFS),,0,0
+7827,Unitek Learning,,0,0
+7830,Parsons Corporation,,0,0
+7832,Epic Games,,0,0
+7836,"WOW! Internet, Cable & Phone",,0,0
+7837,"WOW! Internet, Cable & Phone",,0,0
+7838,"WOW! Internet, Cable & Phone",,0,0
+7840,Long Island Community Hospital,,0,0
+7845,Health Carousel Nursing & Allied Health,,0,0
+7851,VCA Animal Hospitals,,0,0
+7856,Creative Financial Staffing (CFS),,0,0
+7857,Mastercard,,0,0
+7864,Long Island Community Hospital,,0,0
+7868,"WOW! Internet, Cable & Phone",,0,0
+7870,"Burlington Stores, Inc.",,0,0
+7875,Health Carousel Nursing & Allied Health,,0,0
+7876,AVI Foodsystems,,0,0
+7881,Children's Wisconsin,,0,0
+7882,Ken Garff Automotive Group,,0,0
+7884,Creative Financial Staffing (CFS),,0,0
+7886,Creative Financial Staffing (CFS),,0,0
+7887,DocCafe,,0,0
+7894,DocCafe,,0,0
+7898,Creative Financial Staffing (CFS),,0,0
+7903,Applied Materials,,0,0
+7905,"WOW! Internet, Cable & Phone",,0,0
+7907,VCA Animal Hospitals,,0,0
+7908,Transdev North America,,0,0
+7913,"CareDx, Inc.",,0,0
+7915,GE Digital,ai,1,0
+7919,Jobs via eFinancialCareers,,0,0
+7923,Children's Health,,0,0
+7926,CJ Logistics America,,0,0
+7931,Creative Financial Staffing (CFS),,0,0
+7934,Creative Financial Staffing (CFS),,0,0
+7937,Creative Financial Staffing (CFS),,0,0
+7939,DocCafe,,0,0
+7941,Good Samaritan Society,,0,0
+7944,Health Carousel Nursing & Allied Health,,0,0
+7946,Health Carousel Nursing & Allied Health,,0,0
+7948,Good Samaritan Society,,0,0
+7949,Palo Alto Networks,,0,0
+7954,Children's Health,,0,0
+7960,DocCafe,,0,0
+7962,Creative Financial Staffing (CFS),,0,0
+7963,Creative Financial Staffing (CFS),,0,0
+7966,Creative Financial Staffing (CFS),,0,0
+7968,Creative Financial Staffing (CFS),,0,0
+7972,Creative Financial Staffing (CFS),,0,0
+7973,Creative Financial Staffing (CFS),,0,0
+7980,"WOW! Internet, Cable & Phone",,0,0
+7985,Health Carousel Nursing & Allied Health,,0,0
+7986,Health Carousel Nursing & Allied Health,,0,0
+7987,Health Carousel Nursing & Allied Health,,0,0
+7988,Health Carousel Nursing & Allied Health,,0,0
+7989,Health Carousel Nursing & Allied Health,,0,0
+7991,Health Carousel Nursing & Allied Health,,0,0
+7996,Children's Health,,0,0
+7998,Planned Parenthood of Greater New York,,0,0
+8001,DocCafe,,0,0
+8005,CJ Logistics America,,0,0
+8009,DocCafe,,0,0
+8010,Creative Financial Staffing (CFS),,0,0
+8019,Creative Financial Staffing (CFS),,0,0
+8026,Health Carousel Nursing & Allied Health,,0,0
+8031,Health Carousel Nursing & Allied Health,,0,0
+8032,FirstChoice Hiring,,0,0
+8035,DocCafe,,0,0
+8036,AVI Foodsystems,,0,0
+8039,Health Carousel Nursing & Allied Health,,0,0
+8043,Health Carousel Nursing & Allied Health,,0,0
+8044,CareFirst BlueCross BlueShield,cybersecurity,1,0
+8045,Health Carousel Nursing & Allied Health,,0,0
+8047,Spectrum,,0,0
+8048,"Metis Technology Solutions, Inc.",,0,0
+8052,Spectrum,,0,0
+8055,Spectrum,,0,0
+8056,Spectrum Enterprise,,0,0
+8057,Spectrum,,0,0
+8058,Spectrum,,0,0
+8062,Aya Locums,,0,3
+8063,Aya Locums,,0,3
+8064,Aya Locums,,0,3
+8065,Aya Locums,,0,3
+8066,Holiday Stationstores,,0,0
+8067,Aya Locums,,0,3
+8068,Aya Locums,,0,3
+8071,VCA Animal Hospitals,,0,0
+8072,University of Rhode Island,,0,0
+8074,Health Carousel Nursing & Allied Health,,0,0
+8075,Health Carousel Nursing & Allied Health,,0,0
+8076,Health Carousel Nursing & Allied Health,,0,0
+8079,ICON Strategic Solutions,,0,0
+8080,Adventist HealthCare,,0,0
+8082,Long Island Community Hospital,,0,0
+8083,Health Carousel Nursing & Allied Health,,0,0
+8085,Aya Locums,,0,3
+8087,Aya Locums,,0,3
+8089,Aya Locums,,0,3
+8093,MultiCare Health System,,0,0
+8094,Mondelēz International,,0,0
+8096,Mondelēz International,,0,0
+8097,Aya Locums,,0,3
+8101,Spectrum,,0,0
+8105,One Medical,,0,0
+8106,Aya Locums,,0,3
+8108,Mondelēz International,,0,0
+8112,Eddie Bauer,,0,0
+8115,Spectrum,,0,0
+8116,Spectrum,,0,0
+8119,Mondelēz International,,0,0
+8121,Virginia Mason Franciscan Health,,0,0
+8132,Energy Jobline,,0,0
+8136,Energy Jobline,,0,0
+8137,Energy Jobline,,0,0
+8143,The Container Store,,0,0
+8145,FirstChoice Hiring,,0,0
+8146,Spectrum,,0,0
+8147,Aya Locums,,0,3
+8150,Spectrum,,0,0
+8151,Spectrum,,0,0
+8152,Spectrum Enterprise,,0,0
+8154,Spectrum,,0,0
+8158,Spectrum,,0,0
+8159,Spectrum,,0,0
+8160,One Medical,,0,0
+8161,Aya Locums,,0,3
+8162,Mondelēz International,,0,0
+8163,Aya Locums,,0,3
+8164,Aya Locums,,0,3
+8168,University of South Florida,,0,0
+8173,Intermountain Health,,0,0
+8177,Stars Behavioral Health Group,,0,0
+8188,Energy Jobline,,0,0
+8192,Spectrum,,0,0
+8193,Spectrum,,0,0
+8196,Aya Locums,,0,3
+8200,Mondelēz International,,0,0
+8201,Mondelēz International,,0,0
+8203,Aya Locums,,0,3
+8204,Aya Locums,,0,3
+8217,Intertek,,0,0
+8218,Spectrum,,0,0
+8219,Spectrum,,0,0
+8221,Spectrum Community Solutions,,0,0
+8222,Spectrum Community Solutions,,0,0
+8223,Aya Locums,,0,3
+8225,Mondelēz International,,0,0
+8226,MultiCare Health System,,0,0
+8229,Intermountain Health,,0,0
+8233,GE HealthCare,,0,0
+8234,Energy Jobline,,0,0
+8236,Energy Jobline,,0,0
+8239,Energy Jobline,,0,0
+8240,Energy Jobline,,0,0
+8242,Energy Jobline,,0,0
+8249,Energy Jobline,,0,0
+8250,Con Edison,,0,0
+8255,Spectrum,,0,0
+8257,One Medical,,0,0
+8258,Mondelēz International,,0,0
+8269,Holiday Stationstores,,0,0
+8274,Energy Jobline,,0,0
+8275,Energy Jobline,,0,0
+8276,Energy Jobline,,0,0
+8279,Mondelēz International,,0,0
+8285,Holiday Stationstores,,0,0
+8289,Energy Jobline,,0,0
+8291,Energy Jobline,,0,0
+8295,Energy Jobline,r,1,0
+8296,Energy Jobline,,0,0
+8297,"MacAllister Machinery Co., Inc.",,0,0
+8299,Mondelēz International,,0,0
+8304,Intermountain Health,,0,0
+8314,Energy Jobline,,0,0
+8325,Energy Jobline,,0,0
+8328,Energy Jobline,,0,0
+8334,PointClickCare,,0,0
+8344,Checkpoint Systems,,0,0
+8346,Corewell Health,,0,0
+8357,Jobot,,0,0
+8363,United States Army Mid-Atlantic Recruiting Battalion,,0,0
+8419,Michael Page,,0,0
+8437,DNV,,0,0
+8442,Murphy USA,,0,0
+8448,"Varsity Tutors, a Nerdy Company",,0,0
+8452,Glanbia Nutritionals,,0,0
+8453,Success Academy,,0,0
+8492,Oliver James,,0,0
+8503,Halliburton,,0,0
+8505,"Varsity Tutors, a Nerdy Company",,0,0
+8510,MRG Exams,,0,0
+8511,Glanbia Nutritionals,,0,0
+8519,JobsInLogistics.com,,0,0
+8520,HCA Florida Highlands Hospital,,0,0
+8533,DICK'S Sporting Goods,,0,0
+8537,Petco,,0,0
+8538,Petco,,0,0
+8552,DICK'S Sporting Goods,,0,0
+8554,Qualtrics,,0,0
+8557,DICK'S Sporting Goods,,0,0
+8560,DICK'S Sporting Goods,,0,0
+8568,DICK'S Sporting Goods,,0,0
+8575,Easterseals Southern California,,0,0
+8576,CBS Sports,,0,0
+8585,DICK'S Sporting Goods,,0,0
+8586,DICK'S Sporting Goods,,0,0
+8589,"Chico's FAS, Inc.",,0,0
+8593,DICK'S Sporting Goods,,0,0
+8596,DICK'S Sporting Goods,,0,0
+8628,DICK'S Sporting Goods,,0,0
+8629,DICK'S Sporting Goods,,0,0
+8630,DICK'S Sporting Goods,,0,0
+8631,DICK'S Sporting Goods,,0,0
+8632,DICK'S Sporting Goods,,0,0
+8635,ASRC Federal,,0,0
+8646,White Cap,,0,0
+8649,DICK'S Sporting Goods,,0,0
+8653,ASRC Federal,,0,0
+8660,Life Care Centers of America,,0,0
+8667,DICK'S Sporting Goods,,0,0
+8668,DICK'S Sporting Goods,,0,0
+8673,Alliance for Clinical Trials in Oncology,,0,0
+8677,Compass Health Center,,0,0
+8679,GM Financial,,0,0
+8688,Navy Region Southwest Fleet and Family Readiness (FFR),,0,0
+8690,Navy Region Southwest Fleet and Family Readiness (FFR),,0,0
+8691,Navy Region Hawaii Fleet and Family Readiness (FFR),,0,0
+8702,Compass Health Center,,0,0
+8705,GM Financial,,0,0
+8713,Performance Foodservice,,0,0
+8715,Performance Foodservice,,0,0
+8716,Performance Foodservice,,0,0
+8717,Performance Foodservice,,0,0
+8722,GM Financial,,0,0
+8723,GM Financial,,0,0
+8733,Kate Somerville Skincare,,0,0
+8736,Life Care Centers of America,,0,0
+8738,GSFSGroup,,0,0
+8741,BioLife Plasma Services,,0,0
+8742,Performance Foodservice,,0,0
+8743,Performance Foodservice,,0,0
+8756,Cox Automotive Inc.,,0,0
+8761,UPMC,,0,0
+8764,Core Group Resources,,0,0
+8766,Discover Financial Services,,0,0
+8768,Life Care Centers of America,,0,0
+8770,Life Care Centers of America,,0,0
+8771,Navy Region Southwest Fleet and Family Readiness (FFR),,0,0
+8774,Akima,,0,0
+8777,BioLife Plasma Services,,0,0
+8780,Sprouts Farmers Market,,0,0
+8788,"TalentBurst, an Inc 5000 company",,0,0
+8792,California Department of Social Services,,0,0
+8793,"Revere, a Daniel J Edelman Holdings Company",,0,0
+8797,Piper Companies,,0,0
+8801,University of Colorado Boulder,,0,0
+8802,Accor - North & Central America,,0,0
+8805,Navy Region Southwest Fleet and Family Readiness (FFR),,0,0
+8811,Life Care Centers of America,,0,0
+8815,BioLife Plasma Services,,0,0
+8816,BioLife Plasma Services,,0,0
+8817,BioLife Plasma Services,,0,0
+8818,Performance Foodservice,,0,0
+8836,Piper Companies,,0,0
+8839,Navy Region Southwest Fleet and Family Readiness (FFR),,0,0
+8841,Lutheran Community Services Northwest,,0,0
+8846,Life Care Centers of America,,0,0
+8857,Cox Automotive Inc.,,0,0
+8869,Spotlight 29 Casino,,0,0
+8877,Navy Region Southwest Fleet and Family Readiness (FFR),,0,0
+8878,Digital Turbine,,0,0
+8882,Performance Foodservice,,0,0
+8883,Core-Mark International,,0,0
+8885,Sprouts Farmers Market,,0,0
+8899,"TalentBurst, an Inc 5000 company",,0,0
+8908,"Vistar, A PFG Company",,0,0
+8909,BioLife Plasma Services,,0,0
+8910,BioLife Plasma Services,,0,0
+8911,BioLife Plasma Services,,0,0
+8913,Arc'teryx Equipment,,0,0
+8915,The People Concern,,0,0
+8916,Spotlight 29 Casino,,0,0
+8917,Titan Machinery,,0,0
+8925,Hanon Systems,,0,0
+8931,American Express,express,1,0
+8933,Alo Yoga,,0,0
+8936,"TalentBurst, an Inc 5000 company",,0,0
+8937,Northern Trust,,0,0
+8941,Ciox Health,,0,0
+8942,Ciox Health,,0,0
+8946,Lineage,,0,0
+8950,St. Peter's Health Partners,,0,0
+8961,Cox Automotive Inc.,express,1,0
+8964,Alo Yoga,,0,0
+8966,Northern Trust,,0,0
+8967,Northern Trust,,0,0
+8976,Eurofins PSS Insourcing Solutions,,0,0
+8980,General Atomics,,0,0
+8988,St. Peter's Health Partners,,0,0
+8992,myGwork - LGBTQ+ Business Community,,0,0
+8997,Trinity Health,,0,0
+9002,Burns & Levinson LLP,,0,0
+9005,Trinity Health,,0,0
+9007,Trinity Health,,0,0
+9008,Trinity Health,,0,0
+9009,Luna Physical Therapy,,0,0
+9016,Eurofins PSS Insourcing Solutions,,0,0
+9017,Eurofins PSS Insourcing Solutions,,0,0
+9026,The Academies of Math and Science,,0,0
+9029,Trinity Health,,0,2
+9040,myGwork - LGBTQ+ Business Community,,0,0
+9049,Trinity Health,,0,0
+9050,Henkel,,0,0
+9053,Eurofins PSS Insourcing Solutions,,0,0
+9054,Eurofins PSS Insourcing Solutions,,0,0
+9057,myGwork - LGBTQ+ Business Community,,0,0
+9061,Trinity Health,,0,0
+9062,Trinity Health,,0,0
+9063,Trinity Health,,0,0
+9065,Trinity Health,,0,0
+9066,Trinity Health,,0,0
+9072,BDO USA,,0,0
+9073,BDO USA,,0,0
+9077,The Job Network,,0,0
+9083,The Academies of Math and Science,,0,0
+9094,Hospital for Special Surgery,,0,0
+9097,The Job Network,,0,0
+9098,The Job Network,,0,0
+9099,The Job Network,,0,0
+9101,The Job Network,,0,0
+9103,The Job Network,,0,0
+9108,The Job Network,,0,0
+9110,myGwork - LGBTQ+ Business Community,,0,0
+9111,myGwork - LGBTQ+ Business Community,,0,0
+9114,Messer Construction Co.,,0,0
+9115,Luna Physical Therapy,,0,0
+9116,Trinity Health,,0,0
+9118,BDO USA,,0,0
+9123,The Job Network,,0,0
+9124,The Job Network,,0,0
+9126,The Job Network,,0,0
+9127,The Job Network,,0,0
+9128,The Job Network,,0,0
+9132,myGwork - LGBTQ+ Business Community,,0,0
+9142,Trinity Health,,0,0
+9143,Trinity Health,,0,0
+9144,Trane Technologies,,0,0
+9152,The Job Network,,0,0
+9155,The Job Network,,0,0
+9158,The Job Network,,0,0
+9159,The Job Network,,0,0
+9165,BDO USA,,0,0
+9168,The Job Network,,0,0
+9169,The Job Network,,0,0
+9171,The Job Network,,0,0
+9172,The Job Network,,0,0
+9181,BDO USA,,0,0
+9184,The Job Network,,0,0
+9185,The Job Network,,0,0
+9187,The Job Network,,0,0
+9193,BDO USA,,0,0
+9194,The Job Network,,0,0
+9196,The Job Network,,0,0
+9197,The Job Network,,0,0
+9199,The Job Network,,0,0
+9200,The Job Network,,0,0
+9203,The Job Network,,0,0
+9204,The Job Network,,0,0
+9205,The Job Network,,0,0
+9206,The Job Network,,0,0
+9207,The Job Network,,0,0
+9217,BDO USA,,0,0
+9218,The Job Network,,0,0
+9222,The Job Network,,0,0
+9225,The Job Network,,0,0
+9237,Eastridge Workforce Solutions,,0,0
+9245,Eastridge Workforce Solutions,,0,0
+9246,Live Nation Entertainment,,0,0
+9250,University of Miami,cybersecurity,1,0
+9252,Ribbon Communications,,0,0
+9254,Coca-Cola Consolidated,,0,0
+9269,Live Nation Entertainment,,0,0
+9273,Agilex Fragrances,,0,0
+9274,myGwork - LGBTQ+ Business Community,,0,0
+9277,The Judge Group,,0,0
+9278,The Judge Group,,0,0
+9280,Live Nation Entertainment,,0,0
+9285,Bank of America,,0,0
+9293,Live Nation Entertainment,,0,0
+9301,Ribbon Communications,,0,0
+9307,myGwork - LGBTQ+ Business Community,,0,0
+9309,dsm-firmenich,,0,0
+9310,myGwork - LGBTQ+ Business Community,,0,0
+9311,Skechers,,0,0
+9315,HoYoverse,,0,0
+9325,myGwork - LGBTQ+ Business Community,,0,0
+9328,myGwork - LGBTQ+ Business Community,cybersecurity,1,0
+9331,Baxter International Inc.,,0,0
+9332,Baxter International Inc.,,0,0
+9345,myGwork - LGBTQ+ Business Community,,0,0
+9346,myGwork - LGBTQ+ Business Community,,0,0
+9348,Skechers,,0,0
+9349,myGwork - LGBTQ+ Business Community,,0,0
+9353,myGwork - LGBTQ+ Business Community,,0,0
+9354,Baxter International Inc.,,0,0
+9359,Peace Corps,,0,0
+9366,Skechers,,0,0
+9369,myGwork - LGBTQ+ Business Community,,0,0
+9371,myGwork - LGBTQ+ Business Community,,0,0
+9373,Baxter International Inc.,,0,0
+9396,myGwork - LGBTQ+ Business Community,,0,0
+9398,Baxter International Inc.,,0,0
+9402,DC Department of Human Resources,,0,0
+9408,myGwork - LGBTQ+ Business Community,,0,0
+9409,myGwork - LGBTQ+ Business Community,,0,0
+9420,NC Department of Adult Correction,,0,0
+9434,TravelNurseSource,,0,0
+9435,Hamstra Heating & Cooling,,0,0
+9440,Beacon Light Behavioral Health System,,0,0
+9534,Cantex,,0,0
+9543,Pella Corporation,,0,0
+9561,The Jonus Group,,0,0
+9562,The Jonus Group,,0,0
+9568,U.S. Department of Labor,,0,0
+9579,Atrium,,0,0
+9603,dss+,,0,0
+9605,The Jonus Group,,0,0
+9613,U.S. Department of Labor,,0,0
+9619,The Jonus Group,,0,0
+9625,Allied Universal,,0,0
+9641,The Jonus Group,,0,0
+9677,"Chico's FAS, Inc.",,0,0
+9680,"Santander Bank, N.A.",,0,0
+9681,Porsche Cars North America,,0,0
+9693,Santander Consumer USA,,0,0
+9694,"Santander Bank, N.A.",,0,0
+9713,Allied Universal,,0,0
+9727,Santander Consumer USA,,0,0
+9756,"Santander Bank, N.A.",,0,0
+9795,EY,cybersecurity,1,0
+9818,Burger King,,0,0
+9825,Dominion Energy,,0,0
+9830,Santander Consumer USA,,0,0
+9833,"Santander Bank, N.A.",,0,0
+9852,Santander Consumer USA,,0,0
+9854,"Santander Bank, N.A.",,0,0
+9855,Porsche Cars North America,,0,0
+9868,Cedar Fair Entertainment Company,,0,0
+9882,B. Braun Medical Inc. (US),,0,0
+9883,B. Braun Medical Inc. (US),,0,0
+9884,Discover Financial Services,,0,0
+9887,B. Braun Medical Inc. (US),,0,0
+9888,Discover Financial Services,,0,0
+9889,Discover Financial Services,,0,0
+9895,Discover Financial Services,,0,0
+9896,Discover Financial Services,,0,0
+9897,Accor - North & Central America,,0,0
+9898,"Fairmont Orchid, Hawaii",,0,0
+9902,Greater Cincinnati Behavioral Health Services,,0,0
+9903,B. Braun Medical Inc. (US),,0,0
+9905,Discover Financial Services,,0,0
+9906,Discover Financial Services,,0,0
+9909,Heritage Companies,,0,0
+9910,Performance Foodservice,,0,0
+9914,Discover Financial Services,,0,0
+9915,Discover Financial Services,,0,0
+9916,Accor - North & Central America,,0,0
+9920,Cox Automotive Inc.,,0,0
+9923,Discover Financial Services,,0,0
+9924,Discover Financial Services,devops,1,0
+9925,Accor - North & Central America,,0,0
+9928,Discover Financial Services,,0,0
+9930,Accor - North & Central America,,0,0
+9932,Cox Automotive Inc.,,0,0
+9934,Performance Foodservice,,0,0
+9938,Burns & Levinson LLP,,0,0
+9939,CareTeam Solutions,,0,0
+9941,CareTeam Solutions,,0,0
+9944,Collins Aerospace,,0,0
+9946,Collins Aerospace,,0,0
+9949,Pratt & Whitney,,0,0
+9950,American Tire Distributors,,0,0
+9952,Collins Aerospace,,0,0
+9953,CareTeam Solutions,,0,0
+9959,CareTeam Solutions,,0,0
+9964,Collins Aerospace,,0,0
+9965,Collins Aerospace,,0,0
+9966,Anne Arundel County Public Schools,,0,0
+9967,Collins Aerospace,,0,0
+9969,Collins Aerospace,,0,0
+9976,The Job Network,,0,0
+9977,The Job Network,,0,0
+9979,The Job Network,,0,0
+9981,The Job Network,,0,0
+9983,The Job Network,,0,0
+9987,The Job Network,,0,0
+9989,The Job Network,,0,0
+9992,The Job Network,,0,0
+9994,The Job Network,,0,0
+9999,The Job Network,,0,0
+10000,The Job Network,,0,0
+10002,Trane Technologies,,0,0
+10007,The Job Network,,0,0
+10010,The Job Network,,0,0
+10011,The Job Network,,0,0
+10012,The Job Network,,0,0
+10031,The Job Network,,0,0
+10033,The Job Network,,0,0
+10034,The Job Network,,0,0
+10042,The Job Network,,0,0
+10043,The Job Network,,0,0
+10044,The Job Network,,0,0
+10046,The Job Network,,0,0
+10047,The Job Network,,0,0
+10051,The Job Network,,0,0
+10052,The Job Network,,0,0
+10061,The Job Network,,0,0
+10062,The Job Network,,0,0
+10064,The Job Network,,0,0
+10068,myGwork - LGBTQ+ Business Community,,0,0
+10069,Federal Reserve Bank of St. Louis,,0,0
+10073,Sparrow Health System,,0,0
+10074,myGwork - LGBTQ+ Business Community,,0,0
+10079,City and County of Denver,,0,0
+10085,Remington Hospitality,,0,0
+10096,myGwork - LGBTQ+ Business Community,,0,0
+10099,myGwork - LGBTQ+ Business Community,,0,0
+10109,The Judge Group,,0,0
+10114,Elevance Health,,0,0
+10118,myGwork - LGBTQ+ Business Community,,0,0
+10133,myGwork - LGBTQ+ Business Community,,0,0
+10151,myGwork - LGBTQ+ Business Community,,0,0
+10152,myGwork - LGBTQ+ Business Community,,0,0
+10153,myGwork - LGBTQ+ Business Community,,0,0
+10177,myGwork - LGBTQ+ Business Community,,0,0
+10231,DC Department of Human Resources,,0,0
+10254,Fort Mill School District,,0,0
+10324,NC Department of Adult Correction,,0,0
+10338,NC Department of Adult Correction,,0,0
+10349,NC Department of Adult Correction,,0,0
+10378,Cherokee County School District - GA,,0,0
+10402,Cherokee County School District - GA,,0,0
+10661,Lansing Building Products,,0,0
+10795,Paths Management Services,,0,0
+10805,Paths Management Services,,0,0
+10825,Paths Management Services,,0,0
+10827,United Vein & Vascular Centers,,0,0
+10837,ZOLL Medical Corporation,,0,0
+10838,ZOLL Medical Corporation,,0,0
+10847,Hargrove Engineers & Constructors,,0,0
+10854,United Vein & Vascular Centers,,0,0
+10861,Solis Mammography,,0,0
+10870,PVH Corp.,,0,0
+10882,United Vein & Vascular Centers,,0,0
+10905,LPL Financial,,0,0
+10945,Impact Advisors,,0,0
+10954,Five Below,,0,0
+10962,Trinity Health FirstChoice,,0,0
+10992,PVH Corp.,,0,0
+11023,ZOLL Medical Corporation,,0,0
+11027,Calvin Klein,,0,0
+11100,AbbVie,,0,0
+11102,AbbVie,,0,0
+11103,AbbVie,,0,0
+11113,Dollar Tree Stores,,0,0
+11116,LPL Financial,,0,0
+11117,Community FoodBank of New Jersey,,0,0
+11131,AbbVie,,0,0
+11135,AbbVie,,0,0
+11139,AbbVie,,0,0
+11144,Floor & Decor,,0,0
+11150,AbbVie,,0,0
+11151,AbbVie,,0,0
+11152,AbbVie,,0,0
+11154,AbbVie,,0,0
+11168,AbbVie,,0,0
+11169,AbbVie,,0,0
+11170,AbbVie,,0,0
+11188,AbbVie,,0,0
+11189,AbbVie,,0,0
+11200,AbbVie,,0,0
+11201,AbbVie,,0,0
+11202,AbbVie,,0,0
+11203,AbbVie,,0,0
+11205,AbbVie,,0,0
+11206,AbbVie,,0,0
+11221,AbbVie,,0,0
+11222,AbbVie,,0,0
+11269,Buffalo Rock Company,,0,0
+11272,VF Corporation,,0,0
+11273,The North Face,,0,0
+11282,Charger Logistics Inc.,,0,0
+11304,Covenant Living Communities and Services,,0,0
+11309,Arizona Department of Environmental Quality ADEQ,,0,0
+11312,Kipling,,0,0
+11316,HealthFitness,,0,0
+11317,Snowflake,,0,0
+11318,Snowflake,,0,0
+11323,Cincinnati Children's,,0,0
+11350,Cincinnati Children's,,0,0
+11351,Cincinnati Children's,,0,0
+11352,Amherst H. Wilder Foundation,,0,0
+11354,Boston Medical Center (BMC),,0,0
+11357,Buffalo Rock Company,,0,0
+11368,Cincinnati Children's,,0,0
+11378,Sysco,,0,0
+11389,Covenant Living Communities and Services,,0,0
+11397,Boston Medical Center (BMC),,0,0
+11412,Anduril Industries,,0,0
+11414,Aurubis Richmond,,0,0
+11415,Cincinnati Children's,,0,0
+11416,Cincinnati Children's,,0,0
+11417,Boston Medical Center (BMC),,0,0
+11430,Covenant Living Communities and Services,,0,0
+11436,Boston Medical Center (BMC),,0,0
+11438,Marsh McLennan Agency,,0,0
+11441,Whole Foods Market,,0,2
+11442,Whole Foods Market,,0,2
+11445,Oak Street Health,,0,0
+11446,Whole Foods Market,,0,2
+11447,NextEra Energy Resources,,0,0
+11448,Whole Foods Market,,0,2
+11449,Oak Street Health,,0,0
+11451,Protech Automotive Solutions ,,0,0
+11485,Whole Foods Market,,0,2
+11486,Whole Foods Market,,0,2
+11488,Dental Care Alliance,,0,0
+11489,Whole Foods Market,,0,2
+11490,Whole Foods Market,,0,2
+11491,Whole Foods Market,,0,2
+11492,Dental Care Alliance,,0,0
+11494,Dental Care Alliance,,0,0
+11497,Whole Foods Market,,0,2
+11498,NextEra Energy Resources,,0,0
+11499,Whole Foods Market,,0,2
+11500,Whole Foods Market,,0,0
+11501,Whole Foods Market,,0,2
+11502,Whole Foods Market,,0,2
+11503,Whole Foods Market,,0,2
+11508,Caliber Collision,,0,0
+11512,Oak Street Health,,0,0
+11516,Marsh McLennan Agency,,0,0
+11522,Whole Foods Market,,0,2
+11523,Whole Foods Market,,0,2
+11524,Whole Foods Market,,0,2
+11526,Dental Care Alliance,,0,0
+11530,Whole Foods Market,,0,2
+11531,Whole Foods Market,,0,2
+11532,Whole Foods Market,,0,2
+11535,Oak Street Health,,0,0
+11545,UNC Health,,0,0
+11552,Crown Equipment Corporation,,0,0
+11557,HTC Global Services,,0,0
+11562,Boston Medical Center (BMC),,0,0
+11563,Boston Medical Center (BMC),,0,0
+11565,Boston Medical Center (BMC),,0,0
+11570,Whole Foods Market,,0,2
+11571,Whole Foods Market,,0,2
+11572,Whole Foods Market,,0,2
+11573,Whole Foods Market,,0,2
+11574,Whole Foods Market,,0,2
+11575,Whole Foods Market,,0,2
+11576,Whole Foods Market,,0,2
+11578,Whole Foods Market,,0,2
+11583,Whole Foods Market,,0,2
+11584,Whole Foods Market,,0,2
+11585,Whole Foods Market,,0,2
+11586,NextEra Energy Resources,,0,0
+11600,University of Illinois Urbana-Champaign,,0,0
+11615,Crown Equipment Corporation,,0,0
+11621,Freddie Mac,,0,0
+11622,Freddie Mac,,0,0
+11628,Yale University,,0,0
+11630,Yale University,,0,0
+11631,Nebraska Department of Health and Human Services,,0,0
+11642,Cooper University Health Care,,0,0
+11649,CGI,,0,0
+11652,Whole Foods Market,,0,2
+11653,Whole Foods Market,,0,2
+11654,Whole Foods Market,,0,2
+11655,Dental Care Alliance,,0,0
+11659,Whole Foods Market,,0,2
+11660,Whole Foods Market,,0,2
+11664,NextEra Energy Resources,,0,0
+11671,University of Illinois Urbana-Champaign,,0,0
+11690,Cummins Inc.,,0,0
+11695,Mission Veterinary Partners,,0,0
+11700,Sound Physicians,,0,0
+11702,Vivian Health,,0,0
+11703,Vivian Health,,0,0
+11704,Cooper University Health Care,,0,0
+11705,Cooper University Health Care,,0,0
+11708,Whole Foods Market,,0,2
+11709,Whole Foods Market,,0,2
+11710,Whole Foods Market,,0,2
+11712,Whole Foods Market,,0,2
+11717,Whole Foods Market,,0,2
+11718,Oak Street Health,,0,0
+11719,Whole Foods Market,,0,2
+11720,Whole Foods Market,,0,2
+11721,Whole Foods Market,,0,2
+11723,Caliber Collision,,0,0
+11724,Protech Automotive Solutions ,,0,0
+11725,Oak Street Health,,0,0
+11727,Oak Street Health,,0,0
+11743,AssuredPartners,,0,0
+11744,AssuredPartners,,0,0
+11757,Cummins Inc.,,0,0
+11759,AAMCO Transmissions and Total Car Care,,0,0
+11760,Cummins Inc.,,0,0
+11773,Vivian Health,,0,0
+11774,Cooper University Health Care,,0,0
+11782,Whole Foods Market,,0,2
+11783,Whole Foods Market,,0,2
+11784,Whole Foods Market,,0,2
+11786,Dental Care Alliance,,0,0
+11789,Whole Foods Market,,0,0
+11791,Whole Foods Market,,0,2
+11792,Whole Foods Market,,0,2
+11795,Oak Street Health,,0,0
+11805,UNC Health,,0,0
+11806,UNC Health,,0,0
+11807,UNC Health,,0,0
+11808,UNC Health,,0,0
+11809,Uncommon Schools,,0,0
+11810,AssuredPartners,,0,0
+11821,Prudential Financial,,0,0
+11825,Mission Veterinary Partners,,0,0
+11829,Yale University,,0,0
+11831,Mission Veterinary Partners,,0,0
+11834,Nebraska Department of Health and Human Services,,0,0
+11840,Vivian Health,,0,0
+11841,Vivian Health,,0,0
+11842,Cooper University Health Care,,0,0
+11854,Pure Fishing,,0,0
+11856,Raising Cane's Chicken Fingers,,0,0
+11858,Northwestern University,,0,0
+11859,Raising Cane's Chicken Fingers,,0,0
+11861,Raising Cane's Chicken Fingers,,0,0
+11862,Raising Cane's Chicken Fingers,,0,0
+11863,Raising Cane's Chicken Fingers,,0,0
+11864,Raising Cane's Chicken Fingers,,0,0
+11865,Raising Cane's Chicken Fingers,,0,0
+11866,Raising Cane's Chicken Fingers,,0,0
+11867,CyberCoders,,0,0
+11871,CyberCoders,,0,0
+11872,CyberCoders,,0,0
+11873,CyberCoders,,0,0
+11874,Stanford Children's Health | Lucile Packard Children's Hospital Stanford,,0,0
+11880,Cushman & Wakefield,,0,0
+11882,CyberCoders,,0,0
+11889,SEGULA Technologies,,0,0
+11891,TEKsystems,,0,0
+11892,TEKsystems,,0,0
+11895,TEKsystems,,0,0
+11896,TEKsystems,,0,0
+11899,TEKsystems,,0,0
+11905,CyberCoders,,0,0
+11906,CyberCoders,,0,0
+11907,CyberCoders,,0,0
+11908,CyberCoders,,0,0
+11916,Cushman & Wakefield,,0,0
+11919,Victoria’s Secret & Co.,,0,0
+11920,Victoria’s Secret & Co.,,0,0
+11921,Victoria’s Secret & Co.,,0,0
+11922,Victoria’s Secret & Co.,,0,0
+11923,Raising Cane's Chicken Fingers,,0,0
+11925,Cardinal Health,,0,0
+11930,TEKsystems,,0,0
+11934,TEKsystems,,0,0
+11940,Bristol Myers Squibb,,0,0
+11941,Bristol Myers Squibb,,0,0
+11942,CyberCoders,,0,0
+11945,Cushman & Wakefield,,0,0
+11947,"Manulife Investment Management, Timberland and Agriculture",,0,0
+11948,CyberCoders,,0,0
+11951,Cushman & Wakefield,,0,0
+11953,TEKsystems,,0,0
+11962,Cardinal Health,,0,0
+11963,ChristianaCare,,0,0
+11964,Bristol Myers Squibb,,0,0
+11966,WVU Medicine,,0,0
+11968,CompHealth,,0,0
+11973,AIG,,0,0
+11976,Zips Car Wash LLC,,0,0
+11980,Zurn Elkay Water Solutions,,0,0
+11982,RPA,,0,0
+11984,CyberCoders,,0,0
+11989,St. Jude Children's Research Hospital,,0,0
+11992,Victoria’s Secret & Co.,,0,0
+11994,Raising Cane's Chicken Fingers,,0,0
+11998,TEKsystems,,0,0
+12000,"IMA Financial Group, Inc.",,0,0
+12002,Bristol Myers Squibb,,0,0
+12008,WVU Medicine,,0,0
+12009,Bath & Body Works,,0,0
+12010,Bath & Body Works,,0,0
+12011,Bath & Body Works,,0,0
+12012,Bath & Body Works,,0,0
+12013,Seneca Family of Agencies,,0,0
+12015,Buck Institute for Research on Aging,,0,0
+12022,SouthEast Alaska Regional Health Consortium (SEARHC),,0,0
+12023,Driscoll Children's Hospital,,0,0
+12030,Trinity Health At Home,,0,0
+12031,Hard Rock Hotel & Casino Bristol,,0,0
+12033,Cushman & Wakefield,,0,0
+12036,Cushman & Wakefield,,0,0
+12039,NCR Atleos,,0,0
+12041,Victoria’s Secret & Co.,,0,0
+12042,Raising Cane's Chicken Fingers,,0,0
+12053,TEKsystems,,0,0
+12058,TEKsystems,,0,0
+12069,Bath & Body Works,,0,0
+12070,Bath & Body Works,,0,0
+12071,CF Industries,,0,0
+12073,Bank of Hawaii,,0,0
+12074,"Swire Coca-Cola, USA",,0,0
+12075,Zips Car Wash LLC,,0,0
+12083,CyberCoders,,0,0
+12084,CyberCoders,,0,0
+12089,CyberCoders,,0,0
+12090,Victoria’s Secret & Co.,,0,0
+12091,Victoria’s Secret & Co.,,0,0
+12092,Raising Cane's Chicken Fingers,,0,0
+12093,Raising Cane's Chicken Fingers,,0,0
+12094,Raising Cane's Chicken Fingers,,0,0
+12097,TEKsystems,,0,0
+12100,Adobe,,0,0
+12102,Bristol Myers Squibb,,0,0
+12103,Guardant Health,,0,0
+12106,Black & Veatch,,0,0
+12108,Zips Car Wash LLC,,0,0
+12112,Driscoll Children's Hospital,,0,0
+12113,Hard Rock Hotel & Casino Bristol,,0,0
+12117,Thrive Pet Healthcare,,0,0
+12118,Thrive Pet Healthcare,,0,0
+12127,Raising Cane's Chicken Fingers,,0,0
+12129,Case Western Reserve University,,0,0
+12130,Cardinal Health,,0,0
+12131,TEKsystems,,0,0
+12150,Adobe,,0,0
+12151,Bristol Myers Squibb,,0,0
+12152,Bristol Myers Squibb,,0,0
+12160,Endeavor Health,,0,0
+12168,Zurn Elkay Water Solutions,,0,0
+12170,Cardinal Health,,0,0
+12174,TEKsystems,,0,0
+12187,Adobe,ai,1,0
+12188,Bristol Myers Squibb,,0,0
+12211,HCA Healthcare,,0,0
+12212,Bristol Myers Squibb,,0,0
+12218,Black & Veatch,,0,0
+12219,ActionLink,,0,0
+12222,AAA-The Auto Club Group,,0,0
+12223,CACI International Inc,,0,0
+12224,CACI International Inc,,0,0
+12225,CACI International Inc,,0,0
+12226,Trinity Health At Home,,0,0
+12227,Hard Rock Hotel & Casino Bristol,,0,0
+12228,Parkridge Health System,,0,0
+12231,Parkridge East Hospital,,0,0
+12233,St. David's HealthCare,,0,0
+12234,Methodist Healthcare System,,0,0
+12237,Bristol Myers Squibb,,0,0
+12241,CompHealth,,0,0
+12247,Bath & Body Works,,0,0
+12251,Heartland Business Systems,,0,0
+12255,"Swire Coca-Cola, USA",,0,0
+12256,AAA-The Auto Club Group,,0,0
+12267,HCA Houston Healthcare,,0,0
+12268,Texas Orthopedic Hospital,,0,0
+12276,Wesley Healthcare,,0,0
+12278,Bon Secours,,0,0
+12285,HCA Healthcare,,0,0
+12293,Beyond Yoga,,0,0
+12295,Central Plateau Cleanup Company,,0,0
+12301,AEG,,0,0
+12308,HCA Florida Twin Cities Hospital​,,0,0
+12309,Los Robles Hospital and Medical Center,,0,0
+12314,Methodist Healthcare System,,0,0
+12316,HCA Florida Gulf Coast Hospital,,0,0
+12318,Parkridge Health System,,0,0
+12319,HCA Houston Healthcare,,0,0
+12323,Creative Circle,,0,0
+12324,Creative Circle,,0,0
+12325,W. L. Gore & Associates,,0,0
+12326,Sunrise Hospital,,0,0
+12331,Lone Peak Hospital,,0,0
+12333,HCA Healthcare,,0,0
+12335,Sky Ridge Medical Center,,0,0
+12337,St. David's HealthCare,,0,0
+12339,Levi Strauss & Co.,,0,0
+12340,LewisGale Regional Health System,,0,0
+12341,TriStar Southern Hills Medical Center,,0,0
+12344,Pine Rest Christian Mental Health Services,rest,1,0
+12345,The Applied Research Laboratory at Penn State University,,0,0
+12346,Parkridge Health System,,0,0
+12347,Rose Medical Center,,0,0
+12348,St. David's HealthCare,,0,0
+12349,HCA Healthcare,,0,0
+12353,Medical City Healthcare,,0,0
+12355,Creative Circle,,0,0
+12356,Creative Circle,,0,0
+12360,HCA Florida Orange Park Hospital,,0,0
+12368,Natixis Investment Managers,,0,0
+12371,Jobot Consulting,,0,0
+12374,Pine Rest Christian Mental Health Services,rest,1,0
+12376,Jobot Consulting,,0,0
+12379,University Medical Center of Southern Nevada (UMC),,0,0
+12381,World Wide Technology,,0,0
+12384,Jobot,,0,0
+12393,Keck Medicine of USC,,0,1
+12403,"NaphCare, Inc.",,0,0
+12408,Keck Medicine of USC,,0,1
+12409,Keck Medicine of USC,,0,1
+12410,"NaphCare, Inc.",,0,0
+12411,Olsson,,0,0
+12413,FastTek Global,data science,1,0
+12416,"C² Technologies, Inc.",,0,0
+12421,Prisma Health,,0,0
+12422,Prisma Health,,0,0
+12423,Flowserve Corporation,,0,0
+12430,Keck Medicine of USC,,0,1
+12431,Keck Medicine of USC,,0,1
+12433,Main Line Health,,0,0
+12437,PetVet Care Centers,,0,0
+12442,Keck Medicine of USC,,0,1
+12443,Olsson,,0,0
+12450,"Morgan & Morgan, P.A.",,0,0
+12451,Main Line Health,,0,0
+12452,Prisma Health,,0,0
+12454,Prisma Health,,0,0
+12456,Prisma Health,,0,0
+12457,Prisma Health,,0,0
+12459,Jobot,,0,0
+12461,Keck Medicine of USC,,0,1
+12466,"Varsity Tutors, a Nerdy Company",,0,0
+12469,"C² Technologies, Inc.",,0,0
+12471,Prisma Health,,0,0
+12473,Prisma Health,,0,0
+12477,The Goodyear Tire & Rubber Company,,0,0
+12478,Global Payments Inc.,,0,0
+12490,Flowserve Corporation,,0,0
+12491,Prisma Health,,0,0
+12495,Keck Medicine of USC,,0,1
+12497,Olsson,,0,0
+12502,Wilbur-Ellis,,0,0
+12503,Wilbur-Ellis,,0,0
+12505,"C² Technologies, Inc.",,0,0
+12506,Prisma Health,,0,0
+12507,Prisma Health,,0,0
+12508,Prisma Health,,0,0
+12509,Prisma Health,,0,0
+12510,Prisma Health,,0,0
+12513,The Goodyear Tire & Rubber Company,,0,0
+12516,PetVet Care Centers,,0,0
+12518,Murphy USA,,0,0
+12521,Prisma Health,,0,0
+12523,The Goodyear Tire & Rubber Company,,0,0
+12532,Prisma Health,,0,0
+12535,The Goodyear Tire & Rubber Company,,0,0
+12546,Aimbridge Hospitality,,0,0
+12553,Whole Foods Market,,0,2
+12554,Whole Foods Market,,0,2
+12555,Whole Foods Market,,0,2
+12556,Whole Foods Market,,0,2
+12557,Whole Foods Market,,0,2
+12567,University of Illinois Urbana-Champaign,,0,0
+12568,University of Illinois Urbana-Champaign,,0,0
+12590,UNC Health,,0,0
+12592,Yale University,,0,0
+12602,Vivian Health,,0,0
+12603,Vivian Health,,0,0
+12604,PhyNet Dermatology LLC,,0,0
+12613,Ceco Concrete Construction L.L.C.,,0,0
+12643,Mission Veterinary Partners,,0,0
+12644,WVU Medicine Camden Clark Medical Center,,0,0
+12646,Yale University,,0,0
+12649,Nebraska Department of Health and Human Services,,0,0
+12656,Vivian Health,,0,0
+12657,Cooper University Health Care,,0,0
+12658,Cooper University Health Care,,0,0
+12667,VolunteerMatch,,0,0
+12668,VolunteerMatch,,0,0
+12671,VolunteerMatch,,0,0
+12674,VolunteerMatch,,0,0
+12675,VolunteerMatch,,0,0
+12676,VolunteerMatch,,0,0
+12677,VolunteerMatch,,0,0
+12704,AAMCO Transmissions and Total Car Care,,0,0
+12710,Yale University,,0,0
+12711,Yale University,,0,0
+12724,Cooper University Health Care,,0,0
+12725,Griffith Foods,,0,0
+12732,VolunteerMatch,,0,0
+12736,VolunteerMatch,,0,0
+12739,VolunteerMatch,,0,0
+12743,"Shared Medical Services, Inc.",,0,0
+12746,Vivian Health,,0,0
+12747,Vivian Health,,0,0
+12748,Cooper University Health Care,,0,0
+12749,Cooper University Health Care,,0,0
+12750,Cooper University Health Care,,0,0
+12752,PhyNet Dermatology LLC,,0,0
+12755,Huber Engineered Materials,,0,0
+12763,VolunteerMatch,,0,0
+12764,VolunteerMatch,,0,0
+12765,VolunteerMatch,,0,0
+12767,VolunteerMatch,,0,0
+12769,Jefferson Union High School District,,0,0
+12775,VolunteerMatch,,0,0
+12778,VolunteerMatch,,0,0
+12781,VolunteerMatch,,0,0
+12782,VolunteerMatch,,0,0
+12787,Universal Orlando Resort,,0,0
+12788,Jefferson Union High School District,,0,0
+12795,Universal Products & Experiences,,0,0
+12796,Peacock,,0,0
+12797,Parkland Health,,0,0
+12799,Kapitus,,0,0
+12806,VolunteerMatch,,0,0
+12807,VolunteerMatch,,0,0
+12809,VolunteerMatch,,0,0
+12811,VolunteerMatch,,0,0
+12813,VolunteerMatch,,0,0
+12814,VolunteerMatch,,0,0
+12822,Fors Marsh,,0,0
+12827,Parkland Health,,0,0
+12828,Parkland Health,,0,0
+12829,Parkland Health,,0,0
+12837,VolunteerMatch,,0,0
+12839,VolunteerMatch,,0,0
+12840,VolunteerMatch,,0,0
+12841,VolunteerMatch,,0,0
+12842,VolunteerMatch,,0,0
+12848,WIN Waste Innovations,,0,0
+12853,VolunteerMatch,,0,0
+12857,VolunteerMatch,,0,0
+12858,VolunteerMatch,,0,0
+12859,VolunteerMatch,,0,0
+12860,VolunteerMatch,spring,1,0
+12861,VolunteerMatch,,0,0
+12862,St. Joseph's Health,,0,0
+12863,Jefferson Union High School District,,0,0
+12864,Quantum Health,,0,0
+12866,Lancer Hospitality Group,,0,0
+12873,NBCUniversal,,0,0
+12874,NBCUniversal,,0,0
+12877,VolunteerMatch,,0,0
+12880,VolunteerMatch,,0,0
+12881,VolunteerMatch,,0,0
+12885,VolunteerMatch,,0,0
+12888,Universal Orlando Resort,,0,0
+12892,NBCUniversal,,0,0
+12907,Charger Logistics Inc.,,0,0
+12908,Central Garden & Pet,,0,0
+12909,"Global Technical Talent, an Inc. 5000 Company",,0,0
+12912,Boys & Girls Clubs of America,,0,0
+12914,Kettering Health,,0,0
+12922,Charger Logistics Inc.,,0,0
+12928,Corporate Chefs,,0,0
+12937,WIN Waste Innovations,,0,0
+12940,ALTEN Technology USA,,0,0
+12946,UofL Health,,0,0
+12958,NBCUniversal,,0,0
+12977,Definitive Healthcare,,0,0
+12979,"Johnson Service Group, Inc.",,0,0
+12983,HireTalent - Diversity Staffing & Recruiting Firm,,0,0
+12985,MyEyeDr.,,0,0
+12987,MyEyeDr.,,0,0
+12993,Hilton Waikoloa Village,,0,0
+12994,EY,,0,0
+13001,Kettering Health,,0,0
+13002,"Global Technical Talent, an Inc. 5000 Company",,0,0
+13003,Kettering Health,,0,0
+13005,CONMED Corporation,,0,0
+13008,Kettering Health,,0,0
+13023,HireTalent - Diversity Staffing & Recruiting Firm,,0,0
+13027,Hilton Denver City Center,,0,0
+13028,Hilton,,0,0
+13030,DoubleTree by Hilton San Diego-Mission Valley,,0,0
+13034,EY-Parthenon,,0,0
+13035,EY-Parthenon,,0,0
+13036,EPRI,,0,0
+13039,The Johns Hopkins University,,0,0
+13040,SS&C Technologies,,0,0
+13044,Kettering Health,,0,0
+13046,Kimpton Hotels & Restaurants,,0,0
+13048,Kimpton Hotels & Restaurants,,0,0
+13059,Novanta Inc.,,0,0
+13062,HireTalent - Diversity Staffing & Recruiting Firm,,0,0
+13064,HireTalent - Diversity Staffing & Recruiting Firm,,0,0
+13066,Scripps Health,,0,0
+13068,Hilton Americas-Houston,,0,0
+13069,DoubleTree by Hilton Abilene Downtown Convention Center,,0,0
+13071,Hilton New Orleans Riverside,,0,0
+13074,Expert Technical Solutions,python,1,0
+13075,Invenergy,,0,0
+13087,"Global Technical Talent, an Inc. 5000 Company",scrum,1,0
+13099,"Johnson Service Group, Inc.",,0,0
+13108,Hotel del Coronado,,0,0
+13115,"Clover Leaf Solutions, LLC",,0,0
+13119,Kimpton Hotels & Restaurants,,0,0
+13133,New York State Department of State,,0,0
+13140,HireTalent - Diversity Staffing & Recruiting Firm,,0,0
+13142,Waldorf Astoria Monarch Beach Resort & Club,,0,2
+13143,Hilton Anatole,,0,0
+13144,Hilton Anatole,,0,0
+13146,Hilton Americas-Houston,,0,0
+13148,Caribe Hilton,,0,0
+13149,Hilton Americas-Houston,,0,0
+13154,Hilton Washington DC National Mall The Wharf,,0,0
+13164,Kimpton Hotels & Restaurants,,0,0
+13169,Novanta Inc.,,0,0
+13171,SECU,,0,0
+13174,New York State Department of Health,,0,0
+13176,Charger Logistics Inc.,,0,0
+13178,HireTalent - Diversity Staffing & Recruiting Firm,,0,0
+13183,"Conrad Washington, DC",,0,0
+13193,"Liberty Personnel Services, Inc.",,0,0
+13202,"Johnson Service Group, Inc.",,0,0
+13203,NYS Department of Transportation,,0,0
+13204,NYS Department of Transportation,,0,0
+13206,New York State Department of Health,,0,0
+13207,NYS Department of Transportation,,0,0
+13209,HireTalent - Diversity Staffing & Recruiting Firm,,0,0
+13211,Hilton Anatole,,0,0
+13218,EY,oracle,1,0
+13227,National Football League (NFL),,0,0
+13238,Halff,,0,0
+13241,Air Force Research Laboratory,,0,0
+13243,Axon,,0,0
+13246,HireTalent - Diversity Staffing & Recruiting Firm,,0,0
+13247,HireTalent - Diversity Staffing & Recruiting Firm,,0,0
+13249,Scripps Health,,0,0
+13250,PGA TOUR Superstore,,0,0
+13253,Hilton Vancouver Downtown,,0,0
+13255,DoubleTree Suites by Hilton Seattle Airport/Southcenter,,0,0
+13256,Prestige Healthcare Resources Inc.,,0,0
+13258,EY,oracle,1,0
+13259,EY,,0,0
+13260,EY,,0,0
+13280,The Johns Hopkins University,,0,0
+13285,Johnson Controls,,0,0
+13286,Johnson Controls,,0,0
+13290,National Interstate Insurance Company,,0,0
+13315,Bobcat Company,,0,0
+13316,Halff,,0,0
+13317,NYS Office for People With Developmental Disabilities,,0,0
+13320,TYLin | Silman Structural Solutions,,0,0
+13322,Young Living Essential Oils,,0,0
+13323,St. Elizabeth Physicians,,0,0
+13325,Westlake,,0,0
+13330,Title Forward,,0,0
+13336,Fabletics,,0,0
+13338,Ochsner Lafayette General,,0,0
+13339,Ochsner Health,,0,0
+13340,Ochsner Health,,0,0
+13348,Liberty Health,,0,0
+13349,Liberty Health,,0,0
+13350,MASC Medical Recruitment Firm,,0,0
+13356,Reperio Human Capital,linux,1,0
+13381,Bobcat Company,,0,0
+13382,Young Living Essential Oils,,0,0
+13383,MASC Medical Recruitment Firm,,0,0
+13390,NetJets,,0,0
+13396,Texas A&M Engineering Experiment Station (TEES),,0,0
+13403,Ochsner Health,,0,0
+13404,Ochsner Health,,0,0
+13409,Halff,,0,0
+13412,KRA Corporation,,0,0
+13428,Charger Logistics Inc.,,0,0
+13437,The University of Vermont Health Network - Central Vermont Medical Center,,0,0
+13438,The University of Vermont Health Network - Champlain Valley Physicians Hospital,,0,0
+13439,The University of Vermont Medical Center,,0,0
+13451,The University of Vermont Medical Center,,0,0
+13452,The University of Vermont Health Network - Champlain Valley Physicians Hospital,,0,0
+13453,The University of Vermont Medical Center,,0,0
+13454,The University of Vermont Health Network - Champlain Valley Physicians Hospital,,0,0
+13473,Neiman Marcus Group,,0,0
+13476,Papillion La Vista Community Schools,,0,0
+13477,The University of Vermont Health Network - Champlain Valley Physicians Hospital,,0,0
+13478,University of Denver,,0,0
+13483,Modesto City Schools,,0,0
+13503,The University of Vermont Health Network - Champlain Valley Physicians Hospital,,0,0
+13504,The University of Vermont Health Network - Champlain Valley Physicians Hospital,,0,0
+13507,UAMS - University of Arkansas for Medical Sciences,,0,0
+13517,Neiman Marcus Group,,0,0
+13518,Neiman Marcus Group,,0,0
+13520,Complete Staffing Solutions,,0,0
+13551,Papillion La Vista Community Schools,,0,0
+13552,The University of Vermont Health Network - Central Vermont Medical Center,,0,0
+13553,The University of Vermont Medical Center,,0,0
+13604,The University of Vermont Medical Center,,0,0
+13613,Larkin Street Youth Services,,0,0
+13621,The Golden Touch Group,,0,0
+13655,Outpatient Imaging Affiliates,,0,0
+13664,The University of Vermont Health Network - Champlain Valley Physicians Hospital,,0,0
+13756,"Johnson, Mirmiran & Thompson",,0,0
+13796,Merlin Entertainments,,0,0
+13845,Connected Health Care,,0,0
+13846,Connected Health Care,,0,0
+13847,Connected Health Care,,0,0
+13848,Connected Health Care,,0,0
+13849,Connected Health Care,,0,0
+13850,Connected Health Care,,0,0
+13851,Connected Health Care,,0,0
+13852,Connected Health Care,,0,0
+13853,Connected Health Care,,0,0
+13854,Connected Health Care,,0,0
+13855,Connected Health Care,,0,0
+13856,Connected Health Care,,0,0
+13861,"Johnson, Mirmiran & Thompson",,0,0
+13887,Connected Health Care,,0,0
+13888,Connected Health Care,,0,0
+13906,"Johnson, Mirmiran & Thompson",,0,0
+13911,Connected Health Care,,0,0
+13912,Connected Health Care,,0,0
+13913,Connected Health Care,,0,0
+13914,Connected Health Care,,0,0
+13915,Connected Health Care,,0,0
+13916,Connected Health Care,,0,0
+13917,Connected Health Care,,0,0
+13918,Connected Health Care,,0,0
+13919,Connected Health Care,,0,0
+13920,Connected Health Care,,0,0
+13921,Connected Health Care,,0,0
+13922,Connected Health Care,,0,0
+13925,City National Bank of Florida,,0,0
+13926,"Johnson, Mirmiran & Thompson",,0,0
+13939,George Mason University,,0,0
+13943,Vitesco Technologies,,0,0
+13963,GeoStabilization International®,,0,0
+13964,ZOLL Medical Corporation,,0,0
+13965,ZOLL Medical Corporation,,0,0
+13974,Konica Minolta Business Solutions Canada,,0,0
+13988,Allergan Aesthetics,,0,0
+13990,The Y (YMCA),,0,0
+13993,The Y (YMCA),,0,0
+13996,Renewal by Andersen,,0,0
+13999,Liberated Brands,,0,0
+14012,Ashley Furniture Industries,,0,0
+14014,Ashley Furniture Industries,,0,0
+14015,Acme Markets,,0,0
+14016,Comprehensive Community Health Centers,,0,0
+14018,Optum,,0,0
+14019,AbbVie,data science,1,0
+14020,AbbVie,,0,0
+14036,Spear Physical Therapy,,0,0
+14044,Dollar Tree Stores,,0,0
+14067,Kenvue,,0,0
+14072,The Y (YMCA),,0,0
+14082,Sally Beauty,,0,0
+14089,Trinity Health FirstChoice,,0,0
+14096,"Longevity Holdings, Inc.",,0,0
+14103,AbbVie,,0,0
+14104,The Y (YMCA),,0,0
+14116,ZOLL Medical Corporation,,0,0
+14117,Calvin Klein,,0,0
+14133,Ashley Furniture Industries,,0,0
+14135,Safeway,,0,0
+14146,Albertsons Companies,,0,0
+14147,Randalls Food Market,,0,0
+14151,Albertsons Companies,,0,0
+14154,Andersen Corporation,,0,0
+14174,Calvin Klein,,0,0
+14184,Renewal by Andersen,,0,0
+14187,The Y (YMCA),,0,0
+14196,Health Care for the Homeless,,0,0
+14197,Anduril Industries,,0,0
+14203,Ashley Furniture Industries,,0,0
+14204,Ashley Furniture Industries,,0,0
+14205,Acme Markets,,0,0
+14206,Acme Markets,,0,0
+14207,Albertsons Companies,,0,0
+14209,Safeway,,0,0
+14210,Albertsons Companies,,0,0
+14217,Albertsons Companies,,0,0
+14218,Safeway,,0,0
+14224,Albertsons Companies,,0,0
+14231,Vallen USA,,0,0
+14233,AbbVie,,0,0
+14244,Snowflake,,0,0
+14250,Sally Beauty,,0,0
+14251,Sally Beauty,,0,0
+14257,Covenant Living Communities and Services,,0,0
+14258,Whole Foods Market,,0,2
+14259,Sally Beauty,,0,0
+14260,Covenant Living Communities and Services,,0,0
+14264,Whole Foods Market,,0,2
+14265,Whole Foods Market,,0,2
+14267,NextEra Energy Resources,,0,0
+14274,University of Illinois Urbana-Champaign,,0,0
+14278,Covenant Living Communities and Services,,0,1
+14279,Health Care for the Homeless,,0,0
+14284,Caliber Collision,,0,0
+14289,American Institute of Physics,,0,0
+14292,Whole Foods Market,,0,2
+14293,Whole Foods Market,,0,2
+14294,NextEra Energy Resources,,0,0
+14295,Whole Foods Market,,0,2
+14297,Southland Industries,,0,0
+14307,Southland Industries,,0,0
+14308,Southland Industries,,0,0
+14317,WVU Medicine Princeton Community Hospital,,0,0
+14331,Cummins Inc.,,0,0
+14348,Summit Materials,,0,0
+14354,Vivian Health,,0,0
+14355,Vivian Health,,0,0
+14357,Vivian Health,,0,0
+14359,Docusign,,0,0
+14362,Whole Foods Market,,0,2
+14363,Whole Foods Market,,0,2
+14364,Protech Automotive Solutions ,,0,0
+14368,Caliber Collision,,0,0
+14382,Planet,,0,0
+14393,VolunteerMatch,,0,0
+14394,VolunteerMatch,,0,0
+14395,VolunteerMatch,,0,0
+14396,VolunteerMatch,,0,0
+14398,VolunteerMatch,,0,0
+14399,VolunteerMatch,,0,0
+14401,Whole Foods Market,,0,2
+14405,NextEra Energy Resources,,0,0
+14410,University of Illinois Urbana-Champaign,,0,0
+14421,Pinnacle Live,,0,0
+14427,Cooper University Health Care,,0,0
+14428,Cooper University Health Care,,0,0
+14429,Cooper University Health Care,,0,0
+14434,VolunteerMatch,,0,0
+14436,VolunteerMatch,,0,0
+14437,VolunteerMatch,,0,0
+14438,VolunteerMatch,,0,0
+14448,UNC Health,,0,0
+14460,Vivian Health,,0,0
+14463,VolunteerMatch,,0,0
+14464,VolunteerMatch,,0,0
+14465,VolunteerMatch,,0,0
+14466,VolunteerMatch,,0,0
+14467,VolunteerMatch,,0,0
+14468,WVU Medicine,,0,0
+14470,WVU Medicine,,0,0
+14476,Cummins Inc.,,0,0
+14486,Vivian Health,,0,0
+14487,Cooper University Health Care,,0,0
+14488,Cooper University Health Care,,0,0
+14489,Docusign,,0,0
+14492,Intuitive,,0,0
+14493,The US Oncology Network,,0,0
+14496,VolunteerMatch,,0,0
+14497,VolunteerMatch,,0,0
+14498,VolunteerMatch,,0,0
+14499,VolunteerMatch,,0,0
+14500,VolunteerMatch,,0,0
+14502,VolunteerMatch,,0,0
+14503,VolunteerMatch,,0,0
+14504,VolunteerMatch,,0,0
+14509,"TSP, a Syneos Health company",,0,0
+14512,Parkland Health,,0,0
+14514,Southland Industries,,0,0
+14530,LCMC Health,,0,0
+14532,Cooper University Health Care,,0,0
+14534,Vaxcyte,,0,0
+14543,VolunteerMatch,"java,aws,dynamodb,spring",4,0
+14544,VolunteerMatch,,0,0
+14545,VolunteerMatch,,0,0
+14546,VolunteerMatch,,0,0
+14554,WVU Medicine Berkeley and Jefferson Medical Centers,,0,0
+14557,Turner Construction Company,,0,0
+14559,Vivian Health,,0,0
+14560,Vivian Health,,0,0
+14561,Vivian Health,,0,0
+14563,Cooper University Health Care,,0,0
+14564,Cooper University Health Care,,0,0
+14565,PhyNet Dermatology LLC,,0,0
+14569,VolunteerMatch,,0,0
+14570,VolunteerMatch,,0,0
+14572,VolunteerMatch,,0,0
+14574,VolunteerMatch,,0,0
+14575,VolunteerMatch,,0,0
+14576,VolunteerMatch,,0,0
+14578,VolunteerMatch,,0,0
+14579,VolunteerMatch,,0,0
+14580,VolunteerMatch,,0,0
+14581,VolunteerMatch,,0,0
+14593,Vivian Health,,0,0
+14594,Cooper University Health Care,,0,0
+14595,Cooper University Health Care,,0,0
+14604,VolunteerMatch,,0,0
+14605,VolunteerMatch,,0,0
+14606,VolunteerMatch,,0,0
+14607,VolunteerMatch,,0,0
+14608,VolunteerMatch,,0,0
+14609,VolunteerMatch,,0,0
+14610,VolunteerMatch,,0,0
+14615,The US Oncology Network,,0,0
+14620,VolunteerMatch,,0,0
+14622,VolunteerMatch,,0,0
+14623,VolunteerMatch,,0,0
+14624,VolunteerMatch,,0,0
+14625,VolunteerMatch,,0,0
+14628,VolunteerMatch,,0,0
+14629,VolunteerMatch,,0,0
+14630,VolunteerMatch,,0,0
+14643,VolunteerMatch,,0,0
+14648,Universal Orlando Resort,,0,0
+14656,HireTalent - Diversity Staffing & Recruiting Firm,,0,0
+14658,Conrad Los Angeles,,0,0
+14659,Hilton Anatole,,0,0
+14660,Waldorf Astoria Park City,,0,2
+14661,Hilton Waikoloa Village,,0,0
+14663,Universal Orlando Resort,,0,0
+14667,"Global Technical Talent, an Inc. 5000 Company",,0,0
+14674,Scripps Health,,0,0
+14675,HireTalent - Diversity Staffing & Recruiting Firm,,0,0
+14676,Embassy Suites by Hilton Chicago Downtown Magnificent Mile,,0,0
+14677,Waldorf Astoria Monarch Beach Resort & Club,,0,2
+14679,Embassy Suites By Hilton Anaheim Orange,,0,0
+14681,Alameda Alliance for Health,,0,0
+14688,Kimpton Hotels & Restaurants,,0,0
+14690,On The Border Mexican Grill & Cantina,,0,0
+14691,Scripps Health,,0,0
+14693,Waldorf Astoria Washington DC,,0,0
+14694,Washington Hilton,,0,0
+14696,Waldorf Astoria Monarch Beach Resort & Club,,0,2
+14698,Alameda Alliance for Health,,0,0
+14699,RUSH University Medical Center,,0,0
+14700,The Johns Hopkins University,,0,0
+14702,UT Health San Antonio,,0,0
+14710,Times Microwave Systems,,0,0
+14711,Times Microwave Systems,,0,0
+14714,ClearanceJobs,,0,0
+14719,Staples,,0,0
+14721,ClearanceJobs,,0,0
+14723,Hitachi Vantara,,0,0
+14740,Hilton Waikoloa Village,,0,0
+14741,Waldorf Astoria Park City,,0,0
+14742,Hilton San Jose,,0,0
+14746,Harbor Freight Tools,,0,0
+14748,Ochsner Health,,0,0
+14757,ClearanceJobs,,0,0
+14758,Tufts Medicine,,0,0
+14759,ClearanceJobs,,0,0
+14761,ClearanceJobs,,0,0
+14764,Kimpton Hotels & Restaurants,,0,0
+14766,"Johnson Service Group, Inc.",,0,0
+14767,Scripps Health,,0,0
+14769,Hilton Waikoloa Village,,0,0
+14770,DoubleTree by Hilton Hotel San Jose,,0,0
+14771,"AAA Northern California, Nevada & Utah",,0,0
+14773,The Johns Hopkins University,,0,0
+14774,The Johns Hopkins University,,0,0
+14778,Ochsner Lafayette General,,0,0
+14779,Ochsner Health,,0,0
+14785,ClearanceJobs,,0,0
+14790,ClearanceJobs,,0,0
+14791,ClearanceJobs,,0,0
+14793,Clean Harbors,,0,0
+14794,ClearanceJobs,,0,0
+14795,GE Vernova,ai,1,0
+14796,MSA - The Safety Company,,0,0
+14804,Life Fitness,,0,0
+14805,"Johnson Service Group, Inc.",,0,0
+14806,"Johnson Service Group, Inc.",,0,0
+14807,NYS Department of Transportation,,0,0
+14808,On The Border Mexican Grill & Cantina,,0,0
+14809,Scripps Health,,0,0
+14810,Waldorf Astoria Monarch Beach Resort & Club,,0,2
+14811,Conrad Fort Lauderdale Beach,,0,0
+14812,Hilton Des Moines Downtown,,0,0
+14813,Waldorf Astoria Monarch Beach Resort & Club,,0,2
+14814,"AAA Northern California, Nevada & Utah",,0,0
+14815,Hilton New Orleans Riverside,,0,0
+14816,The Johns Hopkins University,,0,0
+14818,Texas A&M Engineering Experiment Station (TEES),,0,0
+14830,Clean Harbors,,0,0
+14831,ClearanceJobs,,0,0
+14832,Medical College of Wisconsin,,0,0
+14833,ClearanceJobs,,0,0
+14834,Aéropostale,,0,0
+14835,Aéropostale,,0,0
+14851,"Johnson Service Group, Inc.",,0,0
+14853,Waldorf Astoria Washington DC,,0,0
+14854,Hilton Hawaiian Village Waikiki Beach Resort,,0,0
+14859,Ochsner Health,,0,0
+14868,ClearanceJobs,,0,0
+14873,NPAworldwide,,0,0
+14877,Comerica Bank,,0,0
+14880,Nestlé Nespresso SA,,0,0
+14885,Hilton Anatole,,0,0
+14886,"The Duniway Hotel, a Hilton Hotel",,0,0
+14887,PGL (Perimeter Global Logistics),,0,0
+14889,Hilton Vancouver Downtown,,0,0
+14890,Waldorf Astoria Monarch Beach Resort & Club,,0,2
+14899,St. Elizabeth Physicians,,0,0
+14907,ClearanceJobs,,0,0
+14908,MSA - The Safety Company,,0,0
+14909,Mars,,0,0
+14912,Comerica Bank,,0,0
+14913,Circle K,,0,0
+14919,The Johns Hopkins University,,0,0
+14928,Ochsner Health,,0,0
+14932,MASC Medical Recruitment Firm,,0,0
+14933,SCS Engineers,,0,0
+14939,ClearanceJobs,,0,0
+14940,Tufts Medicine,,0,0
+14942,Clean Harbors,,0,0
+14943,Clean Harbors,,0,0
+14952,NPAworldwide,,0,0
+14957,Circle K,,0,0
+14958,O'Melveny & Myers LLP,,0,0
+14960,Hamilton Families,,0,0
+14978,The Johns Hopkins University,,0,0
+14979,CCMC,,0,0
+14982,Treasure Island Resort & Casino,,0,0
+14983,Ochsner Health,,0,0
+14987,Banner Health,,0,0
+14989,Banner Health,,0,0
+14990,Banner Health,,0,0
+14998,ClearanceJobs,,0,0
+15006,RWJBarnabas Health,,0,0
+15008,JUSTIN Vineyards & Winery,,0,0
+15013,Circle K,,0,0
+15014,PepsiCo,,0,0
+15018,Motion Recruitment,,0,0
+15022,ClearanceJobs,,0,0
+15023,RWJBarnabas Health,,0,0
+15024,Twin Lakes Recovery Center,,0,0
+15025,RWJBarnabas Health,,0,0
+15028,General Dynamics Information Technology,,0,0
+15029,RWJBarnabas Health,,0,0
+15032,Comerica Bank,,0,0
+15036,ClearanceJobs,,0,0
+15043,Convera,,0,0
+15045,Motion Recruitment,,0,0
+15046,"ServiceSource, Inc",,0,0
+15061,Wells Fargo,,0,1
+15066,Wells Fargo,,0,1
+15072,General Dynamics Information Technology,,0,0
+15080,Comerica Bank,,0,0
+15088,PepsiCo,,0,0
+15089,Nordstrom,,0,0
+15090,Nordstrom,,0,0
+15102,Wells Fargo,,0,1
+15105,Wells Fargo,,0,1
+15108,Wells Fargo,,0,1
+15111,General Dynamics Information Technology,,0,0
+15117,RWJBarnabas Health,,0,0
+15125,"TDIndustries, Inc.",,0,0
+15128,Customers Bank,,0,0
+15130,Nordstrom,,0,0
+15131,Nordstrom,,0,0
+15132,Nordstrom,,0,0
+15135,"Rise Services, Inc.",,0,0
+15136,Wells Fargo,,0,1
+15138,Wells Fargo,,0,1
+15139,Wells Fargo,,0,1
+15141,Wells Fargo,,0,1
+15146,Nestlé Health Science,,0,0
+15159,Wells Fargo,,0,1
+15161,Wells Fargo,,0,1
+15162,Wells Fargo,,0,1
+15163,Wells Fargo,,0,1
+15164,Wells Fargo,,0,1
+15167,Wells Fargo,,0,1
+15176,Bel,,0,0
+15179,Sport Clips Haircuts,,0,0
+15181,Motion Recruitment,"gcp,cybersecurity,aws",3,0
+15182,Motion Recruitment,,0,0
+15195,Wells Fargo,,0,1
+15198,Wells Fargo,,0,1
+15199,Wells Fargo,,0,1
+15200,Wells Fargo,,0,1
+15201,Wells Fargo,,0,1
+15202,Wells Fargo,,0,1
+15207,"TDIndustries, Inc.",,0,0
+15209,"Intermex Wire Transfer, LLC",,0,0
+15221,Wells Fargo,,0,1
+15223,Wells Fargo,,0,1
+15225,Wells Fargo,,0,1
+15226,Wells Fargo,,0,1
+15227,Wells Fargo,,0,1
+15228,Wells Fargo,,0,1
+15229,Wells Fargo,,0,1
+15230,Wells Fargo,,0,1
+15231,Wells Fargo,,0,1
+15233,Lakefield Veterinary Group,,0,0
+15234,Stop & Shop,,0,0
+15236,Canon Solutions America,,0,0
+15237,San Manuel Band of Mission Indians,,0,0
+15240,Lakefield Veterinary Group,,0,0
+15241,County of Santa Clara,,0,0
+15242,Lakefield Veterinary Group,,0,0
+15246,University of Colorado,,0,0
+15248,Wells Fargo,,0,1
+15250,Aha!,,0,0
+15254,Wells Fargo,,0,1
+15256,Wells Fargo,,0,1
+15258,Lakefield Veterinary Group,,0,0
+15264,Smith+Nephew,,0,0
+15272,"Rise Services, Inc.",,0,0
+15276,Wells Fargo,,0,1
+15279,Wells Fargo,,0,1
+15283,Wells Fargo,,0,1
+15289,Wells Fargo,,0,1
+15290,Lakefield Veterinary Group,,0,0
+15297,San Manuel Band of Mission Indians,,0,0
+15301,Arcus Biosciences,,0,0
+15304,"Lowe's Companies, Inc.",,0,2
+15305,"Lowe's Companies, Inc.",,0,2
+15306,"Lowe's Companies, Inc.",,0,2
+15307,"Lowe's Companies, Inc.",,0,2
+15308,"Lowe's Companies, Inc.",,0,2
+15309,"Lowe's Companies, Inc.",,0,2
+15310,"Lowe's Companies, Inc.",,0,2
+15311,"Lowe's Companies, Inc.",,0,2
+15312,"Lowe's Companies, Inc.",,0,2
+15313,"Lowe's Companies, Inc.",,0,2
+15314,"Lowe's Companies, Inc.",,0,2
+15315,"Lowe's Companies, Inc.",,0,2
+15316,"Lowe's Companies, Inc.",,0,2
+15317,"Lowe's Companies, Inc.",,0,2
+15318,"Lowe's Companies, Inc.",,0,2
+15326,Divorce & Mediation Law Firm | Cabanas Law Firm,,0,0
+15328,"Lowe's Companies, Inc.",,0,2
+15330,"Lowe's Companies, Inc.",,0,2
+15331,"Lowe's Companies, Inc.",,0,2
+15332,"Lowe's Companies, Inc.",,0,2
+15333,"Lowe's Companies, Inc.",,0,2
+15334,"Lowe's Companies, Inc.",,0,2
+15336,"Lowe's Companies, Inc.",,0,2
+15337,"Lowe's Companies, Inc.",,0,2
+15338,"Lowe's Companies, Inc.",,0,2
+15339,"Lowe's Companies, Inc.",,0,2
+15340,"Lowe's Companies, Inc.",,0,2
+15345,GE Aerospace,,0,0
+15346,Lakefield Veterinary Group,,0,0
+15347,"Lowe's Companies, Inc.",,0,2
+15348,"Lowe's Companies, Inc.",,0,2
+15349,"Lowe's Companies, Inc.",,0,2
+15351,"Lowe's Companies, Inc.",,0,2
+15352,"Lowe's Companies, Inc.",,0,2
+15354,Sunglass Hut,,0,0
+15355,"Lowe's Companies, Inc.",,0,2
+15357,"Lowe's Companies, Inc.",,0,2
+15360,San Manuel Band of Mission Indians,,0,0
+15366,"Lowe's Companies, Inc.",,0,2
+15367,"Lowe's Companies, Inc.",,0,2
+15368,"Lowe's Companies, Inc.",,0,2
+15369,"Lowe's Companies, Inc.",,0,2
+15370,"Lowe's Companies, Inc.",,0,2
+15371,"Lowe's Companies, Inc.",,0,2
+15374,"Lowe's Companies, Inc.",,0,2
+15375,"Lowe's Companies, Inc.",,0,2
+15377,"Lowe's Companies, Inc.",,0,2
+15378,"Lowe's Companies, Inc.",,0,2
+15382,Lakefield Veterinary Group,,0,0
+15384,Lori's Gifts,,0,0
+15387,"Lowe's Companies, Inc.",,0,2
+15388,"Lowe's Companies, Inc.",,0,2
+15389,"Lowe's Companies, Inc.",,0,2
+15390,"Lowe's Companies, Inc.",,0,2
+15391,"Lowe's Companies, Inc.",,0,2
+15392,"Lowe's Companies, Inc.",,0,2
+15393,"Lowe's Companies, Inc.",,0,2
+15396,Protouch Staffing,,0,0
+15397,EPIC Insurance Brokers & Consultants,,0,0
+15408,Aimbridge Hospitality,,0,0
+15410,Ken Garff Automotive Group,,0,0
+15425,Creative Financial Staffing (CFS),,0,0
+15427,Creative Financial Staffing (CFS),,0,0
+15431,Ken Garff Automotive Group,,0,0
+15436,Aimbridge Hospitality,,0,0
+15444,Creative Financial Staffing (CFS),,0,0
+15445,Creative Financial Staffing (CFS),,0,0
+15446,Creative Financial Staffing (CFS),,0,0
+15447,Creative Financial Staffing (CFS),,0,0
+15452,Aimbridge Hospitality,,0,0
+15458,Aimbridge Hospitality,,0,0
+15460,Creative Financial Staffing (CFS),,0,0
+15461,Creative Financial Staffing (CFS),,0,0
+15463,Creative Financial Staffing (CFS),,0,0
+15465,"Burlington Stores, Inc.",,0,0
+15469,Nesco Resource,,0,0
+15470,Health Carousel Nursing & Allied Health,,0,0
+15471,Health Carousel Nursing & Allied Health,,0,0
+15474,DocCafe,,0,0
+15477,Aimbridge Hospitality,,0,0
+15478,Creative Financial Staffing (CFS),,0,0
+15479,Creative Financial Staffing (CFS),,0,0
+15480,Creative Financial Staffing (CFS),,0,0
+15481,"Nexstar Media Group, Inc.",,0,0
+15483,DocCafe,,0,0
+15490,University of Illinois Chicago,,0,0
+15491,FirstChoice Hiring,,0,0
+15492,Meadows Behavioral Healthcare,,0,0
+15494,Oregon Department of Transportation,,0,0
+15501,Creative Financial Staffing (CFS),azure,1,0
+15505,Beacon Communities LLC,,0,0
+15507,Good Samaritan Society,,0,0
+15508,Health Carousel Nursing & Allied Health,,0,0
+15509,Health Carousel Nursing & Allied Health,,0,0
+15510,Health Carousel Nursing & Allied Health,,0,0
+15511,Health Carousel Nursing & Allied Health,,0,0
+15512,Health Carousel Nursing & Allied Health,,0,0
+15513,Health Carousel Nursing & Allied Health,,0,0
+15514,Health Carousel Nursing & Allied Health,,0,0
+15515,Health Carousel Nursing & Allied Health,,0,0
+15516,Health Carousel Nursing & Allied Health,,0,0
+15520,Louis Vuitton,,0,0
+15522,Creative Financial Staffing (CFS),,0,0
+15531,Creative Financial Staffing (CFS),,0,0
+15535,Nesco Resource,,0,0
+15537,Emory Healthcare,,0,0
+15541,Action Behavior Centers - ABA Therapy for Autism,,0,0
+15543,Health Carousel Nursing & Allied Health,,0,0
+15544,FirstChoice Hiring,,0,0
+15545,Health Carousel Nursing & Allied Health,,0,0
+15546,CareFirst BlueCross BlueShield,,0,0
+15547,Health Carousel Nursing & Allied Health,,0,0
+15548,Health Carousel Nursing & Allied Health,,0,0
+15549,Health Carousel Nursing & Allied Health,,0,0
+15551,Meadows Behavioral Healthcare,,0,0
+15553,"Mission Technologies, a division of HII",,0,0
+15554,PeaceHealth,,0,0
+15555,Mauser Packaging Solutions,,0,0
+15556,Good Samaritan Society,,0,0
+15565,Creative Financial Staffing (CFS),,0,0
+15574,Health Carousel Nursing & Allied Health,,0,0
+15575,Meadows Behavioral Healthcare,,0,0
+15576,Health Carousel Nursing & Allied Health,,0,0
+15580,T-Mobile,,0,0
+15582,KLA,,0,0
+15583,Spectrum,,0,0
+15585,DocCafe,,0,0
+15589,Creative Financial Staffing (CFS),machine learning,1,0
+15592,Emory Healthcare,,0,0
+15597,Meadows Behavioral Healthcare,,0,0
+15598,Health Carousel Nursing & Allied Health,,0,0
+15599,Health Carousel Nursing & Allied Health,,0,0
+15600,Community Health Center,,0,0
+15601,Health Carousel Nursing & Allied Health,,0,0
+15603,Good Samaritan Society,,0,0
+15604,Good Samaritan Society,,0,0
+15610,Creative Financial Staffing (CFS),,0,0
+15612,Creative Financial Staffing (CFS),,0,0
+15613,Creative Financial Staffing (CFS),,0,0
+15614,Creative Financial Staffing (CFS),,0,0
+15615,SAFEbuilt,,0,0
+15617,Good Samaritan Society,,0,0
+15618,Good Samaritan Society,,0,0
+15619,Naval Nuclear Laboratory (FMP),,0,0
+15620,"Mission Technologies, a division of HII",,0,0
+15622,Health Carousel Nursing & Allied Health,,0,0
+15623,Keysight Technologies,ai,1,0
+15624,T-Mobile,,0,0
+15625,Spectrum,,0,0
+15626,Spectrum Community Solutions,,0,0
+15627,Spectrum,,0,0
+15628,Spectrum Community Solutions,,0,0
+15634,Health Carousel Nursing & Allied Health,,0,0
+15635,Health Carousel Nursing & Allied Health,,0,0
+15637,Health Carousel Nursing & Allied Health,,0,0
+15639,Spectrum,,0,0
+15648,Health Carousel Nursing & Allied Health,,0,0
+15649,Health Carousel Nursing & Allied Health,,0,0
+15650,Health Carousel Nursing & Allied Health,,0,0
+15652,PeaceHealth,,0,0
+15653,Health Carousel Nursing & Allied Health,,0,0
+15655,Health Carousel Nursing & Allied Health,,0,0
+15656,Health Carousel Nursing & Allied Health,,0,0
+15659,Spectrum,,0,0
+15660,Spectrum,,0,0
+15661,Spectrum,,0,0
+15669,Apopka Health and Rehabilitation Center,,0,0
+15670,Health Carousel Nursing & Allied Health,,0,0
+15673,Fluor Corporation,,0,0
+15674,T-Mobile,,0,0
+15678,Health Carousel Nursing & Allied Health,,0,0
+15680,Spectrum,,0,0
+15682,Spectrum,,0,0
+15683,Spectrum,,0,0
+15693,T-Mobile,,0,0
+15701,Spectrum,,0,0
+15702,Spectrum,,0,0
+15709,USAA,,0,0
+15710,USAA,,0,0
+15713,USAA,,0,0
+15725,USAA,,0,0
+15726,USAA,,0,0
+15730,USAA,,0,0
+15734,USAA,,0,0
+15741,USAA,,0,0
+15745,PointClickCare,,0,0
+15758,Energy Jobline,,0,0
+15775,GAT Airline Ground Support,,0,0
+15779,Sharp HealthCare,,0,0
+15780,Sharp HealthCare,,0,0
+15781,Sharp HealthCare,,0,0
+15791,GAT Airline Ground Support,,0,0
+15794,Sharp HealthCare,,0,0
+15799,Energy Jobline,,0,0
+15804,Ecolab,,0,0
+15806,Tesla,,0,0
+15808,"Coolray Heating, Cooling, Plumbing, Electrical",,0,0
+15809,Cleveland Clinic,,0,0
+15821,Sharp HealthCare,,0,0
+15822,Ferguson ,,0,0
+15836,Sharp HealthCare,,0,0
+15841,Houston Methodist,,0,0
+15842,"Nalco Water, An Ecolab Company",,0,0
+15845,Tesla,,0,0
+15846,Tesla,,0,0
+15851,Houston Methodist,,0,0
+15852,Houston Methodist,,0,0
+15855,Tesla,,0,0
+15860,Sharp HealthCare,,0,0
+15864,Houston Methodist,,0,0
+15866,UnityPoint Health,,0,0
+15871,UAMS - University of Arkansas for Medical Sciences,,0,0
+15875,Houston Methodist,,0,0
+15876,Houston Methodist,,0,0
+15879,Houston Methodist,,0,0
+15880,UnityPoint Health,,0,0
+15895,Principal Financial Group,,0,0
+15899,McLaren Health Care,,0,0
+15901,ATF,,0,0
+15905,Vanderbilt University Medical Center,,0,0
+15910,Grand Hyatt,,0,0
+15911,UnityPoint Health,,0,0
+15915,Vanderbilt University Medical Center,,0,0
+15920,Vanderbilt University Medical Center,,0,0
+15926,Tata Consultancy Services,,0,0
+15931,Vanderbilt University Medical Center,,0,0
+15938,WVU Hospitals — Ruby Memorial Hospital,ruby,1,0
+15943,Crunchyroll,,0,0
+15953,WVU Hospitals — Ruby Memorial Hospital,ruby,1,0
+15955,Seattle Municipal Court,,0,0
+15958,WVU Hospitals — Ruby Memorial Hospital,ruby,1,0
+15959,WVU Hospitals — Ruby Memorial Hospital,ruby,1,0
+15960,WVU Hospitals — Ruby Memorial Hospital,ruby,1,0
+15973,Grand Hyatt,,0,0
+15979,WVU Hospitals — Ruby Memorial Hospital,ruby,1,0
+15980,WVU Hospitals — Ruby Memorial Hospital,ruby,1,0
+16013,DNV,,0,0
+16015,Elara Caring ,,0,0
+16022,CyberCoders,,0,0
+16034,Victoria’s Secret & Co.,,0,0
+16035,Victoria’s Secret & Co.,apache,1,0
+16036,Victoria’s Secret & Co.,,0,0
+16037,DNV,,0,0
+16040,Elara Caring ,,0,0
+16046,CyberCoders,,0,0
+16048,Victoria’s Secret & Co.,,0,0
+16060,CyberCoders,"postgresql,typescript,node.js",3,0
+16062,Victoria’s Secret & Co.,apache,1,0
+16076,Victoria’s Secret & Co.,,0,0
+16085,Victoria’s Secret & Co.,apache,1,0
+16087,TEKsystems,,0,0
+16090,TEKsystems,,0,0
+16092,TEKsystems,,0,0
+16101,Bristol Myers Squibb,,0,0
+16109,TEKsystems,,0,0
+16113,TEKsystems,express,1,0
+16135,Acosta,,0,0
+16145,Bristol Myers Squibb,,0,0
+16161,ChristianaCare,,0,0
+16165,Maxim Healthcare Staffing,,0,0
+16168,AAA-The Auto Club Group,,0,0
+16170,Zurich North America,,0,0
+16173,TEKsystems,,0,0
+16187,Northeast Georgia Health System,,0,0
+16191,Maxim Healthcare Staffing,,0,0
+16196,Acosta,,0,0
+16197,Acosta,,0,0
+16201,Swisslog,,0,0
+16202,QBE Insurance,,0,0
+16203,Parkland Medical Center,,0,0
+16204,ByteDance,,0,0
+16207,Arcus Biosciences,,0,0
+16210,"Lowe's Companies, Inc.",,0,2
+16211,"Lowe's Companies, Inc.",,0,2
+16217,"Lowe's Companies, Inc.",,0,2
+16218,"Lowe's Companies, Inc.",,0,2
+16219,"Lowe's Companies, Inc.",,0,2
+16221,"Lowe's Companies, Inc.",,0,2
+16222,"Lowe's Companies, Inc.",,0,2
+16223,"Lowe's Companies, Inc.",,0,2
+16224,"Lowe's Companies, Inc.",,0,2
+16227,"Lowe's Companies, Inc.",,0,2
+16229,"Lowe's Companies, Inc.",,0,2
+16230,"Lowe's Companies, Inc.",,0,2
+16231,"Lowe's Companies, Inc.",,0,2
+16232,"Lowe's Companies, Inc.",,0,2
+16233,"Lowe's Companies, Inc.",,0,2
+16234,"Lowe's Companies, Inc.",,0,2
+16235,"Lowe's Companies, Inc.",,0,2
+16236,"Lowe's Companies, Inc.",,0,2
+16237,"Lowe's Companies, Inc.",,0,2
+16238,"Lowe's Companies, Inc.",,0,2
+16242,"Lowe's Companies, Inc.",,0,2
+16243,Protouch Staffing,,0,0
+16244,Protouch Staffing,,0,0
+16245,"Lowe's Companies, Inc.",,0,2
+16249,"Lowe's Companies, Inc.",,0,2
+16250,"Lowe's Companies, Inc.",,0,2
+16251,"Lowe's Companies, Inc.",,0,2
+16252,"Lowe's Companies, Inc.",,0,2
+16257,"Lowe's Companies, Inc.",,0,2
+16258,"Lowe's Companies, Inc.",,0,2
+16259,"Lowe's Companies, Inc.",,0,2
+16260,"Lowe's Companies, Inc.",,0,2
+16261,"Lowe's Companies, Inc.",,0,2
+16263,"Lowe's Companies, Inc.",,0,2
+16264,"Lowe's Companies, Inc.",,0,2
+16269,"Lowe's Companies, Inc.",,0,2
+16270,"Lowe's Companies, Inc.",,0,2
+16271,"Lowe's Companies, Inc.",,0,2
+16272,"Lowe's Companies, Inc.",,0,2
+16276,"Lowe's Companies, Inc.",,0,2
+16277,"Lowe's Companies, Inc.",,0,2
+16278,"Lowe's Companies, Inc.",,0,2
+16279,"Lowe's Companies, Inc.",,0,2
+16280,"Lowe's Companies, Inc.",,0,2
+16281,"Lowe's Companies, Inc.",,0,2
+16282,"Lowe's Companies, Inc.",,0,2
+16283,"Lowe's Companies, Inc.",,0,2
+16284,"Lowe's Companies, Inc.",,0,2
+16285,"Lowe's Companies, Inc.",,0,2
+16286,"Lowe's Companies, Inc.",,0,2
+16287,Pearle Vision,,0,0
+16290,Tetra Tech,,0,0
+16296,Eversource Energy,,0,0
+16297,"University of California, Riverside",,0,0
+16298,EverCommerce,,0,0
+16299,BAYADA Home Health Care,,0,0
+16300,BAYADA Home Health Care,,0,0
+16301,BAYADA Home Health Care,,0,0
+16304,BAYADA Home Health Care,,0,0
+16306,BAYADA Home Health Care,,0,0
+16307,BAYADA Home Health Care,,0,0
+16308,BAYADA Home Health Care,,0,0
+16311,Goodwin Recruiting,,0,0
+16312,Sanford Health,,0,0
+16316,Eversource Energy,,0,0
+16320,BAYADA Home Health Care,,0,0
+16322,BAYADA Home Health Care,,0,0
+16323,BAYADA Home Health Care,,0,0
+16324,BAYADA Home Health Care,,0,0
+16325,BAYADA Home Health Care,,0,0
+16326,Sanford Health,,0,0
+16327,Goodwin Recruiting,,0,0
+16332,Goodwin Recruiting,,0,0
+16333,UniFirst Corporation,,0,0
+16335,Bay Area Hospital,,0,0
+16340,BAYADA Home Health Care,,0,0
+16341,BAYADA Home Health Care,,0,0
+16342,BAYADA Home Health Care,,0,0
+16343,BAYADA Home Health Care,,0,0
+16344,BAYADA Home Health Care,,0,0
+16345,BAYADA Home Health Care,,0,0
+16347,BAYADA Home Health Care,,0,0
+16350,University of Phoenix,,0,0
+16351,BAYADA Home Health Care,,0,0
+16352,Sanford Health,,0,0
+16353,Sanford Health,,0,0
+16354,Sanford Health,,0,0
+16356,Goodwin Recruiting,,0,0
+16359,UniFirst Corporation,,0,0
+16360,UniFirst Corporation,,0,0
+16361,lululemon,,0,0
+16362,lululemon,,0,0
+16366,EverCommerce,,0,0
+16369,BAYADA Home Health Care,,0,0
+16370,BAYADA Home Health Care,,0,0
+16371,BAYADA Home Health Care,,0,0
+16372,BAYADA Home Health Care,,0,0
+16374,BAYADA Home Health Care,,0,0
+16375,BAYADA Home Health Care,,0,0
+16376,BAYADA Home Health Care,,0,0
+16377,Sanford Health,,0,0
+16380,Goodwin Recruiting,,0,0
+16382,Goodwin Recruiting,,0,0
+16389,Signet Jewelers,,0,0
+16390,BAYADA Home Health Care,,0,0
+16391,BAYADA Home Health Care,,0,0
+16393,BAYADA Home Health Care,,0,0
+16395,Goodwin Recruiting,,0,0
+16398,Hyatt Hotels Corporation,,0,0
+16399,UniFirst Corporation,,0,0
+16400,UniFirst Corporation,,0,0
+16402,Builders FirstSource,,0,0
+16403,EverCommerce,,0,0
+16404,EverCommerce,,0,0
+16406,BAYADA Home Health Care,,0,0
+16407,BAYADA Home Health Care,,0,0
+16410,BAYADA Home Health Care,,0,0
+16411,Sanford Health,,0,0
+16412,Hyatt Hotels Corporation,,0,0
+16414,Kenworth Truck Co.,,0,0
+16415,Builders FirstSource,,0,0
+16416,Builders FirstSource,,0,0
+16421,Goodwin Recruiting,,0,0
+16422,Goodwin Recruiting,,0,0
+16425,UniFirst Corporation,,0,0
+16439,Pacific Gas and Electric Company,,0,0
+16443,BAYADA Home Health Care,,0,0
+16445,BAYADA Home Health Care,,0,0
+16446,BAYADA Home Health Care,,0,0
+16447,BAYADA Home Health Care,,0,0
+16450,BAYADA Home Health Care,,0,0
+16451,BAYADA Home Health Care,,0,0
+16453,BAYADA Home Health Care,,0,0
+16455,Goodwin Recruiting,java,1,0
+16461,UniFirst Corporation,,0,0
+16462,UniFirst Corporation,,0,0
+16463,UniFirst Corporation,,0,0
+16484,Panoramic Health,,0,0
+16486,The Leukemia & Lymphoma Society,,0,0
+16494,Builders FirstSource,,0,0
+16496,Dal-Tile LLC,,0,0
+16501,Old Navy,,0,0
+16503,Walmart,,0,0
+16504,Builders FirstSource,,0,0
+16518,Samsung Electronics America,,0,0
+16523,Brooks Running,,0,0
+16525,Panoramic Health,,0,0
+16528,"Spectrum Plastics Group, A DuPont Business",,0,0
+16530,CoreSite,,0,0
+16533,Walmart,,0,0
+16538,Sam's Club,,0,0
+16548,SimplyApply,,0,0
+16550,Tommy Hilfiger,,0,0
+16551,ClearanceJobs,,0,0
+16552,RemoteWorker US,,0,0
+16561,Sam's Club,,0,0
+16569,RemoteWorker US,,0,0
+16571,Creative Circle,,0,0
+16573,SpotOn,,0,0
+16579,U.S. Immigration and Customs Enforcement (ICE),,0,0
+16605,SimplyApply,,0,0
+16608,Sam's Club,,0,0
+16611,Sam's Club,,0,0
+16613,Walmart,,0,0
+16615,The Learning Experience,,0,0
+16616,U.S. Immigration and Customs Enforcement (ICE),,0,0
+16619,RemoteWorker US,,0,0
+16728,SimplyApply,,0,0
+16732,Bigtincan,,0,0
+16753,SimplyApply,,0,0
+16889,Autism Learning Partners,,0,0
+16890,Victra - Verizon Authorized Retailer,,0,0
+16891,ClearanceJobs,,0,0
+16892,ClearanceJobs,,0,0
+16893,RemoteWorker US,,0,0
+16894,MRG Exams,,0,0
+16899,Aya Healthcare,,0,0
+17053,Cogent Communications,,0,0
+17057,SimplyApply,,0,0
+17159,SimplyApply,,0,0
+17160,SimplyApply,,0,0
+17230,ClickJobs.io,,0,0
+17236,RightWorks,,0,0
+17239,BioSpace,,0,0
+17322,ClearanceJobs,,0,0
+17335,SimplyApply,,0,0
+17341,SimplyApply,,0,0
+17356,ClickJobs.io,,0,0
+17378,Arrow Search Partners,,0,0
+17381,SimplyApply,,0,0
+17395,CommuniCare Advantage,,0,0
+17396,ClearanceJobs,,0,0
+17397,RemoteWorker US,,0,0
+17406,Aureus Medical Group,,0,0
+17422,ClearanceJobs,,0,0
+17424,RemoteWorker US,,0,0
+17428,Health eCareers,,0,0
+17446,RemoteWorker US,,0,0
+17463,Satori Mortgage (NMLS:  4190),,0,0
+17471,Aerotek,,0,0
+17483,SimplyApply,,0,0
+17489,UAMS - University of Arkansas for Medical Sciences,,0,0
+17495,RemoteWorker US,,0,0
+17515,ClearanceJobs,,0,0
+17521,Wyndham Hotels & Resorts,,0,0
+17534,SimplyApply,,0,0
+17544,Infinite Care Consulting Services,,0,0
+17546,ClearanceJobs,,0,0
+17547,RemoteWorker US,,0,0
+17550,HealthTrust Workforce Solutions,r,1,0
+17563,ClearanceJobs,,0,0
+17564,Dice,,0,0
+17580,RemoteWorker US,,0,0
+17581,RemoteWorker US,,0,0
+17582,HealthTrust Workforce Solutions,,0,0
+17586,MRINetwork,,0,0
+17588,ClearanceJobs,,0,0
+17589,ClearanceJobs,,0,0
+17590,RemoteWorker US,,0,0
+17593,Lakefield Veterinary Group,,0,0
+17604,Bristol Myers Squibb,,0,0
+17606,Premium Retail Services,,0,0
+17615,Methodist Healthcare System,,0,0
+17616,Jobot Consulting,,0,0
+17621,Jobot,,0,0
+17629,Jobot,,0,0
+17630,Jobot,,0,0
+17644,CodePath,,0,0
+17649,Providence Health & Services,,0,0
+17657,CodePath,,0,0
+17680,Keck Medicine of USC,,0,1
+17682,CodePath,,0,0
+17686,Jobot,,0,0
+17699,Keck Medicine of USC,,0,1
+17709,Jobot,,0,0
+17717,Winchester Ammunition,,0,0
+17727,Murphy USA,,0,0
+17737,Washington University in St. Louis,,0,0
+17738,Baylor Scott & White Health,,0,0
+17741,Transportation Security Administration (TSA),,0,0
+17746,Baylor Scott & White Health,,0,0
+17750,Baylor Scott & White Health,,0,0
+17751,Baylor Scott & White Health,,0,0
+17769,Valley Medical Center,,0,0
+17795,Ken Garff Automotive Group,,0,0
+17805,Strategic Employment Partners (SEP),,0,0
+17806,Strategic Employment Partners (SEP),,0,0
+17808,Jobs via eFinancialCareers,,0,0
+17809,Jobs via eFinancialCareers,,0,0
+17810,Strategic Employment Partners (SEP),,0,0
+17811,Jobs via eFinancialCareers,,0,0
+17812,Jobs via eFinancialCareers,,0,0
+17813,Jobs via eFinancialCareers,,0,0
+17814,Jobs via eFinancialCareers,,0,0
+17815,Jobs via eFinancialCareers,,0,0
+17816,Jobs via eFinancialCareers,,0,0
+17817,Jobs via eFinancialCareers,,0,0
+17818,Jobs via eFinancialCareers,,0,0
+17819,Jobs via eFinancialCareers,,0,0
+17820,Jobs via eFinancialCareers,,0,0
+17821,Jobs via eFinancialCareers,cybersecurity,1,0
+17822,Jobs via eFinancialCareers,,0,0
+17825,The Walt Disney Company,,0,0
+17827,The Walt Disney Company,,0,0
+17828,Intelerad Medical Systems,linux,1,0
+17830,Hornblower Group,,0,0
+17832,Mastercard,cybersecurity,1,0
+17833,The Walt Disney Company,,0,0
+17840,Global Medical Staffing,,0,0
+17847,The Walt Disney Company,,0,0
+17848,The Walt Disney Company,,0,0
+17849,The Walt Disney Company,,0,0
+17850,The Walt Disney Company,,0,0
+17852,T-Mobile,cybersecurity,1,0
+17855,The Walt Disney Company,,0,0
+17856,Naval Nuclear Laboratory (FMP),,0,0
+17861,The Walt Disney Company,,0,0
+17866,Intelerad Medical Systems,linux,1,0
+17873,Micron Technology,,0,0
+17875,California State Controller's Office,,0,0
+17876,The Walt Disney Company,,0,0
+17878,The Walt Disney Company,,0,0
+17880,Sierra Nevada Corporation,,0,0
+17890,T-Mobile,ai,1,0
+17893,Good Samaritan Society,,0,0
+17933,Michael Page,,0,0
+17940,Bowman Williams,,0,0
+17947,"Equity LifeStyle Properties, Inc.",,0,0
+17963,GlobalFoundries,,0,0
+17991,AECOM,,0,0
+17994,Center City Public Charter Schools,,0,0
+17996,Sharp HealthCare,,0,0
+17997,Sharp HealthCare,,0,0
+17998,Sharp HealthCare,,0,0
+18000,Sharp HealthCare,,0,0
+18005,Sharp HealthCare,,0,0
+18006,GAT Airline Ground Support,,0,0
+18009,Energy Jobline,,0,0
+18011,Amazon,,0,0
+18012,Amazon,,0,0
+18014,Energy Jobline,,0,0
+18018,Sharp HealthCare,,0,0
+18019,Sharp HealthCare,,0,0
+18020,Sharp HealthCare,,0,0
+18022,Energy Jobline,,0,0
+18029,Amazon,,0,0
+18031,Energy Jobline,,0,0
+18033,Sharp HealthCare,,0,0
+18034,Sharp HealthCare,,0,0
+18035,Sharp HealthCare,,0,0
+18036,Sharp HealthCare,,0,0
+18038,Energy Jobline,,0,0
+18039,Energy Jobline,,0,0
+18042,Amazon,,0,0
+18044,Catawba Valley Health System,,0,0
+18045,Sharp HealthCare,,0,0
+18046,Sharp HealthCare,,0,0
+18047,Sharp HealthCare,,0,0
+18048,GAT Airline Ground Support,,0,0
+18052,Energy Jobline,,0,0
+18062,Energy Jobline,,0,0
+18063,Energy Jobline,,0,0
+18072,Amazon,,0,0
+18086,Hunter Engineering Company,,0,0
+18089,Pediatrix Medical Group,,0,0
+18092,Oil and Gas Job Search Ltd,,0,0
+18105,"Haley Ward, Inc.",,0,0
+18111,Michael Page,,0,0
+18136,U.S. Department of Transportation,,0,0
+18164,Oil and Gas Job Search Ltd,,0,0
+18175,Houston Methodist,,0,0
+18178,Houston Methodist,,0,0
+18197,Michael Page,,0,0
+18200,Houston Methodist,,0,0
+18206,UnityPoint Health,,0,0
+18220,Houston Methodist,,0,0
+18237,UnityPoint Health,,0,0
+18240,Massachusetts Trial Court,,0,0
+18248,Bimbo Bakeries USA,,0,0
+18265,Bimbo Bakeries USA,express,1,0
+18281,Bimbo Bakeries USA,express,1,0
+18282,UnityPoint Health,,0,0
+18298,Michael Page,,0,0
+18301,Michael Page,,0,0
+18309,"Liberty Personnel Services, Inc.",,0,0
+18312,"Liberty Personnel Services, Inc.",,0,0
+18314,Ochsner Health,,0,0
+18325,Ochsner Health,,0,0
+18327,Ochsner Lafayette General,,0,0
+18329,MASC Medical Recruitment Firm,,0,0
+18341,Ochsner Health,,0,0
+18346,University of Maryland Medical System,,0,0
+18347,Shaw Industries,,0,0
+18368,Ochsner Lafayette General,,0,0
+18369,Ochsner Lafayette General,,0,0
+18382,Ochsner Health,,0,0
+18383,Ochsner Health,,0,0
+18384,Ochsner Health,,0,0
+18397,SCS Engineers,,0,0
+18407,Actalent,,0,0
+18425,Ochsner Health,,0,0
+18426,Ochsner Lafayette General,,0,0
+18449,Children's National Hospital,,0,0
+18459,Packaging Corporation of America,,0,0
+18461,General Dynamics Information Technology,,0,0
+18469,Dice,,0,0
+18470,TDS Telecommunications LLC,,0,0
+18471,Hamilton Families,,0,0
+18475,Ochsner Health,,0,0
+18476,Fred Hutch,,0,0
+18477,Rice Lake Weighing Systems,,0,0
+18487,Actalent,,0,0
+18507,Johnstown Heights Behavioral Health,,0,0
+18509,Aéropostale,,0,0
+18510,Leidos,,0,0
+18513,General Dynamics Information Technology,,0,0
+18519,"Glacier Bancorp, Inc.",,0,0
+18521,Nordstrom,,0,0
+18522,Nordstrom,,0,0
+18523,Nordstrom,,0,0
+18533,Edgility Consulting,,0,0
+18539,Leidos,ai,1,0
+18540,General Dynamics Information Technology,,0,0
+18544,UI Health,,0,0
+18552,Chewy,,0,0
+18553,Chewy,,0,0
+18556,California Department of Public Health,,0,0
+18564,GEICO,,0,0
+18581,Aéropostale,,0,0
+18587,FOX Rehabilitation,,0,0
+18590,Western Digital,,0,0
+18591,TDS Telecommunications LLC,,0,0
+18595,California Department of Public Health,,0,0
+18596,California Department of Public Health,,0,0
+18599,"BlueScope Buildings North America, Inc.",,0,0
+18604,Motion Recruitment,java,1,0
+18605,Motion Recruitment,,0,0
+18617,FOX Rehabilitation,,0,0
+18625,Foothills Bank - Division of Glacier Bank,,0,0
+18627,Nordstrom,,0,0
+18639,RWJBarnabas Health,,0,0
+18640,RWJBarnabas Health,,0,0
+18645,Aéropostale,,0,0
+18648,General Dynamics Information Technology,,0,0
+18650,FOX Rehabilitation,,0,0
+18652,FOX Rehabilitation,,0,0
+18653,Magna International,,0,0
+18654,Chewy,,0,0
+18656,Westinghouse Electric Company,,0,0
+18660,Nordstrom,,0,0
+18661,Nordstrom,,0,0
+18663,Nordstrom,,0,0
+18664,Nordstrom,,0,0
+18680,General Dynamics Information Technology,,0,0
+18689,Weatherby Healthcare,,0,0
+18696,Motion Recruitment,,0,0
+18697,Nordstrom,,0,0
+18711,Johnstown Heights Behavioral Health,,0,0
+18712,Aéropostale,,0,0
+18713,Aéropostale,,0,0
+18715,Johnstown Heights Behavioral Health,,0,0
+18717,General Dynamics Information Technology,,0,0
+18718,General Dynamics Information Technology,,0,0
+18720,NPAworldwide,,0,0
+18724,FOX Rehabilitation,,0,0
+18725,FOX Rehabilitation,,0,0
+18731,TDS Telecommunications LLC,,0,0
+18738,Nordstrom,,0,0
+18748,Carlisle Construction Materials,,0,0
+18749,Homeless Children's Network,,0,0
+18752,Wells Fargo,,0,1
+18753,Wells Fargo,,0,1
+18754,Wells Fargo,,0,1
+18756,Schulte Hospitality Group,,0,0
+18757,LexisNexis Risk Solutions,,0,0
+18763,Accor,,0,0
+18771,GE Aerospace,,0,0
+18774,University of Colorado,,0,0
+18776,Aha!,,0,0
+18779,Wells Fargo,,0,1
+18780,Wells Fargo,,0,1
+18794,University of Colorado Colorado Springs,,0,0
+18797,Wells Fargo,,0,1
+18798,Wells Fargo,,0,1
+18799,Wells Fargo,,0,1
+18800,Wells Fargo,,0,1
+18802,Wells Fargo,,0,1
+18804,Wells Fargo,,0,1
+18814,Aha!,"rails,ruby",2,0
+18819,Wells Fargo,,0,1
+18821,Colliers,,0,0
+18827,Lakefield Veterinary Group,,0,0
+18828,University of Colorado,,0,0
+18830,Wells Fargo,,0,1
+18831,Wells Fargo,,0,1
+18832,Wells Fargo,,0,1
+18834,Schulte Hospitality Group,,0,0
+18837,VCU Health,,0,0
+18839,Astrana Health,,0,0
+18844,Wells Fargo,,0,1
+18845,Wells Fargo,,0,1
+18847,Wells Fargo,,0,1
+18856,Wells Fargo,,0,1
+18857,Wells Fargo,,0,1
+18858,Wells Fargo,,0,1
+18859,Wells Fargo,,0,1
+18861,Florida Agricultural and Mechanical University,,0,0
+18866,Gwinnett County Public Schools,,0,0
+18870,Lakefield Veterinary Group,,0,0
+18875,St. Joseph's Health,,0,0
+18876,St. Joseph's Health,,0,0
+18882,Lakefield Veterinary Group,,0,0
+18884,Aya Education,,0,0
+18891,Battelle,,0,0
+18892,Stanford Medicine Partners,,0,0
+18893,St. Joseph's Health,,0,0
+18894,St. Joseph's Health,,0,0
+18898,"Lowe's Companies, Inc.",,0,2
+18899,"Lowe's Companies, Inc.",,0,2
+18900,"Lowe's Companies, Inc.",,0,2
+18901,"Lowe's Companies, Inc.",,0,2
+18902,"Lowe's Companies, Inc.",,0,2
+18903,"Lowe's Companies, Inc.",,0,2
+18905,"Lowe's Companies, Inc.",,0,2
+18906,"Lowe's Companies, Inc.",,0,2
+18907,"Lowe's Companies, Inc.",,0,2
+18908,"Lowe's Companies, Inc.",,0,2
+18909,"Lowe's Companies, Inc.",,0,2
+18910,"Lowe's Companies, Inc.",,0,2
+18912,"Lowe's Companies, Inc.",,0,2
+18916,"Lowe's Companies, Inc.",,0,2
+18918,"Lowe's Companies, Inc.",,0,2
+18919,"Lowe's Companies, Inc.",,0,2
+18920,"Lowe's Companies, Inc.",,0,2
+18921,"Lowe's Companies, Inc.",,0,2
+18922,"Lowe's Companies, Inc.",,0,2
+18924,"Lowe's Companies, Inc.",,0,2
+18925,"Lowe's Companies, Inc.",,0,2
+18926,"Lowe's Companies, Inc.",,0,2
+18927,"Lowe's Companies, Inc.",,0,2
+18928,"Lowe's Companies, Inc.",,0,2
+18933,Rockwell Automation,,0,0
+18934,"Lowe's Companies, Inc.",,0,2
+18935,"Lowe's Companies, Inc.",,0,2
+18936,"Lowe's Companies, Inc.",,0,2
+18937,"Lowe's Companies, Inc.",,0,2
+18938,"Lowe's Companies, Inc.",,0,2
+18940,"Lowe's Companies, Inc.",,0,2
+18941,"Lowe's Companies, Inc.",,0,2
+18942,"Lowe's Companies, Inc.",,0,2
+18943,"Lowe's Companies, Inc.",,0,2
+18944,"Lowe's Companies, Inc.",,0,2
+18949,Battelle,,0,0
+18953,"Lowe's Companies, Inc.",,0,2
+18954,"Lowe's Companies, Inc.",,0,2
+18955,"Lowe's Companies, Inc.",,0,2
+18956,"Lowe's Companies, Inc.",,0,2
+18957,"Lowe's Companies, Inc.",,0,2
+18960,"Lowe's Companies, Inc.",,0,2
+18961,"Lowe's Companies, Inc.",,0,2
+18962,"Lowe's Companies, Inc.",,0,2
+18965,Protouch Staffing,,0,0
+18972,"Lowe's Companies, Inc.",,0,2
+18973,"Lowe's Companies, Inc.",,0,2
+18974,"Lowe's Companies, Inc.",,0,2
+18978,Protouch Staffing,,0,0
+18985,"Lowe's Companies, Inc.",,0,2
+18987,"Lowe's Companies, Inc.",,0,2
+18988,"Lowe's Companies, Inc.",,0,2
+18994,Protouch Staffing,,0,0
+18996,Protouch Staffing,,0,0
+18998,Protouch Staffing,,0,0
+19002,Northrop Grumman,,0,0
+19005,QualStaff Resources,,0,0
+19006,Stanford Medicine Partners,,0,0
+19008,Protouch Staffing,,0,0
+19015,"Lowe's Companies, Inc.",,0,2
+19018,"Lowe's Companies, Inc.",,0,2
+19019,"Lowe's Companies, Inc.",,0,2
+19020,"Lowe's Companies, Inc.",,0,2
+19022,"Lowe's Companies, Inc.",,0,2
+19024,"Lowe's Companies, Inc.",,0,2
+19025,"Lowe's Companies, Inc.",,0,2
+19026,"Lowe's Companies, Inc.",,0,2
+19027,"Lowe's Companies, Inc.",,0,2
+19028,"Lowe's Companies, Inc.",,0,2
+19029,"Lowe's Companies, Inc.",,0,2
+19030,"Lowe's Companies, Inc.",,0,2
+19032,"Lowe's Companies, Inc.",,0,2
+19034,"Lowe's Companies, Inc.",,0,2
+19036,"Lowe's Companies, Inc.",,0,2
+19037,"Lowe's Companies, Inc.",,0,2
+19040,Protouch Staffing,,0,0
+19046,Signet Jewelers,,0,0
+19048,Signet Jewelers,,0,4
+19051,Altium Packaging,,0,0
+19052,Eversource Energy,,0,0
+19053,"Lowe's Companies, Inc.",,0,2
+19054,"Lowe's Companies, Inc.",,0,2
+19055,"Lowe's Companies, Inc.",,0,2
+19056,EPIC Insurance Brokers & Consultants,,0,0
+19057,Protouch Staffing,,0,0
+19059,Protouch Staffing,,0,0
+19064,Energy Transfer,,0,0
+19066,Signet Jewelers,,0,0
+19075,Southwest Behavioral & Health Services,,0,0
+19077,Protouch Staffing,,0,0
+19079,Protouch Staffing,,0,0
+19081,U.S. Bank,,0,0
+19084,Signet Jewelers,,0,4
+19085,Signet Jewelers,,0,0
+19086,Signet Jewelers,,0,4
+19088,Eversource Energy,,0,0
+19090,Eversource Energy,,0,0
+19091,Signet Jewelers,,0,4
+19102,Park Hyatt,,0,0
+19104,Bio-Rad Laboratories,,0,0
+19105,Pine Rest Christian Mental Health Services,rest,1,0
+19106,Signet Jewelers,,0,4
+19108,Signet Jewelers,,0,4
+19110,Living Spaces Furniture,,0,0
+19113,EverCommerce,,0,0
+19115,Specialized Bicycle Components,,0,0
+19117,BAYADA Home Health Care,,0,0
+19123,Sanford Health,,0,0
+19124,Sanford Health,,0,0
+19127,Signet Jewelers,,0,0
+19128,Signet Jewelers,,0,4
+19131,Signet Jewelers,,0,4
+19132,Signet Jewelers,,0,4
+19133,Signet Jewelers,,0,4
+19145,Signet Jewelers,,0,0
+19149,Sanford Health,,0,0
+19155,First Student,,0,0
+19157,Eversource Energy,,0,0
+19158,Southwest Behavioral & Health Services,,0,0
+19159,Southwest Behavioral & Health Services,,0,0
+19167,"Ross Stores, Inc.",,0,0
+19169,Kenworth Truck Co.,,0,0
+19171,Signet Jewelers,,0,0
+19172,Signet Jewelers,,0,4
+19173,Eversource Energy,,0,0
+19175,Signet Jewelers,,0,4
+19176,Altium Packaging,,0,0
+19184,Mohawk Industries,,0,0
+19186,Signet Jewelers,,0,4
+19193,Sanford Health,,0,0
+19205,Hyatt Place,,0,0
+19209,Sanford Health,,0,0
+19210,Sanford Health,,0,0
+19221,Hyatt Hotels Corporation,,0,0
+19227,UniFirst Corporation,,0,0
+19229,UniFirst Corporation,,0,0
+19231,Hyatt Hotels Corporation,,0,0
+19235,Procore Technologies,,0,0
+19236,Northern Tool + Equipment,,0,0
+19238,UniFirst Corporation,,0,0
+19247,gpac,,0,0
+19249,Gap,,0,0
+19251,Old Navy,,0,0
+19278,Old Navy,,0,0
+19280,Old Navy,,0,0
+19286,Piper Sandler,,0,0
+19304,Children's Hospital of Philadelphia,,0,0
+19307,Piper Sandler,,0,0
+19319,Old Navy,,0,0
+19320,Old Navy,,0,0
+19321,Old Navy,,0,0
+19326,gpac,,0,0
+19336,gpac,,0,0
+19338,Yale New Haven Health,,0,0
+19339,JMA Wireless,,0,0
+19340,National Renewable Energy Laboratory,,0,0
+19350,The Leukemia & Lymphoma Society,,0,0
+19354,Yale New Haven Health,,0,0
+19361,gpac,,0,0
+19365,Johnson Financial Group,,0,0
+19367,Benchling,,0,0
+19370,Piper Sandler,,0,0
+19386,Children's Wisconsin,,0,0
+19393,Creative Circle,,0,0
+19397,Asset Living,,0,0
+19402,Children's Wisconsin,,0,0
+19404,Creative Circle,,0,0
+19410,The Learning Experience,,0,0
+19413,Checkers & Rally’s Drive-In Restaurants,,0,0
+19414,The Learning Experience,,0,0
+19421,Allied OneSource,,0,0
+19431,Allied OneSource,,0,0
+19433,Allied OneSource,,0,0
+19436,State of Connecticut,,0,0
+19438,General Dynamics Mission Systems,,0,0
+19442,"PLS Financial Services, Inc.",,0,0
+19443,"PLS Financial Services, Inc.",,0,0
+19452,The Learning Experience,,0,0
+19453,The Learning Experience,,0,0
+19456,The Learning Experience,,0,0
+19459,Allied OneSource,,0,0
+19461,The Learning Experience,,0,0
+19462,Allied OneSource,,0,0
+19463,"PLS Financial Services, Inc.",,0,0
+19464,State of Connecticut,,0,0
+19467,The Learning Experience,,0,0
+19475,Allied OneSource,,0,0
+19476,Allied OneSource,,0,0
+19483,State of Connecticut,,0,0
+19484,General Dynamics Mission Systems,,0,0
+19485,Baker Hughes,,0,0
+19492,Creative Artists Agency,,0,0
+19493,Allied OneSource,,0,0
+19495,Allied OneSource,,0,0
+19499,Allied OneSource,,0,0
+19503,State of Connecticut,,0,0
+19504,State of Connecticut,,0,0
+19505,Baker Hughes,,0,0
+19509,The Learning Experience,,0,0
+19517,The Learning Experience,,0,0
+19521,"PLS Financial Services, Inc.",,0,0
+19527,"TriLink BioTechnologies, part of Maravai LifeSciences",r,1,0
+19535,Hyatt Hotels Corporation,,0,0
+19540,Allied OneSource,,0,0
+19542,Allied OneSource,,0,0
+19547,Allied OneSource,,0,0
+19553,State of Connecticut,,0,0
+19562,The Learning Experience,,0,0
+19568,Allied OneSource,,0,0
+19571,"PLS Financial Services, Inc.",,0,0
+19585,State of Connecticut,,0,0
+19586,State of Connecticut,,0,0
+19587,State of Connecticut,,0,0
+19588,Dallas Fort Worth International Airport (DFW),,0,0
+19594,SAIC,,0,0
+19595,University of Pennsylvania,,0,0
+19596,UICGS / Bowhead Family of Companies,,0,0
+19604,Turner & Townsend,,0,0
+19610,Embark Behavioral Health,,0,0
+19611,SAIC,,0,0
+19615,Smithfield Foods,,0,0
+19616,Smithfield Foods,,0,0
+19622,Embark Behavioral Health,,0,0
+19625,Smithfield Foods,,0,0
+19626,Smithfield Foods,,0,0
+19627,IQ-EQ,,0,0
+19635,Aya Healthcare,,0,0
+19636,Aya Healthcare,,0,0
+19637,Aya Healthcare,,0,0
+19638,Aya Healthcare,,0,0
+19639,Aya Healthcare,,0,0
+19640,Aya Healthcare,,0,0
+19641,Aya Healthcare,,0,0
+19642,Aya Healthcare,,0,0
+19643,Aya Healthcare,,0,0
+19644,Aya Healthcare,,0,0
+19645,Aya Healthcare,,0,0
+19646,Aya Healthcare,,0,0
+19650,"Konica Minolta Business Solutions U.S.A., Inc.",,0,0
+19651,Sterling Engineering,,0,0
+19652,Smithfield Foods,,0,0
+19663,Aya Healthcare,,0,0
+19664,Aya Healthcare,,0,0
+19665,Aya Healthcare,,0,0
+19666,Aya Healthcare,,0,0
+19667,Aya Healthcare,,0,0
+19668,Aya Healthcare,,0,0
+19669,Aya Healthcare,,0,0
+19670,Aya Healthcare,,0,0
+19672,Nike,,0,0
+19673,Nike,,0,0
+19674,Trinity Health MI,,0,0
+19678,Cognizant,,0,0
+19684,"Konica Minolta Business Solutions U.S.A., Inc.",,0,0
+19696,Aya Healthcare,,0,0
+19697,Aya Healthcare,,0,0
+19698,Aya Healthcare,,0,0
+19699,Aya Healthcare,,0,0
+19700,Aya Healthcare,,0,0
+19701,Aya Healthcare,,0,0
+19702,Aya Healthcare,,0,0
+19703,Aya Healthcare,,0,0
+19704,Aya Healthcare,,0,0
+19705,Goldman Sachs,,0,0
+19706,Aya Healthcare,,0,0
+19707,Aya Healthcare,,0,0
+19710,Micro Center,,0,0
+19711,Michael Baker International,,0,0
+19715,Visa,,0,0
+19722,Smithfield Foods,,0,0
+19726,Brown & Brown Insurance,,0,0
+19730,Aya Healthcare,,0,0
+19732,Aya Healthcare,,0,0
+19733,Aya Healthcare,,0,0
+19734,Aya Healthcare,,0,0
+19735,Aya Healthcare,,0,0
+19737,Aya Healthcare,,0,0
+19738,Nike,,0,0
+19739,Nike,,0,0
+19740,Aya Healthcare,,0,0
+19745,Smithfield Foods,,0,0
+19748,IQ-EQ,,0,0
+19753,Tillamook County Creamery Association,,0,0
+19760,Aya Healthcare,,0,0
+19761,Aya Healthcare,,0,0
+19762,Aya Healthcare,,0,0
+19763,Aya Healthcare,,0,0
+19764,Aya Healthcare,,0,0
+19765,Aya Healthcare,,0,0
+19766,Aya Healthcare,,0,0
+19767,Aya Healthcare,,0,0
+19768,Thomson Reuters,,0,0
+19773,DaVita Kidney Care,,0,0
+19774,Sarepta Therapeutics,,0,0
+19776,WTW,,0,0
+19780,Smithfield Foods,,0,0
+19781,DHL Global Forwarding,,0,0
+19789,Aya Healthcare,,0,0

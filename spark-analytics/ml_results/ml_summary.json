@@ -1,7 +1,8 @@
 {
-  "timestamp": "2025-11-23T18:05:47.322755",
+  "timestamp": "2025-12-01T00:07:08.931484",
   "components_run": [
     "classification",
+    "salary",
     "skills",
     "recommendation"
   ],

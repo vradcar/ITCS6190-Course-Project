@@ -1,0 +1,101 @@
+job_id,company_id,title,description,location,company_name,formatted_experience_level,ingestion_time
+100000,5015,Business Analyst,Business Analyst position at Company_16,Seattle,Company_16,Director,2025-11-30 23:30:01
+100001,5015,QA Tester,QA Tester position at Company_16,Chicago,Company_16,Mid Level,2025-11-30 23:30:01
+100002,5005,DevOps Engineer,DevOps Engineer position at Company_6,Chicago,Company_6,Internship,2025-11-30 23:30:01
+100003,5005,QA Tester,QA Tester position at Company_6,Miami,Company_6,Director,2025-11-30 23:30:01
+100004,5006,Business Analyst,Business Analyst position at Company_7,Seattle,Company_7,Director,2025-11-30 23:30:01
+100005,5009,Software Engineer,Software Engineer position at Company_10,Miami,Company_10,Mid Level,2025-11-30 23:30:01
+100006,5006,QA Tester,QA Tester position at Company_7,Chicago,Company_7,Director,2025-11-30 23:30:01
+100007,5001,Cloud Architect,Cloud Architect position at Company_2,Denver,Company_2,Director,2025-11-30 23:30:01
+100008,5005,DevOps Engineer,DevOps Engineer position at Company_6,Atlanta,Company_6,Entry Level,2025-11-30 23:30:01
+100009,5001,Software Engineer,Software Engineer position at Company_2,Miami,Company_2,Mid Level,2025-11-30 23:30:01
+100010,5005,Data Scientist,Data Scientist position at Company_6,New York,Company_6,Senior Level,2025-11-30 23:30:01
+100011,5002,Data Scientist,Data Scientist position at Company_3,New York,Company_3,Senior Level,2025-11-30 23:30:01
+100012,5005,DevOps Engineer,DevOps Engineer position at Company_6,Atlanta,Company_6,Internship,2025-11-30 23:30:01
+100013,5015,QA Tester,QA Tester position at Company_16,Los Angeles,Company_16,Internship,2025-11-30 23:30:01
+100014,5014,DevOps Engineer,DevOps Engineer position at Company_15,Chicago,Company_15,Mid Level,2025-11-30 23:30:01
+100015,5013,DevOps Engineer,DevOps Engineer position at Company_14,New York,Company_14,Entry Level,2025-11-30 23:30:01
+100016,5003,QA Tester,QA Tester position at Company_4,Los Angeles,Company_4,Internship,2025-11-30 23:30:01
+100017,5004,Product Manager,Product Manager position at Company_5,Denver,Company_5,Entry Level,2025-11-30 23:30:01
+100018,5012,Data Scientist,Data Scientist position at Company_13,New York,Company_13,Director,2025-11-30 23:30:01
+100019,5017,Product Manager,Product Manager position at Company_18,San Francisco,Company_18,Director,2025-11-30 23:30:01
+100020,5001,Business Analyst,Business Analyst position at Company_2,Denver,Company_2,Internship,2025-11-30 23:30:01
+100021,5001,Cloud Architect,Cloud Architect position at Company_2,New York,Company_2,Entry Level,2025-11-30 23:30:01
+100022,5008,Data Scientist,Data Scientist position at Company_9,Austin,Company_9,Director,2025-11-30 23:30:01
+100023,5012,Software Engineer,Software Engineer position at Company_13,Los Angeles,Company_13,Director,2025-11-30 23:30:01
+100024,5011,DevOps Engineer,DevOps Engineer position at Company_12,New York,Company_12,Entry Level,2025-11-30 23:30:01
+100025,5007,Business Analyst,Business Analyst position at Company_8,Boston,Company_8,Mid Level,2025-11-30 23:30:01
+100026,5001,QA Tester,QA Tester position at Company_2,Denver,Company_2,Director,2025-11-30 23:30:01
+100027,5002,Product Manager,Product Manager position at Company_3,New York,Company_3,Internship,2025-11-30 23:30:01
+100028,5003,Data Scientist,Data Scientist position at Company_4,San Francisco,Company_4,Mid Level,2025-11-30 23:30:01
+100029,5017,UX Designer,UX Designer position at Company_18,Austin,Company_18,Senior Level,2025-11-30 23:30:01
+100030,5015,UX Designer,UX Designer position at Company_16,Chicago,Company_16,Entry Level,2025-11-30 23:30:01
+100031,5015,Business Analyst,Business Analyst position at Company_16,Los Angeles,Company_16,Entry Level,2025-11-30 23:30:01
+100032,5002,Product Manager,Product Manager position at Company_3,Miami,Company_3,Senior Level,2025-11-30 23:30:01
+100033,5013,Data Scientist,Data Scientist position at Company_14,New York,Company_14,Internship,2025-11-30 23:30:01
+100034,5019,QA Tester,QA Tester position at Company_20,New York,Company_20,Mid Level,2025-11-30 23:30:01
+100035,5011,Cloud Architect,Cloud Architect position at Company_12,Atlanta,Company_12,Director,2025-11-30 23:30:01
+100036,5002,Business Analyst,Business Analyst position at Company_3,Austin,Company_3,Mid Level,2025-11-30 23:30:01
+100037,5019,Software Engineer,Software Engineer position at Company_20,San Francisco,Company_20,Internship,2025-11-30 23:30:01
+100038,5013,UX Designer,UX Designer position at Company_14,Atlanta,Company_14,Director,2025-11-30 23:30:01
+100039,5010,UX Designer,UX Designer position at Company_11,Seattle,Company_11,Mid Level,2025-11-30 23:30:01
+100040,5009,Data Scientist,Data Scientist position at Company_10,Boston,Company_10,Director,2025-11-30 23:30:01
+100041,5019,Data Scientist,Data Scientist position at Company_20,Chicago,Company_20,Senior Level,2025-11-30 23:30:01
+100042,5016,Data Scientist,Data Scientist position at Company_17,Boston,Company_17,Internship,2025-11-30 23:30:01
+100043,5003,DevOps Engineer,DevOps Engineer position at Company_4,New York,Company_4,Entry Level,2025-11-30 23:30:01
+100044,5016,Business Analyst,Business Analyst position at Company_17,Los Angeles,Company_17,Entry Level,2025-11-30 23:30:01
+100045,5014,Cloud Architect,Cloud Architect position at Company_15,Los Angeles,Company_15,Entry Level,2025-11-30 23:30:01
+100046,5016,DevOps Engineer,DevOps Engineer position at Company_17,Chicago,Company_17,Entry Level,2025-11-30 23:30:01
+100047,5001,Software Engineer,Software Engineer position at Company_2,Miami,Company_2,Director,2025-11-30 23:30:01
+100048,5006,DevOps Engineer,DevOps Engineer position at Company_7,Chicago,Company_7,Mid Level,2025-11-30 23:30:01
+100049,5000,Cloud Architect,Cloud Architect position at Company_1,Austin,Company_1,Internship,2025-11-30 23:30:01
+100050,5003,Software Engineer,Software Engineer position at Company_4,Atlanta,Company_4,Senior Level,2025-11-30 23:30:01
+100051,5012,Cloud Architect,Cloud Architect position at Company_13,Boston,Company_13,Senior Level,2025-11-30 23:30:01
+100052,5007,Product Manager,Product Manager position at Company_8,New York,Company_8,Mid Level,2025-11-30 23:30:01
+100053,5002,Business Analyst,Business Analyst position at Company_3,San Francisco,Company_3,Senior Level,2025-11-30 23:30:01
+100054,5001,Business Analyst,Business Analyst position at Company_2,Chicago,Company_2,Director,2025-11-30 23:30:01
+100055,5010,Cloud Architect,Cloud Architect position at Company_11,New York,Company_11,Mid Level,2025-11-30 23:30:01
+100056,5005,Data Scientist,Data Scientist position at Company_6,Boston,Company_6,Mid Level,2025-11-30 23:30:01
+100057,5017,Data Scientist,Data Scientist position at Company_18,Los Angeles,Company_18,Entry Level,2025-11-30 23:30:01
+100058,5003,Business Analyst,Business Analyst position at Company_4,Miami,Company_4,Mid Level,2025-11-30 23:30:01
+100059,5018,Software Engineer,Software Engineer position at Company_19,San Francisco,Company_19,Internship,2025-11-30 23:30:01
+100060,5009,UX Designer,UX Designer position at Company_10,Miami,Company_10,Senior Level,2025-11-30 23:30:01
+100061,5007,Cloud Architect,Cloud Architect position at Company_8,Chicago,Company_8,Director,2025-11-30 23:30:01
+100062,5010,UX Designer,UX Designer position at Company_11,Denver,Company_11,Entry Level,2025-11-30 23:30:01
+100063,5000,Data Scientist,Data Scientist position at Company_1,Miami,Company_1,Entry Level,2025-11-30 23:30:01
+100064,5000,Cloud Architect,Cloud Architect position at Company_1,Denver,Company_1,Director,2025-11-30 23:30:01
+100065,5012,QA Tester,QA Tester position at Company_13,Boston,Company_13,Entry Level,2025-11-30 23:30:01
+100066,5004,QA Tester,QA Tester position at Company_5,San Francisco,Company_5,Entry Level,2025-11-30 23:30:01
+100067,5002,Cloud Architect,Cloud Architect position at Company_3,Chicago,Company_3,Entry Level,2025-11-30 23:30:01
+100068,5003,DevOps Engineer,DevOps Engineer position at Company_4,Austin,Company_4,Internship,2025-11-30 23:30:01
+100069,5015,Product Manager,Product Manager position at Company_16,New York,Company_16,Senior Level,2025-11-30 23:30:01
+100070,5004,QA Tester,QA Tester position at Company_5,Miami,Company_5,Mid Level,2025-11-30 23:30:01
+100071,5007,DevOps Engineer,DevOps Engineer position at Company_8,Seattle,Company_8,Senior Level,2025-11-30 23:30:01
+100072,5002,Software Engineer,Software Engineer position at Company_3,New York,Company_3,Entry Level,2025-11-30 23:30:01
+100073,5018,UX Designer,UX Designer position at Company_19,Miami,Company_19,Senior Level,2025-11-30 23:30:01
+100074,5001,Cloud Architect,Cloud Architect position at Company_2,Miami,Company_2,Internship,2025-11-30 23:30:01
+100075,5002,QA Tester,QA Tester position at Company_3,Chicago,Company_3,Mid Level,2025-11-30 23:30:01
+100076,5004,UX Designer,UX Designer position at Company_5,Denver,Company_5,Senior Level,2025-11-30 23:30:01
+100077,5015,Business Analyst,Business Analyst position at Company_16,Boston,Company_16,Director,2025-11-30 23:30:01
+100078,5007,Software Engineer,Software Engineer position at Company_8,Atlanta,Company_8,Internship,2025-11-30 23:30:01
+100079,5019,Cloud Architect,Cloud Architect position at Company_20,Austin,Company_20,Senior Level,2025-11-30 23:30:01
+100080,5005,Cloud Architect,Cloud Architect position at Company_6,Miami,Company_6,Senior Level,2025-11-30 23:30:01
+100081,5015,Business Analyst,Business Analyst position at Company_16,Chicago,Company_16,Mid Level,2025-11-30 23:30:01
+100082,5005,Software Engineer,Software Engineer position at Company_6,Los Angeles,Company_6,Internship,2025-11-30 23:30:01
+100083,5001,Data Scientist,Data Scientist position at Company_2,Austin,Company_2,Mid Level,2025-11-30 23:30:01
+100084,5017,Data Scientist,Data Scientist position at Company_18,Boston,Company_18,Director,2025-11-30 23:30:01
+100085,5002,DevOps Engineer,DevOps Engineer position at Company_3,Denver,Company_3,Entry Level,2025-11-30 23:30:01
+100086,5018,Data Scientist,Data Scientist position at Company_19,Denver,Company_19,Director,2025-11-30 23:30:01
+100087,5019,DevOps Engineer,DevOps Engineer position at Company_20,Denver,Company_20,Director,2025-11-30 23:30:01
+100088,5000,Business Analyst,Business Analyst position at Company_1,Chicago,Company_1,Entry Level,2025-11-30 23:30:01
+100089,5001,Data Scientist,Data Scientist position at Company_2,Boston,Company_2,Mid Level,2025-11-30 23:30:01
+100090,5008,Product Manager,Product Manager position at Company_9,New York,Company_9,Mid Level,2025-11-30 23:30:01
+100091,5011,DevOps Engineer,DevOps Engineer position at Company_12,Miami,Company_12,Mid Level,2025-11-30 23:30:01
+100092,5011,UX Designer,UX Designer position at Company_12,Miami,Company_12,Director,2025-11-30 23:30:01
+100093,5009,Data Scientist,Data Scientist position at Company_10,Boston,Company_10,Internship,2025-11-30 23:30:01
+100094,5008,DevOps Engineer,DevOps Engineer position at Company_9,Los Angeles,Company_9,Senior Level,2025-11-30 23:30:01
+100095,5018,Cloud Architect,Cloud Architect position at Company_19,Los Angeles,Company_19,Mid Level,2025-11-30 23:30:01
+100096,5016,QA Tester,QA Tester position at Company_17,Boston,Company_17,Mid Level,2025-11-30 23:30:01
+100097,5002,DevOps Engineer,DevOps Engineer position at Company_3,San Francisco,Company_3,Mid Level,2025-11-30 23:30:01
+100098,5015,Data Scientist,Data Scientist position at Company_16,Seattle,Company_16,Internship,2025-11-30 23:30:01
+100099,5000,Cloud Architect,Cloud Architect position at Company_1,Boston,Company_1,Mid Level,2025-11-30 23:30:01
