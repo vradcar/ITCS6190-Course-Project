@@ -115,6 +115,22 @@ cd "$SPARK_DIR" || {
 }
 
 # --------------------------
+# STEP 0: Generate Streaming Test Data
+# --------------------------
+echo "============================================================"
+echo "STEP 0: Generate Streaming Test Data"
+echo "============================================================"
+if [ -f "streaming_test_data_generator.py" ]; then
+  $PYTHON streaming_test_data_generator.py || {
+    echo "[!] Streaming data generation FAILED."
+    exit 1
+  }
+else
+  echo "⚠️  streaming_test_data_generator.py not found in $SPARK_DIR."
+fi
+echo
+
+# --------------------------
 # STEP 1: Batch analytics (main.py)
 # --------------------------
 echo "============================================================"
