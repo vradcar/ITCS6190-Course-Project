@@ -16,6 +16,7 @@ set -Eeuo pipefail
 # --------------------------
 PROJECT_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 SPARK_DIR="$PROJECT_ROOT/spark-analytics"
+SPARK_REC="$PROJECT_ROOT/data"
 VENV_DIR="$SPARK_DIR/.venv"
 REQUIREMENTS_FILE="$SPARK_DIR/requirements.txt"
 
@@ -144,6 +145,30 @@ else
 fi
 echo
 
+# --------------------------
+# Additional ML scripts (YOUR INSERTED FILES)
+# --------------------------
+
+echo "🔹 Running XGBoost classifier (ml_job_classifier_xg.py)"
+if [ -f "ml_job_classifier_xg.py" ]; then
+  $PYTHON ml_job_classifier_xg.py || {
+    echo "[!] XGBoost classifier FAILED."
+  }
+else
+  echo "⚠️  ml_job_classifier_xg.py not found, skipping."
+fi
+echo
+
+echo "🔹 Running Spark Recommender (spark_recommender.py)"
+if [ -f "spark_recommender.py" ]; then
+  $PYTHON spark_recommender.py || {
+    echo "[!] Spark recommendation model FAILED."
+  }
+else
+  echo "⚠️  spark_recommender.py not found, skipping."
+fi
+echo
+
 # Print ML outputs (if any)
 ML_OUT_DIR="$SPARK_DIR/analytics_output/ml_outputs"
 if [ -d "$ML_OUT_DIR" ]; then
@@ -201,6 +226,7 @@ echo "Run complete. All batch, ML, and complex analytics steps finished."
 echo "Artifacts:"
 echo "  - ML summary & models: $SPARK_DIR/ml_results"
 echo "  - ML detailed outputs: $SPARK_DIR/analytics_output/ml_outputs"
+echo "  - Spark recommender_outputs: $SPARK_REC/recommendations.csv"
 echo "  - Query results:       $SPARK_DIR/analytics_output/query_results"
 echo "  - Visualizations:      $SPARK_DIR/analytics_output/visuals"
 echo "You can re-run only analytics via: python spark-analytics/complex_queries_job.py"
