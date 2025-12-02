@@ -220,8 +220,11 @@ class MLPipeline:
     def save_results(self, results, output_dir="./ml_results"):
         """Save ML results to disk"""
         try:
-            os.makedirs(output_dir, exist_ok=True)
-            print(f"\n💾 Saving results to {output_dir}...")
+            # Ensure results are saved inside spark-analytics/ml_results
+            spark_dir = os.path.dirname(os.path.abspath(__file__))
+            resolved_output_dir = os.path.join(spark_dir, "ml_results") if output_dir == "./ml_results" else output_dir
+            os.makedirs(resolved_output_dir, exist_ok=True)
+            print(f"\n💾 Saving results to {resolved_output_dir}...")
             
             # Save summary
             summary = {
@@ -231,10 +234,10 @@ class MLPipeline:
             }
             
             import json
-            with open(f"{output_dir}/ml_summary.json", "w") as f:
+            with open(os.path.join(resolved_output_dir, "ml_summary.json"), "w") as f:
                 json.dump(summary, f, indent=2)
             
-            print(f"✅ Results saved to {output_dir}")
+            print(f"✅ Results saved to {resolved_output_dir}")
 
             # ---------------------------------------
             # Persist detailed DataFrame outputs for downstream analytics

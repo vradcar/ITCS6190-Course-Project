@@ -1,101 +1,101 @@
-job_id,company_id,title,description,location,company_name,formatted_experience_level,ingestion_time
-100400,5002,DevOps Engineer,DevOps Engineer position at Company_3,Chicago,Company_3,Internship,2025-11-30 23:30:09
-100401,5011,Software Engineer,Software Engineer position at Company_12,Seattle,Company_12,Senior Level,2025-11-30 23:30:09
-100402,5011,Business Analyst,Business Analyst position at Company_12,Austin,Company_12,Director,2025-11-30 23:30:09
-100403,5005,Product Manager,Product Manager position at Company_6,Los Angeles,Company_6,Senior Level,2025-11-30 23:30:09
-100404,5009,DevOps Engineer,DevOps Engineer position at Company_10,Miami,Company_10,Entry Level,2025-11-30 23:30:09
-100405,5010,DevOps Engineer,DevOps Engineer position at Company_11,Los Angeles,Company_11,Director,2025-11-30 23:30:09
-100406,5001,Business Analyst,Business Analyst position at Company_2,San Francisco,Company_2,Entry Level,2025-11-30 23:30:09
-100407,5011,DevOps Engineer,DevOps Engineer position at Company_12,Chicago,Company_12,Mid Level,2025-11-30 23:30:09
-100408,5010,Data Scientist,Data Scientist position at Company_11,New York,Company_11,Senior Level,2025-11-30 23:30:09
-100409,5019,Software Engineer,Software Engineer position at Company_20,Atlanta,Company_20,Mid Level,2025-11-30 23:30:09
-100410,5006,DevOps Engineer,DevOps Engineer position at Company_7,Chicago,Company_7,Mid Level,2025-11-30 23:30:09
-100411,5002,Data Scientist,Data Scientist position at Company_3,Los Angeles,Company_3,Internship,2025-11-30 23:30:09
-100412,5012,Business Analyst,Business Analyst position at Company_13,Seattle,Company_13,Mid Level,2025-11-30 23:30:09
-100413,5015,Cloud Architect,Cloud Architect position at Company_16,New York,Company_16,Senior Level,2025-11-30 23:30:09
-100414,5017,Business Analyst,Business Analyst position at Company_18,Miami,Company_18,Internship,2025-11-30 23:30:09
-100415,5003,Software Engineer,Software Engineer position at Company_4,New York,Company_4,Director,2025-11-30 23:30:09
-100416,5008,Product Manager,Product Manager position at Company_9,New York,Company_9,Director,2025-11-30 23:30:09
-100417,5003,Cloud Architect,Cloud Architect position at Company_4,Denver,Company_4,Mid Level,2025-11-30 23:30:09
-100418,5006,Cloud Architect,Cloud Architect position at Company_7,Atlanta,Company_7,Mid Level,2025-11-30 23:30:09
-100419,5005,DevOps Engineer,DevOps Engineer position at Company_6,Chicago,Company_6,Entry Level,2025-11-30 23:30:09
-100420,5015,Data Scientist,Data Scientist position at Company_16,Chicago,Company_16,Director,2025-11-30 23:30:09
-100421,5006,Software Engineer,Software Engineer position at Company_7,Austin,Company_7,Director,2025-11-30 23:30:09
-100422,5012,UX Designer,UX Designer position at Company_13,Seattle,Company_13,Mid Level,2025-11-30 23:30:09
-100423,5007,Data Scientist,Data Scientist position at Company_8,New York,Company_8,Entry Level,2025-11-30 23:30:09
-100424,5000,DevOps Engineer,DevOps Engineer position at Company_1,Austin,Company_1,Internship,2025-11-30 23:30:09
-100425,5004,Business Analyst,Business Analyst position at Company_5,San Francisco,Company_5,Director,2025-11-30 23:30:09
-100426,5008,Product Manager,Product Manager position at Company_9,Chicago,Company_9,Entry Level,2025-11-30 23:30:09
-100427,5010,UX Designer,UX Designer position at Company_11,Chicago,Company_11,Senior Level,2025-11-30 23:30:09
-100428,5012,Product Manager,Product Manager position at Company_13,Seattle,Company_13,Senior Level,2025-11-30 23:30:09
-100429,5015,Software Engineer,Software Engineer position at Company_16,Chicago,Company_16,Director,2025-11-30 23:30:09
-100430,5011,Business Analyst,Business Analyst position at Company_12,Atlanta,Company_12,Director,2025-11-30 23:30:09
-100431,5018,Product Manager,Product Manager position at Company_19,San Francisco,Company_19,Director,2025-11-30 23:30:09
-100432,5019,QA Tester,QA Tester position at Company_20,Miami,Company_20,Entry Level,2025-11-30 23:30:09
-100433,5008,Software Engineer,Software Engineer position at Company_9,Denver,Company_9,Entry Level,2025-11-30 23:30:09
-100434,5013,UX Designer,UX Designer position at Company_14,Miami,Company_14,Director,2025-11-30 23:30:09
-100435,5016,Data Scientist,Data Scientist position at Company_17,San Francisco,Company_17,Internship,2025-11-30 23:30:09
-100436,5006,Cloud Architect,Cloud Architect position at Company_7,Los Angeles,Company_7,Senior Level,2025-11-30 23:30:09
-100437,5008,Data Scientist,Data Scientist position at Company_9,Seattle,Company_9,Senior Level,2025-11-30 23:30:09
-100438,5013,DevOps Engineer,DevOps Engineer position at Company_14,Los Angeles,Company_14,Internship,2025-11-30 23:30:09
-100439,5019,Product Manager,Product Manager position at Company_20,San Francisco,Company_20,Internship,2025-11-30 23:30:09
-100440,5006,Cloud Architect,Cloud Architect position at Company_7,Denver,Company_7,Entry Level,2025-11-30 23:30:09
-100441,5000,Product Manager,Product Manager position at Company_1,Austin,Company_1,Mid Level,2025-11-30 23:30:09
-100442,5008,Cloud Architect,Cloud Architect position at Company_9,Atlanta,Company_9,Director,2025-11-30 23:30:09
-100443,5005,DevOps Engineer,DevOps Engineer position at Company_6,San Francisco,Company_6,Senior Level,2025-11-30 23:30:09
-100444,5013,Cloud Architect,Cloud Architect position at Company_14,Austin,Company_14,Director,2025-11-30 23:30:09
-100445,5007,DevOps Engineer,DevOps Engineer position at Company_8,Chicago,Company_8,Senior Level,2025-11-30 23:30:09
-100446,5010,Product Manager,Product Manager position at Company_11,San Francisco,Company_11,Director,2025-11-30 23:30:09
-100447,5005,Cloud Architect,Cloud Architect position at Company_6,New York,Company_6,Entry Level,2025-11-30 23:30:09
-100448,5011,DevOps Engineer,DevOps Engineer position at Company_12,Seattle,Company_12,Internship,2025-11-30 23:30:09
-100449,5006,DevOps Engineer,DevOps Engineer position at Company_7,New York,Company_7,Director,2025-11-30 23:30:09
-100450,5011,UX Designer,UX Designer position at Company_12,Denver,Company_12,Mid Level,2025-11-30 23:30:09
-100451,5011,Product Manager,Product Manager position at Company_12,Los Angeles,Company_12,Internship,2025-11-30 23:30:09
-100452,5011,UX Designer,UX Designer position at Company_12,Miami,Company_12,Director,2025-11-30 23:30:09
-100453,5014,DevOps Engineer,DevOps Engineer position at Company_15,New York,Company_15,Internship,2025-11-30 23:30:09
-100454,5015,UX Designer,UX Designer position at Company_16,Atlanta,Company_16,Director,2025-11-30 23:30:09
-100455,5002,UX Designer,UX Designer position at Company_3,Atlanta,Company_3,Director,2025-11-30 23:30:09
-100456,5009,Data Scientist,Data Scientist position at Company_10,Austin,Company_10,Entry Level,2025-11-30 23:30:09
-100457,5000,QA Tester,QA Tester position at Company_1,Seattle,Company_1,Director,2025-11-30 23:30:09
-100458,5017,Software Engineer,Software Engineer position at Company_18,Chicago,Company_18,Entry Level,2025-11-30 23:30:09
-100459,5019,UX Designer,UX Designer position at Company_20,Atlanta,Company_20,Entry Level,2025-11-30 23:30:09
-100460,5019,Product Manager,Product Manager position at Company_20,New York,Company_20,Senior Level,2025-11-30 23:30:09
-100461,5010,Business Analyst,Business Analyst position at Company_11,Atlanta,Company_11,Mid Level,2025-11-30 23:30:09
-100462,5016,Business Analyst,Business Analyst position at Company_17,Los Angeles,Company_17,Senior Level,2025-11-30 23:30:09
-100463,5013,Business Analyst,Business Analyst position at Company_14,San Francisco,Company_14,Senior Level,2025-11-30 23:30:09
-100464,5018,Business Analyst,Business Analyst position at Company_19,Los Angeles,Company_19,Mid Level,2025-11-30 23:30:09
-100465,5013,Data Scientist,Data Scientist position at Company_14,Seattle,Company_14,Internship,2025-11-30 23:30:09
-100466,5011,QA Tester,QA Tester position at Company_12,San Francisco,Company_12,Mid Level,2025-11-30 23:30:09
-100467,5007,UX Designer,UX Designer position at Company_8,Atlanta,Company_8,Entry Level,2025-11-30 23:30:09
-100468,5015,Data Scientist,Data Scientist position at Company_16,Denver,Company_16,Director,2025-11-30 23:30:09
-100469,5015,Business Analyst,Business Analyst position at Company_16,New York,Company_16,Mid Level,2025-11-30 23:30:09
-100470,5007,Software Engineer,Software Engineer position at Company_8,Austin,Company_8,Internship,2025-11-30 23:30:09
-100471,5004,QA Tester,QA Tester position at Company_5,Boston,Company_5,Director,2025-11-30 23:30:09
-100472,5011,Data Scientist,Data Scientist position at Company_12,Miami,Company_12,Senior Level,2025-11-30 23:30:09
-100473,5016,UX Designer,UX Designer position at Company_17,Atlanta,Company_17,Entry Level,2025-11-30 23:30:09
-100474,5018,Data Scientist,Data Scientist position at Company_19,New York,Company_19,Senior Level,2025-11-30 23:30:09
-100475,5004,QA Tester,QA Tester position at Company_5,Atlanta,Company_5,Mid Level,2025-11-30 23:30:09
-100476,5010,Data Scientist,Data Scientist position at Company_11,Los Angeles,Company_11,Director,2025-11-30 23:30:09
-100477,5018,Product Manager,Product Manager position at Company_19,Miami,Company_19,Mid Level,2025-11-30 23:30:09
-100478,5018,UX Designer,UX Designer position at Company_19,Denver,Company_19,Internship,2025-11-30 23:30:09
-100479,5000,Data Scientist,Data Scientist position at Company_1,Los Angeles,Company_1,Mid Level,2025-11-30 23:30:09
-100480,5002,Cloud Architect,Cloud Architect position at Company_3,San Francisco,Company_3,Director,2025-11-30 23:30:09
-100481,5010,Data Scientist,Data Scientist position at Company_11,Austin,Company_11,Internship,2025-11-30 23:30:09
-100482,5003,DevOps Engineer,DevOps Engineer position at Company_4,Denver,Company_4,Director,2025-11-30 23:30:09
-100483,5011,Business Analyst,Business Analyst position at Company_12,Miami,Company_12,Internship,2025-11-30 23:30:09
-100484,5008,Data Scientist,Data Scientist position at Company_9,Chicago,Company_9,Mid Level,2025-11-30 23:30:09
-100485,5004,QA Tester,QA Tester position at Company_5,Seattle,Company_5,Mid Level,2025-11-30 23:30:09
-100486,5005,Product Manager,Product Manager position at Company_6,Atlanta,Company_6,Internship,2025-11-30 23:30:09
-100487,5005,Business Analyst,Business Analyst position at Company_6,San Francisco,Company_6,Director,2025-11-30 23:30:09
-100488,5018,Data Scientist,Data Scientist position at Company_19,Seattle,Company_19,Mid Level,2025-11-30 23:30:09
-100489,5017,QA Tester,QA Tester position at Company_18,Miami,Company_18,Internship,2025-11-30 23:30:09
-100490,5002,Data Scientist,Data Scientist position at Company_3,San Francisco,Company_3,Internship,2025-11-30 23:30:09
-100491,5006,QA Tester,QA Tester position at Company_7,New York,Company_7,Director,2025-11-30 23:30:09
-100492,5010,Business Analyst,Business Analyst position at Company_11,Seattle,Company_11,Senior Level,2025-11-30 23:30:09
-100493,5012,QA Tester,QA Tester position at Company_13,Denver,Company_13,Senior Level,2025-11-30 23:30:09
-100494,5006,QA Tester,QA Tester position at Company_7,Austin,Company_7,Senior Level,2025-11-30 23:30:09
-100495,5008,Cloud Architect,Cloud Architect position at Company_9,New York,Company_9,Director,2025-11-30 23:30:09
-100496,5001,Product Manager,Product Manager position at Company_2,Chicago,Company_2,Senior Level,2025-11-30 23:30:09
-100497,5011,Business Analyst,Business Analyst position at Company_12,Miami,Company_12,Internship,2025-11-30 23:30:09
-100498,5016,UX Designer,UX Designer position at Company_17,Seattle,Company_17,Internship,2025-11-30 23:30:09
-100499,5003,Software Engineer,Software Engineer position at Company_4,Atlanta,Company_4,Director,2025-11-30 23:30:09
+job_id,company_name,title,description,location,company_id,views,formatted_work_type,application_type,formatted_experience_level,posting_domain,sponsored,zip_code
+100400,Company_19,UX Designer,UX Designer position at Company_19,Atlanta,5018,1059,Full-time,External,Senior Level,indeed.com,False,30303
+100401,Company_7,UX Designer,UX Designer position at Company_7,Atlanta,5006,3045,Contract,Referral,Mid Level,indeed.com,True,30303
+100402,Company_17,Cloud Architect,Cloud Architect position at Company_17,Miami,5016,3698,Internship,Easy Apply,Internship,indeed.com,False,33101
+100403,Company_5,Cloud Architect,Cloud Architect position at Company_5,Atlanta,5004,78,Full-time,Referral,Entry Level,company.careers,False,30303
+100404,Company_10,QA Tester,QA Tester position at Company_10,New York,5009,2076,Part-time,External,Internship,indeed.com,False,10001
+100405,Company_1,DevOps Engineer,DevOps Engineer position at Company_1,Los Angeles,5000,3699,Internship,External,Entry Level,linkedin.com,False,90001
+100406,Company_9,DevOps Engineer,DevOps Engineer position at Company_9,Chicago,5008,3596,Temporary,Easy Apply,Internship,company.careers,False,60601
+100407,Company_14,Cloud Architect,Cloud Architect position at Company_14,Denver,5013,3727,Full-time,Easy Apply,Mid Level,company.careers,False,80202
+100408,Company_8,UX Designer,UX Designer position at Company_8,Austin,5007,1732,Part-time,External,Senior Level,company.careers,True,73301
+100409,Company_6,DevOps Engineer,DevOps Engineer position at Company_6,Boston,5005,2178,Temporary,Easy Apply,Senior Level,company.careers,False,02108
+100410,Company_19,Data Scientist,Data Scientist position at Company_19,Los Angeles,5018,1734,Internship,Referral,Senior Level,linkedin.com,True,90001
+100411,Company_5,Data Scientist,Data Scientist position at Company_5,Austin,5004,729,Contract,Referral,Senior Level,linkedin.com,True,73301
+100412,Company_17,UX Designer,UX Designer position at Company_17,Atlanta,5016,1156,Temporary,Referral,Director,company.careers,False,30303
+100413,Company_4,QA Tester,QA Tester position at Company_4,New York,5003,1357,Full-time,Referral,Entry Level,company.careers,False,10001
+100414,Company_16,QA Tester,QA Tester position at Company_16,New York,5015,4682,Internship,External,Mid Level,company.careers,True,10001
+100415,Company_3,DevOps Engineer,DevOps Engineer position at Company_3,Austin,5002,4408,Full-time,Easy Apply,Mid Level,company.careers,True,73301
+100416,Company_20,UX Designer,UX Designer position at Company_20,Atlanta,5019,1181,Internship,Referral,Director,linkedin.com,False,30303
+100417,Company_7,UX Designer,UX Designer position at Company_7,New York,5006,854,Full-time,Referral,Entry Level,linkedin.com,True,10001
+100418,Company_14,UX Designer,UX Designer position at Company_14,San Francisco,5013,4888,Contract,External,Mid Level,linkedin.com,False,94103
+100419,Company_15,QA Tester,QA Tester position at Company_15,Miami,5014,3955,Internship,Easy Apply,Director,indeed.com,True,33101
+100420,Company_7,QA Tester,QA Tester position at Company_7,San Francisco,5006,3786,Temporary,Referral,Director,company.careers,True,94103
+100421,Company_17,QA Tester,QA Tester position at Company_17,New York,5016,2519,Contract,External,Mid Level,company.careers,True,10001
+100422,Company_19,Data Scientist,Data Scientist position at Company_19,Atlanta,5018,1768,Internship,Easy Apply,Mid Level,linkedin.com,False,30303
+100423,Company_13,Business Analyst,Business Analyst position at Company_13,Miami,5012,2466,Temporary,External,Mid Level,company.careers,False,33101
+100424,Company_8,Business Analyst,Business Analyst position at Company_8,Miami,5007,2860,Full-time,Referral,Senior Level,company.careers,False,33101
+100425,Company_10,QA Tester,QA Tester position at Company_10,Seattle,5009,1566,Full-time,Referral,Mid Level,indeed.com,True,98101
+100426,Company_11,DevOps Engineer,DevOps Engineer position at Company_11,Denver,5010,4761,Internship,Referral,Director,company.careers,False,80202
+100427,Company_8,QA Tester,QA Tester position at Company_8,New York,5007,4168,Part-time,External,Senior Level,linkedin.com,False,10001
+100428,Company_14,Business Analyst,Business Analyst position at Company_14,Miami,5013,3363,Temporary,External,Entry Level,indeed.com,True,33101
+100429,Company_11,Product Manager,Product Manager position at Company_11,Denver,5010,4725,Internship,Easy Apply,Internship,indeed.com,False,80202
+100430,Company_13,DevOps Engineer,DevOps Engineer position at Company_13,Boston,5012,672,Internship,External,Mid Level,linkedin.com,False,02108
+100431,Company_5,Data Scientist,Data Scientist position at Company_5,Boston,5004,586,Internship,Referral,Entry Level,linkedin.com,True,02108
+100432,Company_6,Software Engineer,Software Engineer position at Company_6,San Francisco,5005,3268,Contract,Referral,Entry Level,linkedin.com,False,94103
+100433,Company_6,UX Designer,UX Designer position at Company_6,Seattle,5005,3244,Temporary,External,Director,linkedin.com,True,98101
+100434,Company_4,DevOps Engineer,DevOps Engineer position at Company_4,Denver,5003,814,Contract,External,Senior Level,indeed.com,True,80202
+100435,Company_20,QA Tester,QA Tester position at Company_20,Austin,5019,786,Part-time,External,Mid Level,company.careers,True,73301
+100436,Company_19,Data Scientist,Data Scientist position at Company_19,Austin,5018,2884,Contract,Easy Apply,Entry Level,indeed.com,True,73301
+100437,Company_10,Cloud Architect,Cloud Architect position at Company_10,New York,5009,3828,Contract,External,Mid Level,linkedin.com,True,10001
+100438,Company_9,UX Designer,UX Designer position at Company_9,Seattle,5008,1349,Full-time,Easy Apply,Director,company.careers,False,98101
+100439,Company_13,DevOps Engineer,DevOps Engineer position at Company_13,Austin,5012,4667,Internship,External,Mid Level,indeed.com,False,73301
+100440,Company_8,QA Tester,QA Tester position at Company_8,Atlanta,5007,1138,Contract,Referral,Director,company.careers,False,30303
+100441,Company_14,Data Scientist,Data Scientist position at Company_14,Seattle,5013,2571,Internship,Referral,Mid Level,company.careers,False,98101
+100442,Company_10,DevOps Engineer,DevOps Engineer position at Company_10,Austin,5009,755,Part-time,Referral,Senior Level,indeed.com,False,73301
+100443,Company_20,DevOps Engineer,DevOps Engineer position at Company_20,Chicago,5019,3685,Part-time,Referral,Mid Level,company.careers,True,60601
+100444,Company_5,Data Scientist,Data Scientist position at Company_5,San Francisco,5004,4667,Contract,Referral,Director,indeed.com,False,94103
+100445,Company_17,QA Tester,QA Tester position at Company_17,Boston,5016,2935,Internship,External,Entry Level,indeed.com,True,02108
+100446,Company_20,Cloud Architect,Cloud Architect position at Company_20,Denver,5019,4949,Full-time,Referral,Entry Level,indeed.com,False,80202
+100447,Company_16,DevOps Engineer,DevOps Engineer position at Company_16,New York,5015,3735,Full-time,Easy Apply,Mid Level,indeed.com,True,10001
+100448,Company_4,DevOps Engineer,DevOps Engineer position at Company_4,Boston,5003,620,Internship,External,Mid Level,indeed.com,True,02108
+100449,Company_14,DevOps Engineer,DevOps Engineer position at Company_14,Austin,5013,4597,Temporary,External,Internship,company.careers,False,73301
+100450,Company_13,Business Analyst,Business Analyst position at Company_13,San Francisco,5012,1453,Internship,Referral,Entry Level,linkedin.com,False,94103
+100451,Company_19,Business Analyst,Business Analyst position at Company_19,Denver,5018,3063,Contract,Referral,Entry Level,linkedin.com,False,80202
+100452,Company_20,DevOps Engineer,DevOps Engineer position at Company_20,Los Angeles,5019,3957,Internship,External,Internship,linkedin.com,True,90001
+100453,Company_4,Data Scientist,Data Scientist position at Company_4,Boston,5003,194,Internship,Easy Apply,Entry Level,linkedin.com,True,02108
+100454,Company_2,Cloud Architect,Cloud Architect position at Company_2,San Francisco,5001,4044,Full-time,Easy Apply,Senior Level,linkedin.com,False,94103
+100455,Company_10,QA Tester,QA Tester position at Company_10,Seattle,5009,4565,Full-time,Referral,Internship,indeed.com,True,98101
+100456,Company_17,UX Designer,UX Designer position at Company_17,New York,5016,268,Part-time,Referral,Director,indeed.com,False,10001
+100457,Company_19,Data Scientist,Data Scientist position at Company_19,Austin,5018,191,Full-time,External,Internship,linkedin.com,False,73301
+100458,Company_4,Product Manager,Product Manager position at Company_4,Seattle,5003,3018,Part-time,External,Director,company.careers,False,98101
+100459,Company_7,Product Manager,Product Manager position at Company_7,Seattle,5006,98,Part-time,Easy Apply,Entry Level,company.careers,True,98101
+100460,Company_16,Cloud Architect,Cloud Architect position at Company_16,New York,5015,521,Internship,Referral,Internship,company.careers,False,10001
+100461,Company_14,Product Manager,Product Manager position at Company_14,Miami,5013,15,Part-time,External,Internship,company.careers,True,33101
+100462,Company_19,Data Scientist,Data Scientist position at Company_19,New York,5018,665,Temporary,Referral,Entry Level,company.careers,True,10001
+100463,Company_4,Data Scientist,Data Scientist position at Company_4,San Francisco,5003,4884,Temporary,Referral,Internship,company.careers,True,94103
+100464,Company_17,Product Manager,Product Manager position at Company_17,Chicago,5016,1220,Contract,External,Director,indeed.com,False,60601
+100465,Company_4,DevOps Engineer,DevOps Engineer position at Company_4,Atlanta,5003,902,Contract,Referral,Director,company.careers,False,30303
+100466,Company_1,Cloud Architect,Cloud Architect position at Company_1,Denver,5000,1429,Contract,Easy Apply,Internship,indeed.com,False,80202
+100467,Company_8,Product Manager,Product Manager position at Company_8,Atlanta,5007,1470,Temporary,External,Internship,indeed.com,True,30303
+100468,Company_9,UX Designer,UX Designer position at Company_9,Austin,5008,3738,Contract,Easy Apply,Internship,linkedin.com,True,73301
+100469,Company_14,DevOps Engineer,DevOps Engineer position at Company_14,Seattle,5013,4522,Part-time,Easy Apply,Internship,linkedin.com,False,98101
+100470,Company_17,QA Tester,QA Tester position at Company_17,San Francisco,5016,3477,Contract,External,Mid Level,company.careers,False,94103
+100471,Company_19,Software Engineer,Software Engineer position at Company_19,Chicago,5018,4899,Contract,Easy Apply,Entry Level,indeed.com,False,60601
+100472,Company_2,Cloud Architect,Cloud Architect position at Company_2,Miami,5001,564,Contract,Referral,Mid Level,linkedin.com,False,33101
+100473,Company_11,Software Engineer,Software Engineer position at Company_11,Boston,5010,2999,Temporary,Easy Apply,Mid Level,linkedin.com,False,02108
+100474,Company_9,Software Engineer,Software Engineer position at Company_9,Los Angeles,5008,189,Contract,External,Entry Level,indeed.com,False,90001
+100475,Company_14,DevOps Engineer,DevOps Engineer position at Company_14,New York,5013,2840,Internship,External,Internship,company.careers,False,10001
+100476,Company_7,UX Designer,UX Designer position at Company_7,Los Angeles,5006,1243,Internship,Referral,Mid Level,company.careers,False,90001
+100477,Company_11,Cloud Architect,Cloud Architect position at Company_11,Denver,5010,2933,Part-time,Referral,Entry Level,company.careers,False,80202
+100478,Company_18,QA Tester,QA Tester position at Company_18,Austin,5017,4491,Full-time,External,Director,linkedin.com,False,73301
+100479,Company_13,Software Engineer,Software Engineer position at Company_13,Seattle,5012,3578,Temporary,Referral,Mid Level,indeed.com,True,98101
+100480,Company_3,Business Analyst,Business Analyst position at Company_3,Miami,5002,2332,Internship,External,Senior Level,company.careers,False,33101
+100481,Company_8,Data Scientist,Data Scientist position at Company_8,San Francisco,5007,2580,Contract,External,Entry Level,indeed.com,False,94103
+100482,Company_14,Cloud Architect,Cloud Architect position at Company_14,New York,5013,2998,Full-time,Referral,Mid Level,company.careers,True,10001
+100483,Company_12,Product Manager,Product Manager position at Company_12,San Francisco,5011,2751,Contract,External,Mid Level,linkedin.com,False,94103
+100484,Company_19,DevOps Engineer,DevOps Engineer position at Company_19,Denver,5018,1242,Part-time,Referral,Director,company.careers,False,80202
+100485,Company_1,QA Tester,QA Tester position at Company_1,New York,5000,4754,Internship,External,Mid Level,linkedin.com,False,10001
+100486,Company_8,DevOps Engineer,DevOps Engineer position at Company_8,Atlanta,5007,36,Full-time,External,Director,linkedin.com,False,30303
+100487,Company_16,UX Designer,UX Designer position at Company_16,Austin,5015,2283,Internship,External,Mid Level,company.careers,True,73301
+100488,Company_16,QA Tester,QA Tester position at Company_16,Austin,5015,3928,Part-time,External,Senior Level,company.careers,True,73301
+100489,Company_8,DevOps Engineer,DevOps Engineer position at Company_8,Austin,5007,4761,Temporary,Easy Apply,Mid Level,linkedin.com,True,73301
+100490,Company_20,Product Manager,Product Manager position at Company_20,Atlanta,5019,4398,Part-time,Referral,Internship,linkedin.com,False,30303
+100491,Company_10,UX Designer,UX Designer position at Company_10,Los Angeles,5009,2167,Temporary,External,Director,linkedin.com,True,90001
+100492,Company_5,Software Engineer,Software Engineer position at Company_5,New York,5004,4322,Full-time,Referral,Entry Level,company.careers,False,10001
+100493,Company_8,DevOps Engineer,DevOps Engineer position at Company_8,Miami,5007,1638,Temporary,External,Mid Level,indeed.com,True,33101
+100494,Company_16,DevOps Engineer,DevOps Engineer position at Company_16,Miami,5015,976,Internship,Referral,Mid Level,company.careers,False,33101
+100495,Company_13,Cloud Architect,Cloud Architect position at Company_13,Boston,5012,3474,Contract,External,Director,linkedin.com,False,02108
+100496,Company_5,Business Analyst,Business Analyst position at Company_5,Seattle,5004,4774,Internship,Easy Apply,Internship,indeed.com,True,98101
+100497,Company_14,Data Scientist,Data Scientist position at Company_14,Austin,5013,2357,Temporary,Easy Apply,Entry Level,linkedin.com,True,73301
+100498,Company_8,Cloud Architect,Cloud Architect position at Company_8,Atlanta,5007,2239,Part-time,Easy Apply,Senior Level,linkedin.com,False,30303
+100499,Company_3,Business Analyst,Business Analyst position at Company_3,Los Angeles,5002,1454,Full-time,External,Entry Level,company.careers,False,90001
