@@ -28,7 +28,8 @@ class SalaryPredictor:
             "leadership", "management", "architecture"
         ]
     
-    def extract_salary_from_text(self, salary_text):
+    @staticmethod
+    def extract_salary_from_text(salary_text):
         """Extract numeric salary from text field"""
         if not salary_text:
             return None
@@ -52,7 +53,8 @@ class SalaryPredictor:
         
         return None
     
-    def extract_experience_years(self, experience_level, description):
+    @staticmethod
+    def extract_experience_years(experience_level, description):
         """Extract years of experience from experience level and description"""
         if not experience_level and not description:
             return 0
@@ -88,7 +90,7 @@ class SalaryPredictor:
         print("\n💰 Preparing salary prediction features...")
         
         # Extract salary as target variable
-        extract_salary_udf = udf(self.extract_salary_from_text, IntegerType())
+        extract_salary_udf = udf(SalaryPredictor.extract_salary_from_text, IntegerType())
         df = df.withColumn("salary_numeric", extract_salary_udf(col("salary")))
         
         # Filter jobs with valid salary
@@ -100,13 +102,13 @@ class SalaryPredictor:
         
         if df_with_salary.count() == 0:
             print("⚠️  No jobs with valid salary data found")
-            return None
+            return None, None
         
         print(f"📊 Found {df_with_salary.count()} jobs with salary information")
         
         # Extract experience years
         extract_exp_udf = udf(
-            lambda exp, desc: self.extract_experience_years(exp, desc),
+            SalaryPredictor.extract_experience_years,
             IntegerType()
         )
         df_with_salary = df_with_salary.withColumn(

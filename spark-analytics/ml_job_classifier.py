@@ -9,7 +9,7 @@ from pyspark.sql.functions import *
 from pyspark.sql.types import *
 from pyspark.ml import Pipeline
 from pyspark.ml.feature import Tokenizer, StopWordsRemover, CountVectorizer, StringIndexer, VectorAssembler
-from pyspark.ml.classification import RandomForestClassifier
+from pyspark.ml.classification import RandomForestClassifier, LogisticRegression, DecisionTreeClassifier
 from pyspark.ml.evaluation import MulticlassClassificationEvaluator
 import re
 
@@ -74,8 +74,8 @@ class JobClassifier:
         return df
     
     def train_classifier(self, df, test_size=0.2):
-        """Train Random Forest classifier"""
-        print("\n🎯 Training Job Classifier (Random Forest)...")
+        """Train and compare multiple classifiers (RF, LR, DT)"""
+        print("\n🎯 Training & Comparing Job Classifiers...")
         
         # Prepare data
         df_prepared = self.prepare_features(df)
@@ -134,55 +134,69 @@ class JobClassifier:
             outputCol="features"
         )
         
-        # Random Forest classifier
-        rf = RandomForestClassifier(
-            labelCol="label",
-            featuresCol="features",
-            numTrees=100,
-            maxDepth=10,
-            seed=42
-        )
+        # Define classifiers to compare
+        classifiers = {
+            "Random Forest": RandomForestClassifier(labelCol="label", featuresCol="features", numTrees=50, maxDepth=10, seed=42),
+            "Logistic Regression": LogisticRegression(labelCol="label", featuresCol="features", maxIter=20, regParam=0.01),
+            "Decision Tree": DecisionTreeClassifier(labelCol="label", featuresCol="features", maxDepth=10, seed=42)
+        }
         
-        # Build pipeline
-        pipeline = Pipeline(stages=[
+        # Base stages (common for all)
+        base_stages = [
             label_indexer,
             tokenizer,
             remover,
             cv,
             location_indexer,
             experience_indexer,
-            assembler,
-            rf
-        ])
+            assembler
+        ]
         
         # Split data
         train_df, test_df = df_prepared.randomSplit([1.0 - test_size, test_size], seed=42)
-        
         print(f"\n📚 Training on {train_df.count()} samples, testing on {test_df.count()} samples")
         
-        # Train model
-        model = pipeline.fit(train_df)
+        best_model = None
+        best_accuracy = 0.0
+        best_name = ""
+        best_predictions = None
         
-        # Make predictions
-        predictions = model.transform(test_df)
+        print("\n🏆 Model Comparison Results:")
+        print(f"{'Model':<25} | {'Accuracy':<10} | {'F1 Score':<10}")
+        print("-" * 50)
         
-        # Evaluate
-        evaluator = MulticlassClassificationEvaluator(
-            labelCol="label",
-            predictionCol="prediction",
-            metricName="accuracy"
-        )
+        evaluator_acc = MulticlassClassificationEvaluator(labelCol="label", predictionCol="prediction", metricName="accuracy")
+        evaluator_f1 = MulticlassClassificationEvaluator(labelCol="label", predictionCol="prediction", metricName="f1")
+
+        for name, clf in classifiers.items():
+            try:
+                # Build pipeline for this classifier
+                pipeline = Pipeline(stages=base_stages + [clf])
+                
+                # Train
+                model = pipeline.fit(train_df)
+                
+                # Predict
+                predictions = model.transform(test_df)
+                
+                # Evaluate
+                acc = evaluator_acc.evaluate(predictions)
+                f1 = evaluator_f1.evaluate(predictions)
+                
+                print(f"{name:<25} | {acc:.2%}    | {f1:.2%}")
+                
+                if acc > best_accuracy:
+                    best_accuracy = acc
+                    best_model = model
+                    best_name = name
+                    best_predictions = predictions
+            except Exception as e:
+                print(f"{name:<25} | FAILED ({str(e)[:20]}...)")
+
+        print("-" * 50)
+        print(f"🌟 Best Model: {best_name} ({best_accuracy:.2%})")
         
-        accuracy = evaluator.evaluate(predictions)
-        print(f"\n✅ Model Accuracy: {accuracy:.2%}")
-        
-        # Show prediction distribution
-        prediction_labels = predictions.select("prediction", "job_category").collect()
-        print(f"\n📊 Sample Predictions:")
-        for i, row in enumerate(prediction_labels[:10]):
-            print(f"   Prediction {row['prediction']:.0f} -> Category: {row['job_category']}")
-        
-        return model, predictions
+        return best_model, best_predictions
     
     def classify_jobs(self, model, df):
         """Classify jobs using trained model"""

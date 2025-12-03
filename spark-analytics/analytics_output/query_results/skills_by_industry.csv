@@ -1,0 +1,1977 @@
+industry_name,skill_name,skill_count,rank
+Accounting,Accounting/Auditing,170,1
+Accounting,Finance,117,2
+Accounting,Sales,30,3
+Accounting,Information Technology,22,4
+Accounting,Consulting,14,5
+Accounting,Strategy/Planning,13,6
+Accounting,Business Development,12,7
+Accounting,Management,11,8
+Accounting,Analyst,8,9
+Accounting,Human Resources,8,9
+Administration of Justice,Business Development,1,1
+Administration of Justice,Sales,1,1
+Administrative and Support Services,Customer Service,5,1
+Administrative and Support Services,Administrative,3,2
+Administrative and Support Services,Engineering,1,3
+Administrative and Support Services,Design,1,3
+Administrative and Support Services,Project Management,1,3
+Advertising Services,Sales,56,1
+Advertising Services,Business Development,44,2
+Advertising Services,Advertising,34,3
+Advertising Services,Marketing,25,4
+Advertising Services,Information Technology,7,5
+Advertising Services,Management,6,6
+Advertising Services,Public Relations,5,7
+Advertising Services,Writing/Editing,5,7
+Advertising Services,Manufacturing,5,7
+Advertising Services,Engineering,4,10
+Agricultural Chemical Manufacturing,Management,4,1
+Agricultural Chemical Manufacturing,Manufacturing,4,1
+"Agriculture, Construction, Mining Machinery Manufacturing",Analyst,4,1
+"Agriculture, Construction, Mining Machinery Manufacturing",Accounting/Auditing,3,2
+"Agriculture, Construction, Mining Machinery Manufacturing",Finance,3,2
+"Agriculture, Construction, Mining Machinery Manufacturing",Human Resources,1,4
+"Agriculture, Construction, Mining Machinery Manufacturing",Information Technology,1,4
+"Agriculture, Construction, Mining Machinery Manufacturing",Engineering,1,4
+"Agriculture, Construction, Mining Machinery Manufacturing",Manufacturing,1,4
+"Agriculture, Construction, Mining Machinery Manufacturing",Quality Assurance,1,4
+"Agriculture, Construction, Mining Machinery Manufacturing",Production,1,4
+"Air, Water, and Waste Program Management",Legal,2,1
+"Air, Water, and Waste Program Management",Administrative,1,2
+"Air, Water, and Waste Program Management",Customer Service,1,2
+"Air, Water, and Waste Program Management",General Business,1,2
+"Air, Water, and Waste Program Management",Sales,1,2
+"Air, Water, and Waste Program Management",Business Development,1,2
+Airlines and Aviation,Information Technology,24,1
+Airlines and Aviation,Engineering,18,2
+Airlines and Aviation,Management,11,3
+Airlines and Aviation,Manufacturing,11,3
+Airlines and Aviation,Sales,4,5
+Airlines and Aviation,Business Development,4,5
+Airlines and Aviation,Other,3,7
+Airlines and Aviation,Supply Chain,2,8
+Airlines and Aviation,Purchasing,2,8
+Airlines and Aviation,Marketing,2,8
+Airlines and Aviation,Accounting/Auditing,2,8
+Airlines and Aviation,Human Resources,2,8
+Airlines and Aviation,Training,2,8
+Airlines and Aviation,Education,2,8
+Airlines and Aviation,Design,2,8
+Alternative Fuel Vehicle Manufacturing,Legal,1,1
+Alternative Medicine,Other,1,1
+Alternative Medicine,Human Resources,1,1
+Alternative Medicine,Engineering,1,1
+Alternative Medicine,Information Technology,1,1
+Animal Feed Manufacturing,Research,2,1
+Animal Feed Manufacturing,Accounting/Auditing,1,2
+Animal Feed Manufacturing,Science,1,2
+Animal Feed Manufacturing,Manufacturing,1,2
+Animal Feed Manufacturing,Sales,1,2
+Apparel & Fashion,Sales,7,1
+Apparel & Fashion,Business Development,5,2
+Apparel & Fashion,Customer Service,3,3
+Apparel & Fashion,Management,2,4
+Apparel & Fashion,Manufacturing,2,4
+Apparel & Fashion,Human Resources,2,4
+Apparel & Fashion,Other,2,4
+Apparel & Fashion,Engineering,1,8
+Apparel & Fashion,Information Technology,1,8
+Apparel Manufacturing,Accounting/Auditing,1,1
+Apparel Manufacturing,Finance,1,1
+Apparel Manufacturing,Other,1,1
+"Appliances, Electrical, and Electronics Manufacturing",Manufacturing,29,1
+"Appliances, Electrical, and Electronics Manufacturing",Engineering,26,2
+"Appliances, Electrical, and Electronics Manufacturing",Information Technology,26,2
+"Appliances, Electrical, and Electronics Manufacturing",Management,22,4
+"Appliances, Electrical, and Electronics Manufacturing",Sales,14,5
+"Appliances, Electrical, and Electronics Manufacturing",Accounting/Auditing,10,6
+"Appliances, Electrical, and Electronics Manufacturing",Business Development,10,6
+"Appliances, Electrical, and Electronics Manufacturing",Finance,8,8
+"Appliances, Electrical, and Electronics Manufacturing",Marketing,6,9
+"Appliances, Electrical, and Electronics Manufacturing",Design,6,9
+"Appliances, Electrical, and Electronics Manufacturing",Other,6,9
+Architecture and Planning,Design,13,1
+Architecture and Planning,Information Technology,13,1
+Architecture and Planning,Art/Creative,12,3
+Architecture and Planning,Sales,7,4
+Architecture and Planning,Engineering,6,5
+Architecture and Planning,Business Development,6,5
+Architecture and Planning,Marketing,6,5
+Architecture and Planning,Management,5,8
+Architecture and Planning,Public Relations,4,9
+Architecture and Planning,Writing/Editing,4,9
+Armed Forces,Other,16,1
+Armed Forces,Management,7,2
+Armed Forces,Manufacturing,6,3
+Armed Forces,Finance,2,4
+Armed Forces,Sales,2,4
+Armed Forces,Business Development,2,4
+Armed Forces,Administrative,2,4
+Armed Forces,Information Technology,1,8
+Armed Forces,Accounting/Auditing,1,8
+Armed Forces,Research,1,8
+Armed Forces,Analyst,1,8
+Armed Forces,Strategy/Planning,1,8
+Armed Forces,General Business,1,8
+Automation Machinery Manufacturing,Manufacturing,12,1
+Automation Machinery Manufacturing,Engineering,10,2
+Automation Machinery Manufacturing,Management,9,3
+Automation Machinery Manufacturing,Information Technology,9,3
+Automation Machinery Manufacturing,Production,2,5
+Automation Machinery Manufacturing,Analyst,2,5
+Automation Machinery Manufacturing,Sales,1,7
+Automation Machinery Manufacturing,Other,1,7
+Automation Machinery Manufacturing,Design,1,7
+Automation Machinery Manufacturing,Marketing,1,7
+Automation Machinery Manufacturing,Public Relations,1,7
+Automation Machinery Manufacturing,Writing/Editing,1,7
+Automotive,Customer Service,3,1
+Automotive,Quality Assurance,3,1
+Automotive,Management,3,1
+Automotive,Sales,2,4
+Automotive,Business Development,1,5
+Automotive,Accounting/Auditing,1,5
+Automotive,Finance,1,5
+Automotive,Strategy/Planning,1,5
+Automotive,Information Technology,1,5
+Aviation & Aerospace,Administrative,1,1
+Aviation and Aerospace Component Manufacturing,Engineering,30,1
+Aviation and Aerospace Component Manufacturing,Information Technology,29,2
+Aviation and Aerospace Component Manufacturing,Other,18,3
+Aviation and Aerospace Component Manufacturing,Manufacturing,14,4
+Aviation and Aerospace Component Manufacturing,Management,11,5
+Aviation and Aerospace Component Manufacturing,Science,4,6
+Aviation and Aerospace Component Manufacturing,Finance,3,7
+Aviation and Aerospace Component Manufacturing,Supply Chain,3,7
+Aviation and Aerospace Component Manufacturing,Consulting,3,7
+Aviation and Aerospace Component Manufacturing,Project Management,3,7
+Baked Goods Manufacturing,Management,1,1
+Baked Goods Manufacturing,Manufacturing,1,1
+Banking,Finance,163,1
+Banking,Sales,157,2
+Banking,Information Technology,59,3
+Banking,Business Development,28,4
+Banking,Other,22,5
+Banking,Accounting/Auditing,21,6
+Banking,Engineering,20,7
+Banking,Administrative,14,8
+Banking,Customer Service,13,9
+Banking,Legal,10,10
+Banking,Management,10,10
+Banking,Consulting,10,10
+"Bed-and-Breakfasts, Hostels, Homestays",Management,1,1
+Beverage Manufacturing,Sales,2,1
+Beverage Manufacturing,Manufacturing,2,1
+Beverage Manufacturing,Management,2,1
+Beverage Manufacturing,Marketing,1,4
+Beverage Manufacturing,Business Development,1,4
+Beverage Manufacturing,Production,1,4
+Biotechnology,Management,2,1
+Biotechnology,Manufacturing,2,1
+Biotechnology,Sales,1,3
+Biotechnology,Business Development,1,3
+Biotechnology,Information Technology,1,3
+Biotechnology Research,Research,43,1
+Biotechnology Research,Information Technology,36,2
+Biotechnology Research,Analyst,29,3
+Biotechnology Research,Sales,22,4
+Biotechnology Research,Science,18,5
+Biotechnology Research,Other,18,5
+Biotechnology Research,Manufacturing,18,5
+Biotechnology Research,Business Development,17,8
+Biotechnology Research,Management,15,9
+Biotechnology Research,Engineering,14,10
+Book and Periodical Publishing,Sales,20,1
+Book and Periodical Publishing,Advertising,19,2
+Book and Periodical Publishing,Business Development,19,2
+Book and Periodical Publishing,Marketing,3,4
+Book and Periodical Publishing,Public Relations,2,5
+Book and Periodical Publishing,Writing/Editing,2,5
+Book and Periodical Publishing,Other,1,7
+Book and Periodical Publishing,Management,1,7
+Book and Periodical Publishing,Manufacturing,1,7
+Book and Periodical Publishing,Distribution,1,7
+Broadcast Media Production and Distribution,Other,8,1
+Broadcast Media Production and Distribution,Product Management,5,2
+Broadcast Media Production and Distribution,Finance,5,2
+Broadcast Media Production and Distribution,Accounting/Auditing,4,4
+Broadcast Media Production and Distribution,Analyst,4,4
+Broadcast Media Production and Distribution,Public Relations,3,6
+Broadcast Media Production and Distribution,Management,2,7
+Broadcast Media Production and Distribution,Research,2,7
+Broadcast Media Production and Distribution,Information Technology,2,7
+Broadcast Media Production and Distribution,Project Management,2,7
+Broadcast Media Production and Distribution,Marketing,2,7
+Broadcast Media Production and Distribution,Writing/Editing,2,7
+Building Construction,Project Management,5,1
+Building Construction,Engineering,3,2
+Building Construction,Business Development,3,2
+Building Construction,Sales,2,4
+Building Construction,Administrative,1,5
+Building Construction,Design,1,5
+Building Construction,Consulting,1,5
+Building Construction,Strategy/Planning,1,5
+Building Construction,Quality Assurance,1,5
+Building Materials,Product Management,1,1
+Building Materials,Marketing,1,1
+Building Materials,Management,1,1
+Building Materials,Manufacturing,1,1
+Business Consulting and Services,Sales,35,1
+Business Consulting and Services,Consulting,29,2
+Business Consulting and Services,Finance,26,3
+Business Consulting and Services,Business Development,24,4
+Business Consulting and Services,Information Technology,23,5
+Business Consulting and Services,Accounting/Auditing,20,6
+Business Consulting and Services,Management,20,6
+Business Consulting and Services,Strategy/Planning,15,8
+Business Consulting and Services,Other,10,9
+Business Consulting and Services,Marketing,7,10
+Business Content,Sales,5,1
+Business Content,Management,3,2
+Business Content,Manufacturing,3,2
+Business Content,Accounting/Auditing,2,4
+Business Content,Other,2,4
+Business Content,Health Care Provider,2,4
+Business Content,Business Development,1,7
+Business Content,Marketing,1,7
+Business Content,Legal,1,7
+Capital Markets,Finance,8,1
+Capital Markets,Analyst,5,2
+Capital Markets,Business Development,3,3
+Capital Markets,Other,2,4
+Capital Markets,Consulting,2,4
+Capital Markets,Administrative,2,4
+Capital Markets,Accounting/Auditing,2,4
+Capital Markets,Information Technology,2,4
+Capital Markets,Sales,1,9
+Capital Markets,Research,1,9
+Capital Markets,Customer Service,1,9
+Capital Markets,Project Management,1,9
+Capital Markets,Management,1,9
+Capital Markets,Manufacturing,1,9
+Chemical Manufacturing,Manufacturing,23,1
+Chemical Manufacturing,Management,20,2
+Chemical Manufacturing,Engineering,10,3
+Chemical Manufacturing,Sales,9,4
+Chemical Manufacturing,Supply Chain,8,5
+Chemical Manufacturing,Information Technology,6,6
+Chemical Manufacturing,Business Development,5,7
+Chemical Manufacturing,Research,4,8
+Chemical Manufacturing,Other,4,8
+Chemical Manufacturing,Administrative,3,10
+Chemical Manufacturing,Quality Assurance,3,10
+Chemical Manufacturing,Analyst,3,10
+Chemical Manufacturing,Purchasing,3,10
+Chemical Raw Materials Manufacturing,Engineering,2,1
+Chemical Raw Materials Manufacturing,Quality Assurance,1,2
+Chemical Raw Materials Manufacturing,Manufacturing,1,2
+Chemical Raw Materials Manufacturing,Information Technology,1,2
+Civic and Social Organizations,Other,66,1
+Civic and Social Organizations,Sales,17,2
+Civic and Social Organizations,Information Technology,14,3
+Civic and Social Organizations,Business Development,14,3
+Civic and Social Organizations,Marketing,8,5
+Civic and Social Organizations,Engineering,6,6
+Civic and Social Organizations,Management,5,7
+Civic and Social Organizations,Public Relations,4,8
+Civic and Social Organizations,Manufacturing,4,8
+Civic and Social Organizations,Research,4,8
+Civic and Social Organizations,Analyst,4,8
+Civil Engineering,Engineering,39,1
+Civil Engineering,Information Technology,31,2
+Civil Engineering,Management,29,3
+Civil Engineering,Design,13,4
+Civil Engineering,Sales,9,5
+Civil Engineering,Other,8,6
+Civil Engineering,Project Management,6,7
+Civil Engineering,Consulting,5,8
+Civil Engineering,Administrative,5,8
+Civil Engineering,General Business,5,8
+Civil Engineering,Marketing,5,8
+"Claims Adjusting, Actuarial Services",Customer Service,1,1
+Climate Technology Product Manufacturing,Engineering,2,1
+Climate Technology Product Manufacturing,Information Technology,2,1
+Commercial Real Estate,Sales,1,1
+Commercial Real Estate,Management,1,1
+Commercial and Industrial Equipment Rental,Engineering,1,1
+Commercial and Industrial Equipment Rental,Information Technology,1,1
+Commercial and Service Industry Machinery Manufacturing,Project Management,1,1
+Commercial and Service Industry Machinery Manufacturing,Customer Service,1,1
+Community Development and Urban Planning,Management,1,1
+Community Development and Urban Planning,Project Management,1,1
+Community Development and Urban Planning,Accounting/Auditing,1,1
+Community Development and Urban Planning,Finance,1,1
+Community Development and Urban Planning,Analyst,1,1
+Community Services,Finance,1,1
+Community Services,Information Technology,1,1
+Community Services,Business Development,1,1
+Community Services,Management,1,1
+Community Services,Design,1,1
+Community Services,Marketing,1,1
+Community Services,Advertising,1,1
+Computer Games,Information Technology,9,1
+Computer Games,Engineering,8,2
+Computer Games,Marketing,2,3
+Computer Games,Sales,2,3
+Computer Games,Art/Creative,2,3
+Computer Games,Product Management,1,6
+Computer Games,Design,1,6
+Computer Games,Education,1,6
+Computer Games,Training,1,6
+Computer Games,Advertising,1,6
+Computer Games,Public Relations,1,6
+Computer Games,Business Development,1,6
+Computer Games,Management,1,6
+Computer Games,Manufacturing,1,6
+Computer Hardware Manufacturing,Engineering,13,1
+Computer Hardware Manufacturing,Information Technology,8,2
+Computer Hardware Manufacturing,Sales,5,3
+Computer Hardware Manufacturing,Manufacturing,5,3
+Computer Hardware Manufacturing,Business Development,4,5
+Computer Hardware Manufacturing,Design,3,6
+Computer Hardware Manufacturing,Research,3,6
+Computer Hardware Manufacturing,Management,2,8
+Computer Hardware Manufacturing,Other,2,8
+Computer Hardware Manufacturing,Production,1,10
+Computer Hardware Manufacturing,Analyst,1,10
+Computer Hardware Manufacturing,Accounting/Auditing,1,10
+Computer Hardware Manufacturing,Finance,1,10
+Computer Hardware Manufacturing,Product Management,1,10
+Computer Networking,Engineering,1,1
+Computer Networking Products,Information Technology,2,1
+Computer Networking Products,Engineering,2,1
+Computer Networking Products,Consulting,1,3
+Computer Networking Products,Management,1,3
+Computer Networking Products,Manufacturing,1,3
+Computer Networking Products,Accounting/Auditing,1,3
+Computer Networking Products,Finance,1,3
+Computer and Network Security,Information Technology,17,1
+Computer and Network Security,Sales,8,2
+Computer and Network Security,Engineering,6,3
+Computer and Network Security,Business Development,6,3
+Computer and Network Security,Marketing,4,5
+Computer and Network Security,Consulting,3,6
+Computer and Network Security,Accounting/Auditing,2,7
+Computer and Network Security,Finance,2,7
+Computer and Network Security,Analyst,2,7
+Computer and Network Security,Project Management,2,7
+Computer and Network Security,Legal,2,7
+Computer and Network Security,Other,2,7
+Computers and Electronics Manufacturing,Engineering,20,1
+Computers and Electronics Manufacturing,Information Technology,13,2
+Computers and Electronics Manufacturing,Manufacturing,8,3
+Computers and Electronics Manufacturing,Design,4,4
+Computers and Electronics Manufacturing,Finance,4,4
+Computers and Electronics Manufacturing,Accounting/Auditing,3,6
+Computers and Electronics Manufacturing,Sales,3,6
+Computers and Electronics Manufacturing,Marketing,2,8
+Computers and Electronics Manufacturing,Project Management,2,8
+Computers and Electronics Manufacturing,Production,2,8
+Computers and Electronics Manufacturing,General Business,2,8
+Computers and Electronics Manufacturing,Legal,2,8
+Computers and Electronics Manufacturing,Quality Assurance,2,8
+Computers and Electronics Manufacturing,Management,2,8
+Computers and Electronics Manufacturing,Consulting,2,8
+Construction,Management,101,1
+Construction,Manufacturing,88,2
+Construction,Project Management,58,3
+Construction,Information Technology,46,4
+Construction,Sales,45,5
+Construction,Business Development,31,6
+Construction,Engineering,29,7
+Construction,Design,16,8
+Construction,Accounting/Auditing,16,8
+Construction,Finance,16,8
+Construction Hardware Manufacturing,Project Management,1,1
+Consumer Electronics,Engineering,1,1
+Consumer Electronics,Information Technology,1,1
+Consumer Goods,Human Resources,1,1
+Consumer Services,Management,17,1
+Consumer Services,Sales,17,1
+Consumer Services,Manufacturing,12,3
+Consumer Services,Accounting/Auditing,11,4
+Consumer Services,Information Technology,11,4
+Consumer Services,Marketing,10,6
+Consumer Services,Business Development,10,6
+Consumer Services,Finance,7,8
+Consumer Services,Human Resources,6,9
+Consumer Services,Analyst,5,10
+Consumer Services,Customer Service,5,10
+Consumer Services,Other,5,10
+Cosmetics,Purchasing,1,1
+Cosmetics,Supply Chain,1,1
+Cosmetics,Information Technology,1,1
+Cosmetics,Other,1,1
+Courts of Law,Legal,1,1
+Dairy Product Manufacturing,Quality Assurance,1,1
+Dairy Product Manufacturing,Engineering,1,1
+Dairy Product Manufacturing,Human Resources,1,1
+Data Infrastructure and Analytics,Engineering,3,1
+Data Infrastructure and Analytics,Information Technology,2,2
+Data Infrastructure and Analytics,Project Management,2,2
+Defense & Space,Human Resources,1,1
+Defense & Space,Training,1,1
+Defense & Space,Education,1,1
+Defense & Space,Other,1,1
+Defense and Space Manufacturing,Information Technology,47,1
+Defense and Space Manufacturing,Engineering,30,2
+Defense and Space Manufacturing,Other,23,3
+Defense and Space Manufacturing,Management,17,4
+Defense and Space Manufacturing,Manufacturing,14,5
+Defense and Space Manufacturing,Finance,6,6
+Defense and Space Manufacturing,Analyst,5,7
+Defense and Space Manufacturing,Quality Assurance,4,8
+Defense and Space Manufacturing,Accounting/Auditing,3,9
+Defense and Space Manufacturing,Sales,3,9
+Defense and Space Manufacturing,Research,3,9
+Design Services,Engineering,9,1
+Design Services,Design,8,2
+Design Services,Information Technology,7,3
+Design Services,Art/Creative,5,4
+Design Services,Other,5,4
+Design Services,Management,4,6
+Design Services,Manufacturing,4,6
+Design Services,Project Management,1,8
+Design Services,Marketing,1,8
+Design Services,Sales,1,8
+Design Services,Business Development,1,8
+Design Services,Human Resources,1,8
+E-Learning Providers,Education,55,1
+E-Learning Providers,Training,54,2
+E-Learning Providers,Marketing,4,3
+E-Learning Providers,Public Relations,4,3
+E-Learning Providers,Writing/Editing,4,3
+E-Learning Providers,Information Technology,3,6
+E-Learning Providers,Administrative,3,6
+E-Learning Providers,Engineering,2,8
+E-Learning Providers,Sales,1,9
+E-Learning Providers,Accounting/Auditing,1,9
+E-Learning Providers,Finance,1,9
+E-Learning Providers,Other,1,9
+E-learning,Other,1,1
+Education,Education,10,1
+Education,Business Development,5,2
+Education,Sales,4,3
+Education,Training,3,4
+Education,Administrative,2,5
+Education,Customer Service,2,5
+Education,Research,2,5
+Education,Information Technology,2,5
+Education,Marketing,1,9
+Education,Management,1,9
+Education,Other,1,9
+Education,Human Resources,1,9
+Education,Analyst,1,9
+Education Administration Programs,Education,105,1
+Education Administration Programs,Training,104,2
+Education Administration Programs,Management,10,3
+Education Administration Programs,Manufacturing,7,4
+Education Administration Programs,Administrative,6,5
+Education Administration Programs,Information Technology,5,6
+Education Administration Programs,Other,3,7
+Education Administration Programs,Customer Service,2,8
+Education Administration Programs,Human Resources,2,8
+Education Administration Programs,Business Development,2,8
+Education Management,Education,4,1
+Education Management,Research,1,2
+Education Management,Analyst,1,2
+Education Management,Information Technology,1,2
+Education Management,Legal,1,2
+Education Management,Human Resources,1,2
+Education Management,Administrative,1,2
+Education Management,Training,1,2
+Electric Power Generation,Engineering,2,1
+Electric Power Generation,Project Management,2,1
+Electric Power Generation,Management,1,3
+Electric Power Generation,Legal,1,3
+Electric Power Generation,Accounting/Auditing,1,3
+"Electric Power Transmission, Control, and Distribution",Accounting/Auditing,1,1
+"Electric Power Transmission, Control, and Distribution",Purchasing,1,1
+"Electric Power Transmission, Control, and Distribution",Customer Service,1,1
+Electrical Equipment Manufacturing,Manufacturing,1,1
+Engineering Services,Engineering,22,1
+Engineering Services,Information Technology,9,2
+Engineering Services,Management,8,3
+Engineering Services,Design,7,4
+Engineering Services,Project Management,5,5
+Engineering Services,Manufacturing,3,6
+Engineering Services,Administrative,2,7
+Engineering Services,Customer Service,2,7
+Engineering Services,Research,2,7
+Engineering Services,Human Resources,1,10
+Engineering Services,Legal,1,10
+Engineering Services,Consulting,1,10
+Engineering Services,Marketing,1,10
+Engineering Services,Strategy/Planning,1,10
+Engineering Services,Finance,1,10
+Engineering Services,Analyst,1,10
+Engineering Services,Quality Assurance,1,10
+Engines and Power Transmission Equipment Manufacturing,Engineering,1,1
+Engines and Power Transmission Equipment Manufacturing,Management,1,1
+Engines and Power Transmission Equipment Manufacturing,Manufacturing,1,1
+Entertainment,Marketing,2,1
+Entertainment,Public Relations,1,2
+Entertainment,Writing/Editing,1,2
+Entertainment,Management,1,2
+Entertainment,Manufacturing,1,2
+Entertainment,Sales,1,2
+Entertainment Providers,Information Technology,37,1
+Entertainment Providers,Management,29,2
+Entertainment Providers,Manufacturing,20,3
+Entertainment Providers,Engineering,20,3
+Entertainment Providers,Other,17,5
+Entertainment Providers,Product Management,13,6
+Entertainment Providers,Accounting/Auditing,9,7
+Entertainment Providers,Marketing,8,8
+Entertainment Providers,Finance,8,8
+Entertainment Providers,Sales,8,8
+Environmental Quality Programs,Project Management,1,1
+Environmental Quality Programs,Research,1,1
+Environmental Quality Programs,Science,1,1
+Environmental Services,Management,45,1
+Environmental Services,Manufacturing,41,2
+Environmental Services,Information Technology,13,3
+Environmental Services,Other,12,4
+Environmental Services,Engineering,11,5
+Environmental Services,Science,9,6
+Environmental Services,Sales,8,7
+Environmental Services,Business Development,7,8
+Environmental Services,Human Resources,6,9
+Environmental Services,Project Management,6,9
+Events Services,Sales,5,1
+Events Services,Business Development,4,2
+Events Services,Design,2,3
+Events Services,Art/Creative,2,3
+Events Services,Information Technology,2,3
+Events Services,Customer Service,1,6
+Events Services,Administrative,1,6
+Events Services,General Business,1,6
+Events Services,Marketing,1,6
+Events Services,Finance,1,6
+Events Services,Education,1,6
+Events Services,Training,1,6
+Events Services,Management,1,6
+Events Services,Manufacturing,1,6
+Executive Offices,Management,1,1
+Executive Offices,Manufacturing,1,1
+Fabricated Metal Products,Manufacturing,2,1
+Fabricated Metal Products,Engineering,1,2
+Fabricated Metal Products,Other,1,2
+Fabricated Metal Products,General Business,1,2
+Fabricated Metal Products,Management,1,2
+Facilities Services,Management,17,1
+Facilities Services,Manufacturing,15,2
+Facilities Services,Other,6,3
+Facilities Services,Sales,4,4
+Facilities Services,Business Development,4,4
+Facilities Services,Information Technology,4,4
+Facilities Services,Accounting/Auditing,2,7
+Facilities Services,General Business,2,7
+Facilities Services,Human Resources,1,9
+Facilities Services,Marketing,1,9
+Facilities Services,Production,1,9
+Facilities Services,Quality Assurance,1,9
+Facilities Services,Legal,1,9
+Facilities Services,Customer Service,1,9
+Facilities Services,Engineering,1,9
+Facilities Services,Finance,1,9
+Facilities Services,Project Management,1,9
+Farming,Accounting/Auditing,5,1
+Farming,Finance,5,1
+Farming,Analyst,5,1
+Farming,Customer Service,1,4
+Farming,Distribution,1,4
+Farming,Supply Chain,1,4
+Farming,Marketing,1,4
+Farming,Production,1,4
+Farming,Management,1,4
+Farming,Manufacturing,1,4
+"Farming, Ranching, Forestry",Product Management,1,1
+"Farming, Ranching, Forestry",Marketing,1,1
+Fashion Accessories Manufacturing,Design,2,1
+Fashion Accessories Manufacturing,Art/Creative,2,1
+Fashion Accessories Manufacturing,Production,1,3
+Financial Services,Sales,395,1
+Financial Services,Business Development,241,2
+Financial Services,Finance,218,3
+Financial Services,Information Technology,167,4
+Financial Services,Engineering,75,5
+Financial Services,Accounting/Auditing,49,6
+Financial Services,Other,49,6
+Financial Services,Administrative,48,8
+Financial Services,Customer Service,43,9
+Financial Services,Marketing,38,10
+Fire Protection,Business Development,1,1
+Fire Protection,Sales,1,1
+Fire Protection,Quality Assurance,1,1
+Fire Protection,Customer Service,1,1
+Fire Protection,Other,1,1
+Food & Beverages,Management,1,1
+Food & Beverages,Manufacturing,1,1
+Food & Beverages,Marketing,1,1
+Food & Beverages,Sales,1,1
+Food Production,Sales,4,1
+Food Production,Business Development,4,1
+Food Production,Marketing,1,3
+Food Production,Public Relations,1,3
+Food Production,Writing/Editing,1,3
+Food Production,Human Resources,1,3
+Food and Beverage Manufacturing,Manufacturing,33,1
+Food and Beverage Manufacturing,Management,25,2
+Food and Beverage Manufacturing,Sales,17,3
+Food and Beverage Manufacturing,Marketing,13,4
+Food and Beverage Manufacturing,Other,12,5
+Food and Beverage Manufacturing,Business Development,7,6
+Food and Beverage Manufacturing,Quality Assurance,5,7
+Food and Beverage Manufacturing,Production,4,8
+Food and Beverage Manufacturing,Human Resources,4,8
+Food and Beverage Manufacturing,Supply Chain,3,10
+Food and Beverage Manufacturing,Engineering,3,10
+Food and Beverage Retail,Other,1,1
+Food and Beverage Retail,Business Development,1,1
+Food and Beverage Retail,Sales,1,1
+Food and Beverage Retail,Art/Creative,1,1
+Food and Beverage Retail,Marketing,1,1
+Food and Beverage Retail,Customer Service,1,1
+Food and Beverage Services,Manufacturing,116,1
+Food and Beverage Services,Management,114,2
+Food and Beverage Services,Sales,67,3
+Food and Beverage Services,Business Development,48,4
+Food and Beverage Services,Marketing,27,5
+Food and Beverage Services,Information Technology,9,6
+Food and Beverage Services,Other,8,7
+Food and Beverage Services,Accounting/Auditing,5,8
+Food and Beverage Services,Finance,5,8
+Food and Beverage Services,Training,4,10
+Food and Beverage Services,Supply Chain,4,10
+Forestry and Logging,Marketing,1,1
+Forestry and Logging,Public Relations,1,1
+Forestry and Logging,Writing/Editing,1,1
+Forestry and Logging,Administrative,1,1
+Freight and Package Transportation,Management,15,1
+Freight and Package Transportation,Manufacturing,15,1
+Freight and Package Transportation,Administrative,2,3
+Freight and Package Transportation,Strategy/Planning,1,4
+Freight and Package Transportation,Project Management,1,4
+Freight and Package Transportation,Supply Chain,1,4
+Freight and Package Transportation,Distribution,1,4
+Fundraising,Business Development,1,1
+Fundraising,Administrative,1,1
+Furniture and Home Furnishings Manufacturing,Information Technology,3,1
+Furniture and Home Furnishings Manufacturing,Sales,2,2
+Furniture and Home Furnishings Manufacturing,Business Development,2,2
+Furniture and Home Furnishings Manufacturing,Management,2,2
+Furniture and Home Furnishings Manufacturing,Manufacturing,2,2
+Furniture and Home Furnishings Manufacturing,Other,2,2
+Furniture and Home Furnishings Manufacturing,Product Management,1,7
+Furniture and Home Furnishings Manufacturing,Production,1,7
+Furniture and Home Furnishings Manufacturing,Quality Assurance,1,7
+Furniture and Home Furnishings Manufacturing,Distribution,1,7
+Furniture and Home Furnishings Manufacturing,Legal,1,7
+Furniture and Home Furnishings Manufacturing,Engineering,1,7
+Furniture and Home Furnishings Manufacturing,Human Resources,1,7
+Furniture and Home Furnishings Manufacturing,Accounting/Auditing,1,7
+Furniture and Home Furnishings Manufacturing,Finance,1,7
+Furniture and Home Furnishings Manufacturing,Design,1,7
+Furniture and Home Furnishings Manufacturing,Art/Creative,1,7
+Gambling Facilities and Casinos,Other,3,1
+Gambling Facilities and Casinos,Information Technology,3,1
+Gambling Facilities and Casinos,Engineering,2,3
+Gambling Facilities and Casinos,Management,2,3
+Gambling Facilities and Casinos,Manufacturing,2,3
+Gambling Facilities and Casinos,Business Development,1,6
+Gambling Facilities and Casinos,Sales,1,6
+Gambling Facilities and Casinos,Project Management,1,6
+Gambling Facilities and Casinos,Strategy/Planning,1,6
+"Glass, Ceramics and Concrete Manufacturing",Customer Service,1,1
+"Glass, Ceramics and Concrete Manufacturing",Distribution,1,1
+"Glass, Ceramics and Concrete Manufacturing",Quality Assurance,1,1
+"Glass, Ceramics and Concrete Manufacturing",Engineering,1,1
+Golf Courses and Country Clubs,General Business,1,1
+Golf Courses and Country Clubs,Management,1,1
+Golf Courses and Country Clubs,Business Development,1,1
+Government Administration,Information Technology,17,1
+Government Administration,Administrative,15,2
+Government Administration,Other,15,2
+Government Administration,Management,13,4
+Government Administration,Finance,8,5
+Government Administration,Manufacturing,8,5
+Government Administration,Human Resources,6,7
+Government Administration,Customer Service,6,7
+Government Administration,Accounting/Auditing,6,7
+Government Administration,Health Care Provider,6,7
+Government Relations Services,Human Resources,2,1
+Government Relations Services,Administrative,2,1
+Government Relations Services,Customer Service,2,1
+Government Relations Services,Management,2,1
+Government Relations Services,Manufacturing,2,1
+Government Relations Services,Public Relations,2,1
+Government Relations Services,Strategy/Planning,2,1
+Government Relations Services,Design,1,8
+Government Relations Services,Art/Creative,1,8
+Government Relations Services,Information Technology,1,8
+Government Relations Services,Other,1,8
+Government Relations Services,Consulting,1,8
+Graphic Design,Accounting/Auditing,1,1
+Graphic Design,Strategy/Planning,1,1
+Graphic Design,Finance,1,1
+Ground Passenger Transportation,Administrative,2,1
+Ground Passenger Transportation,General Business,1,2
+Ground Passenger Transportation,Other,1,2
+Ground Passenger Transportation,Public Relations,1,2
+Ground Passenger Transportation,Customer Service,1,2
+Ground Passenger Transportation,Strategy/Planning,1,2
+HVAC and Refrigeration Equipment Manufacturing,Engineering,1,1
+HVAC and Refrigeration Equipment Manufacturing,Design,1,1
+HVAC and Refrigeration Equipment Manufacturing,Project Management,1,1
+Health and Human Services,Health Care Provider,17,1
+Health and Human Services,Information Technology,4,2
+Health and Human Services,Administrative,4,2
+Health and Human Services,Management,3,4
+Health and Human Services,Project Management,2,5
+Health and Human Services,Research,2,5
+Health and Human Services,Business Development,1,7
+Health and Human Services,Sales,1,7
+Health and Human Services,Science,1,7
+Health and Human Services,Other,1,7
+Health and Human Services,Customer Service,1,7
+Health and Human Services,Accounting/Auditing,1,7
+Health and Human Services,Finance,1,7
+Health and Human Services,Analyst,1,7
+Health and Human Services,General Business,1,7
+"Health, Wellness & Fitness",Health Care Provider,4,1
+Higher Education,Information Technology,32,1
+Higher Education,Health Care Provider,29,2
+Higher Education,Research,18,3
+Higher Education,Other,18,3
+Higher Education,Analyst,17,5
+Higher Education,Management,16,6
+Higher Education,Manufacturing,14,7
+Higher Education,Administrative,13,8
+Higher Education,Education,13,8
+Higher Education,Training,11,10
+Holding Companies,Management,1,1
+Holding Companies,Manufacturing,1,1
+Home Health Care Services,Business Development,1,1
+Home Health Care Services,Sales,1,1
+Home Health Care Services,Health Care Provider,1,1
+Hospitality,Management,209,1
+Hospitality,Manufacturing,185,2
+Hospitality,Other,43,3
+Hospitality,Information Technology,33,4
+Hospitality,Sales,30,5
+Hospitality,Business Development,18,6
+Hospitality,Finance,15,7
+Hospitality,Customer Service,14,8
+Hospitality,Engineering,12,9
+Hospitality,Accounting/Auditing,12,9
+Hospitals,Finance,1,1
+Hospitals,Analyst,1,1
+Hospitals,Other,1,1
+Hospitals and Health Care,Health Care Provider,1373,1
+Hospitals and Health Care,Other,250,2
+Hospitals and Health Care,Management,160,3
+Hospitals and Health Care,Information Technology,154,4
+Hospitals and Health Care,Manufacturing,130,5
+Hospitals and Health Care,Administrative,73,6
+Hospitals and Health Care,Sales,57,7
+Hospitals and Health Care,Analyst,54,8
+Hospitals and Health Care,Research,51,9
+Hospitals and Health Care,Business Development,42,10
+Hotels and Motels,Management,3,1
+Hotels and Motels,Other,2,2
+Hotels and Motels,Marketing,1,3
+Hotels and Motels,Design,1,3
+Household Services,Management,1,1
+Household Services,Administrative,1,1
+Housing and Community Development,Finance,1,1
+Human Resources,Health Care Provider,7,1
+Human Resources,Information Technology,2,2
+Human Resources,Management,2,2
+Human Resources,Manufacturing,2,2
+Human Resources,Customer Service,1,5
+Human Resources,General Business,1,5
+Human Resources,Administrative,1,5
+Human Resources,Engineering,1,5
+Human Resources Services,Human Resources,13,1
+Human Resources Services,Management,9,2
+Human Resources Services,Health Care Provider,9,2
+Human Resources Services,Sales,7,4
+Human Resources Services,Manufacturing,6,5
+Human Resources Services,Information Technology,6,5
+Human Resources Services,Business Development,5,7
+Human Resources Services,Engineering,4,8
+Human Resources Services,Design,3,9
+Human Resources Services,Consulting,2,10
+Human Resources Services,Administrative,2,10
+Human Resources Services,Customer Service,2,10
+Human Resources Services,Accounting/Auditing,2,10
+Human Resources Services,Other,2,10
+IT Services and IT Consulting,Information Technology,409,1
+IT Services and IT Consulting,Engineering,168,2
+IT Services and IT Consulting,Sales,157,3
+IT Services and IT Consulting,Business Development,123,4
+IT Services and IT Consulting,Other,75,5
+IT Services and IT Consulting,Consulting,60,6
+IT Services and IT Consulting,Management,59,7
+IT Services and IT Consulting,Manufacturing,37,8
+IT Services and IT Consulting,Project Management,30,9
+IT Services and IT Consulting,Finance,29,10
+IT System Custom Software Development,Information Technology,4,1
+IT System Custom Software Development,Sales,4,1
+IT System Custom Software Development,Strategy/Planning,3,3
+IT System Custom Software Development,Business Development,3,3
+IT System Custom Software Development,Finance,2,5
+IT System Custom Software Development,Analyst,2,5
+IT System Custom Software Development,Accounting/Auditing,1,7
+IT System Data Services,Information Technology,3,1
+IT System Data Services,Business Development,3,1
+IT System Data Services,Management,2,3
+IT System Data Services,Analyst,2,3
+IT System Data Services,Administrative,2,3
+IT System Data Services,Accounting/Auditing,2,3
+IT System Data Services,Sales,2,3
+IT System Data Services,Other,1,8
+IT System Data Services,Project Management,1,8
+IT System Data Services,Advertising,1,8
+IT System Data Services,Engineering,1,8
+IT System Data Services,Design,1,8
+IT System Data Services,Finance,1,8
+IT System Design Services,Information Technology,4,1
+IT System Design Services,Business Development,1,2
+IT System Design Services,Management,1,2
+IT System Design Services,Quality Assurance,1,2
+IT System Installation and Disposal,Customer Service,1,1
+IT System Installation and Disposal,Administrative,1,1
+IT System Installation and Disposal,Design,1,1
+IT System Installation and Disposal,Analyst,1,1
+IT System Operations and Maintenance,Information Technology,3,1
+IT System Operations and Maintenance,Engineering,2,2
+IT System Operations and Maintenance,Analyst,1,3
+IT System Operations and Maintenance,Customer Service,1,3
+IT System Operations and Maintenance,Quality Assurance,1,3
+IT System Testing and Evaluation,Engineering,3,1
+IT System Testing and Evaluation,Information Technology,3,1
+IT System Testing and Evaluation,Other,1,3
+IT System Testing and Evaluation,Administrative,1,3
+IT System Testing and Evaluation,Accounting/Auditing,1,3
+IT System Testing and Evaluation,Advertising,1,3
+Individual and Family Services,Health Care Provider,20,1
+Individual and Family Services,Other,6,2
+Individual and Family Services,Sales,6,2
+Individual and Family Services,Business Development,5,4
+Individual and Family Services,Information Technology,4,5
+Individual and Family Services,Education,3,6
+Individual and Family Services,Training,3,6
+Individual and Family Services,Project Management,1,8
+Individual and Family Services,Human Resources,1,8
+Individual and Family Services,Accounting/Auditing,1,8
+Individual and Family Services,Finance,1,8
+Individual and Family Services,Management,1,8
+Industrial Machinery Manufacturing,Information Technology,98,1
+Industrial Machinery Manufacturing,Manufacturing,81,2
+Industrial Machinery Manufacturing,Management,75,3
+Industrial Machinery Manufacturing,Engineering,49,4
+Industrial Machinery Manufacturing,Sales,37,5
+Industrial Machinery Manufacturing,Business Development,27,6
+Industrial Machinery Manufacturing,Other,20,7
+Industrial Machinery Manufacturing,Accounting/Auditing,15,8
+Industrial Machinery Manufacturing,Finance,15,8
+Industrial Machinery Manufacturing,Quality Assurance,12,10
+Information Services,Information Technology,49,1
+Information Services,Engineering,13,2
+Information Services,Sales,7,3
+Information Services,Other,4,4
+Information Services,Business Development,4,4
+Information Services,Project Management,4,4
+Information Services,Analyst,3,7
+Information Services,Marketing,3,7
+Information Services,Customer Service,3,7
+Information Services,Administrative,2,10
+Information Services,Consulting,2,10
+Information Services,Management,2,10
+Information Services,Writing/Editing,2,10
+Information Services,Strategy/Planning,2,10
+Information Services,Product Management,2,10
+Information Services,Research,2,10
+Information Services,Finance,2,10
+Information Services,General Business,2,10
+Information Technology & Services,Information Technology,23,1
+Information Technology & Services,Engineering,6,2
+Information Technology & Services,Management,2,3
+Information Technology & Services,Manufacturing,2,3
+Information Technology & Services,Research,2,3
+Information Technology & Services,Analyst,2,3
+Information Technology & Services,Project Management,2,3
+Information Technology & Services,Finance,2,3
+Information Technology & Services,Health Care Provider,1,9
+Information Technology & Services,Accounting/Auditing,1,9
+Information Technology & Services,Sales,1,9
+Information Technology & Services,Business Development,1,9
+Information Technology & Services,Education,1,9
+Information Technology & Services,Consulting,1,9
+Information Technology & Services,Other,1,9
+Insurance,Sales,62,1
+Insurance,Business Development,49,2
+Insurance,Finance,35,3
+Insurance,Analyst,32,4
+Insurance,Other,25,5
+Insurance,Information Technology,22,6
+Insurance,Customer Service,18,7
+Insurance,Administrative,15,8
+Insurance,Legal,11,9
+Insurance,Marketing,9,10
+Insurance Agencies and Brokerages,Consulting,3,1
+Insurance Agencies and Brokerages,Customer Service,3,1
+Insurance Agencies and Brokerages,Administrative,2,3
+Insurance Agencies and Brokerages,Sales,2,3
+Insurance Agencies and Brokerages,Business Development,1,5
+Insurance Agencies and Brokerages,Finance,1,5
+Insurance Carriers,Human Resources,1,1
+Insurance Carriers,Finance,1,1
+Insurance Carriers,Sales,1,1
+Insurance and Employee Benefit Funds,Human Resources,1,1
+Insurance and Employee Benefit Funds,Information Technology,1,1
+Insurance and Employee Benefit Funds,Consulting,1,1
+Interior Design,Design,4,1
+Interior Design,Art/Creative,2,2
+Interior Design,Consulting,1,3
+Interior Design,Information Technology,1,3
+Interior Design,Sales,1,3
+Interior Design,Business Development,1,3
+Interior Design,Project Management,1,3
+International Affairs,Engineering,1,1
+International Affairs,Information Technology,1,1
+International Affairs,Business Development,1,1
+International Affairs,Sales,1,1
+International Trade and Development,Information Technology,8,1
+International Trade and Development,Engineering,6,2
+International Trade and Development,Project Management,1,3
+International Trade and Development,Research,1,3
+International Trade and Development,Analyst,1,3
+International Trade and Development,Quality Assurance,1,3
+International Trade and Development,Production,1,3
+International Trade and Development,Other,1,3
+Internet Marketplace Platforms,Health Care Provider,19,1
+Internet Marketplace Platforms,Information Technology,7,2
+Internet Marketplace Platforms,Legal,5,3
+Internet Marketplace Platforms,Other,3,4
+Internet Marketplace Platforms,Accounting/Auditing,1,5
+Internet Marketplace Platforms,Administrative,1,5
+Internet Marketplace Platforms,Sales,1,5
+Internet Marketplace Platforms,Business Development,1,5
+Internet Marketplace Platforms,Marketing,1,5
+Internet Marketplace Platforms,Human Resources,1,5
+Internet Marketplace Platforms,Design,1,5
+Internet Marketplace Platforms,Art/Creative,1,5
+Internet Marketplace Platforms,Engineering,1,5
+Internet Publishing,Research,1,1
+Internet Publishing,Analyst,1,1
+Internet Publishing,Information Technology,1,1
+Internet Publishing,Sales,1,1
+Internet Publishing,Business Development,1,1
+Internet Publishing,Marketing,1,1
+Investment Advice,Other,3,1
+Investment Advice,Customer Service,2,2
+Investment Advice,Finance,2,2
+Investment Advice,Sales,1,4
+Investment Advice,Strategy/Planning,1,4
+Investment Advice,Administrative,1,4
+Investment Advice,Legal,1,4
+Investment Advice,Consulting,1,4
+Investment Banking,Finance,18,1
+Investment Banking,Information Technology,14,2
+Investment Banking,Accounting/Auditing,10,3
+Investment Banking,Sales,8,4
+Investment Banking,Other,7,5
+Investment Banking,Analyst,7,5
+Investment Banking,Engineering,4,7
+Investment Banking,Business Development,4,7
+Investment Banking,Consulting,4,7
+Investment Banking,Project Management,2,10
+Investment Banking,Legal,2,10
+Investment Banking,Customer Service,2,10
+Investment Banking,Research,2,10
+Investment Management,Finance,85,1
+Investment Management,Sales,82,2
+Investment Management,Information Technology,26,3
+Investment Management,Engineering,16,4
+Investment Management,Business Development,11,5
+Investment Management,Other,8,6
+Investment Management,Customer Service,8,6
+Investment Management,Accounting/Auditing,7,8
+Investment Management,Legal,7,8
+Investment Management,Administrative,6,10
+Investment Management,Marketing,6,10
+Janitorial Services,Other,1,1
+Landscaping Services,Management,1,1
+Landscaping Services,Manufacturing,1,1
+Law Enforcement,Legal,4,1
+Law Enforcement,Other,2,2
+Law Enforcement,Management,2,2
+Law Enforcement,Health Care Provider,2,2
+Law Enforcement,Information Technology,1,5
+Law Enforcement,Manufacturing,1,5
+Law Enforcement,Science,1,5
+Law Enforcement,Analyst,1,5
+Law Enforcement,Research,1,5
+Law Enforcement,Administrative,1,5
+Law Enforcement,Human Resources,1,5
+Law Practice,Legal,57,1
+Law Practice,Administrative,7,2
+Law Practice,Information Technology,4,3
+Law Practice,Human Resources,3,4
+Law Practice,Accounting/Auditing,3,4
+Law Practice,Marketing,2,6
+Law Practice,Engineering,2,6
+Law Practice,Other,2,6
+Law Practice,Sales,2,6
+Law Practice,Consulting,1,10
+Law Practice,Finance,1,10
+Law Practice,Research,1,10
+Law Practice,Analyst,1,10
+Law Practice,Business Development,1,10
+Leasing Non-residential Real Estate,Sales,5,1
+Leasing Non-residential Real Estate,Administrative,5,1
+Leasing Non-residential Real Estate,Business Development,4,3
+Leasing Non-residential Real Estate,Consulting,2,4
+Leasing Non-residential Real Estate,Customer Service,2,4
+Leasing Non-residential Real Estate,Project Management,2,4
+Leasing Non-residential Real Estate,Engineering,2,4
+Leasing Non-residential Real Estate,Human Resources,2,4
+Leasing Non-residential Real Estate,Accounting/Auditing,1,9
+Leasing Non-residential Real Estate,Information Technology,1,9
+Legal Services,Legal,56,1
+Legal Services,Administrative,7,2
+Legal Services,Sales,7,2
+Legal Services,Business Development,5,4
+Legal Services,Management,3,5
+Legal Services,Other,3,5
+Legal Services,Consulting,3,5
+Legal Services,Customer Service,2,8
+Legal Services,Marketing,1,9
+Legal Services,Information Technology,1,9
+Legal Services,Analyst,1,9
+Legal Services,Accounting/Auditing,1,9
+Legal Services,Manufacturing,1,9
+Legislative Offices,Other,1,1
+Legislative Offices,Legal,1,1
+"Leisure, Travel & Tourism",Design,1,1
+"Leisure, Travel & Tourism",Art/Creative,1,1
+"Leisure, Travel & Tourism",Information Technology,1,1
+Libraries,Management,1,1
+Libraries,Manufacturing,1,1
+Luxury Goods & Jewelry,Design,2,1
+Luxury Goods & Jewelry,Art/Creative,2,1
+Luxury Goods & Jewelry,Information Technology,2,1
+Luxury Goods & Jewelry,Marketing,1,4
+Luxury Goods & Jewelry,Public Relations,1,4
+Luxury Goods & Jewelry,Writing/Editing,1,4
+Machinery Manufacturing,Sales,16,1
+Machinery Manufacturing,Business Development,14,2
+Machinery Manufacturing,Manufacturing,12,3
+Machinery Manufacturing,Management,9,4
+Machinery Manufacturing,Engineering,7,5
+Machinery Manufacturing,Information Technology,5,6
+Machinery Manufacturing,Marketing,3,7
+Machinery Manufacturing,Quality Assurance,3,7
+Machinery Manufacturing,Accounting/Auditing,3,7
+Machinery Manufacturing,Supply Chain,2,10
+Machinery Manufacturing,Purchasing,2,10
+Machinery Manufacturing,Analyst,2,10
+Machinery Manufacturing,Finance,2,10
+Manufacturing,Sales,83,1
+Manufacturing,Manufacturing,71,2
+Manufacturing,Management,67,3
+Manufacturing,Business Development,46,4
+Manufacturing,Marketing,30,5
+Manufacturing,Accounting/Auditing,30,5
+Manufacturing,Information Technology,26,7
+Manufacturing,Engineering,26,7
+Manufacturing,Finance,23,9
+Manufacturing,Analyst,18,10
+Manufacturing,Other,18,10
+Maritime,Sales,1,1
+Maritime Transportation,Project Management,2,1
+Maritime Transportation,Administrative,1,2
+Maritime Transportation,Strategy/Planning,1,2
+Maritime Transportation,Sales,1,2
+Maritime Transportation,Business Development,1,2
+Maritime Transportation,Management,1,2
+Maritime Transportation,Engineering,1,2
+Market Research,Sales,3,1
+Market Research,Marketing,2,2
+Market Research,Strategy/Planning,1,3
+Market Research,Art/Creative,1,3
+Market Research,Administrative,1,3
+Market Research,Management,1,3
+Market Research,Manufacturing,1,3
+Marketing Services,Marketing,17,1
+Marketing Services,Sales,16,2
+Marketing Services,Business Development,7,3
+Marketing Services,Customer Service,4,4
+Marketing Services,Advertising,2,5
+Marketing Services,Information Technology,2,5
+Marketing Services,Product Management,2,5
+Marketing Services,Accounting/Auditing,1,8
+Marketing Services,Administrative,1,8
+Marketing Services,Analyst,1,8
+Marketing Services,Other,1,8
+Marketing Services,Project Management,1,8
+Marketing Services,Public Relations,1,8
+Marketing Services,Writing/Editing,1,8
+Measuring and Control Instrument Manufacturing,Management,1,1
+Measuring and Control Instrument Manufacturing,Product Management,1,1
+Measuring and Control Instrument Manufacturing,Engineering,1,1
+Measuring and Control Instrument Manufacturing,Other,1,1
+Meat Products Manufacturing,Manufacturing,1,1
+Meat Products Manufacturing,Supply Chain,1,1
+Meat Products Manufacturing,Strategy/Planning,1,1
+Meat Products Manufacturing,Human Resources,1,1
+Media Production,Other,6,1
+Media Production,Product Management,4,2
+Media Production,Marketing,3,3
+Media Production,Public Relations,3,3
+Media Production,Writing/Editing,3,3
+Media Production,Engineering,1,6
+Media Production,Research,1,6
+Media Production,Information Technology,1,6
+Media Production,Sales,1,6
+Media Production,Business Development,1,6
+Media Production,Production,1,6
+Media Production,Administrative,1,6
+Media Production,Finance,1,6
+Medical Device,Health Care Provider,1,1
+Medical Device,Information Technology,1,1
+Medical Equipment Manufacturing,Sales,27,1
+Medical Equipment Manufacturing,Manufacturing,25,2
+Medical Equipment Manufacturing,Information Technology,24,3
+Medical Equipment Manufacturing,Business Development,21,4
+Medical Equipment Manufacturing,Management,21,4
+Medical Equipment Manufacturing,Engineering,15,6
+Medical Equipment Manufacturing,Research,10,7
+Medical Equipment Manufacturing,Health Care Provider,9,8
+Medical Equipment Manufacturing,Quality Assurance,9,8
+Medical Equipment Manufacturing,Human Resources,8,10
+Medical Equipment Manufacturing,Analyst,8,10
+Medical Practices,Health Care Provider,81,1
+Medical Practices,Sales,7,2
+Medical Practices,Other,7,2
+Medical Practices,Information Technology,6,4
+Medical Practices,Engineering,5,5
+Medical Practices,Administrative,4,6
+Medical Practices,Accounting/Auditing,4,6
+Medical Practices,Finance,3,8
+Medical Practices,Business Development,3,8
+Medical Practices,Marketing,2,10
+Medical Practices,Customer Service,2,10
+Medical Practices,Management,2,10
+Mental Health Care,Health Care Provider,53,1
+Mental Health Care,Other,15,2
+Mental Health Care,Information Technology,4,3
+Mental Health Care,Administrative,4,3
+Mental Health Care,Sales,3,5
+Mental Health Care,Strategy/Planning,2,6
+Mental Health Care,Business Development,2,6
+Mental Health Care,Management,2,6
+Mental Health Care,Project Management,1,9
+Mental Health Care,Customer Service,1,9
+Mental Health Care,Manufacturing,1,9
+Mental Health Care,Marketing,1,9
+Mental Health Care,Science,1,9
+Metal Treatments,Manufacturing,1,1
+Metalworking Machinery Manufacturing,Finance,1,1
+Metalworking Machinery Manufacturing,Accounting/Auditing,1,1
+Military and International Affairs,Other,15,1
+Military and International Affairs,Science,2,2
+Mining,Management,5,1
+Mining,Manufacturing,5,1
+Mining,Production,3,3
+Mining,Training,2,4
+Mining,Other,2,4
+Mining,Engineering,1,6
+Mining,Information Technology,1,6
+Mining,Education,1,6
+Mining,Accounting/Auditing,1,6
+Mining,Finance,1,6
+Mining,Quality Assurance,1,6
+Mining,Human Resources,1,6
+Motor Vehicle Manufacturing,Manufacturing,63,1
+Motor Vehicle Manufacturing,Management,52,2
+Motor Vehicle Manufacturing,Engineering,31,3
+Motor Vehicle Manufacturing,Information Technology,27,4
+Motor Vehicle Manufacturing,Other,20,5
+Motor Vehicle Manufacturing,Sales,12,6
+Motor Vehicle Manufacturing,Business Development,10,7
+Motor Vehicle Manufacturing,Human Resources,6,8
+Motor Vehicle Manufacturing,Supply Chain,5,9
+Motor Vehicle Manufacturing,Art/Creative,5,9
+Motor Vehicle Manufacturing,Customer Service,5,9
+Motor Vehicle Parts Manufacturing,Engineering,4,1
+Motor Vehicle Parts Manufacturing,Information Technology,2,2
+Motor Vehicle Parts Manufacturing,Manufacturing,2,2
+Motor Vehicle Parts Manufacturing,Analyst,1,4
+Motor Vehicle Parts Manufacturing,Administrative,1,4
+Motor Vehicle Parts Manufacturing,Human Resources,1,4
+Motor Vehicle Parts Manufacturing,Other,1,4
+"Movies, Videos, and Sound",Information Technology,3,1
+"Movies, Videos, and Sound",Engineering,2,2
+"Movies, Videos, and Sound",Project Management,1,3
+Museums,Business Development,1,1
+Museums,Administrative,1,1
+"Museums, Historical Sites, and Zoos",Design,1,1
+"Museums, Historical Sites, and Zoos",Art/Creative,1,1
+"Museums, Historical Sites, and Zoos",Information Technology,1,1
+"Museums, Historical Sites, and Zoos",Business Development,1,1
+"Museums, Historical Sites, and Zoos",Administrative,1,1
+"Museums, Historical Sites, and Zoos",Human Resources,1,1
+"Museums, Historical Sites, and Zoos",Accounting/Auditing,1,1
+"Museums, Historical Sites, and Zoos",Other,1,1
+Musicians,Project Management,2,1
+Musicians,Other,1,2
+Musicians,Finance,1,2
+Musicians,Accounting/Auditing,1,2
+Musicians,Marketing,1,2
+Musicians,Information Technology,1,2
+Nanotechnology Research,Management,2,1
+Nanotechnology Research,Manufacturing,2,1
+Nanotechnology Research,Marketing,1,3
+Nanotechnology Research,Sales,1,3
+Newspaper Publishing,Marketing,2,1
+Newspaper Publishing,Public Relations,2,1
+Newspaper Publishing,Writing/Editing,2,1
+Non-profit Organization Management,Other,8,1
+Non-profit Organization Management,Education,4,2
+Non-profit Organization Management,Training,4,2
+Non-profit Organization Management,Management,4,2
+Non-profit Organization Management,Manufacturing,4,2
+Non-profit Organization Management,Business Development,4,2
+Non-profit Organization Management,Sales,4,2
+Non-profit Organization Management,Administrative,1,8
+Non-profit Organization Management,Health Care Provider,1,8
+Non-profit Organization Management,Project Management,1,8
+Non-profit Organization Management,Information Technology,1,8
+Non-profit Organization Management,Accounting/Auditing,1,8
+Non-profit Organizations,Other,92,1
+Non-profit Organizations,Sales,30,2
+Non-profit Organizations,Information Technology,26,3
+Non-profit Organizations,Business Development,23,4
+Non-profit Organizations,Marketing,18,5
+Non-profit Organizations,Health Care Provider,17,6
+Non-profit Organizations,Education,14,7
+Non-profit Organizations,Finance,13,8
+Non-profit Organizations,Accounting/Auditing,13,8
+Non-profit Organizations,Administrative,11,10
+Nursing Homes and Residential Care Facilities,Strategy/Planning,1,1
+Nursing Homes and Residential Care Facilities,Quality Assurance,1,1
+Nursing Homes and Residential Care Facilities,Business Development,1,1
+Office Administration,Administrative,4,1
+Office Administration,Human Resources,3,2
+Office Administration,General Business,1,3
+Office Administration,Customer Service,1,3
+Office Administration,Health Care Provider,1,3
+Oil and Gas,Finance,16,1
+Oil and Gas,Management,13,2
+Oil and Gas,Sales,12,3
+Oil and Gas,Accounting/Auditing,11,4
+Oil and Gas,Information Technology,11,4
+Oil and Gas,Manufacturing,11,4
+Oil and Gas,Engineering,10,7
+Oil and Gas,Analyst,10,7
+Oil and Gas,Project Management,5,9
+Oil and Gas,Other,5,9
+"Oil, Gas, and Mining",Engineering,1,1
+"Oil, Gas, and Mining",Project Management,1,1
+"Oil, Gas, and Mining",Product Management,1,1
+"Oil, Gas, and Mining",Finance,1,1
+"Oil, Gas, and Mining",Accounting/Auditing,1,1
+Online Audio and Video Media,Marketing,5,1
+Online Audio and Video Media,Sales,3,2
+Online Audio and Video Media,Public Relations,3,2
+Online Audio and Video Media,Writing/Editing,3,2
+Online Audio and Video Media,Information Technology,1,5
+Online Audio and Video Media,Business Development,1,5
+Outsourcing and Offshoring Consulting,Other,4,1
+Outsourcing and Offshoring Consulting,Information Technology,2,2
+Outsourcing and Offshoring Consulting,Engineering,1,3
+Outsourcing and Offshoring Consulting,Accounting/Auditing,1,3
+Outsourcing and Offshoring Consulting,Finance,1,3
+Outsourcing and Offshoring Consulting,Human Resources,1,3
+Outsourcing and Offshoring Consulting,Consulting,1,3
+Outsourcing and Offshoring Consulting,Project Management,1,3
+Outsourcing and Offshoring Consulting,Supply Chain,1,3
+Outsourcing and Offshoring Consulting,Management,1,3
+Outsourcing and Offshoring Consulting,Manufacturing,1,3
+Outsourcing and Offshoring Consulting,Sales,1,3
+Outsourcing and Offshoring Consulting,Business Development,1,3
+Packaging and Containers Manufacturing,Manufacturing,20,1
+Packaging and Containers Manufacturing,Management,17,2
+Packaging and Containers Manufacturing,Project Management,6,3
+Packaging and Containers Manufacturing,Marketing,5,4
+Packaging and Containers Manufacturing,Product Management,4,5
+Packaging and Containers Manufacturing,Information Technology,3,6
+Packaging and Containers Manufacturing,Analyst,2,7
+Packaging and Containers Manufacturing,Other,2,7
+Packaging and Containers Manufacturing,Human Resources,2,7
+Packaging and Containers Manufacturing,Sales,2,7
+Packaging and Containers Manufacturing,Quality Assurance,2,7
+"Paint, Coating, and Adhesive Manufacturing",Sales,3,1
+"Paint, Coating, and Adhesive Manufacturing",Business Development,3,1
+"Paint, Coating, and Adhesive Manufacturing",Accounting/Auditing,1,3
+"Paint, Coating, and Adhesive Manufacturing",Project Management,1,3
+Paper & Forest Products,Marketing,1,1
+Paper & Forest Products,Public Relations,1,1
+Paper & Forest Products,Writing/Editing,1,1
+Paper and Forest Product Manufacturing,Management,1,1
+Paper and Forest Product Manufacturing,Manufacturing,1,1
+Paper and Forest Product Manufacturing,Information Technology,1,1
+Paper and Forest Product Manufacturing,Sales,1,1
+Paper and Forest Product Manufacturing,Business Development,1,1
+Performing Arts,Administrative,1,1
+Performing Arts,Accounting/Auditing,1,1
+Performing Arts,Finance,1,1
+Personal Care Product Manufacturing,Other,6,1
+Personal Care Product Manufacturing,Sales,6,1
+Personal Care Product Manufacturing,Management,6,1
+Personal Care Product Manufacturing,Marketing,5,4
+Personal Care Product Manufacturing,Design,3,5
+Personal Care Product Manufacturing,Art/Creative,3,5
+Personal Care Product Manufacturing,Business Development,3,5
+Personal Care Product Manufacturing,Manufacturing,3,5
+Personal Care Product Manufacturing,Public Relations,2,9
+Personal Care Product Manufacturing,Writing/Editing,2,9
+Personal Care Product Manufacturing,Information Technology,2,9
+Personal and Laundry Services,Management,1,1
+Personal and Laundry Services,Administrative,1,1
+Pharmaceutical Manufacturing,Information Technology,43,1
+Pharmaceutical Manufacturing,Research,36,2
+Pharmaceutical Manufacturing,Sales,32,3
+Pharmaceutical Manufacturing,Manufacturing,30,4
+Pharmaceutical Manufacturing,Analyst,25,5
+Pharmaceutical Manufacturing,Business Development,23,6
+Pharmaceutical Manufacturing,Management,23,6
+Pharmaceutical Manufacturing,Engineering,21,8
+Pharmaceutical Manufacturing,Science,18,9
+Pharmaceutical Manufacturing,Other,17,10
+Philanthropic Fundraising Services,Management,2,1
+Philanthropic Fundraising Services,Marketing,2,1
+Philanthropic Fundraising Services,Finance,1,3
+Philanthropic Fundraising Services,Information Technology,1,3
+Philanthropic Fundraising Services,Business Development,1,3
+Philanthropic Fundraising Services,Public Relations,1,3
+Philanthropic Fundraising Services,Research,1,3
+Philanthropic Fundraising Services,Administrative,1,3
+Philanthropic Fundraising Services,Sales,1,3
+"Physical, Occupational and Speech Therapists",Health Care Provider,2,1
+"Physical, Occupational and Speech Therapists",Management,1,2
+"Physical, Occupational and Speech Therapists",Manufacturing,1,2
+Plastics Manufacturing,Manufacturing,4,1
+Plastics Manufacturing,Management,2,2
+Plastics Manufacturing,Supply Chain,1,3
+Plastics Manufacturing,Production,1,3
+Plastics Manufacturing,Quality Assurance,1,3
+Plastics Manufacturing,Administrative,1,3
+Plastics Manufacturing,Project Management,1,3
+Plastics Manufacturing,Information Technology,1,3
+Plastics Manufacturing,Sales,1,3
+Plastics Manufacturing,Business Development,1,3
+Plastics Manufacturing,Engineering,1,3
+Plastics Manufacturing,Training,1,3
+Plastics and Rubber Product Manufacturing,Distribution,1,1
+Plastics and Rubber Product Manufacturing,Customer Service,1,1
+Primary Metal Manufacturing,Manufacturing,2,1
+Primary Metal Manufacturing,Purchasing,1,2
+Primary Metal Manufacturing,Supply Chain,1,2
+Primary Metal Manufacturing,Management,1,2
+Primary and Secondary Education,Management,24,1
+Primary and Secondary Education,Other,22,2
+Primary and Secondary Education,Education,21,3
+Primary and Secondary Education,Training,21,3
+Primary and Secondary Education,Manufacturing,15,5
+Primary and Secondary Education,Human Resources,14,6
+Primary and Secondary Education,Health Care Provider,12,7
+Primary and Secondary Education,Information Technology,9,8
+Primary and Secondary Education,Project Management,3,9
+Primary and Secondary Education,Administrative,3,9
+Primary and Secondary Education,Engineering,3,9
+Printing Services,Manufacturing,2,1
+Printing Services,Management,1,2
+Printing Services,Quality Assurance,1,2
+Professional Services,Information Technology,9,1
+Professional Services,Engineering,5,2
+Professional Services,Finance,5,2
+Professional Services,Consulting,4,4
+Professional Services,Accounting/Auditing,4,4
+Professional Services,Management,3,6
+Professional Services,Manufacturing,3,6
+Professional Services,Analyst,2,8
+Professional Services,Other,2,8
+Professional Services,Sales,2,8
+Professional Training and Coaching,Sales,2,1
+Professional Training and Coaching,Consulting,1,2
+Professional Training and Coaching,Human Resources,1,2
+Professional Training and Coaching,Writing/Editing,1,2
+Professional Training and Coaching,Training,1,2
+Professional Training and Coaching,Education,1,2
+Professional Training and Coaching,Business Development,1,2
+Professional Training and Coaching,Other,1,2
+Professional Training and Coaching,Project Management,1,2
+Professional Training and Coaching,Information Technology,1,2
+Public Health,Health Care Provider,6,1
+Public Health,Management,3,2
+Public Health,Administrative,2,3
+Public Health,Customer Service,2,3
+Public Health,Analyst,2,3
+Public Health,Information Technology,2,3
+Public Health,Strategy/Planning,2,3
+Public Health,Science,1,8
+Public Health,Other,1,8
+Public Health,Research,1,8
+Public Health,Human Resources,1,8
+Public Policy Offices,Other,3,1
+Public Policy Offices,Legal,1,2
+Public Policy Offices,Business Development,1,2
+Public Policy Offices,Sales,1,2
+Public Relations and Communications Services,Marketing,9,1
+Public Relations and Communications Services,Sales,3,2
+Public Relations and Communications Services,Business Development,3,2
+Public Relations and Communications Services,Public Relations,1,4
+Public Relations and Communications Services,Writing/Editing,1,4
+Public Relations and Communications Services,Administrative,1,4
+Public Safety,Information Technology,44,1
+Public Safety,Engineering,28,2
+Public Safety,Sales,15,3
+Public Safety,Other,13,4
+Public Safety,Project Management,13,4
+Public Safety,Management,11,6
+Public Safety,Manufacturing,9,7
+Public Safety,Marketing,7,8
+Public Safety,Business Development,6,9
+Public Safety,Finance,5,10
+Rail Transportation,Strategy/Planning,1,1
+Rail Transportation,Administrative,1,1
+Rail Transportation,Management,1,1
+Railroad Equipment Manufacturing,Management,3,1
+Railroad Equipment Manufacturing,Health Care Provider,2,2
+Railroad Equipment Manufacturing,Manufacturing,2,2
+Real Estate,Management,74,1
+Real Estate,Sales,66,2
+Real Estate,Manufacturing,44,3
+Real Estate,Business Development,31,4
+Real Estate,Finance,26,5
+Real Estate,Accounting/Auditing,22,6
+Real Estate,General Business,14,7
+Real Estate,Project Management,12,8
+Real Estate,Other,11,9
+Real Estate,Analyst,11,9
+Real Estate,Information Technology,11,9
+Real Estate Agents and Brokers,Sales,1,1
+Real Estate Agents and Brokers,Management,1,1
+Real Estate and Equipment Rental Services,Management,1,1
+Recreational Facilities,Management,1,1
+Recreational Facilities,Manufacturing,1,1
+Recreational Facilities,Information Technology,1,1
+Religious Institutions,Accounting/Auditing,1,1
+Religious Institutions,Finance,1,1
+Religious Institutions,Other,1,1
+Renewable Energy Equipment Manufacturing,Research,1,1
+Renewable Energy Equipment Manufacturing,Science,1,1
+Renewable Energy Equipment Manufacturing,Management,1,1
+Renewable Energy Equipment Manufacturing,Manufacturing,1,1
+Renewable Energy Power Generation,Information Technology,4,1
+Renewable Energy Power Generation,Project Management,3,2
+Renewable Energy Power Generation,Management,2,3
+Renewable Energy Power Generation,Sales,1,4
+Renewable Energy Power Generation,Manufacturing,1,4
+Renewable Energy Power Generation,Other,1,4
+Renewable Energy Semiconductor Manufacturing,Information Technology,8,1
+Renewable Energy Semiconductor Manufacturing,Sales,5,2
+Renewable Energy Semiconductor Manufacturing,Management,4,3
+Renewable Energy Semiconductor Manufacturing,Manufacturing,4,3
+Renewable Energy Semiconductor Manufacturing,Other,4,3
+Renewable Energy Semiconductor Manufacturing,Business Development,3,6
+Renewable Energy Semiconductor Manufacturing,Engineering,3,6
+Renewable Energy Semiconductor Manufacturing,Marketing,3,6
+Renewable Energy Semiconductor Manufacturing,Project Management,3,6
+Renewable Energy Semiconductor Manufacturing,Human Resources,2,10
+Renewables & Environment,Management,6,1
+Renewables & Environment,Manufacturing,6,1
+Renewables & Environment,Engineering,2,3
+Renewables & Environment,Information Technology,2,3
+Renewables & Environment,Health Care Provider,1,5
+Renewables & Environment,Accounting/Auditing,1,5
+Renewables & Environment,Finance,1,5
+Renewables & Environment,Other,1,5
+Repair and Maintenance,Legal,1,1
+Repair and Maintenance,Management,1,1
+Repair and Maintenance,Manufacturing,1,1
+Repair and Maintenance,Production,1,1
+Research Services,Research,12,1
+Research Services,Other,11,2
+Research Services,Information Technology,11,2
+Research Services,Management,7,4
+Research Services,Education,6,5
+Research Services,Training,6,5
+Research Services,Administrative,5,7
+Research Services,Sales,5,7
+Research Services,Analyst,4,9
+Research Services,Engineering,4,9
+Research Services,Finance,4,9
+Research Services,Manufacturing,4,9
+Research Services,Health Care Provider,4,9
+Residential Building Construction,Sales,1,1
+Residential Building Construction,Business Development,1,1
+Residential Building Construction,Information Technology,1,1
+Restaurants,Management,65,1
+Restaurants,Manufacturing,48,2
+Restaurants,Business Development,9,3
+Restaurants,Sales,8,4
+Restaurants,Other,7,5
+Restaurants,Customer Service,6,6
+Restaurants,Information Technology,5,7
+Restaurants,Marketing,4,8
+Restaurants,Training,4,8
+Restaurants,General Business,4,8
+Retail,Sales,564,1
+Retail,Business Development,412,2
+Retail,Management,241,3
+Retail,Manufacturing,226,4
+Retail,Customer Service,157,5
+Retail,Other,140,6
+Retail,Marketing,128,7
+Retail,General Business,125,8
+Retail,Information Technology,83,9
+Retail,Engineering,45,10
+Retail Apparel and Fashion,Sales,102,1
+Retail Apparel and Fashion,Business Development,91,2
+Retail Apparel and Fashion,Management,26,3
+Retail Apparel and Fashion,Manufacturing,22,4
+Retail Apparel and Fashion,Information Technology,16,5
+Retail Apparel and Fashion,Other,13,6
+Retail Apparel and Fashion,Design,10,7
+Retail Apparel and Fashion,Marketing,8,8
+Retail Apparel and Fashion,Art/Creative,8,8
+Retail Apparel and Fashion,Human Resources,4,10
+Retail Apparel and Fashion,Customer Service,4,10
+Retail Apparel and Fashion,Accounting/Auditing,4,10
+"Retail Appliances, Electrical, and Electronic Equipment",Accounting/Auditing,1,1
+Retail Books and Printed News,Information Technology,1,1
+Retail Building Materials and Garden Equipment,Management,6,1
+Retail Building Materials and Garden Equipment,Manufacturing,6,1
+Retail Building Materials and Garden Equipment,Information Technology,3,3
+Retail Building Materials and Garden Equipment,Sales,2,4
+Retail Building Materials and Garden Equipment,Analyst,1,5
+Retail Furniture and Home Furnishings,Sales,1,1
+Retail Furniture and Home Furnishings,Customer Service,1,1
+Retail Groceries,Management,4,1
+Retail Groceries,Manufacturing,4,1
+Retail Groceries,Sales,4,1
+Retail Groceries,Accounting/Auditing,2,4
+Retail Groceries,Finance,2,4
+Retail Groceries,Business Development,2,4
+Retail Groceries,Marketing,2,4
+Retail Groceries,Health Care Provider,2,4
+Retail Groceries,Information Technology,1,9
+Retail Groceries,Other,1,9
+Retail Health and Personal Care Products,Information Technology,5,1
+Retail Health and Personal Care Products,Research,4,2
+Retail Health and Personal Care Products,Analyst,4,2
+Retail Health and Personal Care Products,Marketing,3,4
+Retail Health and Personal Care Products,Sales,3,4
+Retail Health and Personal Care Products,Accounting/Auditing,2,6
+Retail Health and Personal Care Products,Health Care Provider,2,6
+Retail Health and Personal Care Products,Management,2,6
+Retail Health and Personal Care Products,General Business,2,6
+Retail Health and Personal Care Products,Business Development,2,6
+Retail Luxury Goods and Jewelry,Sales,10,1
+Retail Luxury Goods and Jewelry,Business Development,5,2
+Retail Luxury Goods and Jewelry,Other,4,3
+Retail Luxury Goods and Jewelry,Customer Service,4,3
+Retail Luxury Goods and Jewelry,Art/Creative,3,5
+Retail Luxury Goods and Jewelry,General Business,3,5
+Retail Luxury Goods and Jewelry,Accounting/Auditing,2,7
+Retail Luxury Goods and Jewelry,Design,2,7
+Retail Luxury Goods and Jewelry,Writing/Editing,2,7
+Retail Luxury Goods and Jewelry,Information Technology,2,7
+Retail Motor Vehicles,Sales,3,1
+Retail Motor Vehicles,Business Development,3,1
+Retail Motor Vehicles,Management,2,3
+Retail Motor Vehicles,Manufacturing,2,3
+Retail Motor Vehicles,Legal,1,5
+Retail Office Equipment,Sales,6,1
+Retail Office Equipment,Management,5,2
+Retail Office Equipment,Manufacturing,5,2
+Retail Office Equipment,Business Development,4,4
+Retail Office Equipment,Consulting,2,5
+Retail Office Equipment,Information Technology,2,5
+Retail Office Equipment,Human Resources,1,7
+Retail Office Equipment,Marketing,1,7
+Retail Office Equipment,Public Relations,1,7
+Retail Office Equipment,Writing/Editing,1,7
+Retail Office Supplies and Gifts,Sales,1,1
+Retail Office Supplies and Gifts,Business Development,1,1
+Retail Office Supplies and Gifts,Customer Service,1,1
+Retail Office Supplies and Gifts,Information Technology,1,1
+Retail Office Supplies and Gifts,Management,1,1
+Retail Pharmacies,Information Technology,2,1
+Retail Pharmacies,Analyst,1,2
+Retail Pharmacies,Engineering,1,2
+Robot Manufacturing,Engineering,1,1
+Robot Manufacturing,Information Technology,1,1
+Robot Manufacturing,Manufacturing,1,1
+Robot Manufacturing,Production,1,1
+Robot Manufacturing,Administrative,1,1
+Robot Manufacturing,Other,1,1
+Robotics Engineering,Engineering,1,1
+Robotics Engineering,Information Technology,1,1
+Robotics Engineering,Manufacturing,1,1
+Robotics Engineering,Production,1,1
+Robotics Engineering,Administrative,1,1
+Robotics Engineering,Other,1,1
+Rubber Products Manufacturing,Engineering,2,1
+Rubber Products Manufacturing,Product Management,1,2
+Rubber Products Manufacturing,Manufacturing,1,2
+Rubber Products Manufacturing,Training,1,2
+School and Employee Bus Services,Management,2,1
+School and Employee Bus Services,Manufacturing,2,1
+School and Employee Bus Services,Other,1,3
+Seafood Product Manufacturing,Management,1,1
+Seafood Product Manufacturing,Manufacturing,1,1
+Security Systems Services,Other,1,1
+Security Systems Services,Management,1,1
+Security Systems Services,Manufacturing,1,1
+Security Systems Services,Information Technology,1,1
+Security and Investigations,Management,22,1
+Security and Investigations,Information Technology,20,2
+Security and Investigations,Other,18,3
+Security and Investigations,Manufacturing,5,4
+Security and Investigations,Sales,2,5
+Security and Investigations,Human Resources,2,5
+Security and Investigations,Accounting/Auditing,1,7
+Security and Investigations,Finance,1,7
+Security and Investigations,Analyst,1,7
+Security and Investigations,Business Development,1,7
+Semiconductor Manufacturing,Engineering,18,1
+Semiconductor Manufacturing,Manufacturing,14,2
+Semiconductor Manufacturing,Management,8,3
+Semiconductor Manufacturing,Information Technology,5,4
+Semiconductor Manufacturing,Sales,4,5
+Semiconductor Manufacturing,Business Development,3,6
+Semiconductor Manufacturing,Marketing,2,7
+Semiconductor Manufacturing,Design,2,7
+Semiconductor Manufacturing,Research,2,7
+Semiconductor Manufacturing,Analyst,1,10
+Semiconductor Manufacturing,Administrative,1,10
+Semiconductor Manufacturing,Other,1,10
+Semiconductor Manufacturing,Accounting/Auditing,1,10
+Semiconductor Manufacturing,Finance,1,10
+Semiconductor Manufacturing,Quality Assurance,1,10
+Semiconductor Manufacturing,Product Management,1,10
+Semiconductor Manufacturing,Project Management,1,10
+Semiconductor Manufacturing,Human Resources,1,10
+Services for Renewable Energy,Project Management,5,1
+Services for Renewable Energy,Business Development,4,2
+Services for Renewable Energy,Engineering,4,2
+Services for Renewable Energy,Information Technology,4,2
+Services for Renewable Energy,Sales,2,5
+Services for Renewable Energy,Finance,2,5
+Services for Renewable Energy,Management,1,7
+Services for Renewable Energy,Legal,1,7
+Services for Renewable Energy,Design,1,7
+Services for Renewable Energy,Purchasing,1,7
+Services for Renewable Energy,Consulting,1,7
+Services for Renewable Energy,Manufacturing,1,7
+Services for Renewable Energy,General Business,1,7
+Shipbuilding,Sales,2,1
+Shipbuilding,Management,2,1
+Shipbuilding,Project Management,2,1
+Shipbuilding,Other,1,4
+Shipbuilding,Accounting/Auditing,1,4
+Shipbuilding,Finance,1,4
+Shipbuilding,Business Development,1,4
+Shipbuilding,General Business,1,4
+Shipbuilding,Information Technology,1,4
+Shipbuilding,Manufacturing,1,4
+Shipbuilding,Engineering,1,4
+Software Development,Information Technology,175,1
+Software Development,Sales,102,2
+Software Development,Engineering,90,3
+Software Development,Business Development,79,4
+Software Development,Marketing,41,5
+Software Development,Management,30,6
+Software Development,Product Management,29,7
+Software Development,Other,26,8
+Software Development,Project Management,23,9
+Software Development,Manufacturing,22,10
+Space Research and Technology,Science,2,1
+Space Research and Technology,Management,2,1
+Space Research and Technology,Engineering,1,3
+Specialty Trade Contractors,Management,3,1
+Specialty Trade Contractors,Manufacturing,2,2
+Specialty Trade Contractors,General Business,1,3
+Specialty Trade Contractors,Sales,1,3
+Spectator Sports,Information Technology,4,1
+Spectator Sports,Marketing,3,2
+Spectator Sports,Sales,3,2
+Spectator Sports,Management,3,2
+Spectator Sports,Manufacturing,3,2
+Spectator Sports,Public Relations,2,6
+Spectator Sports,Writing/Editing,2,6
+Spectator Sports,Finance,2,6
+Spectator Sports,Accounting/Auditing,2,6
+Spectator Sports,Business Development,2,6
+Spectator Sports,Other,2,6
+Sporting Goods Manufacturing,Sales,9,1
+Sporting Goods Manufacturing,Business Development,7,2
+Sporting Goods Manufacturing,Management,3,3
+Sporting Goods Manufacturing,Other,3,3
+Sporting Goods Manufacturing,Customer Service,3,3
+Sporting Goods Manufacturing,Manufacturing,2,6
+Sporting Goods Manufacturing,General Business,1,7
+Sporting Goods Manufacturing,Art/Creative,1,7
+Sporting Goods Manufacturing,Design,1,7
+Sporting Goods Manufacturing,Accounting/Auditing,1,7
+Sporting Goods Manufacturing,Finance,1,7
+Sporting Goods Manufacturing,Information Technology,1,7
+Sports and Recreation Instruction,Other,1,1
+Sports and Recreation Instruction,Management,1,1
+Sports and Recreation Instruction,Manufacturing,1,1
+Sports and Recreation Instruction,Information Technology,1,1
+Staffing and Recruiting,Health Care Provider,529,1
+Staffing and Recruiting,Information Technology,215,2
+Staffing and Recruiting,Management,116,3
+Staffing and Recruiting,Manufacturing,104,4
+Staffing and Recruiting,Engineering,100,5
+Staffing and Recruiting,Sales,56,6
+Staffing and Recruiting,Finance,54,7
+Staffing and Recruiting,Accounting/Auditing,50,8
+Staffing and Recruiting,Other,37,9
+Staffing and Recruiting,Business Development,34,10
+Strategic Management Services,Strategy/Planning,3,1
+Strategic Management Services,Consulting,2,2
+Strategic Management Services,Management,2,2
+Strategic Management Services,Administrative,2,2
+Strategic Management Services,Sales,1,5
+Strategic Management Services,Business Development,1,5
+Surveying and Mapping Services,Accounting/Auditing,1,1
+Surveying and Mapping Services,Consulting,1,1
+Surveying and Mapping Services,Project Management,1,1
+Surveying and Mapping Services,Engineering,1,1
+Technical and Vocational Training,Other,1,1
+"Technology, Information and Internet",Information Technology,68,1
+"Technology, Information and Internet",Engineering,46,2
+"Technology, Information and Internet",Sales,35,3
+"Technology, Information and Internet",Business Development,23,4
+"Technology, Information and Internet",Marketing,10,5
+"Technology, Information and Internet",Other,10,5
+"Technology, Information and Internet",Management,8,7
+"Technology, Information and Internet",Education,7,8
+"Technology, Information and Internet",Training,7,8
+"Technology, Information and Internet",Finance,6,10
+"Technology, Information and Media",Information Technology,42,1
+"Technology, Information and Media",Product Management,8,2
+"Technology, Information and Media",Engineering,6,3
+"Technology, Information and Media",Project Management,6,3
+"Technology, Information and Media",Analyst,6,3
+"Technology, Information and Media",Marketing,5,6
+"Technology, Information and Media",Strategy/Planning,5,6
+"Technology, Information and Media",Management,4,8
+"Technology, Information and Media",Accounting/Auditing,4,8
+"Technology, Information and Media",Business Development,4,8
+Telecommunications,Information Technology,37,1
+Telecommunications,Sales,36,2
+Telecommunications,Business Development,34,3
+Telecommunications,Engineering,17,4
+Telecommunications,Management,12,5
+Telecommunications,Manufacturing,12,5
+Telecommunications,Other,7,7
+Telecommunications,Analyst,5,8
+Telecommunications,Design,4,9
+Telecommunications,Marketing,4,9
+Telephone Call Centers,Customer Service,2,1
+Textile Manufacturing,Other,8,1
+Textile Manufacturing,Production,7,2
+Textile Manufacturing,Manufacturing,7,2
+Textile Manufacturing,General Business,3,4
+Textile Manufacturing,Customer Service,3,4
+Textile Manufacturing,Sales,2,6
+Textile Manufacturing,Business Development,2,6
+Textile Manufacturing,Administrative,1,8
+Textile Manufacturing,Product Management,1,8
+Textile Manufacturing,Quality Assurance,1,8
+Textile Manufacturing,Research,1,8
+Textile Manufacturing,Analyst,1,8
+Textile Manufacturing,Information Technology,1,8
+Textile Manufacturing,Engineering,1,8
+Think Tanks,Finance,1,1
+Think Tanks,Sales,1,1
+Tobacco Manufacturing,Marketing,2,1
+Tobacco Manufacturing,Sales,2,1
+Tobacco Manufacturing,General Business,1,3
+Tobacco Manufacturing,Administrative,1,3
+Translation and Localization,Sales,1,1
+Translation and Localization,Business Development,1,1
+Transportation Programs,Project Management,2,1
+Transportation Programs,Human Resources,1,2
+Transportation Programs,Management,1,2
+Transportation Programs,Information Technology,1,2
+Transportation Programs,Business Development,1,2
+"Transportation, Logistics, Supply Chain and Storage",Management,32,1
+"Transportation, Logistics, Supply Chain and Storage",Manufacturing,31,2
+"Transportation, Logistics, Supply Chain and Storage",Accounting/Auditing,10,3
+"Transportation, Logistics, Supply Chain and Storage",Finance,10,3
+"Transportation, Logistics, Supply Chain and Storage",Information Technology,10,3
+"Transportation, Logistics, Supply Chain and Storage",Supply Chain,8,6
+"Transportation, Logistics, Supply Chain and Storage",Other,8,6
+"Transportation, Logistics, Supply Chain and Storage",Sales,7,8
+"Transportation, Logistics, Supply Chain and Storage",Analyst,5,9
+"Transportation, Logistics, Supply Chain and Storage",Project Management,4,10
+"Transportation, Logistics, Supply Chain and Storage",Distribution,4,10
+Transportation/Trucking/Railroad,Management,6,1
+Transportation/Trucking/Railroad,Manufacturing,6,1
+Transportation/Trucking/Railroad,Information Technology,2,3
+Transportation/Trucking/Railroad,Human Resources,1,4
+Transportation/Trucking/Railroad,Engineering,1,4
+Travel Arrangements,Management,8,1
+Travel Arrangements,Manufacturing,7,2
+Travel Arrangements,Information Technology,4,3
+Travel Arrangements,Sales,3,4
+Travel Arrangements,Business Development,3,4
+Travel Arrangements,Accounting/Auditing,2,6
+Travel Arrangements,Finance,2,6
+Travel Arrangements,Other,2,6
+Travel Arrangements,Administrative,1,9
+Travel Arrangements,Analyst,1,9
+Travel Arrangements,Legal,1,9
+Travel Arrangements,Design,1,9
+Travel Arrangements,Art/Creative,1,9
+Travel Arrangements,Customer Service,1,9
+Truck Transportation,Management,40,1
+Truck Transportation,Manufacturing,38,2
+Truck Transportation,Sales,23,3
+Truck Transportation,Business Development,12,4
+Truck Transportation,Other,11,5
+Truck Transportation,Accounting/Auditing,7,6
+Truck Transportation,Engineering,7,6
+Truck Transportation,Information Technology,7,6
+Truck Transportation,Finance,6,9
+Truck Transportation,Quality Assurance,4,10
+Utilities,Information Technology,17,1
+Utilities,Other,13,2
+Utilities,Engineering,13,2
+Utilities,Management,12,4
+Utilities,Manufacturing,12,4
+Utilities,Finance,9,6
+Utilities,Project Management,7,7
+Utilities,Sales,4,8
+Utilities,Human Resources,4,8
+Utilities,Accounting/Auditing,3,10
+Utilities,Design,3,10
+Utilities,Science,3,10
+Utilities Administration,Accounting/Auditing,1,1
+Utilities Administration,Finance,1,1
+Utilities Administration,Administrative,1,1
+Utilities Administration,Project Management,1,1
+Utilities Administration,Writing/Editing,1,1
+Vehicle Repair and Maintenance,Management,2,1
+Vehicle Repair and Maintenance,Manufacturing,2,1
+Venture Capital and Private Equity Principals,Finance,9,1
+Venture Capital and Private Equity Principals,Accounting/Auditing,6,2
+Venture Capital and Private Equity Principals,Analyst,3,3
+Venture Capital and Private Equity Principals,Consulting,3,3
+Venture Capital and Private Equity Principals,Administrative,3,3
+Venture Capital and Private Equity Principals,Human Resources,1,6
+Venture Capital and Private Equity Principals,Strategy/Planning,1,6
+Venture Capital and Private Equity Principals,Sales,1,6
+Veterinary Services,Health Care Provider,40,1
+Veterinary Services,Other,9,2
+Veterinary Services,General Business,8,3
+Veterinary Services,Manufacturing,2,4
+Veterinary Services,Education,2,4
+Veterinary Services,Training,2,4
+Veterinary Services,Business Development,1,7
+Veterinary Services,Sales,1,7
+Veterinary Services,Production,1,7
+Veterinary Services,Science,1,7
+Veterinary Services,Engineering,1,7
+Veterinary Services,Information Technology,1,7
+Veterinary Services,Customer Service,1,7
+Warehousing,Distribution,1,1
+Warehousing and Storage,Distribution,2,1
+Warehousing and Storage,Supply Chain,2,1
+Warehousing and Storage,Project Management,1,3
+Warehousing and Storage,Human Resources,1,3
+Warehousing and Storage,Engineering,1,3
+Warehousing and Storage,Manufacturing,1,3
+Warehousing and Storage,Production,1,3
+Warehousing and Storage,Management,1,3
+Warehousing and Storage,Sales,1,3
+Warehousing and Storage,Business Development,1,3
+Warehousing and Storage,Accounting/Auditing,1,3
+Warehousing and Storage,Finance,1,3
+Warehousing and Storage,Customer Service,1,3
+Wellness and Fitness Services,Health Care Provider,44,1
+Wellness and Fitness Services,Other,15,2
+Wellness and Fitness Services,Information Technology,11,3
+Wellness and Fitness Services,Sales,10,4
+Wellness and Fitness Services,Engineering,8,5
+Wellness and Fitness Services,Human Resources,7,6
+Wellness and Fitness Services,Business Development,6,7
+Wellness and Fitness Services,Administrative,5,8
+Wellness and Fitness Services,Finance,4,9
+Wellness and Fitness Services,Management,2,10
+Wellness and Fitness Services,Marketing,2,10
+Wellness and Fitness Services,Accounting/Auditing,2,10
+Wholesale,Sales,14,1
+Wholesale,Management,13,2
+Wholesale,Manufacturing,12,3
+Wholesale,Business Development,12,3
+Wholesale,Information Technology,7,5
+Wholesale,Administrative,3,6
+Wholesale,Marketing,3,6
+Wholesale,Customer Service,3,6
+Wholesale,Accounting/Auditing,2,9
+Wholesale,Finance,2,9
+Wholesale Apparel and Sewing Supplies,Design,1,1
+Wholesale Building Materials,Management,47,1
+Wholesale Building Materials,Manufacturing,46,2
+Wholesale Building Materials,Sales,16,3
+Wholesale Building Materials,Business Development,14,4
+Wholesale Building Materials,Information Technology,8,5
+Wholesale Building Materials,Engineering,3,6
+Wholesale Building Materials,Administrative,2,7
+Wholesale Building Materials,Finance,2,7
+Wholesale Building Materials,Human Resources,2,7
+Wholesale Building Materials,Analyst,2,7
+Wholesale Building Materials,Marketing,2,7
+Wholesale Building Materials,Design,2,7
+Wholesale Building Materials,Art/Creative,2,7
+Wholesale Food and Beverage,Business Development,1,1
+Wholesale Food and Beverage,Sales,1,1
+Wholesale Furniture and Home Furnishings,Sales,1,1
+Wholesale Furniture and Home Furnishings,Customer Service,1,1
+Wholesale Import and Export,Engineering,1,1
+Wholesale Import and Export,Information Technology,1,1
+Wholesale Import and Export,Quality Assurance,1,1
+Wholesale Metals and Minerals,Manufacturing,1,1
+Wholesale Metals and Minerals,Quality Assurance,1,1
+Wholesale Metals and Minerals,Production,1,1
+Wholesale Motor Vehicles and Parts,Management,1,1
+Wholesale Motor Vehicles and Parts,Manufacturing,1,1
+Wineries,Other,1,1
+Wireless Services,Information Technology,11,1
+Wireless Services,Engineering,9,2
+Wireless Services,Design,2,3
+Wireless Services,Research,2,3
+Wireless Services,Project Management,2,3
+Wireless Services,Sales,2,3
+Wireless Services,Business Development,2,3
+Wireless Services,Writing/Editing,1,8
+Wireless Services,Marketing,1,8
+Wireless Services,Production,1,8
+Wireless Services,Human Resources,1,8
+Wood Product Manufacturing,Project Management,1,1
+Writing and Editing,Writing/Editing,1,1
+Writing and Editing,Marketing,1,1
+Writing and Editing,Analyst,1,1

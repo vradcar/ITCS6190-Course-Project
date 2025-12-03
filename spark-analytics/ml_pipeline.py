@@ -15,6 +15,7 @@ from datetime import datetime, timedelta
 from ml_job_classifier import JobClassifier
 from ml_skill_extractor import SkillExtractor
 from ml_recommender import JobRecommender
+from ml_salary_predictor import SalaryPredictor
 
 # Import data loader
 from data_loader import DataLoader
@@ -29,10 +30,18 @@ class MLPipeline:
         self.data_loader = DataLoader()
         self.spark = self.data_loader.spark
         
+        # Add ML modules to Spark context for workers to resolve ModuleNotFoundError
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        self.spark.sparkContext.addPyFile(os.path.join(current_dir, "ml_job_classifier.py"))
+        self.spark.sparkContext.addPyFile(os.path.join(current_dir, "ml_skill_extractor.py"))
+        self.spark.sparkContext.addPyFile(os.path.join(current_dir, "ml_recommender.py"))
+        self.spark.sparkContext.addPyFile(os.path.join(current_dir, "ml_salary_predictor.py"))
+
         # Initialize ML components
         self.job_classifier = JobClassifier(self.spark)
         self.skill_extractor = SkillExtractor(self.spark)
         self.job_recommender = JobRecommender(self.spark)
+        self.salary_predictor = SalaryPredictor(self.spark)
         
         print("✅ ML Pipeline initialized")
     
@@ -43,23 +52,30 @@ class MLPipeline:
         # Load postings data
         df = self.data_loader.load_postings()
         
+        # Sample for stability in local mode
+        if df:
+            sample_limit = 10000
+            print(f"⚠️  Sampling data to {sample_limit} rows for stability...")
+            df = df.limit(sample_limit)
+        
         if df and df.count() > 0:
-            print(f"✅ Loaded {df.count()} job postings")
+            print(f"✅ Loaded {df.count()} job postings (sampled)")
             return df
         
         print("⚠️  No data loaded")
         return None
     
     def run_job_classification(self, df):
-        """Run job classification using Random Forest"""
+        """Run job classification using multiple models"""
         print("\n" + "="*60)
-        print("🎯 Job Classification (Random Forest)")
+        print("🎯 Job Classification (Model Comparison)")
         print("="*60)
         
         if df is None or df.count() == 0:
             print("❌ No data available for classification")
             return None, None
         
+        # This now runs the comparison logic
         model, predictions = self.job_classifier.train_classifier(df)
         
         if model:
@@ -68,6 +84,19 @@ class MLPipeline:
             return model, classified_df
         
         return None, None
+
+    def run_salary_prediction(self, df):
+        """Run salary prediction"""
+        print("\n" + "="*60)
+        print("💰 Salary Prediction (Linear Regression)")
+        print("="*60)
+        
+        if df is None or df.count() == 0:
+            print("❌ No data available for salary prediction")
+            return None, None
+            
+        model, feature_pipeline, predictions = self.salary_predictor.train_predictor(df)
+        return model, predictions
     
     def run_skill_extraction(self, df):
         """Run skill extraction using NLP"""
@@ -134,7 +163,7 @@ class MLPipeline:
         
         # Determine which components to run
         if components is None:
-            components = ['classification', 'skills', 'recommendation']
+            components = ['classification', 'skills', 'recommendation', 'salary']
         
         # 1. Job Classification
         if 'classification' in components:
@@ -147,7 +176,18 @@ class MLPipeline:
             except Exception as e:
                 print(f"❌ Error in job classification: {e}")
         
-        # 2. Skill Extraction
+        # 2. Salary Prediction
+        if 'salary' in components:
+            try:
+                salary_model, salary_preds = self.run_salary_prediction(df)
+                results['salary'] = {
+                    'model': salary_model,
+                    'predictions': salary_preds
+                }
+            except Exception as e:
+                print(f"❌ Error in salary prediction: {e}")
+
+        # 3. Skill Extraction
         if 'skills' in components:
             try:
                 clustered_df, cluster_model, tfidf_model = self.run_skill_extraction(df)
@@ -180,8 +220,11 @@ class MLPipeline:
     def save_results(self, results, output_dir="./ml_results"):
         """Save ML results to disk"""
         try:
-            os.makedirs(output_dir, exist_ok=True)
-            print(f"\n💾 Saving results to {output_dir}...")
+            # Ensure results are saved inside spark-analytics/ml_results
+            spark_dir = os.path.dirname(os.path.abspath(__file__))
+            resolved_output_dir = os.path.join(spark_dir, "ml_results") if output_dir == "./ml_results" else output_dir
+            os.makedirs(resolved_output_dir, exist_ok=True)
+            print(f"\n💾 Saving results to {resolved_output_dir}...")
             
             # Save summary
             summary = {
@@ -191,10 +234,91 @@ class MLPipeline:
             }
             
             import json
-            with open(f"{output_dir}/ml_summary.json", "w") as f:
+            with open(os.path.join(resolved_output_dir, "ml_summary.json"), "w") as f:
                 json.dump(summary, f, indent=2)
             
-            print(f"✅ Results saved to {output_dir}")
+            print(f"✅ Results saved to {resolved_output_dir}")
+
+            # ---------------------------------------
+            # Persist detailed DataFrame outputs for downstream analytics
+            # ---------------------------------------
+            analytics_out_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "analytics_output", "ml_outputs")
+            os.makedirs(analytics_out_dir, exist_ok=True)
+
+            # Helper to safely persist a Spark DataFrame
+            import pandas as _pd
+
+            def _persist_df(df, name: str, sample_rows: int = 5000):
+                """Persist a DataFrame defensively without triggering large actions.
+
+                - Avoid full df.count() which can be expensive and broadcast heavy.
+                - Use df.take(1) to check emptiness.
+                - Write parquet directly (Spark handles partitioning).
+                - For CSV, sample up to sample_rows to limit driver memory.
+                """
+                if df is None:
+                    print(f"   ↳ Skipped {name} (None)")
+                    return
+                try:
+                    # Fast emptiness check
+                    if len(df.take(1)) == 0:
+                        print(f"   ↳ Skipped {name} (empty)")
+                        return
+                    parquet_path = os.path.join(analytics_out_dir, name)
+                    csv_path = os.path.join(analytics_out_dir, f"{name}.csv")
+                    # Parquet writing disabled to avoid HADOOP_HOME errors on Windows
+                    # df.write.mode("overwrite").parquet(parquet_path)
+                    # Sample for CSV to prevent huge driver collection
+                    sample_df = df.limit(sample_rows)
+                    pdf = sample_df.toPandas()
+                    pdf.to_csv(csv_path, index=False)
+                    more_flag = " (truncated sample)" if df.rdd.getNumPartitions() > 1 and pdf.shape[0] == sample_rows else ""
+                    print(f"   ↳ Saved {name} sampled CSV [{pdf.shape[0]} rows]{more_flag}")
+                except Exception as e:
+                    print(f"   ⚠️  Failed to persist {name}: {e}")
+
+            # Classification predictions
+            if "classification" in results:
+                pred_df = results["classification"].get("predictions")
+                if pred_df:
+                    # Select safe columns to avoid Vector serialization issues
+                    safe_cols = ["job_id", "title", "company", "location", "job_category", "prediction", "predicted_category_index"]
+                    existing_cols = [c for c in safe_cols if c in pred_df.columns]
+                    _persist_df(pred_df.select(*existing_cols), "classification_predictions")
+
+            # Skill clustering results
+            if "skills" in results:
+                cluster_df = results["skills"].get("clustered_data")
+                if cluster_df:
+                    # Select safe columns
+                    safe_cols = ["job_id", "title", "extracted_skills", "skill_count", "prediction"]
+                    existing_cols = [c for c in safe_cols if c in cluster_df.columns]
+                    # Rename prediction to cluster_id for clarity
+                    to_save = cluster_df.select(*existing_cols).withColumnRenamed("prediction", "cluster_id")
+                    # Convert array to string for CSV safety (Pandas handles lists, but string is safer for Spark->Pandas)
+                    from pyspark.sql.functions import col, concat_ws
+                    if "extracted_skills" in to_save.columns:
+                        to_save = to_save.withColumn("extracted_skills", concat_ws(",", col("extracted_skills")))
+                    _persist_df(to_save, "skill_clusters")
+
+            # Recommendations
+            if "recommendation" in results:
+                recs_df = results["recommendation"].get("recommendations")
+                if recs_df:
+                    # Explode recommendations to make it flat and CSV friendly
+                    # Schema: user_id, recommendations: Array[Struct(job_index, rating)]
+                    from pyspark.sql.functions import explode, col
+                    flat_recs = recs_df.select(
+                        col("user_id"), 
+                        explode(col("recommendations")).alias("rec")
+                    ).select(
+                        col("user_id"),
+                        col("rec.job_index").alias("job_index"),
+                        col("rec.rating").alias("score")
+                    )
+                    _persist_df(flat_recs, "job_recommendations")
+
+            print(f"✅ Detailed ML outputs stored under: {analytics_out_dir}")
         
         except Exception as e:
             print(f"⚠️  Error saving results: {e}")

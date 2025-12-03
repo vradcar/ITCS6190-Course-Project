@@ -1,0 +1,101 @@
+job_id,company_name,title,description,location,company_id,views,formatted_work_type,application_type,formatted_experience_level,posting_domain,sponsored,zip_code
+100100,Company_8,Data Scientist,Data Scientist position at Company_8,Seattle,5007,1229,Contract,Referral,Director,linkedin.com,False,98101
+100101,Company_15,Data Scientist,Data Scientist position at Company_15,Los Angeles,5014,251,Contract,External,Director,indeed.com,False,90001
+100102,Company_3,Data Scientist,Data Scientist position at Company_3,Miami,5002,927,Contract,External,Senior Level,indeed.com,True,33101
+100103,Company_20,Business Analyst,Business Analyst position at Company_20,San Francisco,5019,1319,Full-time,External,Director,indeed.com,False,94103
+100104,Company_13,Product Manager,Product Manager position at Company_13,San Francisco,5012,771,Part-time,Easy Apply,Director,company.careers,False,94103
+100105,Company_7,DevOps Engineer,DevOps Engineer position at Company_7,Seattle,5006,4846,Internship,Referral,Mid Level,linkedin.com,True,98101
+100106,Company_11,Data Scientist,Data Scientist position at Company_11,Denver,5010,3659,Full-time,External,Director,linkedin.com,True,80202
+100107,Company_17,Software Engineer,Software Engineer position at Company_17,Atlanta,5016,4877,Contract,Referral,Director,company.careers,True,30303
+100108,Company_12,Data Scientist,Data Scientist position at Company_12,Los Angeles,5011,3123,Temporary,Referral,Entry Level,linkedin.com,False,90001
+100109,Company_3,Product Manager,Product Manager position at Company_3,Boston,5002,4963,Temporary,Referral,Director,linkedin.com,False,02108
+100110,Company_6,Data Scientist,Data Scientist position at Company_6,Atlanta,5005,1061,Contract,Easy Apply,Mid Level,company.careers,False,30303
+100111,Company_11,Software Engineer,Software Engineer position at Company_11,San Francisco,5010,510,Full-time,Easy Apply,Senior Level,indeed.com,False,94103
+100112,Company_17,Business Analyst,Business Analyst position at Company_17,Boston,5016,3543,Temporary,Easy Apply,Director,indeed.com,False,02108
+100113,Company_9,UX Designer,UX Designer position at Company_9,Austin,5008,4154,Full-time,External,Entry Level,company.careers,False,73301
+100114,Company_2,Product Manager,Product Manager position at Company_2,Los Angeles,5001,2315,Temporary,External,Internship,company.careers,False,90001
+100115,Company_8,Software Engineer,Software Engineer position at Company_8,Boston,5007,1891,Full-time,External,Mid Level,linkedin.com,False,02108
+100116,Company_6,Cloud Architect,Cloud Architect position at Company_6,Boston,5005,2758,Full-time,Referral,Internship,company.careers,False,02108
+100117,Company_1,QA Tester,QA Tester position at Company_1,San Francisco,5000,4776,Full-time,External,Internship,linkedin.com,True,94103
+100118,Company_11,DevOps Engineer,DevOps Engineer position at Company_11,Atlanta,5010,1941,Temporary,Referral,Director,indeed.com,False,30303
+100119,Company_6,DevOps Engineer,DevOps Engineer position at Company_6,Chicago,5005,1828,Full-time,Referral,Internship,indeed.com,True,60601
+100120,Company_17,QA Tester,QA Tester position at Company_17,Chicago,5016,1029,Full-time,Easy Apply,Mid Level,indeed.com,False,60601
+100121,Company_5,Product Manager,Product Manager position at Company_5,Austin,5004,2951,Part-time,External,Internship,company.careers,False,73301
+100122,Company_20,Software Engineer,Software Engineer position at Company_20,Chicago,5019,2728,Part-time,Referral,Director,company.careers,False,60601
+100123,Company_3,Business Analyst,Business Analyst position at Company_3,San Francisco,5002,1661,Temporary,External,Mid Level,linkedin.com,False,94103
+100124,Company_18,Product Manager,Product Manager position at Company_18,Chicago,5017,701,Contract,External,Senior Level,company.careers,False,60601
+100125,Company_13,Software Engineer,Software Engineer position at Company_13,San Francisco,5012,107,Contract,Easy Apply,Senior Level,indeed.com,True,94103
+100126,Company_7,Product Manager,Product Manager position at Company_7,Seattle,5006,4303,Full-time,External,Senior Level,company.careers,True,98101
+100127,Company_6,Business Analyst,Business Analyst position at Company_6,Los Angeles,5005,4132,Internship,Referral,Mid Level,indeed.com,True,90001
+100128,Company_20,Software Engineer,Software Engineer position at Company_20,Denver,5019,121,Internship,Referral,Internship,company.careers,True,80202
+100129,Company_11,Software Engineer,Software Engineer position at Company_11,Seattle,5010,3792,Temporary,External,Director,linkedin.com,True,98101
+100130,Company_12,Cloud Architect,Cloud Architect position at Company_12,Chicago,5011,93,Internship,Easy Apply,Mid Level,linkedin.com,False,60601
+100131,Company_10,UX Designer,UX Designer position at Company_10,New York,5009,4433,Temporary,Referral,Senior Level,linkedin.com,True,10001
+100132,Company_6,QA Tester,QA Tester position at Company_6,Austin,5005,4547,Temporary,Referral,Senior Level,company.careers,True,73301
+100133,Company_4,Business Analyst,Business Analyst position at Company_4,San Francisco,5003,4459,Internship,Referral,Internship,indeed.com,True,94103
+100134,Company_2,Product Manager,Product Manager position at Company_2,Austin,5001,3328,Part-time,Referral,Senior Level,company.careers,False,73301
+100135,Company_2,DevOps Engineer,DevOps Engineer position at Company_2,Denver,5001,231,Part-time,External,Senior Level,indeed.com,False,80202
+100136,Company_6,Data Scientist,Data Scientist position at Company_6,Miami,5005,3752,Full-time,Referral,Director,linkedin.com,False,33101
+100137,Company_9,Cloud Architect,Cloud Architect position at Company_9,Atlanta,5008,2204,Full-time,Referral,Senior Level,company.careers,False,30303
+100138,Company_11,UX Designer,UX Designer position at Company_11,Atlanta,5010,49,Full-time,Easy Apply,Director,indeed.com,False,30303
+100139,Company_15,QA Tester,QA Tester position at Company_15,Seattle,5014,1511,Full-time,Easy Apply,Entry Level,linkedin.com,True,98101
+100140,Company_7,Product Manager,Product Manager position at Company_7,Los Angeles,5006,1139,Part-time,Easy Apply,Senior Level,linkedin.com,True,90001
+100141,Company_13,QA Tester,QA Tester position at Company_13,Denver,5012,2583,Part-time,Referral,Director,indeed.com,False,80202
+100142,Company_14,UX Designer,UX Designer position at Company_14,Miami,5013,4477,Temporary,Easy Apply,Mid Level,indeed.com,False,33101
+100143,Company_7,DevOps Engineer,DevOps Engineer position at Company_7,Boston,5006,1943,Temporary,External,Entry Level,linkedin.com,False,02108
+100144,Company_11,Cloud Architect,Cloud Architect position at Company_11,Denver,5010,949,Internship,Easy Apply,Mid Level,linkedin.com,True,80202
+100145,Company_6,DevOps Engineer,DevOps Engineer position at Company_6,Atlanta,5005,3011,Temporary,Easy Apply,Senior Level,indeed.com,True,30303
+100146,Company_17,Software Engineer,Software Engineer position at Company_17,Seattle,5016,2667,Part-time,Referral,Director,linkedin.com,False,98101
+100147,Company_11,Cloud Architect,Cloud Architect position at Company_11,Austin,5010,943,Internship,Easy Apply,Mid Level,company.careers,True,73301
+100148,Company_2,Software Engineer,Software Engineer position at Company_2,Atlanta,5001,768,Full-time,Easy Apply,Entry Level,linkedin.com,False,30303
+100149,Company_3,Cloud Architect,Cloud Architect position at Company_3,Austin,5002,1672,Internship,Easy Apply,Mid Level,company.careers,False,73301
+100150,Company_10,UX Designer,UX Designer position at Company_10,Denver,5009,4739,Contract,Referral,Entry Level,linkedin.com,False,80202
+100151,Company_15,Software Engineer,Software Engineer position at Company_15,Miami,5014,3231,Part-time,Easy Apply,Mid Level,indeed.com,True,33101
+100152,Company_3,Software Engineer,Software Engineer position at Company_3,Denver,5002,2516,Temporary,Easy Apply,Internship,linkedin.com,False,80202
+100153,Company_9,UX Designer,UX Designer position at Company_9,Boston,5008,1201,Contract,Easy Apply,Director,company.careers,False,02108
+100154,Company_11,Software Engineer,Software Engineer position at Company_11,Miami,5010,638,Contract,External,Mid Level,company.careers,False,33101
+100155,Company_16,UX Designer,UX Designer position at Company_16,Chicago,5015,3285,Full-time,External,Director,indeed.com,True,60601
+100156,Company_10,Software Engineer,Software Engineer position at Company_10,Los Angeles,5009,4004,Internship,External,Senior Level,indeed.com,True,90001
+100157,Company_18,Product Manager,Product Manager position at Company_18,Chicago,5017,339,Temporary,External,Director,company.careers,True,60601
+100158,Company_16,Cloud Architect,Cloud Architect position at Company_16,Los Angeles,5015,2287,Temporary,Referral,Director,linkedin.com,True,90001
+100159,Company_18,Cloud Architect,Cloud Architect position at Company_18,San Francisco,5017,2389,Temporary,External,Entry Level,linkedin.com,True,94103
+100160,Company_19,Product Manager,Product Manager position at Company_19,Chicago,5018,925,Contract,Easy Apply,Entry Level,company.careers,True,60601
+100161,Company_7,DevOps Engineer,DevOps Engineer position at Company_7,Austin,5006,213,Contract,Easy Apply,Director,company.careers,True,73301
+100162,Company_4,Data Scientist,Data Scientist position at Company_4,Austin,5003,3612,Temporary,Referral,Senior Level,linkedin.com,True,73301
+100163,Company_19,Data Scientist,Data Scientist position at Company_19,Seattle,5018,3104,Contract,Easy Apply,Mid Level,linkedin.com,False,98101
+100164,Company_4,QA Tester,QA Tester position at Company_4,San Francisco,5003,338,Part-time,Referral,Mid Level,indeed.com,False,94103
+100165,Company_16,Software Engineer,Software Engineer position at Company_16,Austin,5015,1903,Part-time,Easy Apply,Entry Level,linkedin.com,True,73301
+100166,Company_19,UX Designer,UX Designer position at Company_19,Boston,5018,2162,Contract,Referral,Mid Level,company.careers,False,02108
+100167,Company_19,QA Tester,QA Tester position at Company_19,Atlanta,5018,3189,Part-time,External,Senior Level,indeed.com,True,30303
+100168,Company_1,UX Designer,UX Designer position at Company_1,Los Angeles,5000,2354,Internship,External,Internship,indeed.com,True,90001
+100169,Company_12,Software Engineer,Software Engineer position at Company_12,Los Angeles,5011,214,Contract,Referral,Director,linkedin.com,False,90001
+100170,Company_19,Business Analyst,Business Analyst position at Company_19,San Francisco,5018,1612,Internship,Referral,Senior Level,indeed.com,True,94103
+100171,Company_6,Business Analyst,Business Analyst position at Company_6,San Francisco,5005,1627,Part-time,Referral,Internship,company.careers,False,94103
+100172,Company_8,Product Manager,Product Manager position at Company_8,Chicago,5007,3212,Temporary,Easy Apply,Senior Level,company.careers,False,60601
+100173,Company_18,DevOps Engineer,DevOps Engineer position at Company_18,Chicago,5017,909,Part-time,Referral,Mid Level,company.careers,True,60601
+100174,Company_15,Software Engineer,Software Engineer position at Company_15,Atlanta,5014,2536,Internship,External,Mid Level,linkedin.com,False,30303
+100175,Company_19,DevOps Engineer,DevOps Engineer position at Company_19,Boston,5018,659,Part-time,External,Internship,indeed.com,True,02108
+100176,Company_2,Data Scientist,Data Scientist position at Company_2,New York,5001,2013,Contract,External,Mid Level,company.careers,True,10001
+100177,Company_1,QA Tester,QA Tester position at Company_1,Austin,5000,3391,Internship,Referral,Mid Level,indeed.com,False,73301
+100178,Company_17,QA Tester,QA Tester position at Company_17,Chicago,5016,280,Part-time,External,Internship,linkedin.com,True,60601
+100179,Company_7,Software Engineer,Software Engineer position at Company_7,Boston,5006,1265,Temporary,Referral,Internship,company.careers,False,02108
+100180,Company_13,UX Designer,UX Designer position at Company_13,Miami,5012,3970,Internship,External,Entry Level,indeed.com,True,33101
+100181,Company_10,Software Engineer,Software Engineer position at Company_10,Los Angeles,5009,502,Part-time,Easy Apply,Senior Level,indeed.com,False,90001
+100182,Company_5,UX Designer,UX Designer position at Company_5,San Francisco,5004,1041,Internship,External,Internship,linkedin.com,False,94103
+100183,Company_19,Business Analyst,Business Analyst position at Company_19,San Francisco,5018,2646,Part-time,Easy Apply,Director,company.careers,False,94103
+100184,Company_13,DevOps Engineer,DevOps Engineer position at Company_13,Los Angeles,5012,1245,Internship,Easy Apply,Entry Level,linkedin.com,False,90001
+100185,Company_9,Product Manager,Product Manager position at Company_9,Boston,5008,3198,Full-time,Easy Apply,Internship,company.careers,True,02108
+100186,Company_9,Cloud Architect,Cloud Architect position at Company_9,Seattle,5008,599,Contract,External,Director,indeed.com,False,98101
+100187,Company_14,UX Designer,UX Designer position at Company_14,Boston,5013,1550,Temporary,Easy Apply,Director,linkedin.com,True,02108
+100188,Company_11,Business Analyst,Business Analyst position at Company_11,San Francisco,5010,319,Temporary,Referral,Mid Level,indeed.com,True,94103
+100189,Company_10,UX Designer,UX Designer position at Company_10,Seattle,5009,1008,Contract,Referral,Internship,linkedin.com,True,98101
+100190,Company_2,UX Designer,UX Designer position at Company_2,San Francisco,5001,68,Full-time,Referral,Internship,indeed.com,False,94103
+100191,Company_2,Cloud Architect,Cloud Architect position at Company_2,Boston,5001,1129,Temporary,Easy Apply,Internship,linkedin.com,False,02108
+100192,Company_14,Product Manager,Product Manager position at Company_14,Chicago,5013,2953,Full-time,External,Director,indeed.com,False,60601
+100193,Company_10,Product Manager,Product Manager position at Company_10,San Francisco,5009,3344,Part-time,Easy Apply,Internship,company.careers,True,94103
+100194,Company_12,Product Manager,Product Manager position at Company_12,Miami,5011,4735,Part-time,External,Entry Level,company.careers,False,33101
+100195,Company_18,Product Manager,Product Manager position at Company_18,Chicago,5017,910,Part-time,Referral,Director,indeed.com,True,60601
+100196,Company_6,Product Manager,Product Manager position at Company_6,Seattle,5005,3499,Internship,Easy Apply,Director,company.careers,False,98101
+100197,Company_14,Cloud Architect,Cloud Architect position at Company_14,Chicago,5013,1243,Part-time,Easy Apply,Senior Level,linkedin.com,False,60601
+100198,Company_11,Product Manager,Product Manager position at Company_11,Boston,5010,3395,Part-time,Easy Apply,Entry Level,linkedin.com,True,02108
+100199,Company_1,QA Tester,QA Tester position at Company_1,Denver,5000,1709,Full-time,External,Senior Level,indeed.com,True,80202
