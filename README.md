@@ -245,17 +245,27 @@ The project demonstrates advanced Spark SQL capabilities:
 
 ## Visualizations (10 Total)
 
-
-Our pipeline produces a rich set of visual outputs across streaming analytics, core Spark SQL analytics, clustering, classification, and recommendations.
+Our pipeline produces a rich set of visual outputs across streaming-style analytics, core Spark SQL analytics, clustering, classification, and recommendations.
 
 ## A. Streaming-Style Analytics
 
 In addition to batch analytics on the full Kaggle dataset, we also implement a **Spark Structured Streaming–style pipeline**:
 
 - We **generate input job postings in micro-batches** (CSV files) using a custom generator script. These batches land in the `streaming_input/` folder and simulate a continuous feed of new jobs entering the market.  
-- Spark reads these micro-batches incrementally, allowing us to compute **near-real-time summaries** (e.g., current title mix, experience-level mix) on top of the same schema used for batch analytics.  
+- Spark reads these micro-batches incrementally, allowing us to compute summaries (e.g., current title mix, experience-level mix) on top of the same schema used for batch analytics.  
 - For model training and evaluation, we rely on the **LinkedIn Job Postings dataset from Kaggle**, which provides a large, diverse historical corpus. This combination of a rich offline dataset + streaming-style simulated input helps our ML models produce **effective, realistic results** while keeping the pipeline easy to run on a single machine.
 
+**Streaming Visualizations:**
+
+1. **Top Job Titles in Latest Stream Batch** (`stream_top_titles.png`)  
+   - Horizontal bar chart of the most common job titles in the most recent micro-batch.  
+   - Shows which roles (e.g., DevOps Engineer, UX Designer, Cloud Architect) are currently dominating the incoming stream.
+
+2. **Experience Levels in Latest Stream Batch** (`stream_experience_levels.png`)  
+   - Bar chart of experience levels (Entry, Mid, Senior, Director, Internship) in the latest batch.  
+   - Helps students see how “senior” the current market is skewing in the simulated stream.
+
+---
 
 ## B. Core Spark SQL Analytics
 
@@ -271,6 +281,8 @@ In addition to batch analytics on the full Kaggle dataset, we also implement a *
    - Ranks skills by how many industries they appear in.  
    - Highlights “safe bet” skills like Management or IT that transfer across many sectors.
 
+---
+
 ## C. Clustering & Skill Landscape
 
 6. **Skill Cluster Sizes (Top)** (`skill_cluster_sizes.png`)  
@@ -280,6 +292,8 @@ In addition to batch analytics on the full Kaggle dataset, we also implement a *
 7. **Skill Frequency by Cluster (Heatmap)** (`skill_cluster_heatmap.png`)  
    - Heatmap of key skills (Python, SQL, AWS, Spark, etc.) vs. clusters.  
    - Darker cells indicate skills that define or dominate specific clusters.
+
+---
 
 ## D. Classification & Recommendation Insights
 
@@ -294,15 +308,6 @@ In addition to batch analytics on the full Kaggle dataset, we also implement a *
 10. **Recommendation Score Histogram** (`recommendation_score_hist.png`)  
     - Histogram of recommendation scores from the collaborative filtering model.  
     - Reveals the score distribution and helps pick sensible thresholds for “strong” vs. “weak” recommendations.
-
-
-#### A. Streaming-Style Analytics
-
-In addition to batch analytics on the full Kaggle dataset, we also implement a **Spark Structured Streaming–style pipeline**:
-
-- We **generate input job postings in micro-batches** (CSV files) using a custom generator script. These batches land in the `streaming_input/` folder and simulate a continuous feed of new jobs entering the market.  
-- Spark reads these micro-batches incrementally, allowing us to compute **near-real-time summaries** (e.g., current title mix, experience-level mix) on top of the same schema used for batch analytics.  
-- For model training and evaluation, we rely on the **LinkedIn Job Postings dataset from Kaggle**, which provides a large, diverse historical corpus. This combination of a rich offline dataset + streaming-style simulated input helps our ML models produce **effective, realistic results** while keeping the pipeline easy to run on a single machine.
 
 
 ## 🎓 Key Research Questions
