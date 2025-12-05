@@ -296,19 +296,14 @@ In addition to batch analytics on the full Kaggle dataset, we also implement a *
     - Reveals the score distribution and helps pick sensible thresholds for “strong” vs. “weak” recommendations.
 
 
-## Streaming Analytics
+#### A. Streaming-Style Analytics
 
-- **Technology**: Spark Structured Streaming  
-- **Source**: File-based (easily migrated to Kafka or other streaming sources)  
-- **Processing**: 3 streaming queries executed over sequential micro-batches:  
-  - Top hiring locations  
-  - Experience level distribution  
-  - Most active companies  
-- **Output**: Console + file output in append mode  
+In addition to batch analytics on the full Kaggle dataset, we also implement a **Spark Structured Streaming–style pipeline**:
 
-This is a **streaming-style, batch-fed pipeline** using files, not a hard real-time system with strict latency guarantees.
+- We **generate input job postings in micro-batches** (CSV files) using a custom generator script. These batches land in the `streaming_input/` folder and simulate a continuous feed of new jobs entering the market.  
+- Spark reads these micro-batches incrementally, allowing us to compute **near-real-time summaries** (e.g., current title mix, experience-level mix) on top of the same schema used for batch analytics.  
+- For model training and evaluation, we rely on the **LinkedIn Job Postings dataset from Kaggle**, which provides a large, diverse historical corpus. This combination of a rich offline dataset + streaming-style simulated input helps our ML models produce **effective, realistic results** while keeping the pipeline easy to run on a single machine.
 
----
 
 ## 🎓 Key Research Questions
 
