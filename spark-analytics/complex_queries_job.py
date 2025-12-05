@@ -185,7 +185,7 @@ def create_visualizations(skills_by_industry, multi_skill_jobs, cross_industry_s
             
             plt.figure(figsize=(10, 6))
             sns.barplot(data=data, y='skill_name', x='skill_count', hue='skill_name', legend=False)
-            plt.title(f'Top 10 Skills in {top_industry}', fontsize=14, fontweight='bold')
+            plt.title(f'Top 3 Skills in {top_industry}', fontsize=14, fontweight='bold')
             plt.xlabel('Job Postings')
             plt.ylabel('Skill')
             plt.tight_layout()
