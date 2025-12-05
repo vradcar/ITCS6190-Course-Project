@@ -137,8 +137,8 @@ class JobClassifier:
         # Define classifiers to compare
         classifiers = {
             "Random Forest": RandomForestClassifier(labelCol="label", featuresCol="features", numTrees=50, maxDepth=10, seed=42),
-            "Logistic Regression": LogisticRegression(labelCol="label", featuresCol="features", maxIter=20, regParam=0.01),
-            "Decision Tree": DecisionTreeClassifier(labelCol="label", featuresCol="features", maxDepth=10, seed=42)
+            #"Logistic Regression": LogisticRegression(labelCol="label", featuresCol="features", maxIter=20, regParam=0.01),
+            #"Decision Tree": DecisionTreeClassifier(labelCol="label", featuresCol="features", maxDepth=10, seed=42)
         }
         
         # Base stages (common for all)
