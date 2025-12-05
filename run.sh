@@ -132,22 +132,7 @@ fi
 echo
 
 # --------------------------
-# STEP 1: Batch analytics (main.py)
-# --------------------------
-echo "============================================================"
-echo "STEP 1: Batch analytics (main.py)"
-echo "============================================================"
-if [ -f "main.py" ]; then
-  $PYTHON main.py || {
-    echo "[!] Batch analytics FAILED (see error above)."
-  }
-else
-  echo "⚠️  main.py not found in $SPARK_DIR, skipping batch analytics."
-fi
-echo
-
-# --------------------------
-# STEP 2: ML pipeline (ml_pipeline.py)
+# STEP 1: ML pipeline (ml_pipeline.py)
 # --------------------------
 echo "============================================================"
 echo "STEP 2: ML pipeline (ml_pipeline.py)"
@@ -162,7 +147,7 @@ fi
 echo
 
 # --------------------------
-# Additional ML scripts (YOUR INSERTED FILES)
+# Additional ML scripts
 # --------------------------
 
 echo "🔹 Running XGBoost classifier (ml_job_classifier_xg.py)"
@@ -202,7 +187,7 @@ if [ -d "$ML_OUT_DIR" ]; then
 fi
 
 # --------------------------
-# STEP 3: Complex analytics & visualizations (complex_queries_job.py)
+# STEP 2: Complex analytics & visualizations
 # --------------------------
 echo "============================================================"
 echo "STEP 3: Complex analytics & visualizations (complex_queries_job.py)"
@@ -242,7 +227,7 @@ echo "Run complete. All batch, ML, and complex analytics steps finished."
 echo "Artifacts:"
 echo "  - ML summary & models: $SPARK_DIR/ml_results"
 echo "  - ML detailed outputs: $SPARK_DIR/analytics_output/ml_outputs"
-echo "  - Spark recommender_outputs: $SPARK_REC/recommendations.csv"
+echo "  - Spark recommender_outputs: $SPARK_DIR/analytics_output/Spark_recommendation_results"
 echo "  - Query results:       $SPARK_DIR/analytics_output/query_results"
 echo "  - Visualizations:      $SPARK_DIR/analytics_output/visuals"
 echo "You can re-run only analytics via: python spark-analytics/complex_queries_job.py"

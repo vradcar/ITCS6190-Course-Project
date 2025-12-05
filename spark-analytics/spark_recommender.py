@@ -14,6 +14,9 @@ from data_loader import DataLoader
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.abspath(os.path.join(BASE_DIR, "..", "data"))
 USERS_FILE = os.path.join(DATA_DIR, "users.csv")
+RECOMMENDATION_RESULTS_DIR = os.path.abspath(
+    "/workspaces/ITCS6190-Course-Project/spark-analytics/analytics_output/Spark_recommendation_results/"
+)
 
 TRAIN_FRACTION = 0.5
 
@@ -200,7 +203,7 @@ def main():
             "recommended_jobs": " | ".join(recommended_jobs)
         })
 
-    out_path = os.path.join(DATA_DIR, "recommendations.csv")
+    out_path = os.path.join(RECOMMENDATION_RESULTS_DIR, "recommendations.csv")
     pd.DataFrame(recommendations).to_csv(out_path, index=False)
     print(f"✔ Saved recommendations to: {out_path}")
 

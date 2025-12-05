@@ -7,8 +7,10 @@ Skill Extraction, Recommendation System, and Trend Forecasting
 
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import *
+from pyspark.sql.types import *
 import argparse
 import os
+import shutil
 from datetime import datetime, timedelta
 
 # Import ML modules
@@ -96,7 +98,7 @@ class MLPipeline:
             return None, None
             
         model, feature_pipeline, predictions = self.salary_predictor.train_predictor(df)
-        return model, predictions
+        return model, predictions, feature_pipeline
     
     def run_skill_extraction(self, df):
         """Run skill extraction using NLP"""
@@ -179,10 +181,12 @@ class MLPipeline:
         # 2. Salary Prediction
         if 'salary' in components:
             try:
-                salary_model, salary_preds = self.run_salary_prediction(df)
+                # Updated to unpack 3 values (model, predictions, pipeline)
+                salary_model, salary_preds, salary_pipeline = self.run_salary_prediction(df)
                 results['salary'] = {
                     'model': salary_model,
-                    'predictions': salary_preds
+                    'predictions': salary_preds,
+                    'feature_pipeline': salary_pipeline
                 }
             except Exception as e:
                 print(f"❌ Error in salary prediction: {e}")
@@ -216,6 +220,163 @@ class MLPipeline:
         print("="*70)
         
         return results
+
+    def run_streaming_inference(self, trained_results, input_dir="streaming-dir", output_dir="ml_results"):
+        """
+        Run inference on a stream of data in streaming-dir using trained models.
+        """
+        print("\n" + "=" * 70)
+        print("🌊 Starting Streaming Inference")
+        print("=" * 70)
+
+        # 1. Define Schema
+        # Streaming requires a user-defined schema, it cannot infer from CSV automatically
+        job_schema = StructType([
+            StructField("job_id", StringType(), True),
+            StructField("title", StringType(), True),
+            StructField("company", StringType(), True),
+            StructField("location", StringType(), True),
+            StructField("salary", StringType(), True),
+            StructField("description_text", StringType(), True),
+            StructField("job_type", StringType(), True),
+            StructField("experience_level", StringType(), True),
+            StructField("posted_date", StringType(), True),
+            StructField("url", StringType(), True)
+        ])
+
+        # 2. Read Stream
+        print(f"👀 Monitoring directory: {input_dir}")
+        stream_df = self.spark.readStream \
+            .option("header", "true") \
+            .option("maxFilesPerTrigger", 1) \
+            .schema(job_schema) \
+            .csv(input_dir)
+
+        # 3. Apply Transformations
+        # We process the stream DF. Note: We cannot call 'count()' or 'show()' here.
+        processed_df = stream_df
+
+        # --- A. Classification ---
+        if 'classification' in trained_results:
+            print("   • Attaching Classification Model...")
+            class_model = trained_results['classification']['model']
+            
+            # Use the helper's prepare_features (safe for streaming as it uses UDFs)
+            processed_df = self.job_classifier.prepare_features(processed_df)
+            
+            # Apply model
+            predictions = class_model.transform(processed_df)
+            
+            # Keep relevant columns and rename prediction
+            processed_df = predictions.withColumnRenamed("prediction", "category_index")
+            
+            # Note: We skip the helper's classify_jobs() because it calls .count() which breaks streaming
+
+        # --- B. Skill Extraction ---
+        print("   • Attaching Skill Extraction Logic...")
+        # Use helper's prepare_text_features (safe for streaming)
+        # Note: We check if columns exist to avoid duplication if Classification already ran prepare_features
+        if "combined_text" not in processed_df.columns:
+            processed_df = self.skill_extractor.prepare_text_features(processed_df)
+        
+        # --- C. Salary Prediction ---
+        if 'salary' in trained_results:
+            print("   • Attaching Salary Prediction Model...")
+            salary_model = trained_results['salary']['model']
+            salary_pipeline = trained_results['salary']['feature_pipeline']
+            
+            # CRITICAL: We cannot use SalaryPredictor.prepare_features() because it checks .count()
+            # We must manually replicate the UDF logic here for the stream.
+            
+            # 1. Extract Numeric Salary
+            extract_salary_udf = udf(SalaryPredictor.extract_salary_from_text, IntegerType())
+            processed_df = processed_df.withColumn("salary_numeric", extract_salary_udf(col("salary")))
+            
+            # 2. Extract Experience Years
+            extract_exp_udf = udf(SalaryPredictor.extract_experience_years, IntegerType())
+            processed_df = processed_df.withColumn(
+                "experience_years", 
+                extract_exp_udf(col("experience_level"), col("description_text"))
+            )
+            
+            # 3. Remote Check
+            processed_df = processed_df.withColumn(
+                "is_remote",
+                when(
+                    col("location").rlike("(?i)remote") | col("description_text").rlike("(?i)remote"), 
+                    1.0
+                ).otherwise(0.0)
+            )
+            
+            # 4. High Value Skills Flags
+            for skill in self.salary_predictor.high_value_skills:
+                processed_df = processed_df.withColumn(
+                    f"has_{skill.replace(' ', '_').replace('.', '_')}",
+                    when(
+                        lower(col("description_text")).rlike(f"(?i)\\b{skill}\\b") |
+                        lower(col("title")).rlike(f"(?i)\\b{skill}\\b"),
+                        1.0
+                    ).otherwise(0.0)
+                )
+
+            # 5. Clean Description
+            processed_df = processed_df.withColumn(
+                "description_clean",
+                regexp_replace(
+                    regexp_replace(lower(coalesce(col("description_text"), lit(""))), "[^a-zA-Z0-9\\s]", " "),
+                    "\\s+", " "
+                )
+            )
+
+            # Apply Feature Pipeline (VectorAssembler, etc)
+            # This is safe because PipelineModels are serializable
+            if salary_pipeline:
+                processed_df = salary_pipeline.transform(processed_df)
+                
+                # Apply Regression Model
+                processed_df = salary_model.transform(processed_df)
+                processed_df = processed_df.withColumnRenamed("prediction", "predicted_salary")
+
+        # 4. Final Selection for Output
+        # Select readable columns for output
+        output_cols = [
+            col("job_id"), col("title"), col("company"), 
+            col("job_category"), # Added by classifier
+            col("extracted_skills"), # Added by skill extractor
+            col("predicted_salary") # Added by salary predictor
+        ]
+        
+        # Filter only columns that actually exist in the dataframe
+        final_select_cols = [c for c in output_cols if c._jc.toString() in processed_df.columns]
+        
+        # If we lost columns or have none, just dump everything except vectors
+        if not final_select_cols:
+             final_output = processed_df.drop("features", "text_features_vec", "raw_features", "bigram_features", "description_vec")
+        else:
+             final_output = processed_df.select(*output_cols)
+
+        # 5. Write Stream
+        # Ensure output directory exists
+        chk_point_dir = os.path.join(output_dir, "_checkpoint")
+        if os.path.exists(chk_point_dir):
+            shutil.rmtree(chk_point_dir) # Clear checkpoint for fresh restart
+
+        print(f"💾 Streaming output to: {output_dir}")
+        
+        query = final_output.writeStream \
+            .outputMode("append") \
+            .format("json") \
+            .option("path", output_dir) \
+            .option("checkpointLocation", chk_point_dir) \
+            .trigger(processingTime="10 seconds") \
+            .start()
+
+        print("⏳ Stream is running... Press Ctrl+C to stop.")
+        try:
+            query.awaitTermination()
+        except KeyboardInterrupt:
+            print("\n🛑 Stopping stream...")
+            query.stop()
     
     def save_results(self, results, output_dir="./ml_results"):
         """Save ML results to disk"""
@@ -249,13 +410,7 @@ class MLPipeline:
             import pandas as _pd
 
             def _persist_df(df, name: str, sample_rows: int = 5000):
-                """Persist a DataFrame defensively without triggering large actions.
-
-                - Avoid full df.count() which can be expensive and broadcast heavy.
-                - Use df.take(1) to check emptiness.
-                - Write parquet directly (Spark handles partitioning).
-                - For CSV, sample up to sample_rows to limit driver memory.
-                """
+                """Persist a DataFrame defensively without triggering large actions."""
                 if df is None:
                     print(f"   ↳ Skipped {name} (None)")
                     return
@@ -266,8 +421,6 @@ class MLPipeline:
                         return
                     parquet_path = os.path.join(analytics_out_dir, name)
                     csv_path = os.path.join(analytics_out_dir, f"{name}.csv")
-                    # Parquet writing disabled to avoid HADOOP_HOME errors on Windows
-                    # df.write.mode("overwrite").parquet(parquet_path)
                     # Sample for CSV to prevent huge driver collection
                     sample_df = df.limit(sample_rows)
                     pdf = sample_df.toPandas()
@@ -334,9 +487,10 @@ def main():
     parser.add_argument("--date", type=str, help="Date to analyze (YYYY-MM-DD)")
     parser.add_argument("--days-back", type=int, default=7, help="Number of days to load for training")
     parser.add_argument("--components", type=str, nargs="+",
-                       choices=['classification', 'skills', 'recommendation'],
+                       choices=['classification', 'skills', 'recommendation', 'salary'],
                        help="ML components to run (default: all)")
     parser.add_argument("--save", action="store_true", help="Save results to disk")
+    parser.add_argument("--streaming", action="store_true", help="Run in streaming mode after training")
     
     args = parser.parse_args()
     
@@ -344,7 +498,7 @@ def main():
     pipeline = MLPipeline()
     
     try:
-        # Run pipeline
+        # Run pipeline (Training phase)
         results = pipeline.run_full_pipeline(
             date_str=args.date,
             days_back=args.days_back,
@@ -354,6 +508,19 @@ def main():
         # Save if requested
         if args.save and results:
             pipeline.save_results(results)
+
+        # Run Streaming if requested
+        if args.streaming and results:
+             # Ensure the streaming directory exists
+            stream_in = "streaming_input"
+            stream_out = "ml_output"  # CHANGED to ml_output
+            os.makedirs(stream_in, exist_ok=True)
+            
+            pipeline.run_streaming_inference(
+                results, 
+                input_dir=stream_in,
+                output_dir=stream_out
+            )
     
     finally:
         pipeline.cleanup()

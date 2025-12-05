@@ -1,54 +1,26 @@
-# ITCS6190 Cloud Computing Course Project  
+# The Job Intelligence Engine 
 ## LinkedIn Job Market Analytics with Apache Spark
 
-**Group Name:** Unattached and Unhinged  
+**Group Name: Unattached and Unhinged**
 
 **Team Members:**
-- Varad Paradkar (801418318) – vparadka@charlotte.edu  
-- Mitali Yadav (801453849) – myadav5@charlotte.edu  
-- Sudeepta Bal (801455628) – sbal1@charlotte.edu  
-- Ruthwik Dovala (801431661) – rdovala@charlotte.edu  
+- Varad Paradkar (801418318) - vparadka@charlotte.edu
+- Mitali Yadav (801453849) - myadav5@charlotte.edu  
+- Sudeepta Bal (801455628) - sbal1@charlotte.edu
+- Ruthwik Dovala (801431661) - rdovala@charlotte.edu
 
 ---
 
 ## 🎯 Project Overview
 
-This project implements a comprehensive **Apache Spark–based analytics and ML platform** for analyzing the LinkedIn job market dataset from Kaggle. The system performs:
+This project implements a comprehensive **Apache Spark-based analytics platform** for analyzing the LinkedIn job market dataset from Kaggle. The system performs complex queries, streaming-style analytics, and provides actionable insights for students and job seekers entering the market.
 
-- Complex **Spark SQL** queries  
-- **Real-time streaming** analytics  
-- **Machine learning pipelines** (including XGBoost and Spark-based recommenders)  
-- Actionable insights for students and job seekers entering the market  
+### Key Features
 
-The goal is to turn a raw job postings dataset into **data-driven career guidance**, with scalable processing on top of Apache Spark.
-
----
-
-## 🧱 Spark Components Used
-
-This project is intentionally designed to showcase **multiple components of Apache Spark**:
-
-- **Spark Core**  
-  - Distributed computation engine using DataFrames (built on RDDs)  
-  - Handles large-scale job and skills data with fault tolerance and parallelism  
-
-- **Spark SQL**  
-  - DataFrame and SQL APIs for complex analytics  
-  - Multi-table joins, window functions, aggregations, and analytical queries  
-
-- **Spark Structured Streaming**  
-  - Real-time pipeline that ingests simulated job postings from files  
-  - Incremental, micro-batch computations for live job market monitoring  
-
-- **Spark MLlib (Machine Learning Library)**  
-  - Used for recommendation (ALS-based **Spark Recommender**)  
-  - Integrated into end-to-end ML pipelines for ranking jobs and skills  
-
-- **External ML Integration (XGBoost + Spark)**  
-  - XGBoost models (via `ml_job_classifier_xg.py`) trained on Spark-prepared features  
-  - Spark handles preprocessing and feature engineering; XGBoost performs high-performance gradient boosting  
-
-Together, these components form a **full-stack Spark application**: from batch analytics and streaming to machine learning and recommendation.
+- **Complex Spark SQL Queries**: Window functions, multi-table joins, and advanced aggregations  
+- **Streaming**: Spark Structured Streaming for processing simulated job market data in micro-batches  
+- **Professional Visualizations**: 5 comprehensive charts showing market trends and opportunities  
+- **Scalable Architecture**: Distributed processing with Apache Spark for large-scale data analysis  
 
 ---
 
@@ -62,18 +34,11 @@ Together, these components form a **full-stack Spark application**: from batch a
                      │
                      ▼
 ┌─────────────────────────────────────────────────────────┐
-│                  Apache Spark Layer                     │
-│                                                         │
-│   ┌──────────────────┐   ┌───────────────────────────┐  │
-│   │   Spark SQL       │  │   Spark Structured        │  │
-│   │   Complex Queries │  │   Streaming (Real-Time)   │  │
-│   └──────────────────┘  └───────────────────────────┘  │
-│                 ▲                     ▲                 │
-│                 │                     │                 │
-│   ┌──────────────────┐   ┌───────────────────────────┐  │
-│   │ Spark MLlib       │  │ XGBoost + Spark           │  │
-│   │ Recommender (ALS) │  │ Job Classifier / ML       │  │
-│   └──────────────────┘   └───────────────────────────┘  │
+│              Apache Spark Processing                    │
+│  ┌──────────────────┐      ┌──────────────────┐        │
+│  │  Spark SQL       │      │  Spark Streaming │        │
+│  │  Complex Queries │      │  Streaming Data  │        │
+│  └──────────────────┘      └──────────────────┘        │
 └────────────────────┬────────────────────────────────────┘
                      │
                      ▼
@@ -82,7 +47,6 @@ Together, these components form a **full-stack Spark application**: from batch a
 │  • Skill Demand Analysis    • Industry Entry Barriers   │
 │  • Salary Trends            • Career Path Builder       │
 │  • Skill Co-occurrence      • Learning Roadmaps         │
-│  • ML Recommendations       • Student Action Plans      │
 └─────────────────────────────────────────────────────────┘
 ```
 
@@ -113,13 +77,10 @@ Together, these components form a **full-stack Spark application**: from batch a
 │   │   └── skills_by_industry.csv
 │   └── visuals
 │       ├── avg_skills_by_industry.png
-│       ├── career_path_builder.png
+│       ├── classification_class_distribution.png
 │       ├── cross_industry_skills.png
-│       ├── industry_entry_barriers.png
-│       ├── skill_diversity_index.png
-│       ├── skill_pairs.png
-│       ├── top_10_skills_overall.png
-│       └── top_skills_by_industry.png
+│       ├── skill_cluster_sizes.png
+│       └── top_skills_top_industry.png
 ├── data
 │   ├── companies
 │   │   ├── companies.csv
@@ -181,317 +142,169 @@ Together, these components form a **full-stack Spark application**: from batch a
 ---
 
 ## 🚀 Quick Start Guide
+### 0. One-Command Run (Recommended)
 
-### ✅ Prerequisites
+From the **repo root**, you can run the entire pipeline (environment setup, analytics, ML, and complex queries) with a single command:
 
-- **Python** 3.8+  
-- **Apache Spark 3.x** (or `pyspark` installed via `pip`)  
-- At least **4 GB RAM** recommended  
-- **Windows-only extra step**: Hadoop binaries (`winutils.exe`)  
+```bash
+chmod +x run.sh      # one-time
+./run.sh
+```
 
-> For local development, you can use either a local Spark installation or rely on `pyspark` via `pip`.  
+What `run.sh` does:
+
+- Creates and activates a virtual environment under `spark-analytics/.venv`  
+- Installs all dependencies from `spark-analytics/requirements.txt`  
+- Generates streaming test data with `streaming_test_data_generator.py`  
+- Runs batch analytics and ML pipeline scripts (e.g., `main.py`, `ml_pipeline.py`, `ml_job_classifier_xg.py`, `spark_recommender.py`)  
+- Runs the complex analytics job to produce query CSVs and visualizations  
+- Prints a summary of where outputs are stored, including:
+  - Query results under `spark-analytics/analytics_output/query_results`  
+  - Visuals under `spark-analytics/analytics_output/visuals`  
+  - ML outputs and recommendations under `spark-analytics/ml_results` and `data/recommendations.csv`  
+
+You can still run individual components manually (see below), but `run.sh` is the easiest way to **run everything** for grading or demos.
 
 ---
+### Prerequisites
 
-### 1. Install Python Dependencies
+- Python 3.8+  
+- Apache Spark 3.x (or PySpark installed via pip)  
+- 4GB+ RAM recommended  
+- Windows users: Install Hadoop binaries (`winutils.exe`)  
 
-From the repository root:
+### 1. Install Dependencies
 
 ```bash
 cd spark-analytics
 pip install -r requirements.txt
 ```
 
-**Key packages:**
-
-- `pyspark`  
-- `pandas`  
-- `matplotlib`  
-- `seaborn`  
-- `numpy`  
-- ML packages used by the pipeline (e.g., `xgboost`, `scikit-learn` where applicable)  
-
----
+**Required packages:**
+- pyspark  
+- pandas  
+- matplotlib  
+- seaborn  
+- numpy  
 
 ### 2. Set Up Hadoop (Windows Only)
 
-If you’re on **Windows** and encounter Hadoop-related errors (e.g., missing `winutils`):
+If you're on Windows and encounter Hadoop errors:
 
-1. Download `winutils.exe` from:  
-   https://github.com/steveloughran/winutils  
-2. Place it in:  
-   `C:\hadoop\bin\`  
-3. Set environment variable:  
-   `HADOOP_HOME=C:\hadoop`  
-4. Add `C:\hadoop\bin` to your `PATH`.  
+1. Download `winutils.exe` from: https://github.com/steveloughran/winutils  
+2. Place it in `C:\hadoop\bin\`  
+3. Set environment variable: `HADOOP_HOME=C:\hadoop`  
+
+### 3. Run Complex Queries Analysis
+
+```bash
+# Open the notebook in VS Code or Jupyter
+cd spark-analytics
+code complex_queries.ipynb  # or jupyter notebook
+
+# Run all cells to generate:
+# - 5 visualizations
+# - Query results (CSV/Parquet)
+# - Student action plan
+```
+
+### 4. Run Streaming Demo
+
+Terminal 1 (Streaming Processor):
+```bash
+cd spark-analytics
+python streaming_processor.py
+```
+
+Terminal 2 (Data Simulator):
+```bash
+cd spark-analytics
+python streaming_data_simulator.py
+```
+
+This demonstrates a **streaming-style pipeline** over file-based job posting batches, rather than a strict low-latency real-time system.
 
 ---
 
-### 3. Run Batch Analytics (Spark SQL + Visualizations)
+## 📊 Analytics Capabilities
 
-You can run the notebook or the Python driver:
+### Complex Queries (Spark SQL)
 
-#### Option A – Notebook (recommended for demo)
-
-```bash
-cd spark-analytics
-# VS Code
-code complex_queries.ipynb
-
-# or Jupyter
-jupyter notebook complex_queries.ipynb
-```
-
-Then **Run All Cells** to generate:
-
-- 8 visualizations (PNG files)  
-- Parquet/CSV query outputs  
-- Student-focused action plan (`STUDENT_ACTION_PLAN.txt`)  
-
-#### Option B – Python Script
-
-```bash
-cd spark-analytics
-python main.py
-```
-
-This script orchestrates:
-
-- Loading cleaned job/company/skills datasets  
-- Running the Spark SQL queries  
-- Writing outputs to `analytics_output/query_results/` and `analytics_output/visuals/`  
-
----
-
-### 4. Run Streaming Demo (Spark Structured Streaming)
-
-#### Terminal 1 – Streaming Processor
-
-```bash
-cd spark-analytics
-python streaming_processor.py   # or equivalent streaming driver
-```
-
-#### Terminal 2 – Data Simulator
-
-```bash
-cd spark-analytics
-python streaming_test_data_generator.py
-```
-
-**Streaming Features:**
-
-- Reads batches from `streaming_input/` as a stream  
-- Tracks:
-  - **Top hiring locations**
-  - **Experience level distributions**
-  - **Most active companies**  
-
-Output is shown in the console and/or persisted to files in append mode.
-
----
-
-## 📊 Analytics Capabilities (Spark SQL & EDA)
-
-### 1. Complex Spark SQL Queries
-
-This project demonstrates advanced **Spark SQL** usage:
+The project demonstrates advanced Spark SQL capabilities:
 
 1. **Top Skills by Industry**  
-   - Uses window functions:  
-     `RANK() OVER (PARTITION BY industry ORDER BY skill_count DESC)`  
-   - Multi-table joins:  
-     `job_skills → skills → job_industries → industries`  
-   - **Result:** Top 10 skills for each industry  
+   - Window functions: `rank() OVER (PARTITION BY industry ORDER BY count DESC)`  
+   - Multi-table joins: job_skills → skills → job_industries → industries  
+   - Result: Top 10 skills for each industry  
 
-2. **Average Skills Required per Industry**  
-   - Aggregations with `AVG()`, `COUNT()`, `GROUP BY`  
-   - Analyzes **skill complexity** across industries  
-   - **Result:** Quantifies entry barriers (skills needed to break in)  
+2. **Average Skills Required**  
+   - Aggregations: `AVG()`, `COUNT()`, `GROUP BY`  
+   - Analyzes skill complexity across industries  
+   - Result: Entry barriers for different sectors  
 
 3. **Cross-Industry Skill Overlap**  
-   - Uses `DISTINCT` and grouped aggregations  
-   - Identifies **transferable skills** used across many industries  
-   - **Result:** Highlights safe skills for long-term career flexibility  
+   - `DISTINCT` analysis with grouping  
+   - Identifies transferable skills  
+   - Result: Skills valuable across multiple sectors  
 
-### 2. Student-Focused Visualizations (8 Total)
+### Visualizations (5 Total)
 
-All visualizations are generated into `analytics_output/visuals/`:
+1. **Top Skills in Focus Industry** (`top_skills_top_industry.png`)
+   - Horizontal bar chart of the top 10 skills in the highest–skill-demand industry (e.g., Newspaper Publishing).
+   - Helps students see which skills dominate a particular sector.
 
-4. **Skill Co-occurrence Network**  
-   - Uses `itertools.combinations` to analyze which skills appear together  
-   - Helps students identify complementary skill bundles to learn together  
+2. **Average Skills Required by Industry (Top 15)** (`avg_skills_by_industry.png`)
+   - Shows average number of skills required per job across the top 15 industries.
+   - Interpreted as **entry barriers**: fewer required skills → easier to enter.
 
-5. **Top 10 Most In-Demand Skills**  
-   - Ranks skills by overall demand  
-   - Shows **share of job postings** requiring each skill  
-   - Directly informs learning priorities  
+3. **Most Versatile Skills (Top 20)** (`cross_industry_skills.png`)
+   - Ranks skills by the number of industries they appear in.
+   - Highlights “safe bet” skills that transfer across many sectors (e.g., Management, IT, Sales).
 
-6. **Industry Entry Barriers**  
-   - Bubble chart:
-     - X-axis: opportunities  
-     - Y-axis: average required skills  
-     - Size/color: industry category or job count  
-   - Classifies industries into:
-     - Entry-friendly  
-     - Moderate  
-     - Advanced  
+4. **Skill Cluster Sizes** (`skill_cluster_sizes.png`)
+   - Visualizes how many skills fall into each cluster (from the ML-based clustering step).
+   - Gives a sense of which skill groups are broad vs. highly specialized.
 
-7. **Skill Diversity Index**  
-   - Quadrant analysis:
-     - Specialist vs generalist skills  
-   - Evaluates **risk and flexibility** of investing in a given skill  
-   - Identifies “best bet” skills with **high demand + high versatility**  
+5. **Classification Predictions Distribution** (`classification_class_distribution.png`)
+   - Shows the distribution of predicted classes from the job classifier.
+   - Useful for spotting class imbalance and understanding how the model is behaving across job categories.
 
-8. **Career Path Builder**  
-   - Models skill progression:  
-     `Foundation → Intermediate → Advanced`  
-   - Based on co-requirement and co-occurrence patterns  
-   - Produces **learning roadmaps** tailored to target industries  
+   Under the hood, we compared two classification models:
+   - A **Spark ML Random Forest** (primary model used in the pipeline)  
+   - An **XGBoost classifier** as a reference model  
 
----
+   XGBoost achieved accuracy within **<1% of the Random Forest model**, but was slightly lower, so we kept Random Forest as the primary production model and used XGBoost as a benchmark for robustness.
 
-## 📡 Real-Time Streaming Analytics (Spark Structured Streaming)
+### Streaming Analytics
 
-- **Engine:** Spark Structured Streaming  
-- **Source:** File-based stream from `streaming_input/` directory  
-- **Mode:** Append / Complete (depending on query)  
+- **Technology**: Spark Structured Streaming  
+- **Source**: File-based (easily migrated to Kafka or other streaming sources)  
+- **Processing**: 3 streaming queries executed over sequential micro-batches:  
+  - Top hiring locations  
+  - Experience level distribution  
+  - Most active companies  
+- **Output**: Console + file output in append mode  
 
-Core streaming queries:
-
-1. **Top Hiring Locations in Near-Real-Time**  
-2. **Experience Level Distribution Over Time**  
-3. **Most Active Companies** (by number of new job postings)  
-
-A typical streaming setup:
-
-```python
-# Read stream from directory
-streaming_df = spark.readStream \
-    .schema(job_schema) \
-    .option("maxFilesPerTrigger", 1) \
-    .csv("streaming_input/")
-
-# Process and write output
-query = streaming_df \
-    .groupBy("location") \
-    .count() \
-    .writeStream \
-    .outputMode("complete") \
-    .format("console") \
-    .start()
-
-query.awaitTermination()
-```
-
-This demonstrates **Spark Structured Streaming** from ingestion to aggregation and visualization for a live job market dashboard.
-
----
-
-## 🤖 Machine Learning Components
-
-### 1. XGBoost Job Classification
-
-**File:** `ml_job_classifier_xg.py`  
-
-**Goal:** Predict **job categories** or **suitability** based on rich feature sets extracted from the LinkedIn dataset.
-
-**Pipeline (high-level):**
-
-1. **Feature Engineering with Spark**  
-   - Encode skills, industries, experience levels, locations, etc.  
-   - Aggregate skill vectors and job attributes into structured feature matrices.  
-
-2. **XGBoost Model Training**  
-   - Export Spark-prepared features to a format consumable by XGBoost (e.g., NumPy/Parquet).  
-   - Train a gradient-boosted trees classifier to distinguish job types (e.g., Data Scientist vs Software Engineer vs Analyst).  
-
-3. **Model Evaluation & Summaries**  
-   - Metrics (accuracy, F1, etc.) captured in `ml_results/ml_summary.json`.  
-   - Comparative analysis with simpler ML models (`ml_job_classifier.py`).  
-
-**Why XGBoost?**
-
-- Strong performance on structured/tabular data  
-- Handles non-linear relationships and complex feature interactions  
-- Often outperforms linear models for job classification tasks  
-
----
-
-### 2. Spark-Based Recommendation Engine (ALS Recommender)
-
-**File:** `spark_recommender.py`  
-
-**Goal:** Recommend **jobs to users** (or skills to users) using **collaborative filtering** with Spark MLlib’s **Alternating Least Squares (ALS)** algorithm.
-
-**Core Idea:**
-
-- Treat job applications, clicks, or interest levels as **implicit/explicit feedback**.  
-- Model user–job interactions as a sparse matrix.  
-- Use ALS to factorize into:
-  - User latent factors  
-  - Job latent factors  
-
-**High-Level Workflow:**
-
-1. **Input Data**  
-   - `users.csv`, `recommendations.csv`, and job-related signals (e.g., past applications or interest).  
-
-2. **Pre-processing with Spark**  
-   - Assign integer IDs to users and jobs  
-   - Normalize or weight feedback signals (e.g., views, clicks, saves)  
-
-3. **ALS Model Training**  
-   - Configure hyperparameters: `rank`, `maxIter`, `regParam`, etc.  
-   - Train with Spark MLlib’s `ALS` implementation.  
-
-4. **Generate Recommendations**  
-   - `recommendForAllUsers(k)` – top-`k` jobs per user  
-   - Save outputs to `data/output_recommendation.csv`  
-
-**Outcome:**
-
-- A **Scalable Recommender System** that demonstrates how Spark MLlib can personalize job suggestions at scale.  
-
----
-
-### 3. Additional ML Modules
-
-- **`ml_salary_predictor.py`**  
-  - Predicts salary ranges based on features such as role, industry, location, seniority, and skill counts.  
-
-- **`ml_skill_extractor.py`**  
-  - Extracts and normalizes skills using basic NLP or rules from job descriptions.  
-
-- **`ml_recommender.py`**  
-  - Can be used for content-based recommendation (e.g., skills-based job suggestions) and comparison with ALS.  
-
-- **`ml_pipeline.py`**  
-  - Coordinates feature engineering, model training, and evaluation for different ML tasks.  
-
-Detailed explanations live in **`spark-analytics/ML_README.md`** and **`INTEGRATION_SUMMARY.md`**.
+This is a **streaming-style, batch-fed pipeline** using files, not a hard real-time system with strict latency guarantees.
 
 ---
 
 ## 🎓 Key Research Questions Answered
 
 1. **What skills should students learn first?**  
-   - **Answer:** Top skills visualization + skill co-occurrence/pair analysis.  
+   - Answer: Top 10 visualization + skill pairs analysis  
 
 2. **Which industries are beginner-friendly?**  
-   - **Answer:** Entry barriers bubble chart (industries requiring < 5 skills on average).  
+   - Answer: Entry barriers bubble chart (< 5 skills required)  
 
 3. **Are skills specialized or generalist?**  
-   - **Answer:** Skill diversity index + quadrant analysis.  
+   - Answer: Skill diversity quadrant analysis  
 
-4. **What is a sensible learning progression?**  
-   - **Answer:** Career path builder (foundation → intermediate → advanced).  
+4. **What's the learning progression?**  
+   - Answer: Career path builder with foundation/intermediate/advanced  
 
-5. **Which skills appear together most often?**  
-   - **Answer:** Skill co-occurrence network and top skill pairs.  
-
-6. **Which jobs are best for a given student profile?**  
-   - **Answer:** Spark Recommender (ALS) + XGBoost job classifier + salary predictions.  
+5. **What skills appear together?**  
+   - Answer: Skill co-occurrence pairs (learn bundles efficiently)  
 
 ---
 
@@ -499,43 +312,34 @@ Detailed explanations live in **`spark-analytics/ML_README.md`** and **`INTEGRAT
 
 ### Dataset Statistics
 
-- **Total Job Postings:** 40,000+ records  
-- **Companies:** 91,026 company records  
-- **Industries:** 147 unique industries  
-- **Skills:** 1,000+ unique skills tracked  
-- **Geographic Coverage:** Global job market  
+- **Total Job Postings**: 40,000+ records  
+- **Companies**: 91,026 company records  
+- **Industries**: 147 unique industries  
+- **Skills**: 1,000+ unique skills tracked  
+- **Geographic Coverage**: Global job market data  
 
 ### Key Findings
 
-1. **Industry Dominance**  
-   - Technology, Finance, and Healthcare account for **60%+** of postings.  
+1. **Industry Dominance**: Technology, Finance, and Healthcare account for 60%+ of postings  
+2. **Company Size Correlation**: Larger companies post 3x more jobs on average  
+3. **Skill Bundling**: Top 20 skill pairs identified for efficient learning  
+4. **Entry Barriers**: 30% of industries require < 5 skills, marking them as beginner-friendly  
+5. **Versatile Skills**: SQL, Python, and Communication appear in 80+ industries  
 
-2. **Company Size Correlation**  
-   - Large companies post **~3x more jobs** on average compared to smaller ones.  
+### Analysis Notebooks
 
-3. **Skill Bundling**  
-   - Top 20 skill pairs identified, enabling **bundle-based learning**.  
+- `data_analysis.ipynb`: Pandas-based EDA with frequency plots, heatmaps, and distributions  
+- `complex_queries.ipynb`: Spark SQL-based analysis with advanced aggregations  
 
-4. **Entry Barriers**  
-   - Around **30% of industries** require < 5 skills, marking them as more accessible.  
-
-5. **Versatile Skills**  
-   - Skills like **SQL, Python, and Communication** appear across **80+ industries**, making them valuable core skills.  
-
-### EDA Notebooks
-
-- `data_analysis.ipynb` – Pandas-based EDA with distributions, heatmaps, frequency plots.  
-- `complex_queries.ipynb` – Spark SQL–based analytics with advanced queries and visualizations.  
+All visualizations saved to: `analytics_output/visuals/`
 
 ---
 
 ## 🛠️ Technical Implementation
 
-### Spark Configuration (Example)
+### Spark Configuration
 
 ```python
-from pyspark.sql import SparkSession
-
 spark = SparkSession.builder \
     .appName("LinkedIn Job Analysis") \
     .config("spark.driver.memory", "4g") \
@@ -543,30 +347,24 @@ spark = SparkSession.builder \
     .getOrCreate()
 ```
 
-### Complex Query Example (Top Skills per Industry)
+### Complex Query Example
 
 ```python
-from pyspark.sql.functions import count, desc, col
-from pyspark.sql.window import Window
-from pyspark.sql.functions import rank
-
+# Top 10 skills per industry with ranking
 skills_by_industry = job_skills \
     .join(skill_map, "skill_abr") \
     .join(job_industries, "job_id") \
     .join(industry_map, "industry_id") \
     .groupBy("industry_name", "skill_name") \
     .agg(count("*").alias("skill_count")) \
-    .withColumn(
-        "rank",
-        rank().over(
-            Window.partitionBy("industry_name")
-                  .orderBy(desc("skill_count"))
-        )
-    ) \
+    .withColumn("rank", rank().over(
+        Window.partitionBy("industry_name")
+              .orderBy(desc("skill_count"))
+    )) \
     .filter(col("rank") <= 10)
 ```
 
-### Streaming Setup Example
+### Streaming Setup
 
 ```python
 # Read stream from directory
@@ -583,164 +381,104 @@ query = streaming_df \
     .outputMode("complete") \
     .format("console") \
     .start()
-
-query.awaitTermination()
 ```
 
 ---
 
-## 🎯 Check-In & Demo Requirements
+## 🎯 Check-In Demo Requirements
 
-This project is designed to **fully satisfy** and exceed the course’s check-in/demo requirements:
+This project fully satisfies all check-in requirements:
 
-- ✅ **Complex Queries:**  
-  - 8+ sophisticated Spark SQL queries with window functions, joins, and aggregations  
+✅ **Complex Queries**: 8 sophisticated Spark SQL queries with window functions, joins, aggregations  
+✅ **Streaming Setup**: Streaming pipeline with Spark Structured Streaming (processor + simulator)  
+✅ **Demo Results**: All visualizations + console output ready to show  
+✅ **Technical Challenges**: Documented (Hadoop on Windows, cell execution order, data/schema alignment)  
+✅ **ML Integration Plan**: Detailed roadmap in `Documentation/ML_INTEGRATION_PLAN.md`  
 
-- ✅ **Streaming Setup:**  
-  - Real-time processing with Spark Structured Streaming (processor + simulator)  
+### Demo Flow (~30 minutes)
 
-- ✅ **ML Integration (Implemented & Planned):**  
-  - XGBoost job classifier, Spark ALS recommender, salary prediction, skill extraction  
-
-- ✅ **Demo-Ready Results:**  
-  - Visualizations, console streaming outputs, and ML summaries ready to present  
-
-- ✅ **Technical Challenges Documented:**  
-  - Handling Hadoop on Windows, execution order issues in notebooks, schema alignment, and ML integration hurdles  
-
-### Suggested Demo Flow (7–8 minutes)
-
-1. **Complex Queries (3 min):**  
-   - Show `complex_queries.ipynb` and walk through 2–3 key queries.  
-
-2. **Visualizations (2 min):**  
-   - Open `analytics_output/visuals/` and explain the 8 charts with student-focused narratives.  
-
-3. **Streaming Demo (2 min):**  
-   - Run streaming processor + generator to highlight real-time capabilities.  
-
-4. **ML & Recommendations (1 min):**  
-   - Summarize XGBoost classifier and Spark Recommender results from `ml_results`.  
-
-5. **Q&A (optional):**  
-   - Discuss challenges and future improvements.  
-
-Additional details: see **`Documentation/DEMO_GUIDE.md`** and **`INTEGRATION_SUMMARY.md`**.
+1. **Show Complex Queries** (3 min): Open `complex_queries.ipynb`, demonstrate 3 original queries  
+2. **Show Visualizations** (2 min): Display 5 charts with student insights  
+3. **Run Streaming Demo** (2 min): Demo of streaming processor + simulator on file-based batches  
+4. **Q&A** (1 min): Discuss challenges and next steps  
 
 ---
 
-## 🔮 Future Enhancements (Extended ML Roadmap)
+## 📋 Future Enhancements (Phase 3: ML)
 
-Even beyond the current implementation, there is a clear roadmap for further work:
+### Planned Machine Learning Integration
 
-1. **Richer Job Classification**  
-   - Incorporate transformer-based embeddings (e.g., BERT) to improve XGBoost features.  
+1. **Job Classification**: MLlib Random Forest for categorizing roles (with XGBoost as a comparative baseline)  
+2. **Salary Prediction**: Linear regression based on skills, experience, location  
+3. **Skill Extraction**: NLP-based skill mining from job descriptions  
+4. **Recommendation System**: Collaborative filtering for job matching  
+5. **Trend Forecasting**: Time-series analysis for market predictions  
 
-2. **Advanced Salary Prediction**  
-   - Use gradient boosting and ensemble models for more accurate salary forecasting.  
-
-3. **NLP-Based Skill Extraction**  
-   - Use modern NLP (spaCy, transformers) to automatically mine skills from free-text job descriptions.  
-
-4. **Hybrid Recommendation**  
-   - Combine:
-     - Collaborative filtering (ALS)  
-     - Content-based (skills, titles, industries)  
-     - XGBoost ranking models  
-   - to create a holistic, personalized recommender.  
-
-5. **Trend Forecasting**  
-   - Use time-series modeling to predict demand and salary trends over time.  
-
-All ML plans and current status are tracked in **`Documentation/ML_INTEGRATION_PLAN.md`** and **`ML_README.md`**.
+See: `Documentation/ML_INTEGRATION_PLAN.md` for complete roadmap
 
 ---
 
-## ⚠️ Performance & Common Issues
+## ⚠️ Important Notes
 
 ### Performance Optimization
 
-- **Shuffle Partitions:**  
-  - Default set to `4` for local machines; scale up (e.g., `200+`) for production clusters.  
+- **Shuffle Partitions**: Set to 4 for local development (adjust for cluster: 200+)  
+- **Driver Memory**: 4GB recommended for full dataset processing  
+- **Data Caching**: Use `.cache()` for DataFrames used multiple times  
+- **File Formats**: Parquet preferred over CSV for analytics output  
 
-- **Driver Memory:**  
-  - Recommended `spark.driver.memory = "4g"` (or higher for full dataset).  
+### Common Issues & Solutions
 
-- **Caching:**  
-  - Use `.cache()` for DataFrames used in multiple queries.  
+1. **Hadoop Error (Windows)**:  
+   - Solution: Install `winutils.exe` and set `HADOOP_HOME`  
 
-- **Columnar Formats:**  
-  - Use **Parquet** for intermediate analytics to reduce I/O and improve performance.  
+2. **NameError in Notebook**:  
+   - Solution: Run all cells in order (use "Run All")  
 
-### Common Issues & Fixes
+3. **Out of Memory**:  
+   - Solution: Increase `spark.driver.memory` or reduce dataset size  
 
-1. **Hadoop Error on Windows**  
-   - Install `winutils.exe`, set `HADOOP_HOME`, and update `PATH`.  
-
-2. **NameError / Missing Variable in Notebook**  
-   - Always run notebooks with **"Run All"** to respect cell dependencies.  
-
-3. **Out of Memory**  
-   - Reduce dataset size or increase `spark.driver.memory`.  
-
-4. **Streaming Not Triggering**  
-   - Ensure `streaming_input/` exists and contains files.  
-   - Verify file permissions and schema consistency.  
+4. **Streaming Not Starting**:  
+   - Solution: Ensure `streaming_input/` directory exists  
 
 ---
 
 ## 📚 Documentation
 
-- **`README.md` (this file):**  
-  High-level overview, architecture, and setup.  
-
-- **`spark-analytics/README.md`:**  
-  Detailed Spark analytics and module descriptions.  
-
-- **`spark-analytics/ML_README.md`:**  
-  In-depth explanation of ML models, including XGBoost and Spark Recommender.  
-
-- **`Documentation/DEMO_GUIDE.md`:**  
-  Step-by-step demo instructions.  
-
-- **`Documentation/PROJECT_SUMMARY.md`:**  
-  Complete technical write-up of design decisions and findings.  
-
-- **`Documentation/ML_INTEGRATION_PLAN.md`:**  
-  ML roadmap and integration design.  
-
-- **`Documentation/CHECKLIST.md`:**  
-  Pre-demo checklist to ensure all components work.  
+- **README.md** (this file): Project overview and setup  
+- **spark-analytics/README.md**: Detailed analytics documentation  
+- **Documentation/DEMO_GUIDE.md**: Presentation instructions  
+- **Documentation/PROJECT_SUMMARY.md**: Complete technical explanation  
+- **Documentation/ML_INTEGRATION_PLAN.md**: Future ML roadmap  
+- **Documentation/CHECKLIST.md**: Demo day checklist  
 
 ---
 
 ## 👥 Team Contributions
 
-All team members contributed to:
-
-- Data cleaning, integration, and exploratory analysis  
-- Design and implementation of Spark SQL queries  
-- Visualization design and storytelling for students  
-- Streaming architecture and test data generation  
-- Machine learning pipelines (XGBoost, Spark Recommender, etc.)  
-- Documentation, demo preparation, and project planning  
+All team members contributed equally to:
+- Data analysis and query design  
+- Visualization development  
+- Streaming architecture  
+- Documentation and presentation preparation  
 
 ---
 
-## 📄 License & Course Information
+## 📄 License
 
-This project is developed for educational purposes as part of:
+This project is for educational purposes as part of ITCS 6190 - Cloud Computing.
 
-- **Course:** ITCS 6190 – Cloud Computing  
-- **Semester:** Fall 2025  
-- **University:** University of North Carolina at Charlotte  
-
-License: See `LICENSE` file in the repository.
+**Course**: ITCS 6190 - Cloud Computing  
+**Semester**: Fall 2025  
+**University**: University of North Carolina at Charlotte  
 
 ---
 
 ## 🔗 Dataset Source
 
-**LinkedIn Job Postings Dataset (2023–2024)**  
-Source: Kaggle – [LinkedIn Job Postings](https://www.kaggle.com/datasets/arshkon/linkedin-job-postings)  
-License: **CC0 Public Domain**
+**LinkedIn Job Postings Dataset** (2023-2024)  
+Source: Kaggle - [LinkedIn Job Postings](https://www.kaggle.com/datasets/arshkon/linkedin-job-postings)  
+License: CC0 Public Domain  
+
+---
+
