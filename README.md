@@ -205,7 +205,7 @@ python3 complex_queries_job.py  # python file
 
 # Run it, generates
 # - 10 visualizations
-# - Query results (CSV/Parquet)
+# - Query results (CSV files)
 ```
 
 ### 4.  Streaming-Style Demo
@@ -529,8 +529,7 @@ All without needing to run any code or understand the underlying infrastructure.
 
 - **Shuffle Partitions**: Set to 4 for local development (adjust for cluster: 200+)  
 - **Driver Memory**: 4GB recommended for full dataset processing  
-- **Data Caching**: Use `.cache()` for DataFrames used multiple times  
-- **File Formats**: Parquet preferred over CSV for analytics output  
+- **Data Caching**: Use `.cache()` for DataFrames used multiple times
 
 ### Common Issues & Solutions
 
