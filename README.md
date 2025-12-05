@@ -248,7 +248,7 @@ The project demonstrates advanced Spark SQL capabilities:
 
 Our pipeline produces a rich set of visual outputs across streaming analytics, core Spark SQL analytics, clustering, classification, and recommendations.
 
-#### A. Streaming-Style Analytics
+## A. Streaming-Style Analytics
 
 In addition to batch analytics on the full Kaggle dataset, we also implement a **Spark Structured Streaming–style pipeline**:
 
@@ -257,7 +257,7 @@ In addition to batch analytics on the full Kaggle dataset, we also implement a *
 - For model training and evaluation, we rely on the **LinkedIn Job Postings dataset from Kaggle**, which provides a large, diverse historical corpus. This combination of a rich offline dataset + streaming-style simulated input helps our ML models produce **effective, realistic results** while keeping the pipeline easy to run on a single machine.
 
 
-#### B. Core Spark SQL Analytics
+## B. Core Spark SQL Analytics
 
 3. **Top Skills in Focus Industry** (`top_skills_top_industry.png`)  
    - Top 10 skills for the highest–skill-demand industry (e.g., Newspaper Publishing).  
@@ -271,7 +271,7 @@ In addition to batch analytics on the full Kaggle dataset, we also implement a *
    - Ranks skills by how many industries they appear in.  
    - Highlights “safe bet” skills like Management or IT that transfer across many sectors.
 
-#### C. Clustering & Skill Landscape
+## C. Clustering & Skill Landscape
 
 6. **Skill Cluster Sizes (Top)** (`skill_cluster_sizes.png`)  
    - Shows how many skills fall into each cluster discovered by the ML pipeline.  
@@ -281,7 +281,7 @@ In addition to batch analytics on the full Kaggle dataset, we also implement a *
    - Heatmap of key skills (Python, SQL, AWS, Spark, etc.) vs. clusters.  
    - Darker cells indicate skills that define or dominate specific clusters.
 
-#### D. Classification & Recommendation Insights
+## D. Classification & Recommendation Insights
 
 8. **Classification Predictions Distribution** (`classification_class_distribution.png`)  
    - Histogram of predicted job classes from the classifier.  
