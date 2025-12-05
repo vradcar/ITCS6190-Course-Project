@@ -152,15 +152,20 @@ What `run.sh` does:
 
 - Creates and activates a virtual environment under `spark-analytics/.venv`  
 - Installs all dependencies from `spark-analytics/requirements.txt`  
-- Generates streaming test data with `streaming_test_data_generator.py`  
-- Runs batch analytics and ML pipeline scripts (e.g., `main.py`, `ml_pipeline.py`, `ml_job_classifier_xg.py`, `spark_recommender.py`)  
-- Runs the complex analytics job to produce query CSVs and visualizations  
-- Prints a summary of where outputs are stored, including:
-  - Query results under `spark-analytics/analytics_output/query_results`  
-  - Visuals under `spark-analytics/analytics_output/visuals`  
-  - ML outputs and recommendations under `spark-analytics/ml_results` and `data/recommendations.csv`  
+- Generates streaming-style test data with `streaming_test_data_generator.py`  
+- Runs the main ML pipeline via `ml_pipeline.py --save`  
+- Runs the XGBoost classifier (`ml_job_classifier_xg.py`) as a comparative model  
+- Runs the Spark-based recommender system (`spark_recommender.py`)  
+- Runs the complex analytics + visualization job (`complex_queries_job.py`) to produce query CSVs and charts  
+- Prints a summary of where all artifacts are saved, including:  
+  - ML summary & models: `spark-analytics/ml_results`  
+  - ML detailed outputs: `spark-analytics/analytics_output/ml_outputs`  
+  - Spark recommendation outputs: `spark-analytics/analytics_output/Spark_recommendation_results`  
+  - Query results: `spark-analytics/analytics_output/query_results`  
+  - Visualizations: `spark-analytics/analytics_output/visuals`  
 
-You can still run individual components manually (see below), but `run.sh` is the easiest way to **run everything** for grading or demos.
+You can still run individual components manually (e.g., specific notebooks or scripts), but `run.sh` is the easiest way to **run everything end-to-end** for grading or demos.
+
 
 ---
 ### Prerequisites
@@ -202,26 +207,21 @@ code complex_queries.ipynb  # or jupyter notebook
 # Run all cells to generate:
 # - 5 visualizations
 # - Query results (CSV/Parquet)
-# - Student action plan
 ```
 
-### 4. Run Streaming Demo
+### 4.  Streaming-Style Demo
 
-Terminal 1 (Streaming Processor):
+The end-to-end run via `./run.sh` already generates streaming-style batches and runs the Spark jobs.  
+If you want to **only regenerate the streaming input data** used by the pipeline, run:
+
 ```bash
 cd spark-analytics
-python streaming_processor.py
+python streaming_test_data_generator.py
 ```
 
-Terminal 2 (Data Simulator):
-```bash
-cd spark-analytics
-python streaming_data_simulator.py
-```
+This script writes multiple CSV batches into the `streaming_input/` directory, simulating a feed of incoming job postings.  
+These batches are then consumed by the Spark jobs as a **streaming-style, file-based pipeline**, rather than a strict low-latency real-time system.
 
-This demonstrates a **streaming-style pipeline** over file-based job posting batches, rather than a strict low-latency real-time system.
-
----
 
 ## 📊 Analytics Capabilities
 
@@ -244,35 +244,61 @@ The project demonstrates advanced Spark SQL capabilities:
    - Identifies transferable skills  
    - Result: Skills valuable across multiple sectors  
 
-### Visualizations (5 Total)
+## Visualizations (10 Total)
 
-1. **Top Skills in Focus Industry** (`top_skills_top_industry.png`)
-   - Horizontal bar chart of the top 10 skills in the highest–skill-demand industry (e.g., Newspaper Publishing).
-   - Helps students see which skills dominate a particular sector.
 
-2. **Average Skills Required by Industry (Top 15)** (`avg_skills_by_industry.png`)
-   - Shows average number of skills required per job across the top 15 industries.
-   - Interpreted as **entry barriers**: fewer required skills → easier to enter.
+Our pipeline produces a rich set of visual outputs across streaming analytics, core Spark SQL analytics, clustering, classification, and recommendations.
 
-3. **Most Versatile Skills (Top 20)** (`cross_industry_skills.png`)
-   - Ranks skills by the number of industries they appear in.
-   - Highlights “safe bet” skills that transfer across many sectors (e.g., Management, IT, Sales).
+#### A. Streaming-Style Analytics
 
-4. **Skill Cluster Sizes** (`skill_cluster_sizes.png`)
-   - Visualizes how many skills fall into each cluster (from the ML-based clustering step).
-   - Gives a sense of which skill groups are broad vs. highly specialized.
+1. **Top Job Titles in Latest Stream Batch** (`stream_top_titles.png`)  
+   - Horizontal bar chart of the most common job titles in the most recent micro-batch.  
+   - Shows which roles (e.g., DevOps Engineer, UX Designer, Cloud Architect) are currently dominating the incoming stream.
 
-5. **Classification Predictions Distribution** (`classification_class_distribution.png`)
-   - Shows the distribution of predicted classes from the job classifier.
-   - Useful for spotting class imbalance and understanding how the model is behaving across job categories.
+2. **Experience Levels in Latest Stream Batch** (`stream_experience_levels.png`)  
+   - Bar chart of experience levels (Entry, Mid, Senior, Director, Internship) in the latest batch.  
+   - Helps students see how “senior” the current market is skewing in near-real-time.
 
-   Under the hood, we compared two classification models:
-   - A **Spark ML Random Forest** (primary model used in the pipeline)  
-   - An **XGBoost classifier** as a reference model  
+#### B. Core Spark SQL Analytics
 
-   XGBoost achieved accuracy within **<1% of the Random Forest model**, but was slightly lower, so we kept Random Forest as the primary production model and used XGBoost as a benchmark for robustness.
+3. **Top Skills in Focus Industry** (`top_skills_top_industry.png`)  
+   - Top 10 skills for the highest–skill-demand industry (e.g., Newspaper Publishing).  
+   - Concrete list of what you need to break into that specific sector.
 
-### Streaming Analytics
+4. **Average Skills Required by Industry (Top 15)** (`avg_skills_by_industry.png`)  
+   - Average number of skills required per job across the top 15 industries.  
+   - Interpreted as **entry barriers**: fewer skills → easier entry for students.
+
+5. **Most Versatile Skills (Top 20)** (`cross_industry_skills.png`)  
+   - Ranks skills by how many industries they appear in.  
+   - Highlights “safe bet” skills like Management or IT that transfer across many sectors.
+
+#### C. Clustering & Skill Landscape
+
+6. **Skill Cluster Sizes (Top)** (`skill_cluster_sizes.png`)  
+   - Shows how many skills fall into each cluster discovered by the ML pipeline.  
+   - Indicates which clusters are broad (lots of skills) vs. tightly specialized.
+
+7. **Skill Frequency by Cluster (Heatmap)** (`skill_cluster_heatmap.png`)  
+   - Heatmap of key skills (Python, SQL, AWS, Spark, etc.) vs. clusters.  
+   - Darker cells indicate skills that define or dominate specific clusters.
+
+#### D. Classification & Recommendation Insights
+
+8. **Classification Predictions Distribution** (`classification_class_distribution.png`)  
+   - Histogram of predicted job classes from the classifier.  
+   - Used to inspect class imbalance and sanity-check the model’s behavior.
+
+9. **Top Users by Unique Jobs Recommended** (`recs_top_users_unique_jobs.png`)  
+   - Bar plot of users vs. number of unique jobs recommended.  
+   - Shows which users receive the most diverse recommendation set.
+
+10. **Recommendation Score Histogram** (`recommendation_score_hist.png`)  
+    - Histogram of recommendation scores from the collaborative filtering model.  
+    - Reveals the score distribution and helps pick sensible thresholds for “strong” vs. “weak” recommendations.
+
+
+## Streaming Analytics
 
 - **Technology**: Spark Structured Streaming  
 - **Source**: File-based (easily migrated to Kafka or other streaming sources)  
@@ -286,22 +312,39 @@ This is a **streaming-style, batch-fed pipeline** using files, not a hard real-t
 
 ---
 
-## 🎓 Key Research Questions Answered
+## 🎓 Key Research Questions
 
-1. **What skills should students learn first?**  
-   - Answer: Top 10 visualization + skill pairs analysis  
+Our Job Intelligence Engine is designed around a set of student- and job-seeker-focused research questions:
 
-2. **Which industries are beginner-friendly?**  
-   - Answer: Entry barriers bubble chart (< 5 skills required)  
+1. **Which job titles are currently most in demand?**  
+   - Answered by streaming visualizations of top job titles in the latest micro-batch.
 
-3. **Are skills specialized or generalist?**  
-   - Answer: Skill diversity quadrant analysis  
+2. **How is demand distributed across experience levels?**  
+   - Entry vs. Mid vs. Senior vs. Director vs. Internship, from the streaming experience-level chart.
 
-4. **What's the learning progression?**  
-   - Answer: Career path builder with foundation/intermediate/advanced  
+3. **Which skills matter most in each industry?**  
+   - Answered by the “Top Skills in Focus Industry” and industry-specific skill ranking queries.
 
-5. **What skills appear together?**  
-   - Answer: Skill co-occurrence pairs (learn bundles efficiently)  
+4. **Which industries have low entry barriers for students?**  
+   - Derived from “Average Skills Required by Industry” — industries needing fewer skills are more beginner-friendly.
+
+5. **Which skills are the most versatile across the job market?**  
+   - Answered by the “Most Versatile Skills (Top 20)” visualization based on cross-industry skill overlap.
+
+6. **How do technical skills naturally cluster together?**  
+   - Investigated via skill clusters and the “Skill Frequency by Cluster” heatmap.
+
+7. **Is our job classifier well-balanced across classes?**  
+   - Checked using the “Classification Predictions Distribution” plot.
+
+8. **Are job recommendations diverse and fair across users?**  
+   - Studied using “Top Users by Unique Jobs Recommended” and the recommendation score histogram.
+
+9. **What recommendation score ranges correspond to strong vs. weak matches?**  
+   - Inferred from the shape of the recommendation score histogram.
+
+Together, these questions guide how we turn raw LinkedIn job postings into **actionable career intelligence** for students and early-career professionals.
+
 
 ---
 
@@ -328,22 +371,30 @@ This is a **streaming-style, batch-fed pipeline** using files, not a hard real-t
 
 ---
 
-## 📓 Analysis Notebooks
+## 📓 Analysis Components
 
 - **`data_analysis.ipynb`**  
-  Pandas-based EDA with:
-  - Dataset loading and basic profiling (`.info()`, `.describe()`)  
-  - Frequency plots and bar charts for industries, specialities, and skills  
-  - Initial cleaning of `postings.csv` and export to `postings_cleaned.csv`
+  Pandas-based exploratory data analysis with:
+  - Loading core CSVs from the `data/` folder  
+  - Basic profiling of tables (`head()`, `.info()`, `.describe()`)  
+  - Frequency plots / bar charts for industries, companies, and skills  
+  - Cleaning the raw postings data and exporting a slimmer
+    `postings_cleaned.csv` used by all Spark jobs
 
-- **`complex_queries.ipynb`**  
-  Spark SQL-based analytics with:
-  - Multi-table joins across jobs, skills, and industries  
-  - Window functions for ranking top skills by industry  
-  - Aggregations used later for the complex query outputs and visualizations
-
-_All visualizations produced in these notebooks are saved under:_  
-`analytics_output/visuals/`
+- **`complex_queries_job.py`**  
+  Production Spark script (used instead of a notebook) that:
+  - Initializes a Spark session and resolves paths to the `data/` and
+    `analytics_output/` directories  
+  - Loads `postings_cleaned.csv`, `jobs/job_skills.csv`,
+    `jobs/job_industries.csv`, and the `mappings/skills.csv` and
+    `mappings/industries.csv` lookup tables  
+  - Runs three main Spark SQL aggregations:
+    - Top skills per industry with window functions for ranking  
+    - Average number of skills per job by industry (entry-barrier signal)  
+    - Cross-industry skill overlap (how many industries use each skill)  
+  - Writes the aggregated tables as CSVs under
+    `spark-analytics/analytics_output/query_results/` for downstream use in
+    visualizations and reporting :contentReference[oaicite:0]{index=0}
 
 
 ## 🛠️ Technical Implementation
@@ -351,83 +402,128 @@ _All visualizations produced in these notebooks are saved under:_
 ### Spark Configuration
 
 ```python
-spark = SparkSession.builder \
-    .appName("LinkedIn Job Analysis") \
-    .config("spark.driver.memory", "4g") \
-    .config("spark.sql.shuffle.partitions", "4") \
+from pyspark.sql import SparkSession
+
+spark = (
+    SparkSession.builder
+    .appName("LinkedIn Job Complex Analytics")
+    .config("spark.driver.memory", "4g")
+    .config("spark.sql.shuffle.partitions", "4")
     .getOrCreate()
+)
+
+spark.sparkContext.setLogLevel("WARN")
 ```
 
-### Complex Query Example
+### Core Complex Queries (Spark SQL)
+
+Below is a representative example of how we implement the main analytics in `complex_queries_job.py`.
+
+#### 1️⃣ Top 10 Skills per Industry (with Ranking)
+
+This query ranks skills within each industry using window functions and broadcast joins for efficiency.
 
 ```python
+from pyspark.sql.functions import col, count, desc, rank, broadcast
+from pyspark.sql.window import Window
+
+# Clean industry mapping (drop nulls)
+industry_map_clean = industry_map.dropna()
+
 # Top 10 skills per industry with ranking
-skills_by_industry = job_skills \
-    .join(skill_map, "skill_abr") \
-    .join(job_industries, "job_id") \
-    .join(industry_map, "industry_id") \
-    .groupBy("industry_name", "skill_name") \
-    .agg(count("*").alias("skill_count")) \
-    .withColumn("rank", rank().over(
-        Window.partitionBy("industry_name")
-              .orderBy(desc("skill_count"))
-    )) \
+skills_by_industry = (
+    job_skills
+    .join(broadcast(skill_map), "skill_abr")
+    .join(job_industries, "job_id")
+    .join(broadcast(industry_map_clean), "industry_id")
+    .groupBy("industry_name", "skill_name")
+    .agg(count("*").alias("skill_count"))
+    .withColumn(
+        "rank",
+        rank().over(
+            Window.partitionBy("industry_name")
+                  .orderBy(desc("skill_count"))
+        )
+    )
     .filter(col("rank") <= 10)
+    .orderBy("industry_name", "rank")
+)
 ```
 
-### Streaming Setup
+#### 2️⃣ Average Skills Required per Job by Industry
+
+We compute the average number of skills required per job, grouped by industry, which we later interpret as an **entry barrier** signal.
 
 ```python
-# Read stream from directory
-streaming_df = spark.readStream \
-    .schema(job_schema) \
-    .option("maxFilesPerTrigger", 1) \
-    .csv("streaming_input/")
+from pyspark.sql.functions import avg
 
-# Process and write output
-query = streaming_df \
-    .groupBy("location") \
-    .count() \
-    .writeStream \
-    .outputMode("complete") \
-    .format("console") \
-    .start()
+multi_skill_jobs = (
+    job_skills
+    .groupBy("job_id")
+    .agg(count("skill_abr").alias("num_skills"))
+    .join(job_industries, "job_id")
+    .join(broadcast(industry_map_clean), "industry_id")
+    .groupBy("industry_name")
+    .agg(
+        avg("num_skills").alias("avg_skills_required"),
+        count("job_id").alias("total_jobs")
+    )
+    .orderBy(desc("avg_skills_required"))
+)
 ```
 
----
+#### 3️⃣ Cross-Industry Skill Overlap
 
-## 🎯 Check-In Demo Requirements
+This query measures how many different industries use each skill, which we use to identify **versatile, high-transferability** skills.
 
-This project fully satisfies all check-in requirements:
+```python
+cross_industry_skills = (
+    job_skills
+    .join(broadcast(skill_map), "skill_abr")
+    .join(job_industries, "job_id")
+    .join(broadcast(industry_map_clean), "industry_id")
+    .select("skill_name", "industry_name")
+    .distinct()
+    .groupBy("skill_name")
+    .agg(count("industry_name").alias("num_industries"))
+    .orderBy(desc("num_industries"))
+)
+```
 
-✅ **Complex Queries**: 8 sophisticated Spark SQL queries with window functions, joins, aggregations  
-✅ **Streaming Setup**: Streaming pipeline with Spark Structured Streaming (processor + simulator)  
-✅ **Demo Results**: All visualizations + console output ready to show  
-✅ **Technical Challenges**: Documented (Hadoop on Windows, cell execution order, data/schema alignment)  
-✅ **ML Integration Plan**: Detailed roadmap in `Documentation/ML_INTEGRATION_PLAN.md`  
 
-### Demo Flow (~30 minutes)
+## 🎯 Spark Functionality & Design Approach
 
-1. **Show Complex Queries** (3 min): Open `complex_queries.ipynb`, demonstrate 3 original queries  
-2. **Show Visualizations** (2 min): Display 5 charts with student insights  
-3. **Run Streaming Demo** (2 min): Demo of streaming processor + simulator on file-based batches  
-4. **Q&A** (1 min): Discuss challenges and next steps  
+Our Job Intelligence Engine showcases several core Spark capabilities:
 
----
+- **Unified Batch + Streaming-Style Processing**  
+  We use Spark to handle both historical batch data (from Kaggle) and streaming-style micro-batches generated into `streaming_input/`, giving a realistic pipeline that can be later migrated to Kafka or other real-time sources.
 
-## 📋 Future Enhancements (Phase 3: ML)
+- **Spark SQL for Rich Analytics**  
+  Complex Spark SQL queries power our core insights:
+  - Window functions to rank top skills by industry  
+  - Multi-table joins across jobs, skills, companies, and industries  
+  - Aggregations for entry barriers, cross-industry skill overlap, and demand patterns  
 
-### Planned Machine Learning Integration
+- **ML & Recommendations on Spark Data**  
+  Cleaned and aggregated Spark outputs feed into our ML pipeline:
+  - Random Forest and XGBoost classifiers for job category prediction  
+  - A Spark-based recommender system that suggests jobs to users and logs scores for analysis  
 
-1. **Job Classification**: MLlib Random Forest for categorizing roles (with XGBoost as a comparative baseline)  
-2. **Salary Prediction**: Linear regression based on skills, experience, location  
-3. **Skill Extraction**: NLP-based skill mining from job descriptions  
-4. **Recommendation System**: Collaborative filtering for job matching  
-5. **Trend Forecasting**: Time-series analysis for market predictions  
+### Design Approach
 
-See: `Documentation/ML_INTEGRATION_PLAN.md` for complete roadmap
+- **Student-Centric Insight First**: Every query and visualization was designed to answer concrete questions a student or early-career job seeker might ask (Which skills? Which industries? Which roles?).
+- **Script-First, Reproducible Pipeline**: Instead of relying only on notebooks, we implemented `run.sh`, `ml_pipeline.py`, and `complex_queries_job.py` so the entire system can be run end-to-end with a single command for grading, demos, or future extensions.
+- **Modular Architecture**: The project is structured into clear layers—data preparation (`data_analysis.ipynb`), Spark analytics (`complex_queries_job.py`), ML (`ml_pipeline.py`, XGBoost classifier), and recommendations—making it easy to swap components or scale parts independently.
 
----
+
+## 📋 Future Enhancements
+
+A key next step is to build a **user-friendly interface** (web or desktop) on top of this Spark + ML pipeline, so students and job seekers can interactively:
+
+- Explore job market insights and visualizations  
+- Get personalized recommendations and skill roadmaps  
+
+All without needing to run any code or understand the underlying infrastructure.
 
 ## ⚠️ Important Notes
 
