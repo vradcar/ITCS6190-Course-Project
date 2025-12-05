@@ -173,11 +173,15 @@ def create_visualizations(skills_by_industry, multi_skill_jobs, cross_industry_s
 
     print("Generating visualizations from ML outputs and stream data...")
 
-    # Visualization 1: Top Skills in the #1 Industry only (Simplified from subplots)
+    # Visualization 1: Top Skills in the #1 Industry (sorted)
     try:
         if not avg_skills_pd.empty:
             top_industry = avg_skills_pd.nlargest(1, 'avg_skills_required')['industry_name'].iloc[0]
-            data = skills_by_industry_pd[skills_by_industry_pd['industry_name'] == top_industry].head(10)
+            data = (
+                skills_by_industry_pd[skills_by_industry_pd['industry_name'] == top_industry]
+                .sort_values('skill_count', ascending=False)
+                .head(10)
+            )
             
             plt.figure(figsize=(10, 6))
             sns.barplot(data=data, y='skill_name', x='skill_count', hue='skill_name', legend=False)
@@ -193,11 +197,11 @@ def create_visualizations(skills_by_industry, multi_skill_jobs, cross_industry_s
         print('⚠️  Failed to build top_skills_top_industry visualization')
         traceback.print_exc()
 
-    # Visualization 2: Average skills required by industry (top 15)
+    # Visualization 2: Average skills required by industry (top 15, sorted)
     try:
         if not avg_skills_pd.empty:
             plt.figure(figsize=(12, 8))
-            top_15_avg = avg_skills_pd.head(15)
+            top_15_avg = avg_skills_pd.sort_values('avg_skills_required', ascending=False).head(15)
             sns.barplot(data=top_15_avg, y='industry_name', x='avg_skills_required', hue='industry_name', legend=False)
             plt.title('Average Skills Required by Industry (Top 15)', fontsize=14, fontweight='bold')
             plt.xlabel('Avg Skills')
@@ -211,11 +215,11 @@ def create_visualizations(skills_by_industry, multi_skill_jobs, cross_industry_s
         print('⚠️  Failed to build avg_skills_by_industry visualization')
         traceback.print_exc()
 
-    # Visualization 3: Cross-industry skills (top 20)
+    # Visualization 3: Cross-industry skills (top 20, sorted)
     try:
         if not cross_industry_pd.empty:
             plt.figure(figsize=(12, 8))
-            top_20_cross = cross_industry_pd.head(20)
+            top_20_cross = cross_industry_pd.sort_values('num_industries', ascending=False).head(20)
             sns.barplot(data=top_20_cross, y='skill_name', x='num_industries', hue='skill_name', legend=False)
             plt.title('Most Versatile Skills (Top 20)', fontsize=14, fontweight='bold')
             plt.xlabel('Industry Count')
@@ -273,11 +277,11 @@ def create_visualizations(skills_by_industry, multi_skill_jobs, cross_industry_s
         print('⚠️  Failed to build stream_experience_levels visualization')
         traceback.print_exc()
 
-    # Visualization 6: Classification predictions — class distribution
+    # Visualization 6: Classification predictions — class distribution (use job_category if available)
     try:
         cls = ml_outputs.get("classification_predictions", pd.DataFrame())
         col_name = None
-        for c in ["predicted_class", "prediction", "label_predicted"]:
+        for c in ["job_category", "predicted_class", "prediction", "label_predicted"]:
             if c in cls.columns:
                 col_name = c
                 break
@@ -285,7 +289,7 @@ def create_visualizations(skills_by_industry, multi_skill_jobs, cross_industry_s
             dist = cls[col_name].value_counts().reset_index()
             dist.columns = ["class", "count"]
             plt.figure(figsize=(8,6))
-            sns.barplot(data=dist, x="class", y="count")
+            sns.barplot(data=dist.sort_values('count', ascending=False), x="class", y="count")
             plt.title("Classification Predictions Distribution", fontsize=14, fontweight='bold')
             plt.xticks(rotation=30, ha='right')
             plt.tight_layout()
@@ -297,59 +301,44 @@ def create_visualizations(skills_by_industry, multi_skill_jobs, cross_industry_s
         print('⚠️  Failed to build classification_class_distribution visualization')
         traceback.print_exc()
 
-    # Visualization 7: Classification — confidence histogram
+    # Visualization 7: Recommendations — score histogram (use available numeric confidence proxy)
     try:
-        cls = ml_outputs.get("classification_predictions", pd.DataFrame())
-        conf_col = None
-        for c in ["probability", "confidence", "score"]:
-            if c in cls.columns:
-                conf_col = c
-                break
-        if not cls.empty and conf_col:
+        recs = ml_outputs.get("job_recommendations", pd.DataFrame())
+        if not recs.empty and "score" in recs.columns:
             plt.figure(figsize=(8,6))
-            sns.histplot(cls[conf_col], bins=20)
-            plt.title("Classification Confidence Histogram", fontsize=14, fontweight='bold')
-            plt.xlabel("Confidence")
+            sns.histplot(recs["score"].dropna(), bins=20)
+            plt.title("Recommendation Score Histogram", fontsize=14, fontweight='bold')
+            plt.xlabel("Score")
             plt.ylabel("Frequency")
             plt.tight_layout()
-            plt.savefig(os.path.join(visuals_out, 'classification_confidence_hist.png'), dpi=300, bbox_inches='tight')
+            plt.savefig(os.path.join(visuals_out, 'recommendation_score_hist.png'), dpi=300, bbox_inches='tight')
             plt.close()
         else:
-            print("⚠️  Skipping classification_confidence_hist: No data available or column missing")
+            print("⚠️  Skipping recommendation_score_hist: No data available or column missing")
     except Exception:
-        print('⚠️  Failed to build classification_confidence_hist visualization')
+        print('⚠️  Failed to build recommendation_score_hist visualization')
         traceback.print_exc()
 
-    # Visualization 8: Recommendations — top recommended jobs per predicted class
+    # Visualization 8: Recommendations — top recommended jobs per user (unique jobs)
     try:
         recs = ml_outputs.get("job_recommendations", pd.DataFrame())
         if not recs.empty:
-            group_col = None
-            for c in ["predicted_class", "class", "segment"]:
-                if c in recs.columns:
-                    group_col = c
-                    break
-            cnt_col = None
-            for c in ["job_id", "recommendation_id", "item_id"]:
-                if c in recs.columns:
-                    cnt_col = c
-                    break
-            if group_col and cnt_col:
-                top = recs.groupby(group_col)[cnt_col].nunique().reset_index().sort_values(cnt_col, ascending=False).head(10)
+            if "user_id" in recs.columns and "job_index" in recs.columns:
+                top = recs.groupby("user_id")["job_index"].nunique().reset_index().sort_values("job_index", ascending=False).head(10)
                 plt.figure(figsize=(10,6))
-                sns.barplot(data=top, x=cnt_col, y=group_col)
-                plt.title("Top Recommended Jobs per Class (Unique Count)", fontsize=14, fontweight='bold')
+                sns.barplot(data=top, x="job_index", y="user_id")
+                plt.title("Top Users by Unique Jobs Recommended", fontsize=14, fontweight='bold')
                 plt.xlabel("Unique Jobs Recommended")
-                plt.ylabel("Class")
+                plt.ylabel("User ID")
                 plt.tight_layout()
-                plt.savefig(os.path.join(visuals_out, 'recs_top_jobs_per_class.png'), dpi=300, bbox_inches='tight')
+                plt.savefig(os.path.join(visuals_out, 'recs_top_users_unique_jobs.png'), dpi=300, bbox_inches='tight')
                 plt.close()
             else:
-                print("⚠️  Skipping recs_top_jobs_per_class: Required columns missing")
+                print("⚠️  Skipping recs_top_users_unique_jobs: Required columns missing")
         else:
-            print("⚠️  Skipping recs_top_jobs_per_class: No data available")
+            print("⚠️  Skipping recs_top_users_unique_jobs: No data available")
     except Exception:
-        print('⚠️  Failed to build recs_top_jobs_per_class visualization')
+        print('⚠️  Failed to build recs_top_users_unique_jobs visualization')
         traceback.print_exc()
 
     # Visualization 9: Skill clusters — cluster size distribution
@@ -377,12 +366,15 @@ def create_visualizations(skills_by_industry, multi_skill_jobs, cross_industry_s
         print('⚠️  Failed to build skill_cluster_sizes visualization')
         traceback.print_exc()
 
-    # Visualization 10: Skill clusters — cluster vs skill frequency heatmap (if available)
+    # Visualization 10: Skill clusters — cluster vs skill frequency heatmap (derive from extracted_skills)
     try:
         sc = ml_outputs.get("skill_clusters", pd.DataFrame())
-        needed = ["cluster_id", "skill_name"]
-        if not sc.empty and all(c in sc.columns for c in needed):
-            pivot = sc.groupby(["cluster_id", "skill_name"]).size().reset_index(name="count")
+        if not sc.empty and "cluster_id" in sc.columns and "extracted_skills" in sc.columns:
+            # Expand extracted_skills (comma-separated) to rows
+            expanded = sc.dropna(subset=["extracted_skills"]).copy()
+            expanded = expanded.assign(skill_name=expanded["extracted_skills"].str.split(",")).explode("skill_name")
+            expanded["skill_name"] = expanded["skill_name"].str.strip()
+            pivot = expanded.groupby(["cluster_id", "skill_name"]).size().reset_index(name="count")
             pivot = pivot.pivot(index="skill_name", columns="cluster_id", values="count").fillna(0)
             plt.figure(figsize=(12,8))
             sns.heatmap(pivot, cmap="Blues")
