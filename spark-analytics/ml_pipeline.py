@@ -504,11 +504,6 @@ def main():
             days_back=args.days_back,
             components=args.components
         )
-
-        if results:
-            print("trying to get results now")
-        if args.save:
-            print("trying to print now")
         
         # Save if requested
         if args.save and results:
