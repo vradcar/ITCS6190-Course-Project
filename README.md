@@ -19,7 +19,7 @@ This project implements a comprehensive **Apache Spark-based analytics platform*
 
 - **Complex Spark SQL Queries**: Window functions, multi-table joins, and advanced aggregations  
 - **Streaming**: Spark Structured Streaming for processing simulated job market data in micro-batches  
-- **Professional Visualizations**: 5 comprehensive charts showing market trends and opportunities  
+- **Professional Visualizations**: 10 comprehensive charts showing market trends and opportunities  
 - **Scalable Architecture**: Distributed processing with Apache Spark for large-scale data analysis  
 
 ---
@@ -200,12 +200,11 @@ If you're on Windows and encounter Hadoop errors:
 ### 3. Run Complex Queries Analysis
 
 ```bash
-# Open the notebook in VS Code or Jupyter
 cd spark-analytics
-code complex_queries.ipynb  # or jupyter notebook
+code complex_queries_job.py  # python file
 
-# Run all cells to generate:
-# - 5 visualizations
+# Run it, generates
+# - 10 visualizations
 # - Query results (CSV/Parquet)
 ```
 
@@ -251,13 +250,12 @@ Our pipeline produces a rich set of visual outputs across streaming analytics, c
 
 #### A. Streaming-Style Analytics
 
-1. **Top Job Titles in Latest Stream Batch** (`stream_top_titles.png`)  
-   - Horizontal bar chart of the most common job titles in the most recent micro-batch.  
-   - Shows which roles (e.g., DevOps Engineer, UX Designer, Cloud Architect) are currently dominating the incoming stream.
+In addition to batch analytics on the full Kaggle dataset, we also implement a **Spark Structured Streaming–style pipeline**:
 
-2. **Experience Levels in Latest Stream Batch** (`stream_experience_levels.png`)  
-   - Bar chart of experience levels (Entry, Mid, Senior, Director, Internship) in the latest batch.  
-   - Helps students see how “senior” the current market is skewing in near-real-time.
+- We **generate input job postings in micro-batches** (CSV files) using a custom generator script. These batches land in the `streaming_input/` folder and simulate a continuous feed of new jobs entering the market.  
+- Spark reads these micro-batches incrementally, allowing us to compute **near-real-time summaries** (e.g., current title mix, experience-level mix) on top of the same schema used for batch analytics.  
+- For model training and evaluation, we rely on the **LinkedIn Job Postings dataset from Kaggle**, which provides a large, diverse historical corpus. This combination of a rich offline dataset + streaming-style simulated input helps our ML models produce **effective, realistic results** while keeping the pipeline easy to run on a single machine.
+
 
 #### B. Core Spark SQL Analytics
 
