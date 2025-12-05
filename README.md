@@ -55,32 +55,15 @@ This project implements a comprehensive **Apache Spark-based analytics platform*
 ## 📂 Project Structure
 
 ```text
+.
 ├── Documentation
+│   ├── The Job Intelligence Engine(Final Presentation).pdf
 │   ├── Unattached and Unhinged_project proposal.pdf
 │   └── Unattached and Unhinged_project_2nd check in.pdf
 ├── LICENSE
+├── Project Demo and Technical aspects video
+│   └── Video of the Demo and technical explanations of our project.pdf
 ├── README.md
-├── analytics_output
-│   ├── STUDENT_ACTION_PLAN.txt
-│   ├── query_results
-│   │   ├── avg_skills_by_industry
-│   │   │   ├── _SUCCESS
-│   │   │   └── part-00000-02f9a49d-fb2d-49fe-87c5-6e0f7ad2da76-c000.snappy.parquet
-│   │   ├── avg_skills_by_industry.csv
-│   │   ├── cross_industry_skills
-│   │   │   ├── _SUCCESS
-│   │   │   └── part-00000-3e256c5d-6cdb-47c5-99d5-038cfb3bb425-c000.snappy.parquet
-│   │   ├── cross_industry_skills.csv
-│   │   ├── skills_by_industry
-│   │   │   ├── _SUCCESS
-│   │   │   └── part-00000-abed45b1-4805-433e-8384-26b7c33c48d5-c000.snappy.parquet
-│   │   └── skills_by_industry.csv
-│   └── visuals
-│       ├── avg_skills_by_industry.png
-│       ├── classification_class_distribution.png
-│       ├── cross_industry_skills.png
-│       ├── skill_cluster_sizes.png
-│       └── top_skills_top_industry.png
 ├── data
 │   ├── companies
 │   │   ├── companies.csv
@@ -99,19 +82,33 @@ This project implements a comprehensive **Apache Spark-based analytics platform*
 │   │   ├── _SUCCESS
 │   │   └── part-00000-d5c8f9f2-70b2-4195-98d5-609fb9eec289-c000.csv
 │   ├── postings_cleaned.csv
-│   ├── recommendations.csv
 │   └── users.csv
 ├── run.sh
 └── spark-analytics
-    ├── INTEGRATION_SUMMARY.md
-    ├── ML_README.md
     ├── README.md
-    ├── __pycache__
-    │   ├── data_loader.cpython-312.pyc
-    │   ├── ml_job_classifier.cpython-312.pyc
-    │   ├── ml_recommender.cpython-312.pyc
-    │   └── ml_skill_extractor.cpython-312.pyc
-    ├── complex_queries.ipynb
+    ├── analytics_output
+    │   ├── Spark_recommendation_results
+    │   │   └── recommendations.csv
+    │   ├── ml_outputs
+    │   │   ├── classification_predictions.csv
+    │   │   ├── job_recommendations.csv
+    │   │   └── skill_clusters.csv
+    │   ├── query_results
+    │   │   ├── avg_skills_by_industry.csv
+    │   │   ├── cross_industry_skills.csv
+    │   │   └── skills_by_industry.csv
+    │   └── visuals
+    │       ├── avg_skills_by_industry.png
+    │       ├── classification_class_distribution.png
+    │       ├── cross_industry_skills.png
+    │       ├── recommendation_score_hist.png
+    │       ├── recs_top_users_unique_jobs.png
+    │       ├── skill_cluster_heatmap.png
+    │       ├── skill_cluster_sizes.png
+    │       ├── stream_experience_levels.png
+    │       ├── stream_top_titles.png
+    │       └── top_skills_top_industry.png
+    ├── complex_queries_job.py
     ├── data_analysis.ipynb
     ├── data_loader.py
     ├── main.py
@@ -126,16 +123,16 @@ This project implements a comprehensive **Apache Spark-based analytics platform*
     ├── requirements.txt
     ├── spark_recommender.py
     ├── streaming_input
-    │   ├── batch_0000.csv
-    │   ├── batch_0001.csv
-    │   ├── batch_0002.csv
-    │   ├── batch_0003.csv
-    │   ├── batch_0004.csv
-    │   ├── batch_0005.csv
-    │   ├── batch_0006.csv
-    │   ├── batch_0007.csv
-    │   ├── batch_0008.csv
-    │   └── batch_0009.csv
+    │   ├── test_batch_0000.csv
+    │   ├── test_batch_0001.csv
+    │   ├── test_batch_0002.csv
+    │   ├── test_batch_0003.csv
+    │   ├── test_batch_0004.csv
+    │   ├── test_batch_0005.csv
+    │   ├── test_batch_0006.csv
+    │   ├── test_batch_0007.csv
+    │   ├── test_batch_0008.csv
+    │   └── test_batch_0009.csv
     └── streaming_test_data_generator.py
 ```
 
@@ -310,30 +307,44 @@ This is a **streaming-style, batch-fed pipeline** using files, not a hard real-t
 
 ## 📈 Exploratory Data Analysis (EDA)
 
-### Dataset Statistics
+## 📈 Dataset Statistics (from `data_analysis.ipynb`)
 
-- **Total Job Postings**: 40,000+ records  
-- **Companies**: 91,026 company records  
-- **Industries**: 147 unique industries  
-- **Skills**: 1,000+ unique skills tracked  
-- **Geographic Coverage**: Global job market data  
-
-### Key Findings
-
-1. **Industry Dominance**: Technology, Finance, and Healthcare account for 60%+ of postings  
-2. **Company Size Correlation**: Larger companies post 3x more jobs on average  
-3. **Skill Bundling**: Top 20 skill pairs identified for efficient learning  
-4. **Entry Barriers**: 30% of industries require < 5 skills, marking them as beginner-friendly  
-5. **Versatile Skills**: SQL, Python, and Communication appear in 80+ industries  
-
-### Analysis Notebooks
-
-- `data_analysis.ipynb`: Pandas-based EDA with frequency plots, heatmaps, and distributions  
-- `complex_queries.ipynb`: Spark SQL-based analysis with advanced aggregations  
-
-All visualizations saved to: `analytics_output/visuals/`
+- **Total Job Postings (raw `postings.csv`)**: 123,849 records  
+- **Job–Industry Links (`job_industries.csv`)**: 164,808 records  
+- **Job–Skill Links (`job_skills.csv`)**: 213,768 records  
+- **Industries (`mappings/industries.csv`)**: 422 unique industries  
+- **Skills (`mappings/skills.csv`)**: 35 aggregated skill categories  
+- **Geographic Coverage**: Global job market data (multiple countries and cities in the `location` column)
 
 ---
+
+## 🔍 Key Findings (from EDA)
+
+- **Industry Dominance**: A small set of industries (e.g., Technology and related sectors) account for a large share of postings.  
+- **Company Size & Activity**: Some companies appear frequently across the postings, indicating higher hiring activity and market presence.  
+- **Skill Bundling**: Many jobs list multiple required skills, and repeated co-occurrence patterns suggest natural “skill bundles” for students to learn together.  
+- **Entry Barriers**: Certain industries tend to have lower average skill counts per job, making them more beginner-friendly than highly specialized sectors.  
+- **Versatile Skills**: General-purpose skills like programming, data, and business/communication recur across many industries, making them strong “core” investments.
+
+---
+
+## 📓 Analysis Notebooks
+
+- **`data_analysis.ipynb`**  
+  Pandas-based EDA with:
+  - Dataset loading and basic profiling (`.info()`, `.describe()`)  
+  - Frequency plots and bar charts for industries, specialities, and skills  
+  - Initial cleaning of `postings.csv` and export to `postings_cleaned.csv`
+
+- **`complex_queries.ipynb`**  
+  Spark SQL-based analytics with:
+  - Multi-table joins across jobs, skills, and industries  
+  - Window functions for ranking top skills by industry  
+  - Aggregations used later for the complex query outputs and visualizations
+
+_All visualizations produced in these notebooks are saved under:_  
+`analytics_output/visuals/`
+
 
 ## 🛠️ Technical Implementation
 
