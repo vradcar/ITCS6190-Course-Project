@@ -201,7 +201,7 @@ If you're on Windows and encounter Hadoop errors:
 
 ```bash
 cd spark-analytics
-code complex_queries_job.py  # python file
+python3 complex_queries_job.py  # python file
 
 # Run it, generates
 # - 10 visualizations
