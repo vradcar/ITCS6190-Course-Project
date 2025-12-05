@@ -221,7 +221,7 @@ class MLPipeline:
         
         return results
 
-    def run_streaming_inference(self, trained_results, input_dir="./streaming_input", output_dir="streaming-output"):
+    def run_streaming_inference(self, trained_results, input_dir="streaming-dir", output_dir="ml_results"):
         """
         Run inference on a stream of data in streaming-dir using trained models.
         """
@@ -504,6 +504,11 @@ def main():
             days_back=args.days_back,
             components=args.components
         )
+
+        if results:
+            print("trying to get results now")
+        if args.save:
+            print("trying to print now")
         
         # Save if requested
         if args.save and results:
@@ -513,7 +518,7 @@ def main():
         if args.streaming and results:
              # Ensure the streaming directory exists
             stream_in = "streaming_input"
-            stream_out = "streaming-output"
+            stream_out = "ml_output"  # CHANGED to ml_output
             os.makedirs(stream_in, exist_ok=True)
             
             pipeline.run_streaming_inference(
