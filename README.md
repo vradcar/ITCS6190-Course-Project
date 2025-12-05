@@ -536,28 +536,33 @@ All without needing to run any code or understand the underlying infrastructure.
 
 ### Common Issues & Solutions
 
-1. **Hadoop Error (Windows)**:  
-   - Solution: Install `winutils.exe` and set `HADOOP_HOME`  
+1. **Missing Dependencies / Import Errors**  
+   - Make sure **all** Python packages listed in `spark-analytics/requirements.txt` are installed in your active environment.  
+   - Easiest option: run `./run.sh`, which automatically creates a virtual environment and installs everything from `requirements.txt`.
 
-2. **NameError in Notebook**:  
-   - Solution: Run all cells in order (use "Run All")  
+2. **NameError in Notebook**  
+   - Solution: Run all cells in order (use “Run All” in Jupyter/VS Code) to ensure every variable and function is defined before plots or queries.
 
-3. **Out of Memory**:  
-   - Solution: Increase `spark.driver.memory` or reduce dataset size  
+3. **Out of Memory (OOM)**  
+   - Solution:  
+     - Increase `spark.driver.memory` in the Spark configuration, or  
+     - Work with a sampled subset of the data (as done in `complex_queries_job.py`), or  
+     - Close other heavy applications while running the pipeline.
 
-4. **Streaming Not Starting**:  
-   - Solution: Ensure `streaming_input/` directory exists  
-
+4. **Streaming-Style Pipeline Not Producing Data**  
+   - Solution:  
+     - Ensure the `streaming_input/` directory exists under `spark-analytics/`.  
+     - Re-run the generator script:
+       ```bash
+       cd spark-analytics
+       python streaming_test_data_generator.py
+       ```
 ---
 
 ## 📚 Documentation
 
 - **README.md** (this file): Project overview and setup  
-- **spark-analytics/README.md**: Detailed analytics documentation  
-- **Documentation/DEMO_GUIDE.md**: Presentation instructions  
-- **Documentation/PROJECT_SUMMARY.md**: Complete technical explanation  
-- **Documentation/ML_INTEGRATION_PLAN.md**: Future ML roadmap  
-- **Documentation/CHECKLIST.md**: Demo day checklist  
+- **spark-analytics/README.md**: Detailed analytics documentation 
 
 ---
 
