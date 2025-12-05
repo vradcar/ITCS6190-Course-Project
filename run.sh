@@ -135,7 +135,7 @@ echo
 # STEP 1: ML pipeline (ml_pipeline.py)
 # --------------------------
 echo "============================================================"
-echo "STEP 2: ML pipeline (ml_pipeline.py)"
+echo "STEP 1: ML pipeline (ml_pipeline.py)"
 echo "============================================================"
 if [ -f "ml_pipeline.py" ]; then
   $PYTHON ml_pipeline.py --save || {
@@ -190,7 +190,7 @@ fi
 # STEP 2: Complex analytics & visualizations
 # --------------------------
 echo "============================================================"
-echo "STEP 3: Complex analytics & visualizations (complex_queries_job.py)"
+echo "STEP 2: Complex analytics & visualizations (complex_queries_job.py)"
 echo "============================================================"
 if [ -f "complex_queries_job.py" ]; then
   $PYTHON complex_queries_job.py || {
